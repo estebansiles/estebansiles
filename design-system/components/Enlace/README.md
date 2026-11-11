@@ -2,5 +2,5 @@ Enlace de acción en accion con subrayado de 1px y flecha que avanza al pasar el
 
 ```jsx
 <Enlace href="/servicios">Conoce los servicios</Enlace>
-<Enlace href="https://wa.me/506…" externo>Escríbeme por WhatsApp</Enlace>
+<Enlace href="https://wa.me/506…" externo>Escribime por WhatsApp</Enlace>
 ```

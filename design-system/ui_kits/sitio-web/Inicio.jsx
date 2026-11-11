@@ -14,7 +14,7 @@ function Inicio({ ir }) {
         <span className="sl-etiqueta" style={{color:'var(--texto-suave)'}}>Comunicación estratégica</span>
         <h1 className="sl-display sl-titulo" style={{margin:0}}><span className="sl-firma">T</span>odo se puede transformar</h1>
         <p className="sl-subtitulo" style={{color:'var(--texto-suave)'}}>Hola, soy Esteban. Me dedico a la comunicación estratégica y a la transformación digital. No hay excusas.</p>
-        <div style={{display:'flex',gap:'var(--space-3)',flexWrap:'wrap'}}><Boton iconoFinal="flecha" onClick={()=>ir('contacto')}>Agenda una llamada</Boton><Boton variante="secundario" icono="mensaje">Escríbeme por WhatsApp</Boton></div>
+        <div style={{display:'flex',gap:'var(--space-3)',flexWrap:'wrap'}}><Boton iconoFinal="flecha" onClick={()=>ir('contacto')}>Agendá una llamada</Boton><Boton variante="secundario" icono="mensaje">Escribime por WhatsApp</Boton></div>
       </div>
     </Patron>
     <Seccion>
@@ -38,8 +38,8 @@ function Inicio({ ir }) {
     </Seccion>
     <Seccion tema="oscuro">
       <div className="sl-reticula" style={{alignItems:'center'}}>
-        <div style={{gridColumn:'span 8'}}><Titulo nivel={2} tamano={1} bajada="Una llamada de 30 minutos basta para encontrar el primer proceso que puedes automatizar.">Casi todo se puede automatizar</Titulo></div>
-        <div style={{gridColumn:'span 4',display:'flex',justifyContent:'flex-end'}}><Boton variante="primario" iconoFinal="flecha" onClick={()=>ir('contacto')}>Agenda una llamada</Boton></div>
+        <div style={{gridColumn:'span 8'}}><Titulo nivel={2} tamano={1} bajada="Una llamada de 30 minutos basta para encontrar el primer proceso que podés automatizar.">Casi todo se puede automatizar</Titulo></div>
+        <div style={{gridColumn:'span 4',display:'flex',justifyContent:'flex-end'}}><Boton variante="primario" iconoFinal="flecha" onClick={()=>ir('contacto')}>Agendá una llamada</Boton></div>
       </div>
     </Seccion>
   </>);

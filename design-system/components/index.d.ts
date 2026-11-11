@@ -49,7 +49,7 @@ export interface PatronProps {
 }
 export declare function Patron(props: PatronProps): JSX.Element;
 /**
- * Botón de acción. Texto en imperativo: "Agenda una llamada", "Escríbeme por WhatsApp".
+ * Botón de acción. Texto en imperativo: "Agendá una llamada", "Escribime por WhatsApp".
  * @startingPoint section="Acciones" subtitle="Botones primario, secundario, fantasma y acento" viewport="700x300"
  */
 export interface BotonProps {

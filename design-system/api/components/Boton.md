@@ -17,7 +17,7 @@ Botón principal de la marca (radio-sm, Poppins 500); úsalo para llamadas a la 
 
 ## Notes
 
-Botón de acción. Texto en imperativo: "Agenda una llamada", "Escríbeme por WhatsApp". @startingPoint section="Acciones" subtitle="Botones primario, secundario, fantasma y acento" viewport="700x300"
+Botón de acción. Texto en imperativo: "Agendá una llamada", "Escribime por WhatsApp". @startingPoint section="Acciones" subtitle="Botones primario, secundario, fantasma y acento" viewport="700x300"
 
 ## Props (BotonProps)
 

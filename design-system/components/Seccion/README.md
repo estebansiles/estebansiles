@@ -2,7 +2,7 @@ Contenedor de sección de página (sl-seccion + sl-contenedor); úsalo para cada
 
 ```jsx
 <Seccion><Titulo>Servicios</Titulo>…</Seccion>
-<Seccion tema="oscuro"><Titulo>Agenda una llamada</Titulo></Seccion>
+<Seccion tema="oscuro"><Titulo>Agendá una llamada</Titulo></Seccion>
 ```
 
 - `tema="oscuro"` cambia todos los tokens de función dentro del bloque.

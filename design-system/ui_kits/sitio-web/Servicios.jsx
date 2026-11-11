@@ -2,7 +2,7 @@
 const { Titulo, Seccion, Pestanas, Ficha, Icono, Boton, Estado } = window.SilesDesignSystem_ba437f;
 const DETALLE={
   automatizacion:{icono:'automatizacion',titulo:'Automatización',texto:'Reviso tus tareas repetitivas y las convierto en flujos que corren solos: aprobaciones, recordatorios, reportes y conciliaciones.',puntos:['Mapa de procesos y priorización','Integración entre sistemas existentes','Capacitación para tu equipo'],plazo:'4 a 8 semanas'},
-  marketing:{icono:'marketing',titulo:'Marketing digital',texto:'Defino contigo a quién le hablas, qué le dices y cómo medir si funciona. Sin campañas que nadie revisa.',puntos:['Estrategia y calendario de contenido','Pauta en redes y buscadores','Tablero de resultados mensual'],plazo:'Mensual'},
+  marketing:{icono:'marketing',titulo:'Marketing digital',texto:'Defino contigo a quién le hablas, qué le decís y cómo medir si funciona. Sin campañas que nadie revisá.',puntos:['Estrategia y calendario de contenido','Pauta en redes y buscadores','Tablero de resultados mensual'],plazo:'Mensual'},
   ux:{icono:'experiencia-usuario',titulo:'Experiencia de usuario',texto:'Investigo cómo usan tus clientes el sitio o la aplicación y rediseño lo que les estorba.',puntos:['Entrevistas y pruebas con usuarios','Prototipos navegables','Guía de diseño para desarrollo'],plazo:'6 a 10 semanas'}};
 function Servicios({ ir }) {
   const [tab,setTab]=React.useState('automatizacion');
@@ -10,7 +10,7 @@ function Servicios({ ir }) {
   const d=DETALLE[tab];
   return (
     <Seccion>
-      <Titulo nivel={1} tamano={1} antetitulo="Servicios" bajada="Elige por dónde empezar. Todo se puede combinar.">Servicios</Titulo>
+      <Titulo nivel={1} tamano={1} antetitulo="Servicios" bajada="Elegí por dónde empezar. Todo se puede combinar.">Servicios</Titulo>
       <div style={{display:'flex',gap:'var(--space-2)',margin:'var(--space-8) 0 var(--space-6)'}}>{['Pymes','Instituciones','Profesionales'].map(f=><Ficha key={f} activa={filtro===f} onClick={()=>setFiltro(f)}>{f}</Ficha>)}</div>
       <Pestanas activa={tab} alCambiar={setTab} pestanas={[{id:'automatizacion',texto:'Automatización'},{id:'marketing',texto:'Marketing digital'},{id:'ux',texto:'Experiencia de usuario'}]}/>
       <div className="sl-reticula" style={{marginTop:'var(--space-12)'}}>
@@ -23,7 +23,7 @@ function Servicios({ ir }) {
         <aside style={{gridColumn:'9 / span 4',background:'var(--fondo-alterno)',padding:'var(--space-8)',display:'flex',flexDirection:'column',gap:'var(--space-4)',alignSelf:'start'}}>
           <span className="sl-etiqueta" style={{color:'var(--texto-suave)'}}>Plazo</span><span className="sl-titulo-3">{d.plazo}</span>
           <span className="sl-etiqueta" style={{color:'var(--texto-suave)',marginTop:'var(--space-2)'}}>Disponibilidad</span><span><Estado tipo="exito">Abierta</Estado></span>
-          <Boton bloque onClick={()=>ir('cotizacion')} style={{marginTop:'var(--space-4)'}}>Pide una cotización</Boton>
+          <Boton bloque onClick={()=>ir('cotizacion')} style={{marginTop:'var(--space-4)'}}>Pedí una cotización</Boton>
         </aside>
       </div>
     </Seccion>

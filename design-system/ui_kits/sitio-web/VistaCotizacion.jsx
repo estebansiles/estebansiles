@@ -23,7 +23,7 @@ function VistaCotizacion() {
         </div>
         <h1 className="sl-titulo-2 sl-titulo" style={{margin:0}}><span className="sl-firma">P</span>ropuesta económica</h1>
         <TablaCotizacion partidas={[{concepto:'Diagnóstico digital',detalle:'Entrevistas, mapa de procesos y priorización',precio:450000},{concepto:'Automatización de facturación',detalle:'Integración con factura electrónica y contabilidad',precio:1187500},{concepto:'Recordatorios de cobro',detalle:'Flujo por correo y WhatsApp',precio:687500},{concepto:'Capacitación',detalle:'Dos sesiones de 2 horas',cantidad:2,precio:250000}]} nota="Precios en colones costarricenses. Pagos: 50 % al iniciar, 50 % contra entrega."/>
-        <p className="sl-cuerpo sl-medida">Con esta propuesta tu equipo deja de digitar facturas a mano y el cobro se da seguimiento solo. Si tienes dudas, escríbeme. Lo resolvemos en una llamada.</p>
+        <p className="sl-cuerpo sl-medida">Con esta propuesta tu equipo deja de digitar facturas a mano y el cobro se da seguimiento solo. Si tenés dudas, escribime. Lo resolvemos en una llamada.</p>
       </article>
       {aviso && <div style={{position:'fixed',left:24,bottom:24,zIndex:50}}><Notificacion>{aviso}</Notificacion></div>}
     </Seccion>

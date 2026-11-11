@@ -9,7 +9,7 @@ function Encabezado({ vista, ir }) {
         <nav style={{display:'flex',gap:'var(--space-6)',marginLeft:'auto'}}>
           {items.map(([id,t])=><a key={id} href="#" onClick={e=>{e.preventDefault();ir(id);}} className="sl-cuerpo-ui" style={{color:vista===id?'var(--texto)':'var(--texto-suave)',textDecoration:'none',fontWeight:vista===id?700:400,borderBottom:vista===id?'2px solid var(--realce)':'2px solid transparent',padding:'6px 0'}}>{t}</a>)}
         </nav>
-        <Boton tamano="sm" onClick={()=>ir('contacto')}>Agenda una llamada</Boton>
+        <Boton tamano="sm" onClick={()=>ir('contacto')}>Agendá una llamada</Boton>
       </div>
     </header>
   );
