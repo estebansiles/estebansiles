@@ -45,9 +45,9 @@ Piezas y recursos añadidos en esta versión:
 ---
 
 ## Fundamentos de contenido
-- **Persona:** primera del singular, tuteo. “Hola, soy Esteban. Me dedico a la comunicación estratégica.” Nunca “nosotros” ni “usted”.
+- **Persona:** primera del singular, voseo costarricense. “Hola, soy Esteban. Me dedico a la comunicación estratégica.” Nunca “nosotros” ni “usted”.
 - **Tono:** cercano, directo, optimista sobre la tecnología. Frases cortas que afirman: “Casi todo se puede automatizar, no hay motivo para no intentarlo.”
-- **Llamadas a la acción:** verbo en imperativo de tú — “Agenda una llamada”, “Escríbeme por WhatsApp”, “Pide una cotización”. Nunca “Haga clic aquí”.
+- **Llamadas a la acción:** verbo en imperativo de vos — “Agendá una llamada”, “Escribime por WhatsApp”, “Pedí una cotización”. Nunca “Haga clic aquí”.
 - **Mayúsculas:** tipo oración en títulos (solo primera letra y nombres propios): “Diseño de experiencia de usuario”. Mayúsculas sostenidas solo en el estilo etiqueta.
 - **Sin emojis ni signos de exclamación** en piezas de marca.
 - **Montos:** moneda + separador de miles con espacio: ₡2 825 000, US$1 500. En cotizaciones, IVA 13 % en fila aparte (componente Cotizacion).
