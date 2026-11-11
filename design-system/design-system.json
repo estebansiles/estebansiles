@@ -25,7 +25,9 @@
   "docs": {
     "readme": "project/README.md",
     "sections": [
+      "project/aplicaciones.md",
       "project/github.md",
+      "project/impresion.md",
       "project/ui_kits/sitio-web/README.md"
     ]
   },
@@ -34,24 +36,26 @@
     "iconos",
     "notes"
   ],
+  "lastChange": {
+    "at": "2026-11-11T05:20:00Z",
+    "by": "Esteban Siles",
+    "note": "Paquete de componentes completo: piezas, aplicaciones, degradados, duotono y motivos; color de acción #00737E; versión anterior eliminada.",
+    "via": "Claude"
+  },
   "layout": "files",
   "libraries": [
     {
+      "global": "React",
       "name": "react",
       "version": "18"
     },
     {
+      "global": "ReactDOM",
       "name": "react-dom",
       "version": "18"
     }
   ],
   "namespace": "SilesDesignSystem_ba437f",
   "sections": {},
-  "title": "Siles - Design System",
-  "lastChange": {
-    "by": "Esteban Siles",
-    "at": "2026-11-11T05:20:00Z",
-    "via": "Claude",
-    "note": "Paquete de componentes completo: piezas, aplicaciones, degradados, duotono y motivos; color de acción #00737E; versión anterior eliminada."
-  }
+  "title": "Siles - Design System"
 }
