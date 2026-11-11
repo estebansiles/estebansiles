@@ -1,0 +1,17 @@
+<!-- @dsCard group="Formularios" height=200 -->
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><title>Casilla — vista previa</title>
+<style>body{padding:24px}.fila{display:flex;flex-wrap:wrap;gap:12px;align-items:center}.col{display:flex;flex-direction:column;gap:20px}.lbl{font:400 11px/1 var(--fuente-texto);letter-spacing:.2em;text-transform:uppercase;color:var(--texto-suave);margin-bottom:8px}</style></head>
+<body>
+<div id="root"></div>
+<script>
+  var S = window.SilesDesignSystem_ba437f, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h('div', {className: 'col', style: {gap: 12}},
+    h(S.Casilla, {etiqueta: 'Acepto la política de privacidad', defaultChecked: true}),
+    h(S.Casilla, {etiqueta: 'Quiero recibir el boletín'}),
+    h(S.Casilla, {tipo: 'radio', name: 'r', etiqueta: 'Menos de ₡1 000 000', defaultChecked: true}),
+    h(S.Casilla, {tipo: 'radio', name: 'r', etiqueta: 'Más de ₡1 000 000'})));
+</script>
+</body>
+</html>
