@@ -1,0 +1,16 @@
+/*
+Theme Name: Siles (hijo de Divi)
+Theme URI: https://www.siles.cr/
+Description: Tema hijo de Divi 4 para Siles Comunicación. Aplica los tokens, la tipografía, los estilos y el movimiento del sistema de diseño de Siles sobre los módulos de Divi.
+Author: Siles Comunicación
+Author URI: https://www.siles.cr/
+Template: Divi
+Version: 0.1.0
+Text Domain: siles-divi
+*/
+
+/* Los estilos viven en assets/ y se cargan desde functions.php, en este orden:
+   1. assets/tokens.css            Variables y fuentes del sistema de diseño.
+   2. assets/siles-divi.css        Marca aplicada a los módulos de Divi y clases de apoyo.
+   3. assets/siles-movimiento.css  Animaciones, transiciones y sombras.
+   Este archivo queda libre para ajustes puntuales del sitio. */

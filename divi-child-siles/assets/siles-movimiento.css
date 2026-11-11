@@ -1,0 +1,113 @@
+/* Movimiento y profundidad de Siles sobre Divi 4.
+   Curva del sistema, sin rebotes. Las sombras son tenues y teñidas de tinta: el filete de 1px sigue siendo el borde.
+   Lo automático (botones, tarjetas, campos, menú) no pide nada; lo demás se activa con una clase en "Clase CSS".
+   Conviene apagar las animaciones propias de Divi en los módulos que usen estas clases, para que no se sumen. */
+
+:root {
+  --sombra-reposo: 0 1px 2px rgba(30, 32, 32, .04), 0 12px 28px -20px rgba(30, 32, 32, .18);
+  --sombra-elevada: 0 2px 4px rgba(30, 32, 32, .05), 0 22px 44px -22px rgba(30, 32, 32, .28);
+  --sombra-accion: 0 10px 20px -12px rgba(0, 94, 103, .55);
+  --halo-foco: 0 0 0 4px rgba(0, 140, 153, .14);
+}
+
+@keyframes siles-sube { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+@keyframes siles-dibuja { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes siles-cinta { to { transform: translateX(-50%); } }
+@keyframes siles-deriva { from { background-position: 0% 50%; } to { background-position: 100% 50%; } }
+@keyframes siles-cabecera { to { box-shadow: 0 14px 28px -22px rgba(30, 32, 32, .35); } }
+
+/* ---------- Automático ---------- */
+
+/* Botones: suben 1px con una sombra del color de la acción; al presionar bajan 1px */
+body.siles #page-container .et_pb_button,
+body.siles #page-container .et_pb_contact_submit { transition: background-color .16s var(--curva), color .16s var(--curva), border-color .16s var(--curva), box-shadow .2s var(--curva), transform .12s var(--curva); }
+body.siles #page-container .et_pb_button:hover,
+body.siles #page-container .et_pb_contact_submit:hover { transform: translateY(-1px); box-shadow: var(--sombra-accion); }
+body.siles #page-container .et_pb_button.siles-boton--secundario:hover { box-shadow: 0 8px 16px -12px rgba(30, 32, 32, .4); }
+body.siles #page-container .et_pb_button:active,
+body.siles #page-container .et_pb_contact_submit:active { transform: translateY(1px); box-shadow: none; }
+
+/* Tarjetas: filete nítido en reposo; al pasar el cursor suben 4px y la sombra se abre debajo */
+body.siles .et_pb_blurb.siles-tarjeta,
+body.siles .et_pb_blog_grid .et_pb_post,
+body.siles .et_pb_portfolio_grid .et_pb_portfolio_item,
+body.siles .et_pb_filterable_portfolio_grid .et_pb_portfolio_item { transition: transform .24s var(--curva), box-shadow .24s var(--curva), border-color .2s var(--curva); }
+body.siles .et_pb_blurb.siles-tarjeta:hover,
+body.siles .et_pb_blog_grid .et_pb_post:hover,
+body.siles .et_pb_portfolio_grid .et_pb_portfolio_item:hover,
+body.siles .et_pb_filterable_portfolio_grid .et_pb_portfolio_item:hover { transform: translateY(-4px); box-shadow: var(--sombra-elevada); border-color: var(--texto); }
+body.siles .et_pb_blurb.siles-tarjeta .et_pb_main_blurb_image { transition: transform .24s var(--curva); }
+body.siles .et_pb_blurb.siles-tarjeta:hover .et_pb_main_blurb_image { transform: translateY(-2px) scale(1.06); }
+
+/* Campos: el borde cambia con suavidad y aparece un halo tenue al enfocar */
+body.siles .et_pb_contact_form .input { transition: border-color .16s var(--curva), box-shadow .2s var(--curva); }
+body.siles .et_pb_contact_form .input:focus { box-shadow: var(--halo-foco); }
+
+/* Menú: la barra de realce crece desde la izquierda */
+body.siles #top-menu > li > a,
+body.siles .et-l--header .et_pb_menu .et-menu > li > a { position: relative; transition: color .16s var(--curva); }
+body.siles #top-menu > li > a::before,
+body.siles .et-l--header .et_pb_menu .et-menu > li > a::before { content: ""; position: absolute; left: 0; right: 0; bottom: 18px; height: 2px; background: var(--realce); transform: scaleX(0); transform-origin: left; transition: transform .2s var(--curva); }
+body.siles #top-menu > li > a:hover::before,
+body.siles #top-menu > li.current-menu-item > a::before,
+body.siles #top-menu > li.current-menu-ancestor > a::before,
+body.siles .et-l--header .et_pb_menu .et-menu > li > a:hover::before,
+body.siles .et-l--header .et_pb_menu .et-menu > li.current-menu-item > a::before { transform: scaleX(1); }
+
+/* Encabezado fijo: gana una sombra tenue al bajar */
+@supports (animation-timeline: scroll()) {
+  body.siles #main-header { animation: siles-cabecera linear both; animation-timeline: scroll(root); animation-range: 0 160px; }
+}
+
+/* ---------- Con clase ---------- */
+
+/* siles-entra: entrada al cargar (portadas). Escalonar con siles-retraso-1 a siles-retraso-4 */
+.siles-entra { animation: siles-sube .7s var(--curva) both; }
+.siles-retraso-1 { animation-delay: .1s; }
+.siles-retraso-2 { animation-delay: .22s; }
+.siles-retraso-3 { animation-delay: .34s; }
+.siles-retraso-4 { animation-delay: .46s; }
+
+/* siles-revela: aparece al entrar en pantalla. Sin soporte del navegador, queda visible sin animar */
+@supports (animation-timeline: view()) {
+  .siles-revela { animation: siles-sube linear both; animation-timeline: view(); animation-range: entry 0% entry 100%; }
+  .et_pb_column:nth-child(2) > .siles-revela { animation-range: entry 10% cover 28%; }
+  .et_pb_column:nth-child(3) > .siles-revela { animation-range: entry 20% cover 34%; }
+  .et_pb_column:nth-child(4) > .siles-revela { animation-range: entry 30% cover 40%; }
+  .siles-traza::before { animation: siles-dibuja linear both; animation-timeline: view(); animation-range: entry 0% cover 35%; }
+}
+
+/* siles-traza: filete que se dibuja de izquierda a derecha sobre el módulo */
+.siles-traza::before { content: ""; display: block; height: 1px; background: var(--texto); transform-origin: left; margin-bottom: var(--space-5); transition: background-color .2s var(--curva); }
+.siles-traza:hover::before { background: var(--realce); }
+
+/* siles-eleva: cualquier módulo sube 4px con sombra al pasar el cursor */
+.siles-eleva { transition: transform .24s var(--curva), box-shadow .24s var(--curva); }
+.siles-eleva:hover { transform: translateY(-4px); box-shadow: var(--sombra-elevada); }
+
+/* siles-papel: bloque con filete y sombra de reposo muy baja (capturas, documentos, destacados) */
+.siles-papel { border: 1px solid var(--linea); box-shadow: var(--sombra-reposo); transition: box-shadow .3s var(--curva), border-color .2s var(--curva); }
+.siles-papel:hover { box-shadow: var(--sombra-elevada); border-color: var(--linea-fuerte); }
+
+/* Franja con degradado: deriva despacio; el bloque liso flota sobre ella */
+.et_pb_section.siles-franja { background-size: 180% 180%; animation: siles-deriva 16s ease-in-out infinite alternate; }
+.siles-franja .siles-bloque, .siles-franja-profunda .siles-bloque { box-shadow: 0 30px 60px -34px rgba(30, 32, 32, .45); }
+
+/* siles-cinta: banda de temas en movimiento. En un módulo Código:
+   <div class="siles-cinta"><div class="siles-cinta__pista"> ...ítems dos veces... </div></div> */
+.siles-cinta { overflow: hidden; border-bottom: 1px solid var(--linea); -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+.siles-cinta__pista { display: flex; width: max-content; animation: siles-cinta 48s linear infinite; }
+.siles-cinta:hover .siles-cinta__pista { animation-play-state: paused; }
+.siles-cinta__pista > span { display: flex; align-items: center; gap: var(--space-8); padding: var(--space-5) 0 var(--space-5) var(--space-8); white-space: nowrap; font-size: 13px; letter-spacing: .2em; text-transform: uppercase; color: var(--texto-suave); }
+.siles-cinta__pista > span::after { content: ""; width: 6px; height: 6px; background: var(--realce); }
+
+@media (prefers-reduced-motion: reduce) {
+  .siles-entra, .siles-revela, .siles-traza::before, .siles-cinta__pista, .et_pb_section.siles-franja, body.siles #main-header { animation: none; }
+  body.siles #page-container .et_pb_button, body.siles #page-container .et_pb_contact_submit,
+  body.siles .et_pb_blurb.siles-tarjeta, body.siles .et_pb_blog_grid .et_pb_post, body.siles .et_pb_portfolio_item,
+  body.siles .et_pb_blurb.siles-tarjeta .et_pb_main_blurb_image, body.siles .et_pb_contact_form .input,
+  .siles-eleva, .siles-papel, .siles-traza::before,
+  body.siles #top-menu > li > a::before, body.siles .et-l--header .et_pb_menu .et-menu > li > a::before { transition: none; }
+  body.siles #page-container .et_pb_button:hover, body.siles .et_pb_blurb.siles-tarjeta:hover, body.siles .et_pb_blog_grid .et_pb_post:hover,
+  body.siles .et_pb_portfolio_item:hover, .siles-eleva:hover { transform: none; }
+}
