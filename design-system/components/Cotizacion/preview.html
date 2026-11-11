@@ -1,0 +1,17 @@
+<!-- @dsCard group="Contenido" height=380 -->
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><title>Cotizacion — vista previa</title>
+<style>body{padding:24px}.fila{display:flex;flex-wrap:wrap;gap:12px;align-items:center}.col{display:flex;flex-direction:column;gap:20px}.lbl{font:400 11px/1 var(--fuente-texto);letter-spacing:.2em;text-transform:uppercase;color:var(--texto-suave);margin-bottom:8px}</style></head>
+<body>
+<div id="root"></div>
+<script>
+  var S = window.SilesDesignSystem_ba437f, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h(S.Cotizacion, {
+    partidas: [
+      {concepto: 'Diagnóstico digital', detalle: 'Entrevistas y mapa de procesos', precio: 450000},
+      {concepto: 'Automatización de facturación', detalle: 'Integración con factura electrónica', cantidad: 2, precio: 1187500}],
+    nota: 'Vigencia de 15 días. Precios en colones.'}));
+</script>
+</body>
+</html>

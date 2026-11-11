@@ -1,0 +1,21 @@
+<!-- @dsCard group="Marca" height=520 -->
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><title>Icono — vista previa</title>
+<style>body{padding:24px}.fila{display:flex;flex-wrap:wrap;gap:12px;align-items:center}.col{display:flex;flex-direction:column;gap:20px}.lbl{font:400 11px/1 var(--fuente-texto);letter-spacing:.2em;text-transform:uppercase;color:var(--texto-suave);margin-bottom:8px}</style></head>
+<body>
+<div id="root"></div>
+<script>
+  var S = window.SilesDesignSystem_ba437f, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h('div', {className: 'col'},
+    h('div', {style: {display: 'grid', gridTemplateColumns: 'repeat(8,minmax(0,1fr))', gap: '16px 8px'}},
+      S.NOMBRES_ICONOS.map(function (n) {
+        return h('div', {key: n, style: {display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6}},
+          h(S.Icono, {nombre: n, tamano: 32}),
+          h('div', {style: {font: '400 11px/1.2 var(--fuente-texto)', color: 'var(--texto-suave)', textAlign: 'center', overflowWrap: 'anywhere'}}, n));
+      })),
+    h('div', {'data-theme': 'dark', style: {background: 'var(--fondo)', color: 'var(--texto)', padding: 24, display: 'flex', gap: 28, flexWrap: 'wrap'}},
+      S.NOMBRES_ICONOS.slice(0, 14).map(function (n) { return h(S.Icono, {key: n, nombre: n, tamano: 32}); }))));
+</script>
+</body>
+</html>

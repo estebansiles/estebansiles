@@ -1,0 +1,55 @@
+<!-- @dsCard height=288 -->
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Siles Comunicación</title>
+<style>
+  html, body { margin:0; height:100%; }
+  body { padding:0; background:var(--fondo); color:var(--texto); overflow:hidden; }
+  .cover { position:relative; width:960px; height:288px; overflow:hidden; }
+  .art { position:absolute; top:0; left:0; width:960px; height:112px; }
+  .art svg { display:block; width:960px; height:112px; overflow:visible; }
+  .marca { fill:var(--verde-1); }
+  .tinta { fill:var(--texto); }
+  .acento { fill:var(--verde-2); }
+  .profundo { fill:var(--verde-1-profundo); }
+  .blk { rx:var(--radio-0); }
+  .hilo { stroke:var(--linea-fuerte); stroke-width:1; fill:none; }
+  .nodo { fill:var(--gris-500); }
+  .words { position:absolute; left:var(--space-6); right:var(--space-6); bottom:var(--space-6); }
+  .name { margin:0; font-family:var(--font-titulos); font-weight:600; font-size:64px; line-height:.95; letter-spacing:-0.01em; color:var(--texto); white-space:nowrap; }
+  .tag { margin:var(--space-3) 0 0; font-family:var(--font-texto); font-weight:400; font-size:14px; line-height:20px; color:var(--texto-suave); }
+</style>
+</head>
+<body>
+<div class="cover">
+<div class="art" aria-hidden="true">
+<svg viewBox="0 0 960 112" width="960" height="112">
+<!--
+  blocks      verde-1 336×128 bled off the top (the brand, largest) · texto 144×96 (tinta in Claro, blanco in Oscuro: the dark block of the brand) · verde-2 96×48 (the accent, small: one per piece) · verde-1-profundo 72 wide, bleeding off the top and the right edge — about a third of 960×288
+  arrangement the top-band skeleton (the name is too wide for the 440 zone): a strip of unequal bands, bottoms on one line at y=112, space-4 gutters, first block inset space-6 like the name
+  pattern     the brand's own motif, the README's "patrón de red (nodos cuadrados grises, un nodo verde-2)": 13 square nodes on a space-6 pitch joined by 5 hairlines in linea-fuerte, one node in verde-2, on the ground between the blocks
+  scales      block sides in space-4 / space-6 multiples; gutters space-4; node pitch space-6; nodes space-1 square, accent node space-3; corners radio-0 (a square system)
+-->
+<rect class="marca blk" x="24" y="-16" width="336" height="128"/>
+<rect class="tinta blk" x="376" y="16" width="144" height="96"/>
+<path class="hilo" d="M548 28 L596 52 L644 28 M596 52 L620 100 L692 76 M644 28 L716 52 L692 76 M716 52 L764 28 M548 76 L596 52"/>
+<g class="nodo">
+<rect x="546" y="26" width="4" height="4"/><rect x="594" y="50" width="4" height="4"/><rect x="642" y="26" width="4" height="4"/>
+<rect x="618" y="98" width="4" height="4"/><rect x="714" y="50" width="4" height="4"/><rect x="762" y="26" width="4" height="4"/>
+<rect x="546" y="74" width="4" height="4"/><rect x="570" y="98" width="4" height="4"/><rect x="666" y="50" width="4" height="4"/>
+<rect x="738" y="98" width="4" height="4"/><rect x="762" y="74" width="4" height="4"/><rect x="690" y="26" width="4" height="4"/>
+</g>
+<rect class="acento" x="686" y="70" width="12" height="12"/>
+<rect class="acento blk" x="792" y="64" width="96" height="48"/>
+<rect class="profundo blk" x="904" y="-16" width="72" height="128"/>
+</svg>
+</div>
+<div class="words">
+<h1 class="name"><span class="sl-firma">S</span>iles Comunicación</h1>
+<p class="tag">Todo se puede transformar digitalmente, no hay excusas.</p>
+</div>
+</div>
+</body>
+</html>
