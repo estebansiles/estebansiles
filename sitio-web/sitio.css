@@ -1,0 +1,149 @@
+/* Movimiento y profundidad del sitio. Curva del sistema: cubic-bezier(.2,0,0,1), sin rebotes.
+   Sin esta hoja todo el contenido queda visible y estático. */
+
+:root {
+  --curva: cubic-bezier(.2, 0, 0, 1);
+  /* Sombras suaves, teñidas de tinta: el filete de 1px sigue siendo el borde; la sombra solo da aire */
+  --sombra-reposo: 0 1px 2px rgba(30, 32, 32, .04), 0 12px 28px -20px rgba(30, 32, 32, .18);
+  --sombra-elevada: 0 2px 4px rgba(30, 32, 32, .05), 0 22px 44px -22px rgba(30, 32, 32, .28);
+  --sombra-accion: 0 10px 20px -12px rgba(0, 94, 103, .55);
+  --halo-foco: 0 0 0 4px rgba(0, 140, 153, .14);
+}
+
+@keyframes sube { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+@keyframes sube-a { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+@keyframes sube-b { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+@keyframes aparece { from { opacity: 0; } to { opacity: 1; } }
+@keyframes dibuja { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes cinta { to { transform: translateX(-50%); } }
+@keyframes entra-lado { from { opacity: 0; transform: translateX(-24px); } to { opacity: 1; transform: none; } }
+@keyframes deriva { from { background-position: 0% 50%; } to { background-position: 100% 50%; } }
+@keyframes cabecera { to { box-shadow: 0 1px 0 var(--linea), 0 14px 28px -22px rgba(30, 32, 32, .35); } }
+@keyframes respira { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+
+/* Transición de página: el contenido entra al cargar cada pantalla */
+.pagina { animation: aparece .4s var(--curva) both; }
+
+/* Entrada escalonada (portadas); el retraso va en línea en cada elemento */
+.entra { animation: sube .7s var(--curva) both; }
+
+/* Cambio de pestaña o de filtro: el nombre de la animación alterna para reiniciarla */
+.cambia { animation-duration: .4s; animation-timing-function: var(--curva); animation-fill-mode: both; }
+
+/* Notificación */
+.tostada { animation: entra-lado .3s var(--curva) both; }
+
+/* Revelado al hacer scroll, con un leve escalonado entre vecinos */
+@supports (animation-timeline: view()) {
+  .revela { animation: sube linear both; animation-timeline: view(); animation-range: entry 0% entry 100%; }
+  .eleva.revela:nth-child(3n+2), .traza.revela:nth-child(2) { animation-range: entry 10% cover 28%; }
+  .eleva.revela:nth-child(3n), .traza.revela:nth-child(3) { animation-range: entry 20% cover 34%; }
+  .traza.revela:nth-child(4) { animation-range: entry 30% cover 40%; }
+  .traza::before { animation: dibuja linear both; animation-timeline: view(); animation-range: entry 0% cover 35%; }
+}
+
+/* Encabezado: gana una sombra tenue al bajar y una barra de realce marca el avance de lectura */
+.pagina > header::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; background: var(--realce); transform: scaleX(0); transform-origin: left; }
+@supports (animation-timeline: scroll()) {
+  .pagina > header { animation: cabecera linear both; animation-timeline: scroll(root); animation-range: 0 160px; }
+  .pagina > header::after { animation: dibuja linear both; animation-timeline: scroll(root); }
+}
+
+/* Proceso: cuatro pasos en fila en escritorio; en tableta y móvil, dos arriba y dos abajo */
+.pasos-4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+@media (max-width: 1023px) { .pasos-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* Móvil: la portada pierde relleno para que el título quepa dentro de su bloque liso */
+@media (max-width: 640px) {
+  .sl-patron { padding: var(--space-6) var(--space-4) !important; }
+  .sl-patron__bloque, .sl-franja__bloque { padding: var(--space-6); }
+  .sl-patron__bloque .sl-display { font-size: 38px; }
+}
+
+/* Filete que se dibuja de izquierda a derecha; al pasar el cursor toma el realce */
+.traza::before { content: ""; display: block; height: 1px; background: var(--texto); transform-origin: left; margin-bottom: var(--space-5); transition: background-color .2s var(--curva); }
+.traza:hover::before { background: var(--realce); }
+.traza svg { transition: transform .2s var(--curva); }
+.traza:hover svg { transform: translateY(-3px); }
+
+/* Tarjetas: filete nítido en reposo; al pasar el cursor suben 4px y la sombra se abre debajo */
+.eleva .sl-tarjeta { transition: transform .24s var(--curva), box-shadow .24s var(--curva), border-color .2s var(--curva); }
+.eleva:hover .sl-tarjeta, .eleva:focus-within .sl-tarjeta { transform: translateY(-4px); box-shadow: var(--sombra-elevada); }
+.eleva .sl-tarjeta__icono { display: inline-flex; transition: transform .24s var(--curva); }
+.eleva:hover .sl-tarjeta__icono { transform: translateY(-2px) scale(1.06); }
+
+/* Bloques con filete (documento de cotización, destacados): sombra de reposo muy baja que se abre al pasar */
+.papel { box-shadow: var(--sombra-reposo); transition: box-shadow .3s var(--curva), border-color .2s var(--curva); }
+.papel:hover { box-shadow: var(--sombra-elevada); border-color: var(--linea-fuerte, var(--linea)); }
+
+/* Botones: suben 1px con una sombra del color de la acción; al presionar bajan 1px */
+.sl-boton { transition: background-color .16s var(--curva), color .16s var(--curva), border-color .16s var(--curva), box-shadow .2s var(--curva), transform .12s var(--curva); }
+.sl-boton--primario:hover, .sl-boton--acento:hover { transform: translateY(-1px); box-shadow: var(--sombra-accion); }
+.sl-boton--secundario:hover { transform: translateY(-1px); box-shadow: 0 8px 16px -12px rgba(30, 32, 32, .4); }
+.sl-boton:active { transform: translateY(1px); box-shadow: none; }
+.sl-boton svg { transition: transform .16s var(--curva); }
+.sl-boton:hover svg:last-child { transform: translateX(3px); }
+
+/* Campos: el borde cambia con suavidad y aparece un halo tenue al enfocar */
+.sl-campo__control { transition: border-color .16s var(--curva), box-shadow .2s var(--curva); }
+.sl-campo__control:focus { box-shadow: var(--halo-foco); }
+
+/* Franja de cierre: el degradado deriva despacio y el bloque liso flota sobre él */
+.sl-franja--marca { background-size: 180% 180%; animation: deriva 16s ease-in-out infinite alternate; }
+.sl-franja__bloque { box-shadow: 0 30px 60px -34px rgba(30, 32, 32, .45); }
+
+/* Patrón de red: cada nodo destella por turnos, en orden que se percibe aleatorio.
+   Tres colores de alto contraste de la paleta (verde-2, verde-1 y tinta) y periodos primos entre sí
+   para que la secuencia no se repita a la vista. */
+@keyframes destello {
+  0%, 84%, 100% { fill: var(--nodo-base); filter: none; transform: scale(1); }
+  91% { fill: var(--brillo); filter: drop-shadow(0 0 4px var(--brillo)) drop-shadow(0 0 10px var(--brillo)); transform: scale(1.9); }
+}
+.sl-patron__svg rect { --nodo-base: #8a8f8f; --brillo: var(--verde-2); transform-box: fill-box; transform-origin: center; animation: destello 11s var(--curva) infinite backwards; }
+.sl-patron[data-theme="dark"] .sl-patron__svg rect { --nodo-base: #555a5a; }
+.sl-patron__svg rect[fill="#00D1B1"] { --nodo-base: #00d1b1; }
+.sl-patron__svg rect:nth-child(3n+1) { --brillo: var(--verde-2); }
+.sl-patron__svg rect:nth-child(3n+2) { --brillo: var(--verde-1); }
+.sl-patron__svg rect:nth-child(3n) { --brillo: var(--tinta); }
+.sl-patron[data-theme="dark"] .sl-patron__svg rect:nth-child(3n) { --brillo: var(--blanco); }
+.sl-patron__svg rect:nth-child(7n+1) { animation-duration: 7.3s; }
+.sl-patron__svg rect:nth-child(7n+2) { animation-duration: 12.7s; }
+.sl-patron__svg rect:nth-child(7n+3) { animation-duration: 9.1s; }
+.sl-patron__svg rect:nth-child(7n+4) { animation-duration: 14.3s; }
+.sl-patron__svg rect:nth-child(7n+5) { animation-duration: 8.3s; }
+.sl-patron__svg rect:nth-child(7n+6) { animation-duration: 10.9s; }
+.sl-patron__svg rect:nth-child(7n) { animation-duration: 13.1s; }
+.sl-patron__svg rect:nth-child(5n+1) { animation-delay: -1.7s; }
+.sl-patron__svg rect:nth-child(5n+2) { animation-delay: -6.1s; }
+.sl-patron__svg rect:nth-child(5n+3) { animation-delay: -3.4s; }
+.sl-patron__svg rect:nth-child(5n+4) { animation-delay: -8.9s; }
+.sl-patron__svg rect:nth-child(5n) { animation-delay: -4.8s; }
+.sl-patron__svg rect:nth-child(11n+3) { animation-delay: -10.3s; }
+.sl-patron__svg rect:nth-child(13n+6) { animation-delay: -0.6s; }
+
+/* Navegación: la barra de realce crece desde la izquierda */
+.nav-a { position: relative; display: inline-flex; align-items: center; min-height: 44px; color: var(--texto-suave); text-decoration: none; transition: color .16s var(--curva); }
+.nav-a::after { content: ""; position: absolute; left: 0; right: 0; bottom: 6px; height: 2px; background: var(--realce); transform: scaleX(0); transform-origin: left; transition: transform .2s var(--curva); }
+.nav-a:hover, .nav-a[aria-current] { color: var(--texto); }
+.nav-a:hover::after, .nav-a[aria-current]::after { transform: scaleX(1); }
+.nav-a[aria-current] { font-weight: 700; }
+
+/* Filas de contacto: el ícono avanza 3px, como la flecha del enlace */
+.fila { transition: border-color .16s var(--curva); }
+.fila > :first-child { transition: transform .16s var(--curva); }
+.fila:hover { border-bottom-color: var(--texto); }
+.fila:hover > :first-child { transform: translateX(3px); }
+
+/* Cinta de temas: bordes desvanecidos y marcas que respiran */
+.cinta { overflow: hidden; border-bottom: 1px solid var(--linea); background: var(--fondo); -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+.cinta__pista { display: flex; width: max-content; animation: cinta 48s linear infinite; }
+.cinta:hover .cinta__pista { animation-play-state: paused; }
+.cinta__pista > span > span { animation: respira 3.2s ease-in-out infinite; }
+.cinta__pista > span:nth-child(even) > span { animation-delay: -1.6s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .sl-patron__svg rect { animation: none; }
+  .pagina, .entra, .cambia, .tostada, .revela, .traza::before, .cinta__pista, .cinta__pista > span > span, .sl-franja--marca, .pagina > header, .pagina > header::after { animation: none; }
+  .eleva .sl-tarjeta, .eleva .sl-tarjeta__icono, .papel, .sl-boton, .sl-boton svg, .sl-campo__control, .traza::before, .traza svg, .nav-a, .nav-a::after, .fila, .fila > :first-child { transition: none; }
+  .eleva:hover .sl-tarjeta, .eleva:hover .sl-tarjeta__icono, .sl-boton:hover, .sl-boton:hover svg:last-child, .traza:hover svg { transform: none; }
+}
