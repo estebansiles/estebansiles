@@ -1,0 +1,15 @@
+<!-- @dsCard group="Piezas" height=300 -->
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><title>TarjetaPresentacion — vista previa</title>
+<style>body{padding:24px}.fila{display:flex;flex-wrap:wrap;gap:16px;align-items:flex-start}.col{display:flex;flex-direction:column;gap:20px}.lbl{font:400 11px/1 var(--fuente-texto);letter-spacing:.2em;text-transform:uppercase;color:var(--texto-suave);margin-bottom:8px}</style></head>
+<body>
+<div id="root"></div>
+<script>
+  var S = window.SilesDesignSystem_ba437f, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h('div',{className:'fila'},
+ h(S.TarjetaPresentacion,{nombre:'Esteban Siles',cargo:'Consultor en transformación digital',contacto:['+506 0000 0000','esteban@siles.cr','www.siles.cr']}),
+ h(S.TarjetaPresentacion,{lado:'reverso'})));
+</script>
+</body>
+</html>

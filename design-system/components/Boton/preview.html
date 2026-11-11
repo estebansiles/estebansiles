@@ -1,0 +1,22 @@
+<!-- @dsCard group="Acciones" height=250 -->
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><title>Boton — vista previa</title>
+<style>body{padding:24px}.fila{display:flex;flex-wrap:wrap;gap:12px;align-items:center}.col{display:flex;flex-direction:column;gap:20px}.lbl{font:400 11px/1 var(--fuente-texto);letter-spacing:.2em;text-transform:uppercase;color:var(--texto-suave);margin-bottom:8px}</style></head>
+<body>
+<div id="root"></div>
+<script>
+  var S = window.SilesDesignSystem_ba437f, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h('div', {className: 'col'},
+    h('div', null, h('div', {className: 'lbl'}, 'Variantes'), h('div', {className: 'fila'},
+      h(S.Boton, {iconoFinal: 'flecha'}, 'Agenda una llamada'),
+      h(S.Boton, {variante: 'secundario', icono: 'mensaje'}, 'Escríbeme por WhatsApp'),
+      h(S.Boton, {variante: 'fantasma'}, 'Ver detalles'),
+      h(S.Boton, {variante: 'acento'}, 'Empieza hoy'))),
+    h('div', null, h('div', {className: 'lbl'}, 'Pequeño · deshabilitado'), h('div', {className: 'fila'},
+      h(S.Boton, {tamano: 'sm', icono: 'descargar'}, 'Descargar propuesta'),
+      h(S.Boton, {tamano: 'sm', variante: 'secundario'}, 'Cancelar'),
+      h(S.Boton, {disabled: true}, 'Enviar')))));
+</script>
+</body>
+</html>

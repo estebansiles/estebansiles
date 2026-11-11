@@ -1,0 +1,15 @@
+<!-- @dsCard group="Contenido" height=330 -->
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><title>Tarjeta — vista previa</title>
+<style>body{padding:24px}.fila{display:flex;flex-wrap:wrap;gap:12px;align-items:center}.col{display:flex;flex-direction:column;gap:20px}.lbl{font:400 11px/1 var(--fuente-texto);letter-spacing:.2em;text-transform:uppercase;color:var(--texto-suave);margin-bottom:8px}</style></head>
+<body>
+<div id="root"></div>
+<script>
+  var S = window.SilesDesignSystem_ba437f, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h('div', {style: {display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16}},
+    h(S.Tarjeta, {icono: 'automatizacion', titulo: 'Automatización', pie: h(S.Enlace, null, 'Ver más')}, 'Casi todo se puede automatizar.'),
+    h(S.Tarjeta, {variante: 'hundida', icono: 'experiencia-usuario', antetitulo: 'Paso 2', titulo: 'Experiencia de usuario'}, 'Diseño pensando en quien usa.')));
+</script>
+</body>
+</html>

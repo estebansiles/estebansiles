@@ -1,0 +1,15 @@
+<!-- @dsCard group="Aplicaciones" height=480 -->
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><title>Panel — vista previa</title>
+<style>body{padding:24px}.fila{display:flex;flex-wrap:wrap;gap:16px;align-items:flex-start}.col{display:flex;flex-direction:column;gap:20px}.lbl{font:400 11px/1 var(--fuente-texto);letter-spacing:.2em;text-transform:uppercase;color:var(--texto-suave);margin-bottom:8px}</style></head>
+<body>
+<div id="root"></div>
+<script>
+  var S = window.SilesDesignSystem_ba437f, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h(S.Panel,{titulo:'Cotizaciones',navegacion:[{texto:'Inicio',icono:'planear'},{texto:'Cotizaciones',icono:'analitica',activo:true},{texto:'Clientes',icono:'clientes'},{texto:'Facturas',icono:'factura-electronica'}],acciones:h(S.Boton,{variante:'secundario',tamano:'sm'},'Nueva')},
+ h('div',{className:'fila'},h(S.Metrica,{etiqueta:'Vigentes',valor:'12',cambio:'3',direccion:'sube'}),h(S.Metrica,{etiqueta:'Por aprobar',valor:'₡4 150 000',cambio:'8 %',direccion:'baja'})),
+ h(S.Tabla,{columnas:[{clave:'c',texto:'Cliente'},{clave:'m',texto:'Monto',num:true},{clave:'e',texto:'Estado',celda:function(f){return h(S.Estado,{tipo:f.t},f.e);}}],filas:[{c:'Agroindustria Sur',m:'₡2 825 000',e:'Listo',t:'exito'},{c:'Hotel Costa Verde',m:'US$1 500',e:'Pendiente',t:'alerta'}]})));
+</script>
+</body>
+</html>
