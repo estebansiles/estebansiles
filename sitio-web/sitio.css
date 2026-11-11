@@ -53,6 +53,15 @@
 .pasos-4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
 @media (max-width: 1023px) { .pasos-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 
+/* Marco de imagen pendiente: reserva el espacio de una captura hasta que exista la foto real */
+.marco { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--space-3); box-sizing: border-box; padding: var(--space-6); text-align: center; background: var(--fondo-alterno); border: 1px solid var(--linea); color: var(--texto-suave); }
+.marco--16x9 { aspect-ratio: 16 / 9; }
+.marco--4x3 { aspect-ratio: 4 / 3; }
+
+/* Migas de pan */
+.migas a { color: var(--texto-suave); text-decoration: none; transition: color .16s var(--curva); }
+.migas a:hover { color: var(--texto); }
+
 /* Móvil: la portada pierde relleno para que el título quepa dentro de su bloque liso */
 @media (max-width: 640px) {
   .sl-patron { padding: var(--space-6) var(--space-4) !important; }
