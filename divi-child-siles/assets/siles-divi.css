@@ -488,3 +488,125 @@ body.siles .et_pb_image.siles-papel img { width: 100%; aspect-ratio: 4 / 3; obje
 body.siles .et_pb_image.siles-captura { text-align: center; margin-inline: auto; }
 /* El clearfix de Divi (::before/::after) ocupaba celdas de la cuadrícula de "Otros proyectos" */
 body.siles .et_pb_posts_nav.siles-otros::before, body.siles .et_pb_posts_nav.siles-otros::after { display: none; }
+
+/* ============ Parte 5 · Servicios, Blog y Cotización ============ */
+
+/* Botón en HTML (fuera del módulo Botón): <a class="siles-boton siles-boton--flecha"> o <button class="siles-boton"> */
+body.siles .siles-boton, body.siles #page-container a.siles-boton {
+  display: inline-flex; align-items: center; justify-content: center; gap: var(--space-2);
+  min-height: var(--control-alto); padding: 0 var(--space-5); border: 1px solid transparent; border-radius: var(--radio-sm);
+  background: var(--accion); color: var(--accion-texto); font-family: var(--font-titulos); font-weight: 500; font-size: 15px; line-height: 1;
+  text-decoration: none; cursor: pointer; transition: background-color .16s var(--curva), box-shadow .2s var(--curva), transform .12s var(--curva);
+}
+body.siles .siles-boton:hover, body.siles #page-container a.siles-boton:hover { background: var(--accion-hover); color: var(--accion-texto); transform: translateY(-1px); box-shadow: var(--sombra-accion); }
+body.siles .siles-boton:disabled { background: var(--superficie-hundida); color: var(--texto-suave); cursor: not-allowed; transform: none; box-shadow: none; }
+body.siles .siles-boton--bloque { width: 100%; }
+body.siles .siles-boton.siles-boton--flecha::after {
+  content: ""; width: 20px; height: 20px; background: currentColor;
+  -webkit-mask: url("iconos/flecha.svg") center / contain no-repeat; mask: url("iconos/flecha.svg") center / contain no-repeat;
+}
+
+/* Aviso (componente Aviso) */
+body.siles .siles-aviso { display: grid; grid-template-columns: auto 1fr; gap: var(--space-1) var(--space-3); padding: var(--space-4) var(--space-5); border-top: 2px solid currentColor; font-weight: 400; font-size: 15px; line-height: 1.5; }
+body.siles .siles-aviso[hidden] { display: none; }
+body.siles .siles-aviso__estado { font-weight: 700; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; padding-top: 3px; }
+body.siles .siles-aviso__texto { color: var(--texto); }
+body.siles .siles-aviso--exito { background: var(--exito-fondo); color: var(--exito); }
+body.siles .siles-aviso--alerta { background: var(--alerta-fondo); color: var(--alerta); }
+body.siles .siles-aviso--error { background: var(--error-fondo); color: var(--error); }
+body.siles .siles-aviso + .siles-cotizador { margin-top: var(--space-8); }
+
+/* Campo y casilla (componentes Campo y Casilla) */
+body.siles .siles-campo { display: flex; flex-direction: column; gap: var(--space-2); }
+body.siles .siles-campo__etiqueta { font-weight: 700; font-size: 15px; color: var(--texto); }
+body.siles .siles-campo__control {
+  width: 100%; box-sizing: border-box; min-height: var(--control-alto); padding: var(--space-3);
+  background: var(--superficie); color: var(--texto); border: 1px solid var(--linea-fuerte); border-radius: var(--radio-sm);
+  font-family: var(--font-texto); font-weight: 400; font-size: 15px; line-height: 1.4;
+  transition: border-color .16s var(--curva), box-shadow .2s var(--curva);
+}
+body.siles .siles-campo__control::placeholder { color: var(--gris-500); }
+body.siles .siles-campo__control:hover { border-color: var(--texto-suave); }
+body.siles .siles-campo__control:focus { border-color: var(--texto); box-shadow: var(--halo-foco); outline: none; }
+body.siles textarea.siles-campo__control { resize: vertical; }
+body.siles .siles-casilla { display: flex; gap: var(--space-3); align-items: flex-start; font-weight: 400; font-size: 15px; line-height: 1.45; color: var(--texto); cursor: pointer; }
+body.siles .siles-casilla input { flex: none; width: 20px; height: 20px; margin: 1px 0 0; accent-color: var(--accion); cursor: pointer; }
+
+/* Cotizador */
+body.siles .siles-cotizador { display: flex; flex-wrap: wrap; align-items: flex-start; gap: var(--space-12) var(--space-16); }
+body.siles .siles-cotizador__trampa { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+body.siles .siles-cotizador__opciones { flex: 4 1 300px; min-width: 0; margin: 0; padding: 0; border: 0; display: flex; flex-direction: column; }
+body.siles .siles-cotizador__opciones legend { padding: 0; margin-bottom: var(--space-4); }
+body.siles .siles-cotizador__opcion { display: flex; flex-direction: column; gap: var(--space-1); padding: var(--space-4) 0; border-top: 1px solid var(--linea); }
+body.siles .siles-cotizador__opcion .siles-casilla span { font-weight: 700; }
+body.siles .siles-cotizador__detalle { padding-left: var(--space-8); font-weight: 400; font-size: 15px; color: var(--texto-suave); }
+body.siles .siles-cotizador__hoja { flex: 7 1 420px; min-width: 0; box-sizing: border-box; background: var(--superficie); padding: var(--space-12) var(--space-8); display: flex; flex-direction: column; gap: var(--space-8); }
+body.siles .siles-cotizador__marca { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: var(--space-4); }
+body.siles .siles-cotizador__marca img { height: 40px; width: auto; }
+body.siles .siles-cotizador__hoja h2 { font-size: 24px; line-height: 1.25; padding: 0; }
+body.siles .siles-cotizador__partidas { display: flex; flex-direction: column; }
+body.siles .siles-cotizador__partidas[hidden] { display: none; }
+body.siles .siles-cotizador__cabeza { display: flex; justify-content: space-between; gap: var(--space-4); padding-bottom: var(--space-3); border-bottom: 1px solid var(--texto); font-size: 13px; letter-spacing: .2em; text-transform: uppercase; color: var(--texto-suave); }
+body.siles .siles-cotizador__partida { display: flex; align-items: flex-start; gap: var(--space-4); padding: var(--space-4) 0; border-bottom: 1px solid var(--linea); }
+body.siles .siles-cotizador__partida h3 { margin: 0; padding: 0 0 var(--space-1); font-size: 19px; line-height: 1.3; }
+body.siles .siles-cotizador__partida p { margin: 0; padding: 0; font-weight: 400; font-size: 15px; line-height: 1.45; color: var(--texto-suave); }
+body.siles .siles-cotizador__hoja .siles-nota { margin: calc(-1 * var(--space-4)) 0 0; padding: 0; }
+body.siles .siles-cotizador__datos { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: var(--space-5); padding-top: var(--space-6); border-top: 1px solid var(--linea); }
+body.siles .siles-campo--ancho { grid-column: 1 / -1; }
+body.siles .siles-cotizador__acciones { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-4) var(--space-6); }
+body.siles .siles-cambia { animation: siles-sube .4s var(--curva) both; }
+
+/* Pasos (componente Pasos): <ol class="siles-pasos"><li class="siles-paso">… */
+body.siles .siles-pasos { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-8); }
+body.siles .siles-paso { display: flex; flex-direction: column; gap: var(--space-3); padding-top: var(--space-6); border-top: 1px solid var(--linea); }
+body.siles .siles-paso--activo { border-top: 2px solid var(--realce); }
+body.siles .siles-paso__marca { display: inline-grid; place-items: center; width: 44px; height: 44px; border: 1.5px solid var(--texto); font-family: var(--font-titulos); font-weight: 600; font-size: 15px; color: var(--texto); }
+body.siles .siles-paso--activo .siles-paso__marca { background: var(--acento); border-color: var(--acento); color: var(--acento-texto); }
+body.siles .siles-paso h3 { padding: 0; }
+body.siles .siles-paso p { padding: 0; color: var(--texto-suave); }
+
+/* Servicios: contenido de cada pestaña con columna principal y ficha lateral */
+body.siles .siles-servicio { display: flex; flex-wrap: wrap; align-items: flex-start; gap: var(--space-12) var(--space-16); }
+body.siles .siles-servicio__principal { flex: 7 1 360px; min-width: 0; display: flex; flex-direction: column; gap: var(--space-6); }
+body.siles .siles-servicio__principal h2, body.siles .siles-servicio__principal p { padding: 0; margin: 0; }
+body.siles .siles-servicio__principal > p { font-size: 20px; line-height: 1.6; color: var(--texto-suave); max-width: var(--medida); }
+body.siles .siles-servicio__lateral { flex: 4 1 280px; background: var(--fondo-alterno); padding: var(--space-8); display: flex; flex-direction: column; gap: var(--space-4); }
+body.siles .siles-servicio__lateral .siles-antetitulo { margin: 0; }
+body.siles .siles-servicio__plazo { font-family: var(--font-titulos); font-weight: 600; font-size: 24px; line-height: 1.25; }
+body.siles .et_pb_tabs.siles-pestanas .et_pb_tab { padding-top: var(--space-12); }
+
+/* Fichas de categoría (enlaces) */
+body.siles .siles-fichas { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+body.siles #page-container .siles-fichas a {
+  display: inline-flex; align-items: center; height: 32px; padding: 0 var(--space-3); border: 1px solid var(--linea-fuerte); border-radius: var(--radio-sm);
+  color: var(--texto); font-weight: 400; font-size: 14px; text-decoration: none;
+}
+body.siles #page-container .siles-fichas a:hover { border-color: var(--texto); }
+body.siles #page-container .siles-fichas a[aria-current] { background: var(--texto); color: var(--fondo); border-color: var(--texto); }
+
+/* Blog en rejilla: tarjetas con filete, imagen 16:9 y enlace con flecha */
+body.siles .siles-blog .et_pb_post { padding: 0; display: flex; flex-direction: column; }
+body.siles .siles-blog .et_pb_post .et_pb_image_container { margin: 0; }
+body.siles .siles-blog .et_pb_post .et_pb_image_container img { aspect-ratio: 16 / 9; object-fit: cover; width: 100%; }
+body.siles .siles-blog .et_pb_post .entry-title, body.siles .siles-blog .et_pb_post .post-meta, body.siles .siles-blog .et_pb_post .post-content { padding-left: var(--space-6); padding-right: var(--space-6); }
+body.siles .siles-blog .et_pb_post .entry-title { padding-top: var(--space-6); font-size: 22px; line-height: 1.3; }
+body.siles #page-container .siles-blog .et_pb_post .entry-title a { color: var(--texto); }
+body.siles .siles-blog .et_pb_post .post-content { padding-bottom: var(--space-6); color: var(--texto-suave); font-size: 16px; }
+body.siles #page-container .siles-blog .et_pb_post .more-link { display: inline-flex; margin-top: var(--space-3); color: var(--accion); font-family: var(--font-titulos); font-weight: 500; font-size: 15px; border-bottom: 1px solid currentColor; }
+body.siles .siles-blog .pagination a { font-family: var(--font-titulos); font-weight: 500; }
+
+/* Artículo: columna de lectura de 760px */
+body.siles #page-container .et_pb_row.siles-fila-angosta { max-width: 760px; }
+body.siles .siles-articulo .et_pb_title_container h1 { font-size: clamp(36px, 4.4vw, 52px); line-height: 1.12; }
+body.siles .siles-articulo .et_pb_title_meta_container { font-size: 13px; letter-spacing: .2em; text-transform: uppercase; color: var(--texto-suave); }
+body.siles .siles-articulo .et_pb_title_featured_container img { margin-top: var(--space-8); }
+body.siles .siles-lectura { font-size: 18px; line-height: 1.7; }
+body.siles .siles-lectura h2 { font-size: 28px; margin-top: var(--space-8); }
+body.siles .siles-lectura h3 { font-size: 22px; margin-top: var(--space-6); }
+body.siles .siles-lectura img { height: auto; }
+body.siles .siles-llamado .et_pb_text_inner { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-4) var(--space-8); padding: var(--space-8); background: var(--fondo-alterno); }
+body.siles .siles-llamado p { flex: 1 1 280px; padding: 0; }
+body.siles #page-container .et_pb_tabs_controls li a { color: var(--texto-suave); }
+body.siles #page-container .et_pb_tabs_controls li.et_pb_tab_active a { color: var(--texto); }
+body.siles .siles-paso .siles-antetitulo { margin: 0; }
+body.siles .siles-servicio__lateral .siles-boton { margin-top: var(--space-4); }

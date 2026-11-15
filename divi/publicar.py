@@ -15,6 +15,8 @@ AQUI = os.path.dirname(os.path.abspath(__file__))
 PAGINAS = {
     "inicio": ("inicio-nuevo", "Inicio"),
     "contacto": ("contacto", "Contacto"),
+    "servicios": ("servicios", "Servicios"),
+    "cotizacion": ("cotizacion", "Cotización"),
 }
 
 

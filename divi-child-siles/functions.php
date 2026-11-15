@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'SILES_DIVI_VERSION', '0.3.0' );
+define( 'SILES_DIVI_VERSION', '0.4.0' );
 
 /**
  * Carga el estilo de Divi y, después, las hojas del sistema de diseño.
@@ -81,3 +81,5 @@ function siles_divi_icono( $atts ) {
 	);
 }
 add_shortcode( 'siles_icono', 'siles_divi_icono' );
+
+require_once __DIR__ . '/inc/cotizador.php';

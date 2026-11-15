@@ -335,6 +335,148 @@ def plantilla_proyectos():
     return cabecera + todos + cierre
 
 
+# ---------- Servicios ----------
+
+DETALLE = [
+    ("automatizacion", "Automatización", "automatizacion",
+     "Reviso tus tareas repetitivas y las convierto en flujos que corren solos: aprobaciones, recordatorios, reportes y conciliaciones.",
+     ["Mapa de procesos y priorización", "Integración entre sistemas existentes", "Capacitación para tu equipo"], "4 a 8 semanas"),
+    ("marketing", "Marketing digital", "marketing",
+     "Defino con vos a quién le hablás, qué le decís y cómo medir si funciona. Sin campañas que nadie revisa.",
+     ["Estrategia y calendario de contenido", "Pauta en redes y buscadores", "Tablero de resultados mensual"], "Mensual"),
+    ("ux", "Experiencia de usuario", "experiencia-usuario",
+     "Investigo cómo usan tus clientes el sitio o la aplicación y rediseño lo que les estorba.",
+     ["Entrevistas y pruebas con usuarios", "Prototipos navegables", "Guía de diseño para desarrollo"], "6 a 10 semanas"),
+]
+FASES = [("Fase 1", "Diagnóstico", "Reviso procesos y datos, y priorizo con vos."),
+         ("Fase 2", "Diseño", "Defino la solución, los costos y los plazos."),
+         ("Fase 3", "Implementación", "Construyo, conecto y capacito a tu equipo.")]
+
+
+def servicios():
+    pestanas = "".join(
+        sc("et_pb_tab",
+           f'<div class="siles-servicio"><div class="siles-servicio__principal">{icono(ic, 48)}<h2>{titulo}</h2><p>{txt}</p>{lista_checks(puntos)}</div>'
+           f'<aside class="siles-servicio__lateral"><p class="siles-antetitulo">Plazo</p><span class="siles-servicio__plazo">{plazo}</span>'
+           f'<p class="siles-antetitulo">Disponibilidad</p><span><span class="siles-estado siles-estado--exito">Abierta</span></span>'
+           f'<a class="siles-boton siles-boton--flecha siles-boton--bloque" href="/cotizacion/">Pedí una cotización</a></aside></div>',
+           title=titulo)
+        for _, titulo, ic, txt, puntos, plazo in DETALLE)
+    cabecera = seccion(
+        fila("4_4", columna("4_4",
+                            texto(antetitulo("Servicios"), clase="siles-entra"),
+                            texto("<h1>Servicios</h1>", clase="siles-firma siles-entra siles-retraso-1"),
+                            texto("<p>Elegí por dónde empezar. Todo se puede combinar.</p>", clase="siles-subtitulo siles-medida siles-entra siles-retraso-2"),
+                            sc("et_pb_tabs", pestanas, module_class="siles-pestanas siles-entra siles-retraso-3"))),
+        admin_label="Servicios",
+    )
+    pasos = "".join(f'<li class="siles-paso{" siles-paso--activo" if n == 1 else ""}"><span class="siles-paso__marca">{n}</span>'
+                    f'<span class="siles-antetitulo">{e}</span><h3>{t}</h3><p>{c}</p></li>' for n, (e, t, c) in enumerate(FASES, 1))
+    metodo = seccion(
+        fila("3_5,2_5",
+             columna("3_5", texto(antetitulo("Método") + "<h2>Por fases, sin saltos al vacío</h2>", clase="siles-firma siles-revela")),
+             columna("2_5", texto("<p>Cada fase entrega algo que ya podés usar, y decidís si seguimos con la siguiente.</p>", clase="siles-cuerpo-lg siles-revela")),
+             clase="siles-fila-abajo"),
+        fila("4_4", columna("4_4", texto(f'<ol class="siles-pasos">{pasos}</ol>', clase="siles-revela"))),
+        clase="siles-alterna", admin_label="Método",
+    )
+    cierre = seccion(
+        fila("2_3,1_3",
+             columna("2_3",
+                     texto("<h2>¿No sabés por dónde empezar?</h2>", clase="siles-firma siles-revela"),
+                     texto("<p>Contame qué hacés hoy y te digo cuál es el primer paso.</p>", clase="siles-subtitulo siles-medida siles-revela")),
+             columna("1_3", texto('<p><a class="siles-enlace" href="/contacto/">Hablemos</a></p>', clase="siles-revela")),
+             clase="siles-fila-abajo"),
+        admin_label="Cierre",
+    )
+    return cabecera + metodo + cierre
+
+
+# ---------- Cotización ----------
+
+CONDICIONES = [("factura-electronica", "Factura electrónica", "Cada pago lleva su comprobante, con el IVA del 13 % en fila aparte."),
+               ("pagos", "Pago por fases", "La mitad al iniciar y la otra mitad contra entrega, por transferencia o SINPE Móvil."),
+               ("firma-digital", "Firma digital", "Aprobás la propuesta con firma digital certificada, sin imprimir nada.")]
+
+
+def cotizacion():
+    principal = seccion(
+        fila("4_4", columna("4_4",
+                            texto("<h1>Cotización</h1>", clase="siles-firma siles-entra"),
+                            texto("[siles_cotizador]", clase="siles-entra siles-retraso-1"))),
+        admin_label="Cotizador",
+    )
+    condiciones = seccion(
+        fila("4_4", columna("4_4", texto(antetitulo("Condiciones") + "<h2>Claro desde el inicio</h2>", clase="siles-firma siles-revela"))),
+        fila("1_3,1_3,1_3", *[columna("1_3", texto(f'{icono(i, 40)}<h3 style="margin-top: var(--space-3)">{t}</h3><p style="color: var(--texto-suave)">{c}</p>',
+                                                   clase="siles-traza siles-revela")) for i, t, c in CONDICIONES]),
+        clase="siles-alterna", admin_label="Condiciones",
+    )
+    return principal + condiciones
+
+
+# ---------- Blog ----------
+
+CATEGORIAS_BLOG = [("Estrategia digital", "estrategia-digital"), ("Investigación", "investigacion"), ("Ideas sueltas", "ideas-sueltas"),
+                   ("Entrevistas", "entrevista"), ("Marketing político", "marketing-politico")]
+
+
+def boletin():
+    consentimiento = [{"value": "Acepto recibir el boletín por correo, según la Ley 8968. Me puedo dar de baja cuando quiera.", "checked": 0, "dragID": 0}]
+    campos = (sc("et_pb_contact_field", "", field_id="correo", field_title="Correo", field_type="email", fullwidth_field="on", required_mark="on")
+              + sc("et_pb_contact_field", "", field_id="consentimiento", field_title="Consentimiento", field_type="checkbox",
+                   checkbox_options=json.dumps(consentimiento, ensure_ascii=False, separators=(",", ":")), fullwidth_field="on", required_mark="on"))
+    formulario = sc("et_pb_contact_form", campos, email=CORREO, title="", captcha="off", submit_button_text="Suscribite",
+                    success_message="Quedaste en la lista. Te escribo cuando publique algo nuevo.",
+                    custom_message="Suscripción al boletín: %%correo%%", module_class="siles-revela")
+    return seccion(
+        fila("1_2,1_2",
+             columna("1_2", texto(antetitulo("Boletín") + "<h2>Recibí lo nuevo por correo</h2>", clase="siles-firma siles-revela"),
+                     texto("<p>Un correo cuando publico algo que vale la pena. Te das de baja cuando querás.</p>", clase="siles-revela", custom_css_main_element="color: var(--texto-suave);")),
+             columna("1_2", formulario)),
+        admin_label="Boletín",
+    )
+
+
+def plantilla_blog():
+    """Cuerpo del Theme Builder para /blog/ y las categorías: usa el listado de la página actual."""
+    fichas = '<nav class="siles-fichas" aria-label="Temas"><a href="/blog/">Todos</a>' + "".join(
+        f'<a href="/category/{s}/">{n}</a>' for n, s in CATEGORIAS_BLOG) + "</nav>"
+    cabecera = seccion(
+        fila("4_4", columna("4_4",
+                            texto(antetitulo("Blog"), clase="siles-entra"),
+                            texto("<h1>Ideas para transformar tu negocio</h1>", clase="siles-firma siles-entra siles-retraso-1"),
+                            texto("<p>Escribo corto y al grano sobre estrategia digital, investigación, marketing y lo que voy aprendiendo en el camino.</p>",
+                                  clase="siles-subtitulo siles-medida siles-entra siles-retraso-2"),
+                            texto(fichas, clase="siles-entra siles-retraso-3"))),
+        admin_label="Cabecera del blog",
+    )
+    listado = seccion(
+        fila("4_4", columna("4_4", sc("et_pb_blog", "", fullwidth="off", posts_number="9", use_current_loop="on", show_thumbnail="on",
+                                      show_content="off", show_more="on", show_author="off", show_date="on", show_categories="on",
+                                      show_comments="off", show_excerpt="on", excerpt_length="160", show_pagination="on",
+                                      use_manual_excerpt="on", module_class="siles-blog"))),
+        clase="siles-alterna", admin_label="Artículos",
+    )
+    return cabecera + listado + boletin()
+
+
+def plantilla_articulo():
+    """Cuerpo del Theme Builder para cada entrada del blog."""
+    articulo = seccion(
+        fila("4_4", columna("4_4",
+                            texto('<p><a class="siles-enlace siles-enlace--volver" href="/blog/">Volvé al blog</a></p>'),
+                            sc("et_pb_post_title", "", title="on", meta="on", author="off", date="on", categories="on", comments="off",
+                               featured_image="on", featured_placement="below", module_class="siles-articulo"),
+                            sc("et_pb_post_content", "", module_class="siles-lectura"),
+                            texto('<p>¿Querés aplicar esto en tu negocio? Lo vemos en una llamada de 30 minutos.</p>'
+                                  '<a class="siles-boton siles-boton--flecha" href="/contacto/">Agendá una llamada</a>', clase="siles-llamado")),
+             clase="siles-fila-angosta"),
+        admin_label="Artículo",
+    )
+    return articulo + boletin()
+
+
 # ---------- Salida ----------
 
 def exportar_layout(nombre, shortcode):
@@ -354,6 +496,10 @@ if __name__ == "__main__":
     exportar_layout("pie.json", pie())
     guardar_pagina("inicio", inicio())
     guardar_pagina("contacto", contacto())
+    guardar_pagina("servicios", servicios())
+    guardar_pagina("cotizacion", cotizacion())
+    exportar_layout("blog.json", plantilla_blog())
+    exportar_layout("articulo.json", plantilla_articulo())
     exportar_layout("proyecto.json", plantilla_proyecto())
     exportar_layout("proyectos.json", plantilla_proyectos())
     import proyectos
