@@ -400,3 +400,89 @@ body.siles .siles-lista .et_pb_text_inner a { display: inline-flex; align-items:
 body.siles .et_pb_row .et_pb_column.siles-bloque { margin-left: auto !important; margin-right: auto !important; }
 body.siles .siles-portada .et_pb_row .et_pb_column.siles-bloque { margin-left: 0 !important; }
 body.siles .siles-botones .et_pb_button_module_wrapper { vertical-align: top; }
+
+/* ============ Parte 4 · Proyectos ============ */
+
+/* Enlace con flecha (componente Enlace): <a class="siles-enlace" href="...">Texto</a> */
+body.siles #page-container a.siles-enlace {
+  display: inline-flex; align-items: center; gap: var(--space-2);
+  color: var(--accion); font-family: var(--font-titulos); font-weight: 500; font-size: 15px;
+  text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 2px;
+}
+body.siles #page-container a.siles-enlace::after {
+  content: ""; width: 18px; height: 18px; background: currentColor; transition: transform .2s var(--curva);
+  -webkit-mask: url("iconos/flecha.svg") center / contain no-repeat; mask: url("iconos/flecha.svg") center / contain no-repeat;
+}
+body.siles #page-container a.siles-enlace:hover { color: var(--accion-hover); }
+body.siles #page-container a.siles-enlace:hover::after { transform: translateX(3px); }
+
+/* Botón con ícono de enlace externo */
+body.siles #page-container .et_pb_button.siles-boton--externo { --siles-boton-icono: url("iconos/enlace-externo.svg"); gap: var(--space-2); }
+body.siles #page-container .et_pb_button.siles-boton--externo::after {
+  content: ""; display: inline-block; position: static; opacity: 1; flex: none; width: 20px; height: 20px; margin: 0; font-size: 0;
+  background: currentColor; -webkit-mask: var(--siles-boton-icono) center / contain no-repeat; mask: var(--siles-boton-icono) center / contain no-repeat;
+}
+
+/* Migas de pan */
+body.siles .siles-migas { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); font-weight: 400; font-size: 15px; color: var(--texto-suave); }
+body.siles #page-container .siles-migas a { color: var(--texto-suave); text-decoration: none; }
+body.siles #page-container .siles-migas a:hover { color: var(--texto); }
+body.siles .siles-migas [aria-current] { color: var(--texto); }
+
+/* Antetítulo con etiqueta de estado al lado */
+body.siles .siles-con-estado { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3); }
+
+/* Lista con marcas de verificación */
+body.siles .siles-checks { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; }
+body.siles .siles-checks li { display: flex; gap: 12px; align-items: center; padding: var(--space-3) 0; border-bottom: 1px solid var(--linea); font-size: 18px; line-height: 1.5; }
+
+/* Imágenes con filete (galería) */
+body.siles .et_pb_image.siles-papel { padding: 0; background: var(--superficie); }
+body.siles .et_pb_image.siles-papel img { display: block; }
+body.siles .et_pb_image.siles-papel + .et_pb_image.siles-papel { margin-top: var(--space-6); }
+
+/* Caso destacado en el listado: imagen sobre el patrón a la izquierda, texto a la derecha, todo en un bloque con filete */
+body.siles #page-container .et_pb_row.siles-destacado { display: flex; flex-wrap: wrap; align-items: stretch; padding: 0; margin-top: var(--space-12); background: var(--superficie); }
+body.siles .siles-destacado > .et_pb_column { margin: 0 !important; }
+body.siles .siles-destacado .siles-destacado__imagen { display: flex; align-items: center; justify-content: center; padding: var(--space-8); min-height: 280px; background-color: var(--fondo-suave); }
+body.siles .siles-destacado .siles-destacado__texto { padding: var(--space-12) var(--space-8); }
+body.siles .siles-destacado .siles-destacado__texto .et_pb_module { margin-bottom: var(--space-6); }
+@media (max-width: 980px) { body.siles .siles-destacado > .et_pb_column { width: 100% !important; } }
+body.siles .siles-trio .et_pb_text_inner, body.siles .siles-trio { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(180px, 100%), 1fr)); gap: var(--space-6); }
+body.siles .siles-trio p { padding: 0; font-weight: 400; font-size: 15px; line-height: 1.45; }
+body.siles .siles-trio .siles-antetitulo { margin-bottom: var(--space-2); }
+
+/* Portafolio filtrable: capturas en 16:10 */
+body.siles .siles-portafolio .et_portfolio_image { aspect-ratio: 16 / 10; background: var(--fondo-suave); }
+body.siles .siles-portafolio .et_portfolio_image img { width: 100%; height: 100%; object-fit: contain; }
+body.siles .siles-portafolio .et_pb_portfolio_item h2 { padding-top: var(--space-5); }
+body.siles .siles-portafolio .et_overlay { display: none; }
+
+/* Otros proyectos (módulo Navegación de entradas) como dos tarjetas */
+body.siles .et_pb_posts_nav.siles-otros { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: var(--space-6); margin-bottom: var(--space-8); }
+body.siles .et_pb_posts_nav.siles-otros > span { float: none; width: auto; text-align: left; }
+body.siles .et_pb_posts_nav.siles-otros a {
+  display: flex; flex-direction: column; gap: var(--space-2); height: 100%; box-sizing: border-box; padding: var(--space-8);
+  background: var(--superficie); border: 1px solid var(--linea); transition: transform .24s var(--curva), box-shadow .24s var(--curva), border-color .2s var(--curva);
+}
+body.siles #page-container .et_pb_posts_nav.siles-otros a { color: var(--texto); font-family: var(--font-titulos); font-weight: 600; font-size: 22px; line-height: 1.3; }
+body.siles .et_pb_posts_nav.siles-otros a:hover { transform: translateY(-4px); box-shadow: var(--sombra-elevada); border-color: var(--texto); }
+body.siles .et_pb_posts_nav.siles-otros .meta-nav { display: none; }
+body.siles .et_pb_posts_nav.siles-otros .nav-previous a::before,
+body.siles .et_pb_posts_nav.siles-otros .nav-next a::before {
+  font-family: var(--font-texto); font-weight: 400; font-size: 13px; letter-spacing: .2em; text-transform: uppercase; color: var(--texto-suave);
+}
+body.siles .et_pb_posts_nav.siles-otros .nav-previous a::before { content: "Proyecto anterior"; }
+body.siles .et_pb_posts_nav.siles-otros .nav-next a::before { content: "Proyecto siguiente"; }
+@media (prefers-reduced-motion: reduce) { body.siles .et_pb_posts_nav.siles-otros a, body.siles #page-container a.siles-enlace::after { transition: none; } }
+
+/* Ajustes tras la revisión de la fase 2 */
+body.siles #page-container .siles-portafolio .et_pb_portfolio_item h2 a,
+body.siles #page-container .siles-portafolio .et_pb_portfolio_item .et_pb_module_header a { color: var(--texto); }
+body.siles #page-container .siles-portafolio .post-meta a { color: var(--texto-suave); }
+body.siles #page-container .et_pb_portfolio_filters li a { color: var(--texto); }
+body.siles #page-container .et_pb_portfolio_filters li a.active { color: var(--fondo); }
+/* Galería: capturas de página completa recortadas en 4:3 desde arriba */
+body.siles .et_pb_image.siles-papel img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: top; }
+/* Captura principal del proyecto centrada */
+body.siles .et_pb_image.siles-captura { text-align: center; margin-inline: auto; }

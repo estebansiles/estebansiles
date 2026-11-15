@@ -219,6 +219,122 @@ def contacto():
     )
 
 
+# ---------- Proyectos ----------
+
+SECTORES_IDS = "579983390,579983391,579983392"  # categorías de proyecto Salud, Agroindustria y Comercio
+
+
+def lista_checks(items):
+    return '<ul class="siles-checks">' + "".join(f"<li>{icono('check')}{i}</li>" for i in items) + "</ul>"
+
+
+def parrafos(ps, estilo=""):
+    return "".join(f'<p{estilo}>{p}</p>' for p in ps)
+
+
+def ficha(p):
+    filas = [("Cliente", p["cliente"], False), ("Año", p["anio"], False), ("Sector", p["sector"], False),
+             ("Tipo", p["tipo"], False), ("Servicios", ", ".join(p["servicios"]), True), ("Créditos", "<br>".join(p["creditos"]), True)]
+    dl = "".join(('<div class="siles-ficha__ancho">' if ancho else "<div>") + f"<dt>{k}</dt><dd>{v}</dd></div>" for k, v, ancho in filas)
+    return texto(f"<dl>{dl}</dl>", clase="siles-ficha siles-entra siles-retraso-3")
+
+
+def proyecto(p):
+    """Contenido de un proyecto (va en la entrada; la plantilla del Theme Builder solo la envuelve)."""
+    migas = ('<nav class="siles-migas" aria-label="Migas de pan"><a href="/">Inicio</a><span aria-hidden="true">/</span>'
+             f'<a href="/portafolio/">Proyectos</a><span aria-hidden="true">/</span><span aria-current="page">{p["titulo"]}</span></nav>')
+    cabecera = seccion(
+        fila("4_4", columna("4_4", texto(migas, clase="siles-entra"))),
+        fila("3_5,2_5",
+             columna("3_5",
+                     texto(f'<p class="siles-antetitulo siles-con-estado">{p["sector"]} · {p["tipo"]} <span class="siles-estado siles-estado--exito">En producción</span></p>',
+                           clase="siles-entra siles-retraso-1"),
+                     texto(f"<h1>{p['titulo']}</h1>", clase="siles-firma siles-entra siles-retraso-1"),
+                     texto(f"<p>{p['bajada']}</p>", clase="siles-subtitulo siles-medida siles-entra siles-retraso-2"),
+                     boton("Visitá el sitio", p["url"], url_new_window="on", clase="siles-boton--externo siles-entra siles-retraso-3"),
+                     boton("Quiero algo así", "/contacto/", clase="siles-boton--secundario siles-entra siles-retraso-3"),
+                     clase="siles-botones"),
+             columna("2_5", ficha(p))),
+        fila("4_4", columna("4_4", imagen(p["captura"], f"Captura del proyecto {p['titulo']}", clase="siles-captura siles-entra siles-retraso-4", animation="off"))),
+        admin_label="Cabecera del proyecto",
+    )
+    caso = seccion(
+        fila("4_4", columna("4_4", texto(antetitulo("El caso") + "<h2>Del reto a la solución</h2>", clase="siles-firma siles-revela"))),
+        fila("1_2,1_2",
+             columna("1_2", texto(f'<div class="siles-paso-cabeza"><span class="siles-antetitulo">Reto</span>{icono("investigar", 32)}</div>'
+                                  + parrafos(p["reto"], ' style="color: var(--texto-suave)"'), clase="siles-traza siles-revela")),
+             columna("1_2", texto(f'<div class="siles-paso-cabeza"><span class="siles-antetitulo">Solución</span>{icono("desarrollo", 32)}</div>'
+                                  + parrafos(p["solucion"], ' style="color: var(--texto-suave)"'), clase="siles-traza siles-revela"))),
+        clase="siles-alterna", admin_label="El caso",
+    )
+    alcance = seccion(
+        fila("1_2,1_2",
+             columna("1_2",
+                     texto(antetitulo("Entregable principal") + f"<h2>{p['entregable']}</h2>", clase="siles-firma siles-revela"),
+                     texto(parrafos(p["entregable_texto"]), clase="siles-cuerpo-lg siles-revela"),
+                     texto(antetitulo("Lo que incluyó") + lista_checks(p["incluyo"]), clase="siles-revela")),
+             columna("1_2", *[imagen(g, f"Vista del proyecto {p['titulo']}", clase="siles-papel siles-revela", animation="off") for g in p["galeria"]])),
+        admin_label="Entregable",
+    )
+    return cabecera + caso + alcance
+
+
+def plantilla_proyecto():
+    """Cuerpo del Theme Builder para todos los proyectos: el contenido de la entrada, otros proyectos y el cierre."""
+    contenido = seccion(
+        fila("4_4", columna("4_4", sc("et_pb_post_content", "")), clase="siles-fila-completa"),
+        custom_padding="0px||0px||false|false", admin_label="Contenido del proyecto",
+    )
+    otros = seccion(
+        fila("4_4", columna("4_4",
+                            texto(antetitulo("Otros proyectos"), clase="siles-revela"),
+                            sc("et_pb_post_nav", "", in_same_term="off", prev_text="%title", next_text="%title",
+                               module_class="siles-otros siles-revela"),
+                            texto('<p><a class="siles-enlace" href="/portafolio/">Mirá todos los proyectos</a></p>', clase="siles-revela"))),
+        admin_label="Otros proyectos",
+    )
+    cierre = franja_cierre("Tu proyecto puede ser el siguiente", "Contame qué querés transformar y armamos el plan por fases.",
+                           "Pedí una cotización", "/cotizacion/")
+    return contenido + otros + cierre
+
+
+def plantilla_proyectos():
+    """Cuerpo del Theme Builder para el archivo /portafolio/."""
+    d = next(p for p in __import__("proyectos").PROYECTOS if p["slug"] == "sitio-web-para-doctor")
+    cabecera = seccion(
+        fila("4_4", columna("4_4",
+                            texto(antetitulo("Portafolio"), clase="siles-entra"),
+                            texto("<h1>Proyectos</h1>", clase="siles-firma siles-entra siles-retraso-1"),
+                            texto("<p>Lo que ya transformé con pymes y empresas de Costa Rica. Cada caso cuenta el reto, lo que hice y el resultado.</p>",
+                                  clase="siles-subtitulo siles-medida siles-entra siles-retraso-2"))),
+        fila("2_5,3_5",
+             columna("2_5", imagen(d["captura"], "Captura del sitio web para doctor", url=f"/portafolio/{d['slug']}/", animation="off"),
+                     clase="siles-destacado__imagen", background_image=f"{TEMA}/marca/patron-5.svg", background_size="cover"),
+             columna("3_5",
+                     texto('<p class="siles-antetitulo siles-con-estado">Caso destacado <span class="siles-estado siles-estado--exito">En producción</span></p>'),
+                     texto(f"<h2>{d['titulo']}</h2>"),
+                     texto(f"<p>{d['bajada']}</p>", clase="siles-cuerpo-lg siles-medida"),
+                     texto('<div class="siles-trio">'
+                           '<div class="siles-traza"><p class="siles-antetitulo">Reto</p><p>Llegar a pacientes más allá del boca a boca.</p></div>'
+                           '<div class="siles-traza"><p class="siles-antetitulo">Solución</p><p>Sitio de marca personal y landing page de pterigión.</p></div>'
+                           '<div class="siles-traza"><p class="siles-antetitulo">Resultado</p><p>Alcance más allá de su ámbito local.</p></div></div>'),
+                     texto(f'<p><a class="siles-enlace" href="/portafolio/{d["slug"]}/">Mirá el caso completo</a></p>'),
+                     clase="siles-destacado__texto"),
+             clase="siles-destacado siles-papel siles-entra siles-retraso-3"),
+        admin_label="Cabecera y destacado",
+    )
+    todos = seccion(
+        fila("4_4", columna("4_4", texto(antetitulo("Por sector") + "<h2>Todos los proyectos</h2>", clase="siles-firma siles-revela"))),
+        fila("4_4", columna("4_4", sc("et_pb_filterable_portfolio", "", fullwidth="off", posts_number="12",
+                                      include_categories=SECTORES_IDS, show_title="on", show_categories="on",
+                                      show_pagination="off", module_class="siles-portafolio"))),
+        clase="siles-alterna", admin_label="Todos los proyectos",
+    )
+    cierre = franja_cierre("Tu proyecto puede ser el siguiente", "Contame qué querés transformar y armamos el plan por fases.",
+                           "Pedí una cotización", "/cotizacion/")
+    return cabecera + todos + cierre
+
+
 # ---------- Salida ----------
 
 def exportar_layout(nombre, shortcode):
@@ -238,4 +354,9 @@ if __name__ == "__main__":
     exportar_layout("pie.json", pie())
     guardar_pagina("inicio", inicio())
     guardar_pagina("contacto", contacto())
-    print("Listo: encabezado.json, pie.json, paginas/inicio.txt, paginas/contacto.txt")
+    exportar_layout("proyecto.json", plantilla_proyecto())
+    exportar_layout("proyectos.json", plantilla_proyectos())
+    import proyectos
+    for p in proyectos.PROYECTOS:
+        guardar_pagina("proyecto-" + p["slug"], proyecto(p))
+    print("Listo: encabezado, pie, inicio, contacto, plantillas de proyectos y", len(proyectos.PROYECTOS), "proyectos")

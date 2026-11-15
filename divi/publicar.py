@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Sube las páginas de divi/paginas/ al WordPress por la API REST, con el constructor de Divi activo.
 
-Uso:  python3 divi/publicar.py https://staging3.siles.cr inicio contacto
+Uso:  python3 divi/publicar.py https://staging3.siles.cr inicio contacto proyectos
 La autenticación (contraseña de aplicación) la agrega el entorno; este script no maneja credenciales.
 Si la página ya existe (mismo slug), la actualiza; si no, la crea publicada.
 """
@@ -26,9 +26,24 @@ def api(base, metodo, ruta, datos=None):
         return json.load(r)
 
 
+def subir_proyectos(base):
+    """Pone el contenido de cada proyecto (divi/paginas/proyecto-<slug>.txt) en su entrada, con el constructor activo."""
+    sys.path.insert(0, AQUI)
+    import proyectos
+    for p in proyectos.PROYECTOS:
+        with open(os.path.join(AQUI, "paginas", "proyecto-" + p["slug"] + ".txt"), encoding="utf-8") as f:
+            contenido = f.read()
+        r = api(base, "POST", f"/project/{p['id']}", {"title": p["titulo"], "content": contenido,
+                                                      "meta": {"_et_pb_use_builder": "on", "_et_pb_old_content": ""}})
+        print(f"proyecto {p['id']}: actualizado {r['link']}")
+
+
 def main():
     base = sys.argv[1].rstrip("/")
     for clave in sys.argv[2:]:
+        if clave == "proyectos":
+            subir_proyectos(base)
+            continue
         slug, titulo = PAGINAS[clave]
         with open(os.path.join(AQUI, "paginas", clave + ".txt"), encoding="utf-8") as f:
             contenido = f.read()
