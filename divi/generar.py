@@ -15,7 +15,8 @@ VERSION = "4.27.9"
 TEMA = "/wp-content/themes/divi-child-siles/assets"
 MENU_PRINCIPAL = "579983389"  # "Principal Siles", creado en el staging por la API
 CORREO = "esteban@siles.cr"
-WHATSAPP = "[TU NÚMERO]"  # pendiente: número de WhatsApp
+WHATSAPP = "8865 9046"
+WHATSAPP_URL = "https://wa.me/50688659046"
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 
@@ -64,7 +65,7 @@ def imagen(src, alt, url="", clase="", **a):
 def anuncio(titulo, cuerpo, icono, url="", antetitulo="", clase="siles-tarjeta siles-revela"):
     html = (f'<p class="siles-antetitulo">{antetitulo}</p>' if antetitulo else "") + f"<p>{cuerpo}</p>"
     return sc("et_pb_blurb", html, title=titulo, url=url, image=f"{TEMA}/iconos/{icono}.svg", alt=titulo,
-              icon_placement="top", image_max_width="40px", text_orientation="left", module_class=clase)
+              icon_placement="top", image_max_width="40px", text_orientation="left", animation="off", module_class=clase)
 
 
 def icono(nombre, tamano=24):
@@ -101,7 +102,7 @@ def pie():
              columna("1_4", texto(
                  antetitulo("Contacto")
                  + f'<p>{icono("correo", 20)}<a href="mailto:{CORREO}">{CORREO}</a></p>'
-                 + f'<p>{icono("mensaje", 20)}<a href="/contacto/">WhatsApp</a></p>'
+                 + f'<p>{icono("mensaje", 20)}<a href="{WHATSAPP_URL}" target="_blank" rel="noopener">WhatsApp {WHATSAPP}</a></p>'
                  + f'<p>{icono("ubicacion", 20)}San José, Costa Rica</p>', clase="siles-lista")),
              columna("1_4", texto(
                  antetitulo("Sitio") + "".join(f'<p><a href="{u}">{t}</a></p>' for t, u in sitio), clase="siles-lista"))),
@@ -151,7 +152,7 @@ def inicio():
                             texto("<p>Hola, soy Esteban. Me dedico a la comunicación estratégica y a la transformación digital. No hay excusas.</p>",
                                   clase="siles-subtitulo siles-entra siles-retraso-2"),
                             boton("Agendá una llamada", "/contacto/", clase="siles-boton--flecha siles-entra siles-retraso-3"),
-                            boton("Escribime por WhatsApp", "/contacto/", clase="siles-boton--secundario siles-boton--mensaje siles-entra siles-retraso-3"),
+                            boton("Escribime por WhatsApp", WHATSAPP_URL, url_new_window="on", clase="siles-boton--secundario siles-boton--mensaje siles-entra siles-retraso-3"),
                             clase="siles-bloque siles-botones")),
         clase="siles-portada", background_image=f"{TEMA}/marca/patron-11.svg", background_size="cover",
         admin_label="Portada",
@@ -203,7 +204,7 @@ def contacto():
                     success_message="Recibí tu mensaje. Te respondo en menos de 24 horas.",
                     module_id="formulario", module_class="siles-entra siles-retraso-4")
     filas = (f'<a href="mailto:{CORREO}">{icono("correo")}{CORREO}</a>'
-             f'<a href="#formulario">{icono("mensaje")}WhatsApp: {WHATSAPP}</a>'
+             f'<a href="{WHATSAPP_URL}" target="_blank" rel="noopener">{icono("mensaje")}WhatsApp: {WHATSAPP}</a>'
              f'<a href="#formulario">{icono("calendario")}Agendá una llamada de 30 minutos</a>'
              f'<span class="siles-fila">{icono("ubicacion")}San José, Costa Rica</span>')
     return seccion(

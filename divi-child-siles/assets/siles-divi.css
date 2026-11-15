@@ -369,3 +369,29 @@ body.siles .et_pb_contact_form .et_pb_contact_field_checkbox label { display: fl
 body.siles .et_pb_contact_form .et_pb_contact_field_options_title { display: none; }
 body.siles .et_pb_contact_form .et_contact_bottom_container { float: none; display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-4); text-align: left; }
 body.siles .et_pb_contact_form .et_pb_contact_captcha_question { font-size: 15px; }
+
+/* ---------- Colores de enlace por zona ----------
+   La regla general (#page-container a) pinta los enlaces con el color de acción; en navegación, pie,
+   títulos de tarjeta y filas de contacto el enlace va en tinta, como en el prototipo. */
+body.siles #page-container .et-l--header .et_pb_menu .et-menu > li > a { color: var(--texto-suave); }
+body.siles #page-container .et-l--header .et_pb_menu .et-menu > li > a:hover,
+body.siles #page-container .et-l--header .et_pb_menu .et-menu > li.current-menu-item > a { color: var(--texto); }
+body.siles #page-container .et-l--footer a { color: var(--texto); }
+body.siles #page-container .et-l--footer a:hover { color: var(--verde-2); }
+body.siles #page-container .et_pb_blurb.siles-tarjeta .et_pb_module_header a,
+body.siles #page-container .siles-filas a { color: var(--texto); }
+body.siles #page-container .siles-filas a:hover { color: var(--accion); }
+body.siles #page-container .siles-pie-legal a { color: var(--texto-suave); }
+
+/* Listas del pie: el contenedor real es .et_pb_text_inner */
+body.siles .siles-lista .et_pb_text_inner { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-3); }
+body.siles .siles-lista .et_pb_text_inner > .siles-antetitulo { margin-bottom: 0; }
+
+/* Formulario: área de texto más alta y flecha en el botón de envío */
+body.siles .et_pb_contact_form textarea.et_pb_contact_message { min-height: 140px; }
+body.siles #page-container .et_pb_contact_submit { gap: var(--space-2); }
+body.siles #page-container .et_pb_contact_submit::after {
+  content: ""; display: inline-block; position: static; opacity: 1; width: 20px; height: 20px; margin: 0; font-size: 0;
+  background: currentColor; -webkit-mask: url("iconos/flecha.svg") center / contain no-repeat; mask: url("iconos/flecha.svg") center / contain no-repeat;
+}
+body.siles .siles-lista .et_pb_text_inner a { display: inline-flex; align-items: center; min-height: 32px; }
