@@ -259,3 +259,113 @@ body.siles .siles-oscuro h1, body.siles .siles-oscuro h2, body.siles .siles-oscu
   .siles-bloque { padding: var(--space-6); }
   .siles-display, .siles-display h1, .siles-display h2 { font-size: 38px !important; }
 }
+
+/* ============ Parte 3 · Piezas del sitio ============ */
+
+/* Íconos en línea ([siles_icono]): heredan el color del texto */
+.siles-icono { display: inline-block; flex: none; vertical-align: middle; color: inherit; }
+.siles-oscuro .siles-icono { --icono-acento: var(--verde-2); }
+
+/* Antetítulo dentro de un módulo Texto: <p class="siles-antetitulo">Servicios</p> */
+body.siles .siles-antetitulo {
+  margin: 0 0 var(--space-4); padding: 0;
+  font-family: var(--font-texto); font-weight: 400; font-size: 13px; line-height: 1.3;
+  letter-spacing: .2em; text-transform: uppercase; color: var(--texto-suave);
+}
+body.siles .et_pb_text_inner > *:last-child { padding-bottom: 0; margin-bottom: 0; }
+/* Título 2 con el tamaño de un título 1 (franjas de cierre) */
+body.siles .siles-titulo-1 h2 { font-size: clamp(36px, 4.4vw, 52px); line-height: 1.12; }
+
+/* ---------- Encabezado (Theme Builder) ----------
+   Fila con la clase siles-cabecera: logo, menú y botón en una sola línea, también en tableta y móvil. */
+body.siles #page-container .et_pb_row.siles-cabecera {
+  display: flex; align-items: center; gap: var(--space-2) var(--space-8);
+  min-height: 80px; padding: var(--space-2) 0;
+}
+body.siles .et_pb_row.siles-cabecera > .et_pb_column { width: auto !important; margin: 0 !important; float: none; }
+body.siles .et_pb_row.siles-cabecera > .et_pb_column:nth-child(2) { flex: 1 1 auto; }
+body.siles .et_pb_row.siles-cabecera .et_pb_menu__wrap { justify-content: flex-end; }
+body.siles .et_pb_row.siles-cabecera .et_pb_menu .et-menu > li { padding-left: 0; padding-right: 0; margin-left: var(--space-6); }
+body.siles .et_pb_row.siles-cabecera .et_pb_menu .et-menu > li > a { padding-top: 20px; padding-bottom: 20px; }
+body.siles .et_pb_row.siles-cabecera .et_pb_menu .et-menu > li > a::before { bottom: 12px; }
+body.siles .siles-logo img { display: block; height: 36px; width: auto; }
+body.siles .siles-oscuro .siles-logo img, body.siles .et-l--footer .siles-logo img { height: 40px; }
+/* Menú móvil de Divi con la marca */
+body.siles .et_pb_menu .et_mobile_nav_menu .mobile_nav .mobile_menu_bar::before { color: var(--texto); }
+body.siles .et_pb_menu .et_mobile_menu { border-top: 2px solid var(--realce); box-shadow: var(--sombra-elevada, 0 20px 40px -20px rgba(30,32,32,.3)); }
+body.siles .et_pb_menu .et_mobile_menu li a { font-family: var(--font-texto); font-size: 16px; color: var(--texto); }
+@media (max-width: 600px) {
+  body.siles .et_pb_row.siles-cabecera > .et_pb_column:nth-child(3) { display: none; }
+}
+
+/* ---------- Pie (Theme Builder) ---------- */
+body.siles .siles-pie-legal .et_pb_text_inner {
+  display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: var(--space-2) var(--space-6);
+  padding-top: var(--space-6); border-top: 1px solid var(--linea);
+  font-size: 13px; letter-spacing: .2em; text-transform: uppercase; color: var(--texto-suave);
+}
+body.siles .siles-pie-legal p { padding: 0; margin: 0; }
+body.siles .siles-pie-legal a, body.siles .siles-lista a { text-decoration: none; }
+body.siles .siles-lista { display: flex; flex-direction: column; gap: var(--space-3); }
+body.siles .siles-lista p { display: flex; align-items: center; gap: 10px; margin: 0; padding: 0; font-weight: 400; font-size: 15px; line-height: 1.45; }
+
+/* ---------- Botones con ícono del sistema ----------
+   siles-boton--sm (pequeño), siles-boton--flecha (flecha al final), siles-boton--mensaje (globo al inicio) */
+body.siles #page-container .et_pb_button.siles-boton--sm { min-height: var(--control-alto-sm, 36px); padding: 0 var(--space-4) !important; font-size: 14px; }
+body.siles #page-container .et_pb_button.siles-boton--flecha::after,
+body.siles #page-container .et_pb_button.siles-boton--mensaje::before {
+  content: ""; display: inline-block; position: static; opacity: 1; flex: none;
+  width: 20px; height: 20px; margin: 0; font-size: 0; line-height: 0;
+  background: currentColor;
+  -webkit-mask: var(--siles-boton-icono) center / contain no-repeat; mask: var(--siles-boton-icono) center / contain no-repeat;
+  transition: transform .2s var(--curva);
+}
+body.siles #page-container .et_pb_button.siles-boton--flecha { --siles-boton-icono: url("iconos/flecha.svg"); gap: var(--space-2); }
+body.siles #page-container .et_pb_button.siles-boton--mensaje { --siles-boton-icono: url("iconos/mensaje.svg"); gap: var(--space-2); }
+body.siles #page-container .et_pb_button.siles-boton--flecha:hover::after { transform: translateX(3px); }
+/* Varios botones en una fila: clase siles-botones en la columna */
+body.siles .siles-botones .et_pb_button_module_wrapper { display: inline-block; margin: 0 var(--space-3) var(--space-3) 0; }
+
+/* ---------- Portada con patrón ----------
+   Sección con la clase siles-portada y el patrón como imagen de fondo; la columna lleva siles-bloque. */
+body.siles .et_pb_section.siles-portada { display: flex; align-items: center; min-height: 600px; background-color: var(--fondo-suave); background-size: cover; background-position: center; }
+body.siles .siles-portada .et_pb_row { width: calc(100% - 2 * var(--space-6)); }
+body.siles .siles-portada .siles-bloque { float: none; }
+@media (max-width: 640px) { body.siles .et_pb_section.siles-portada { min-height: 520px; } }
+
+/* ---------- Franja de cierre ----------
+   Sección con siles-franja; la columna con siles-bloque queda centrada, sobre fondo liso. */
+body.siles .et_pb_section.siles-franja, body.siles .et_pb_section.siles-franja-profunda { display: flex; align-items: center; min-height: 420px; }
+body.siles .siles-franja .siles-bloque, body.siles .siles-franja-profunda .siles-bloque { float: none; margin-inline: auto; max-width: 720px; background: var(--superficie); }
+
+/* ---------- Cinta: sección sin relleno y fila a todo el ancho ---------- */
+body.siles #page-container .et_pb_row.siles-fila-completa { width: 100%; max-width: none; padding: 0; }
+
+/* ---------- Encabezado de bloque: título a la izquierda, bajada a la derecha, alineados abajo ---------- */
+@media (min-width: 981px) {
+  body.siles .et_pb_row.siles-fila-abajo { display: flex; align-items: flex-end; }
+}
+body.siles .et_pb_row.siles-fila-abajo { padding-bottom: 0; margin-bottom: var(--space-12); }
+
+/* ---------- Tarjetas (Anuncio) ---------- */
+body.siles .et_pb_blurb.siles-tarjeta .et_pb_main_blurb_image { text-align: left; margin-bottom: var(--space-4); }
+body.siles .et_pb_blurb.siles-tarjeta .et_pb_image_wrap { width: 40px; }
+body.siles .et_pb_equal_columns .et_pb_blurb.siles-tarjeta { height: 100%; }
+body.siles .et_pb_blurb.siles-tarjeta .et_pb_module_header a { color: var(--texto); }
+
+/* ---------- Pasos del proceso y filas de datos ---------- */
+body.siles .siles-paso-cabeza { display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-3); }
+body.siles .siles-paso-cabeza .siles-antetitulo { margin: 0; }
+body.siles .siles-filas a, body.siles .siles-filas span.siles-fila {
+  display: flex; gap: 12px; align-items: center; min-height: 44px; padding: var(--space-3) 0;
+  color: var(--texto); text-decoration: none; border-bottom: 1px solid var(--linea);
+}
+body.siles .siles-filas span.siles-fila { color: var(--texto-suave); border-bottom: 0; }
+body.siles .siles-filas p { padding: 0; }
+
+/* ---------- Formulario de contacto: ancho completo y casilla de consentimiento ---------- */
+body.siles .et_pb_contact_form_container .et_pb_contact_main_title { display: none; }
+body.siles .et_pb_contact_form .et_pb_contact_field_checkbox label { display: flex; gap: var(--space-3); align-items: flex-start; font-size: 15px; line-height: 1.45; }
+body.siles .et_pb_contact_form .et_pb_contact_field_options_title { display: none; }
+body.siles .et_pb_contact_form .et_contact_bottom_container { float: none; display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-4); text-align: left; }
+body.siles .et_pb_contact_form .et_pb_contact_captcha_question { font-size: 15px; }
