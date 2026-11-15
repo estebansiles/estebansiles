@@ -486,3 +486,5 @@ body.siles #page-container .et_pb_portfolio_filters li a.active { color: var(--f
 body.siles .et_pb_image.siles-papel img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: top; }
 /* Captura principal del proyecto centrada */
 body.siles .et_pb_image.siles-captura { text-align: center; margin-inline: auto; }
+/* El clearfix de Divi (::before/::after) ocupaba celdas de la cuadrícula de "Otros proyectos" */
+body.siles .et_pb_posts_nav.siles-otros::before, body.siles .et_pb_posts_nav.siles-otros::after { display: none; }
