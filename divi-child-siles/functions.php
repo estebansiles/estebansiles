@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'SILES_DIVI_VERSION', '0.1.0' );
+define( 'SILES_DIVI_VERSION', '0.1.1' );
 
 /**
  * Carga el estilo de Divi y, después, las hojas del sistema de diseño.

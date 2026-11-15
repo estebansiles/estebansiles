@@ -40,11 +40,15 @@ body.siles :focus-visible { outline: 2px solid var(--foco); outline-offset: var(
 body.siles #page-container .et_pb_row,
 body.siles #page-container .container { width: calc(100% - 2 * var(--space-6)); max-width: var(--ancho-contenido); }
 
-/* Secciones: espacio vertical del sistema y filete entre bloques */
-body.siles .et_pb_section { padding-top: var(--space-16); padding-bottom: var(--space-16); }
+/* Secciones: espacio vertical del sistema.
+   :where() deja la especificidad en la de .et_pb_section, así el relleno que se fije
+   en el constructor (sección por sección) sigue mandando. El encabezado del Theme Builder
+   queda fuera: lleva su propio relleno, más corto. */
+:where(body.siles) :where(.et-l--body, #et-main-area > #main-content, .et-l--footer) .et_pb_section { padding-top: var(--space-16); padding-bottom: var(--space-16); }
 @media (min-width: 981px) {
-  body.siles .et_pb_section { padding-top: var(--space-24); padding-bottom: var(--space-24); }
+  :where(body.siles) :where(.et-l--body, #et-main-area > #main-content, .et-l--footer) .et_pb_section { padding-top: var(--space-24); padding-bottom: var(--space-24); }
 }
+:where(body.siles) .et-l--header .et_pb_section { padding-top: var(--space-4); padding-bottom: var(--space-4); }
 
 /* Esquinas rectas en imágenes y bloques */
 body.siles .et_pb_image img, body.siles .et_pb_post img, body.siles .et_pb_portfolio_item img { border-radius: var(--radio-0); }
