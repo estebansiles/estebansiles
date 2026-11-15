@@ -395,3 +395,8 @@ body.siles #page-container .et_pb_contact_submit::after {
   background: currentColor; -webkit-mask: url("iconos/flecha.svg") center / contain no-repeat; mask: url("iconos/flecha.svg") center / contain no-repeat;
 }
 body.siles .siles-lista .et_pb_text_inner a { display: inline-flex; align-items: center; min-height: 32px; }
+
+/* Divi fija margin-right:0 !important en la última columna: el bloque de la franja se centra con márgenes explícitos */
+body.siles .et_pb_row .et_pb_column.siles-bloque { margin-left: auto !important; margin-right: auto !important; }
+body.siles .siles-portada .et_pb_row .et_pb_column.siles-bloque { margin-left: 0 !important; }
+body.siles .siles-botones .et_pb_button_module_wrapper { vertical-align: top; }
