@@ -65,7 +65,7 @@ def imagen(src, alt, url="", clase="", **a):
 def anuncio(titulo, cuerpo, icono, url="", antetitulo="", clase="siles-tarjeta siles-revela"):
     html = (f'<p class="siles-antetitulo">{antetitulo}</p>' if antetitulo else "") + f"<p>{cuerpo}</p>"
     return sc("et_pb_blurb", html, title=titulo, url=url, image=f"{TEMA}/iconos/{icono}.svg", alt=titulo,
-              icon_placement="top", image_max_width="40px", text_orientation="left", animation="off", module_class=clase)
+              icon_placement="top", icon_alignment="left", image_max_width="40px", text_orientation="left", animation="off", module_class=clase)
 
 
 def icono(nombre, tamano=24):

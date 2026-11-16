@@ -662,3 +662,4 @@ body.siles .et_pb_column .et_pb_blurb.siles-tarjeta .et_pb_blurb_content { text-
 @media (prefers-reduced-motion: reduce) {
   body.siles .et_pb_section.siles-portada { background-image: url("marca/patron-11-quieto.svg") !important; }
 }
+body.siles .et_pb_column .et_pb_blurb.siles-tarjeta .et_pb_image_wrap { margin-left: 0; margin-right: auto; }
