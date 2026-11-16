@@ -94,6 +94,8 @@ function patron(semilla, densidad, alto, ancho = 1440, animado = false) {
 escribir('assets/marca/patron-11.svg', patron(11, 14, 600, 1440, true)); /* portada: nodos que se encienden */
 escribir('assets/marca/patron-11-quieto.svg', patron(11, 14, 600)); /* la misma red sin animación, para "reducir movimiento" */
 escribir('assets/marca/patron-5.svg', patron(5, 10, 280, 640));
+/* Imagen para redes sociales (1200 × 630): misma red de la portada, con nodos de la paleta encendidos */
+escribir('herramientas/patron-social.svg', patron(11, 14, 630, 1200, true));
 escribir('assets/marca/patron-23.svg', patron(23, 10, 280, 640));
 
 console.log('Listo:', Object.keys(ICONOS).length, 'íconos, 2 logos, 3 patrones.');

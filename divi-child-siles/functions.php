@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'SILES_DIVI_VERSION', '0.7.1' );
+define( 'SILES_DIVI_VERSION', '0.7.2' );
 define( 'SILES_DIVI_CORREO', 'contact@siles.cr' ); // Recibe las cotizaciones.
 
 /**
@@ -84,3 +84,24 @@ function siles_divi_icono( $atts ) {
 add_shortcode( 'siles_icono', 'siles_divi_icono' );
 
 require_once __DIR__ . '/inc/cotizador.php';
+
+/**
+ * Imagen para redes sociales: si la versión principal es AVIF (la crea el plugin "Formatos modernos de imagen"),
+ * Yoast publica la imagen original, porque Facebook, LinkedIn y WhatsApp no muestran AVIF en sus vistas previas.
+ *
+ * @param string $url URL de la imagen que Yoast va a publicar.
+ * @return string
+ */
+function siles_divi_imagen_social( $url ) {
+	if ( ! is_string( $url ) || ! preg_match( '/\.avif(\?.*)?$/i', $url ) ) {
+		return $url;
+	}
+	$adjunto = attachment_url_to_postid( preg_replace( '/\?.*$/', '', $url ) );
+	if ( ! $adjunto ) {
+		return $url;
+	}
+	$original = wp_get_original_image_url( $adjunto );
+	return ( $original && ! preg_match( '/\.avif$/i', $original ) ) ? $original : $url;
+}
+add_filter( 'wpseo_opengraph_image', 'siles_divi_imagen_social' );
+add_filter( 'wpseo_twitter_image', 'siles_divi_imagen_social' );
