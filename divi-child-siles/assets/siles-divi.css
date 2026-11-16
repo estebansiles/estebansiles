@@ -610,3 +610,5 @@ body.siles #page-container .et_pb_tabs_controls li a { color: var(--texto-suave)
 body.siles #page-container .et_pb_tabs_controls li.et_pb_tab_active a { color: var(--texto); }
 body.siles .siles-paso .siles-antetitulo { margin: 0; }
 body.siles .siles-servicio__lateral .siles-boton { margin-top: var(--space-4); }
+/* La plantilla vieja del blog dejaba título y metadatos en position:absolute (CSS propio del layout) */
+body.siles .siles-blog .et_pb_post .entry-title, body.siles .siles-blog .et_pb_post .post-meta { position: static; }
