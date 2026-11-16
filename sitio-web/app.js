@@ -48,7 +48,8 @@
           <a href=${ir('inicio')} aria-label="Siles Comunicación, inicio" style="display: flex; align-items: center; min-height: 44px"><${Logo} alto=${36} /></a>
           <nav aria-label="Principal" style="display: flex; flex-wrap: wrap; gap: 0 var(--space-6); margin-left: auto">
             ${RUTAS.filter(function (r) { return r[0] !== 'cotizacion'; }).map(function (r) {
-              return html`<a key=${r[0]} class="sl-cuerpo-ui nav-a" href=${ir(r[0])} aria-current=${p.vista === r[0] ? 'page' : undefined}>${r[1]}</a>`;
+              var actual = p.vista === r[0] ? 'page' : (p.vista === 'proyecto' && r[0] === 'proyectos' ? 'true' : undefined);
+              return html`<a key=${r[0]} class="sl-cuerpo-ui nav-a" href=${ir(r[0])} aria-current=${actual}>${r[1]}</a>`;
             })}
           </nav>
           <${Boton} variante="secundario" tamano="sm" href=${ir(cta[0])}>${cta[1]}<//>
@@ -292,7 +293,7 @@
                 return html`<div key=${c[0]} class="traza" style="display: flex; flex-direction: column; gap: var(--space-2)"><span class="sl-etiqueta" style=${SUAVE}>${c[0]}</span><p class="sl-cuerpo-ui" style="margin: 0">${c[1]}</p></div>`;
               })}
             </div>
-            <div><${Enlace} href=${ir('contacto')}>Quiero algo así<//></div>
+            <div><${Enlace} href=${ir('proyecto')}>Mirá el caso completo<//></div>
           </div>
         </article>
       <//>
@@ -304,10 +305,139 @@
         <${Filtro} etiqueta="Filtrar por sector" opciones=${SECTORES} valor=${sector} alCambiar=${setSector} />
         <div key=${sector} class="cambia" style=${REJILLA + '; animation-name: sube-a'}>
           ${lista.map(function (p, i) {
-            return html`<div key=${i} class="eleva" style="display: grid"><${Tarjeta} icono=${p.icono} antetitulo=${p.sector} titulo="[Nombre del proyecto]" href=${ir('contacto')}>[Reto del cliente, lo que hice y el resultado medible]<//></div>`;
+            return html`<div key=${i} class="eleva" style="display: grid"><${Tarjeta} icono=${p.icono} antetitulo=${p.sector} titulo="[Nombre del proyecto]" href=${ir('proyecto')}>[Reto del cliente, lo que hice y el resultado medible]<//></div>`;
           })}
         </div>
         <p class="sl-nota" style="margin: var(--space-8) 0 0; color: var(--texto-suave)">Tarjetas de ejemplo: reemplazá cada una por un proyecto real con el permiso del cliente.</p>
+      <//>
+
+      <${Franja} fondo="marca" alto=${420}>
+        <div class="revela" style="display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-6)">
+          <${Firma} clase="sl-titulo-1">Tu proyecto puede ser el siguiente<//>
+          <p class="sl-subtitulo sl-medida" style="margin: 0; color: var(--texto-suave)">Contame qué querés transformar y armamos el plan por fases.</p>
+          <${Boton} iconoFinal="flecha" href=${ir('cotizacion')}>Pedí una cotización<//>
+        </div>
+      <//>`;
+  }
+
+  /* ---------- Proyecto único (plantilla) ---------- */
+
+  var CAPTURAS = [
+    { id: 'escritorio', texto: 'Escritorio', icono: 'diseno-web', proporcion: '16 / 10', rotulo: '[Captura de escritorio · 16:10]', alt: 'Espacio para la captura de escritorio', pie: 'Vista de escritorio' },
+    { id: 'tableta', texto: 'Tableta', icono: 'experiencia-usuario', proporcion: '4 / 3', rotulo: '[Captura de tableta · 4:3]', alt: 'Espacio para la captura de tableta', pie: 'Vista de tableta' },
+    { id: 'movil', texto: 'Móvil', icono: 'app-movil', proporcion: '1 / 1', rotulo: '[Captura de móvil]', alt: 'Espacio para la captura de móvil', pie: 'Vista de móvil' }
+  ];
+  var FICHA_PROYECTO = [['Cliente', '[Nombre del cliente]'], ['Año', '[Año]'], ['Sector', 'Salud'], ['Plazo', '[Duración]'], ['Servicios', '[Servicios aplicados]', true], ['Herramientas', '[Plataforma e integraciones]', true]];
+  var CASO = [
+    ['Reto', 'investigar', '[Qué problema tenía el cliente]', '[Contexto: cómo trabajaba antes, qué le costaba y qué quería lograr]'],
+    ['Solución', 'desarrollo', '[Qué construí]', '[Decisiones de diseño, estructura del sitio e integraciones]'],
+    ['Resultado', 'mejorar', '[Qué cambió]', '[Cifra o cambio medible, con el periodo en que se midió]']
+  ];
+
+  function Proyecto() {
+    var e = useState('escritorio'), vista = e[0], setVista = e[1];
+    var v = CAPTURAS.filter(function (x) { return x.id === vista; })[0];
+    function alSitio(ev) { ev.preventDefault(); var el = document.getElementById('sitio'); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+    return html`
+      <${Seccion}>
+        <nav class="migas sl-cuerpo-ui entra" aria-label="Migas de pan" style="display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); margin-bottom: var(--space-8); color: var(--texto-suave)">
+          <a href=${ir('inicio')}>Inicio</a><span aria-hidden="true">/</span>
+          <a href=${ir('proyectos')}>Proyectos</a><span aria-hidden="true">/</span>
+          <span aria-current="page" style="color: var(--texto)">Sitio web para doctor</span>
+        </nav>
+
+        <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: var(--space-12) var(--space-16)">
+          <div style="flex: 7 1 360px; min-width: 0; display: flex; flex-direction: column; gap: var(--space-4)">
+            <div class="entra" style="display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3); animation-delay: .06s">
+              <span class="sl-etiqueta" style=${SUAVE}>Salud · Diseño web</span>
+              <${Estado} tipo="exito">En producción<//>
+            </div>
+            <${Firma} nivel="h1" clase="sl-titulo-1" extra="entra" estilo="animation-delay: .12s">Sitio web para doctor<//>
+            <p class="sl-subtitulo sl-medida entra" style="margin: var(--space-2) 0 0; color: var(--texto-suave); animation-delay: .24s">[Una frase que resuma qué se hizo y qué cambió para el cliente]</p>
+            <div class="entra" style="display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-4) var(--space-6); margin-top: var(--space-4); animation-delay: .36s">
+              <${Boton} iconoFinal="enlace-externo" href="#sitio" onClick=${alSitio}>Visitá el sitio<//>
+              <${Enlace} href=${ir('contacto')}>Quiero algo así<//>
+            </div>
+          </div>
+          <dl class="entra" style="flex: 4 1 280px; min-width: 0; margin: 0; padding: var(--space-8); background: var(--fondo-alterno); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-6); animation-delay: .3s">
+            ${FICHA_PROYECTO.map(function (f) {
+              return html`<div key=${f[0]} style=${'display: flex; flex-direction: column; gap: var(--space-2);' + (f[2] ? 'grid-column: 1 / -1' : '')}><dt class="sl-etiqueta" style=${SUAVE}>${f[0]}</dt><dd class="sl-cuerpo-ui" style="margin: 0">${f[1]}</dd></div>`;
+            })}
+          </dl>
+        </div>
+
+        <figure id="sitio" class="entra" style="margin: var(--space-12) 0 0; display: flex; flex-direction: column; gap: var(--space-3); animation-delay: .42s">
+          <div class="marco marco--16x9 papel" role="img" aria-label="Espacio para la captura principal del proyecto">
+            <${Icono} nombre="diseno-web" tamano=${48} />
+            <span class="sl-etiqueta">[Captura principal del sitio · 16:9]</span>
+          </div>
+          <figcaption class="sl-nota" style=${SUAVE}>[Pie de foto: qué se ve en la captura]</figcaption>
+        </figure>
+      <//>
+
+      <${Seccion} alterna=${true}>
+        <div class="revela" style="display: flex; flex-direction: column; gap: var(--space-4); margin-bottom: var(--space-12)">
+          <span class="sl-etiqueta" style=${SUAVE}>El caso</span>
+          <${Firma}>Del reto al resultado<//>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: var(--space-8)">
+          ${CASO.map(function (c) {
+            return html`
+              <div key=${c[0]} class="traza revela" style="display: flex; flex-direction: column; gap: var(--space-3)">
+                <div style="display: flex; justify-content: space-between; align-items: center"><span class="sl-etiqueta" style=${SUAVE}>${c[0]}</span><${Icono} nombre=${c[1]} tamano=${32} /></div>
+                <h3 class="sl-titulo-3" style="margin: 0">${c[2]}</h3>
+                <p class="sl-cuerpo" style="margin: 0; color: var(--texto-suave)">${c[3]}</p>
+              </div>`;
+          })}
+        </div>
+      <//>
+
+      <${Seccion}>
+        <${Encabezado2} antetitulo="Galería" titulo="Así se ve" margen="var(--space-8)">
+          <p class="sl-cuerpo-ui" role="status" style="flex: 0 1 auto; margin: 0; color: var(--texto-suave)">${v.pie}</p>
+        <//>
+        <div class="revela" style="overflow-x: auto; margin-bottom: var(--space-8)">
+          <${Pestanas} pestanas=${CAPTURAS.map(function (x) { return { id: x.id, texto: x.texto }; })} activa=${vista} alCambiar=${setVista} />
+        </div>
+        <div key=${vista} class="cambia" style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: var(--space-6); animation-name: sube-a">
+          <div class="marco papel" role="img" aria-label=${v.alt} style=${'flex: 8 1 420px; min-width: 0; aspect-ratio: ' + v.proporcion}>
+            <${Icono} nombre=${v.icono} tamano=${48} />
+            <span class="sl-etiqueta">${v.rotulo}</span>
+          </div>
+          <div style="flex: 4 1 260px; min-width: 0; display: flex; flex-direction: column; gap: var(--space-6)">
+            <div class="marco marco--4x3" role="img" aria-label="Espacio para un detalle del diseño"><span class="sl-etiqueta">[Detalle 1 · 4:3]</span></div>
+            <div class="marco marco--4x3" role="img" aria-label="Espacio para otro detalle del diseño"><span class="sl-etiqueta">[Detalle 2 · 4:3]</span></div>
+          </div>
+        </div>
+      <//>
+
+      <${Seccion} alterna=${true}>
+        <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: var(--space-12) var(--space-16)">
+          <div class="revela" style="flex: 6 1 340px; min-width: 0; display: flex; flex-direction: column; gap: var(--space-6)">
+            <div style="display: flex; flex-direction: column; gap: var(--space-4)">
+              <span class="sl-etiqueta" style=${SUAVE}>Alcance</span>
+              <${Firma}>Lo que incluyó<//>
+            </div>
+            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column">
+              ${[1, 2, 3, 4].map(function (n) {
+                return html`<li key=${n} class="sl-cuerpo" style="display: flex; gap: 12px; align-items: center; padding: var(--space-3) 0; border-bottom: 1px solid var(--linea)"><${Icono} nombre="check" tamano=${24} />[Entregable ${n}]</li>`;
+              })}
+            </ul>
+          </div>
+          <figure class="revela" style="flex: 5 1 320px; min-width: 0; margin: 0; padding: var(--space-8); background: var(--superficie); border: 1px solid var(--linea); display: flex; flex-direction: column; gap: var(--space-5)">
+            <span class="sl-etiqueta" style=${SUAVE}>Lo que dice el cliente</span>
+            <blockquote class="sl-cuerpo-lg" style="margin: 0">[Testimonio del cliente, en una o dos frases, con su permiso para publicarlo]</blockquote>
+            <figcaption class="sl-cuerpo-ui" style=${SUAVE}>[Nombre y cargo]</figcaption>
+          </figure>
+        </div>
+      <//>
+
+      <${Seccion}>
+        <nav class="revela" aria-label="Otros proyectos" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: var(--space-6)">
+          <div class="eleva" style="display: grid"><${Tarjeta} antetitulo="Proyecto anterior" titulo="[Nombre del proyecto anterior]" href=${ir('proyecto')}>[Sector y una línea de resumen]<//></div>
+          <div class="eleva" style="display: grid"><${Tarjeta} antetitulo="Proyecto siguiente" titulo="[Nombre del proyecto siguiente]" href=${ir('proyecto')}>[Sector y una línea de resumen]<//></div>
+        </nav>
+        <div class="revela" style="margin-top: var(--space-8)"><${Enlace} href=${ir('proyectos')}>Mirá todos los proyectos<//></div>
       <//>
 
       <${Franja} fondo="marca" alto=${420}>
@@ -571,8 +701,8 @@
 
   /* ---------- Aplicación ---------- */
 
-  var VISTAS = { inicio: Inicio, servicios: Servicios, proyectos: Proyectos, blog: Blog, cotizacion: Cotizacion, contacto: Contacto };
-  var TITULOS = { inicio: 'Siles Comunicación', servicios: 'Servicios', proyectos: 'Proyectos', blog: 'Blog', cotizacion: 'Cotización', contacto: 'Contacto' };
+  var VISTAS = { inicio: Inicio, servicios: Servicios, proyectos: Proyectos, proyecto: Proyecto, blog: Blog, cotizacion: Cotizacion, contacto: Contacto };
+  var TITULOS = { inicio: 'Siles Comunicación', servicios: 'Servicios', proyectos: 'Proyectos', proyecto: 'Sitio web para doctor', blog: 'Blog', cotizacion: 'Cotización', contacto: 'Contacto' };
 
   function rutaActual() {
     var h = window.location.hash;
