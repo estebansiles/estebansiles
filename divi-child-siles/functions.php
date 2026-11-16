@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'SILES_DIVI_VERSION', '0.8.0' );
+define( 'SILES_DIVI_VERSION', '0.9.0' );
 define( 'SILES_DIVI_CORREO', 'contact@siles.cr' ); // Recibe las cotizaciones.
 
 /**
@@ -23,6 +23,8 @@ function siles_divi_estilos() {
 	wp_enqueue_style( 'siles-tokens', $base . '/tokens.css', array(), SILES_DIVI_VERSION );
 	wp_enqueue_style( 'siles-divi', $base . '/siles-divi.css', array( 'parent-style', 'siles-tokens' ), SILES_DIVI_VERSION );
 	wp_enqueue_style( 'siles-movimiento', $base . '/siles-movimiento.css', array( 'siles-divi' ), SILES_DIVI_VERSION );
+	wp_enqueue_style( 'siles-animaciones', $base . '/siles-animaciones.css', array( 'siles-movimiento' ), SILES_DIVI_VERSION );
+	wp_enqueue_script( 'siles-animaciones', $base . '/siles-animaciones.js', array(), SILES_DIVI_VERSION, array( 'in_footer' => true, 'strategy' => 'defer' ) );
 }
 add_action( 'wp_enqueue_scripts', 'siles_divi_estilos', 20 );
 
@@ -105,3 +107,11 @@ function siles_divi_imagen_social( $url ) {
 }
 add_filter( 'wpseo_opengraph_image', 'siles_divi_imagen_social' );
 add_filter( 'wpseo_twitter_image', 'siles_divi_imagen_social' );
+
+/**
+ * Marca el documento con .siles-js antes de pintar: lo que se anima al entrar en pantalla solo se oculta si hay JavaScript.
+ */
+function siles_divi_marca_js() {
+	echo "<script>document.documentElement.classList.add('siles-js');</script>\n";
+}
+add_action( 'wp_head', 'siles_divi_marca_js', 0 );

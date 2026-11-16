@@ -383,6 +383,142 @@ def sobre_mi():
     return portada + bio + vision + trayectoria + trabajo + testimonios + cierre
 
 
+# ---------- Sobre mí, propuesta con más movimiento (/esteban-propuesta/) ----------
+
+ORGANIZACIONES = ["PROSIC", "CIEP", "TECHO", "Entebbe", "Uniko Branding", "ALICE", "Guías y Scouts", "AD San Carlos", "Coopelesca", "COOCIQUE"]
+ROLES = ["la comunicación estratégica", "la transformación digital", "la automatización", "la IA generativa"]
+
+
+def sobre_mi_propuesta():
+    import sobre_mi as S
+    I = S.INTRO
+    # Portada oscura
+    titulo = ('<p class="siles-antetitulo" style="color: #b5b9b9">Sobre mí</p>'
+              '<h1 class="siles-sm-titulo"><span class="siles-linea"><span>Hola,</span></span>'
+              '<span class="siles-linea"><span>soy <em>Esteban</em>.</span></span></h1>'
+              '<p class="siles-sm-rol">Me dedico a <span class="siles-rotador">' + "".join(f"<span>{r}</span>" for r in ROLES) + "</span></p>"
+              f'<p class="siles-sm-bajada">{I["bajada"]}</p>')
+    foto = (f'<figure class="siles-sm-foto"><img src="{I["foto"]}" alt="Esteban Siles frente a un tablero de notas en una sesión de trabajo" width="1344" height="768">'
+            '<span class="siles-sm-chip siles-sm-chip--1 siles-anima"><strong data-contar="16" data-prefijo="+">+16</strong>años de experiencia</span>'
+            '<span class="siles-sm-chip siles-sm-chip--2 siles-anima"><strong data-contar="44">44</strong>proyectos</span></figure>')
+    portada = seccion(
+        fila("1_2,1_2",
+             columna("1_2", texto(titulo),
+                     boton("Agendá una llamada", "/conversemos/", clase="siles-boton--flecha"),
+                     boton("Mirá mi trabajo", "/portafolio/", clase="siles-boton--secundario"),
+                     texto('<p class="siles-sm-baja" aria-hidden="true">Seguí bajando</p>'),
+                     clase="siles-botones"),
+             columna("1_2", texto(foto)),
+             clase="siles-fila-centro"),
+        clase="siles-sm-hero siles-oscuro", admin_label="Portada",
+    )
+    # Banda de organizaciones
+    pista = "".join(f"<span>{o}</span>" for o in ORGANIZACIONES * 2)
+    orgs = seccion(
+        fila("4_4", columna("4_4", sc("et_pb_code", f'<div class="siles-sm-orgs__marco" aria-label="Organizaciones con las que he trabajado: {", ".join(ORGANIZACIONES)}">'
+                                                    f'<div class="siles-sm-orgs__pista" aria-hidden="true">{pista}</div></div>')),
+             clase="siles-fila-completa"),
+        clase="siles-sm-orgs", custom_padding="40px||40px||false|false", admin_label="Organizaciones",
+    )
+    # Quién soy: biografía, cifras que cuentan y barras que se llenan
+    barras = '<div class="siles-barras">' + "".join(
+        f'<div class="siles-barra"><div class="siles-barra__cabeza"><span>{n}</span><span><b data-contar="{v}">{v}</b> %</span></div>'
+        f'<div class="siles-barra__pista" role="img" aria-label="{n}: {v} %"><i></i></div></div>' for n, v in S.HABILIDADES) + "</div>"
+    for n, v in S.HABILIDADES:
+        barras = barras.replace(f'aria-label="{n}: {v} %"><i></i>', f'aria-label="{n}: {v} %"><i style="width: {v}%"></i>', 1)
+    cifras = '<div class="siles-sm-cifras">' + "".join(
+        f'<div><strong data-contar="{c.lstrip("+")}" data-prefijo="{"+" if c.startswith("+") else ""}">{c}</strong><span>{t}</span></div>' for c, t in S.CIFRAS) + "</div>"
+    bio = seccion(
+        fila("3_5,2_5",
+             columna("3_5",
+                     texto(antetitulo("Quién soy") + "<h2>Me dedico a la comunicación estratégica</h2>", clase="siles-firma siles-anima siles-anima--sube"),
+                     texto(parrafos(S.BIO), clase="siles-cuerpo-lg siles-anima siles-anima--sube"),
+                     texto(cifras, clase="siles-anima")),
+             columna("2_5", texto(antetitulo("Lo que más hago") + barras, clase="siles-anima"))),
+        admin_label="Quién soy",
+    )
+    # Manifiesto: palabras que se encienden
+    def frase(lema):
+        a, _, b = lema.partition(", ")
+        palabras = [(w, False) for w in (a + ",").split()] + [(w, True) for w in (b + ".").split()]
+        return '<p class="siles-sm-manifiesto">' + " ".join(
+            f'<span class="p{" p--acento" if ac else ""}" style="--i: {i}">{w}</span>' for i, (w, ac) in enumerate(palabras)) + "</p>"
+    manifiesto = seccion(
+        fila("4_4", columna("4_4",
+                            texto(antetitulo("Lo que creo"), custom_css_main_element="color: rgba(255,255,255,.7);"),
+                            texto("".join(frase(l) for l in S.LEMAS), clase="siles-anima"))),
+        clase="siles-sm-manifiesto-sec siles-oscuro", admin_label="Manifiesto",
+    )
+    # Visión y método
+    pasos = "".join(f'<li><span class="marca">{n}</span>{icono(i, 28)}<h3>{t}</h3><p>{c}</p></li>' for n, (i, t, c) in enumerate(S.METODO, 1))
+    metodo = seccion(
+        fila("1_2,1_2",
+             columna("1_2", texto(antetitulo("Visión y método") + "<h2>Mi visión</h2>", clase="siles-firma siles-anima siles-anima--sube")),
+             columna("1_2", texto(parrafos(S.VISION), clase="siles-anima siles-anima--sube")),
+             clase="siles-fila-abajo"),
+        fila("4_4", columna("4_4", texto(f'<ol class="siles-sm-metodo">{pasos}</ol>', clase="siles-anima"))),
+        clase="siles-alterna", admin_label="Método",
+    )
+    # Trayectoria: línea de tiempo y tarjetas
+    tiempo = '<ol class="siles-sm-tiempo">' + "".join(
+        f'<li><span class="anio">{a}</span><span class="cargo">{t.split(", ", 1)[0]}</span><span class="lugar">{t.split(", ", 1)[1] if ", " in t else ""}</span></li>'
+        for a, t in S.TRAYECTORIA["Experiencia"]) + "</ol>"
+    tarjetas = '<div class="siles-sm-tarjetas">' + "".join(
+        f'<div><h3>{tit}</h3><ul class="siles-trayectoria">' + "".join(f"<li><span>{a}</span><span>{t}</span></li>" for a, t in S.TRAYECTORIA[tit]) + "</ul></div>"
+        for tit in ["Educación", "Certificaciones", "Otras cosas"]) + "</div>"
+    trayectoria = seccion(
+        fila("4_4", columna("4_4",
+                            texto(antetitulo("Trayectoria") + "<h2>De dónde vengo</h2>", clase="siles-firma siles-anima siles-anima--sube"),
+                            texto(tiempo, clase="siles-anima"))),
+        fila("4_4", columna("4_4", texto(tarjetas, clase="siles-anima"))),
+        admin_label="Trayectoria",
+    )
+    # Galería de trabajos
+    def item(src, nombre, url, oculto):
+        extra = ' tabindex="-1"' if oculto else ""
+        cuerpo = f'<img src="{src}" alt="{"" if oculto else "Proyecto para " + nombre}" loading="lazy"><span>{nombre}</span>'
+        return f'<a class="siles-sm-galeria__item" href="{url}"{extra}>{cuerpo}</a>' if url else f'<div class="siles-sm-galeria__item">{cuerpo}</div>'
+    galeria = ('<div class="siles-sm-galeria"><div class="siles-sm-galeria__pista">'
+               + "".join(item(s, n, u, False) for s, n, u in S.TRABAJOS)
+               + '<div style="display: contents" aria-hidden="true">' + "".join(item(s, n, u, True) for s, n, u in S.TRABAJOS) + "</div>"
+               + "</div></div>")
+    trabajo = seccion(
+        fila("3_5,2_5",
+             columna("3_5", texto(antetitulo("Portafolio") + "<h2>Un poco de mi trabajo</h2>", clase="siles-firma siles-anima siles-anima--sube")),
+             columna("2_5", texto('<p><a class="siles-enlace" href="/portafolio/">Mirá todos los proyectos</a></p>', clase="siles-anima siles-anima--sube")),
+             clase="siles-fila-abajo"),
+        fila("4_4", columna("4_4", texto(galeria)), clase="siles-fila-completa"),
+        clase="siles-alterna siles-sm-galeria-sec", admin_label="Trabajo",
+    )
+    # Testimonios en carrusel
+    items = "".join(
+        f'<figure class="siles-carrusel__item" aria-roledescription="testimonio" aria-label="{n + 1} de {len(S.TESTIMONIOS)}">'
+        f'<div class="siles-carrusel__foto"><img src="{foto}" alt="{autor}" width="200" height="200" loading="lazy"></div>'
+        f'<div class="siles-carrusel__texto"><blockquote>{cita}</blockquote><figcaption><strong>{autor}</strong>{cargo}</figcaption></div></figure>'
+        for n, (cita, autor, cargo, foto) in enumerate(S.TESTIMONIOS))
+    puntos = "".join(f'<button type="button" class="siles-carrusel__punto" aria-label="Testimonio {n + 1}"></button>' for n in range(len(S.TESTIMONIOS)))
+    carrusel = (f'<div class="siles-carrusel" data-carrusel role="region" aria-roledescription="carrusel" aria-label="Testimonios" tabindex="0">'
+                f'<div class="siles-carrusel__pista" aria-live="polite">{items}</div>'
+                f'<div class="siles-carrusel__controles"><button type="button" data-anterior aria-label="Testimonio anterior">{icono("flecha", 20)}</button>'
+                f'<div class="siles-carrusel__puntos">{puntos}</div>'
+                f'<button type="button" data-siguiente aria-label="Testimonio siguiente">{icono("flecha", 20)}</button></div></div>')
+    testimonios = seccion(
+        fila("4_4", columna("4_4",
+                            texto(antetitulo("Testimonios") + "<h2>Lo que dicen de mi trabajo</h2>", clase="siles-firma siles-anima siles-anima--sube"),
+                            texto(carrusel, clase="siles-anima siles-anima--sube"))),
+        admin_label="Testimonios",
+    )
+    cierre = seccion(
+        fila("4_4", columna("4_4",
+                            texto("<h2>Conversemos</h2>", clase="siles-firma siles-titulo-1"),
+                            texto("<p>Contame qué querés transformar y te propongo un primer paso en una llamada de 30 minutos.</p>", clase="siles-subtitulo siles-medida"),
+                            boton("Agendá una llamada", "/conversemos/", clase="siles-boton--flecha"),
+                            clase="siles-bloque siles-anima siles-anima--sube")),
+        clase="siles-sm-cierre", admin_label="Cierre",
+    )
+    return portada + orgs + bio + manifiesto + metodo + trayectoria + trabajo + testimonios + cierre
+
+
 # ---------- 404 ----------
 
 GIF_404 = "g01ZnwAUvutuK8GIQn"  # Confused Travolta, inserción oficial de GIPHY (480 × 270)
@@ -743,6 +879,7 @@ if __name__ == "__main__":
     guardar_pagina("contacto", contacto())
     guardar_pagina("servicios", servicios())
     guardar_pagina("sobre-mi", sobre_mi())
+    guardar_pagina("sobre-mi-propuesta", sobre_mi_propuesta())
     guardar_pagina("conversemos", conversemos())
     guardar_pagina("terminos", terminos())
     guardar_pagina("privacidad", privacidad())

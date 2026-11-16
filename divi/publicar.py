@@ -17,6 +17,7 @@ PAGINAS = {
     "contacto": ("contacto", "Contacto"),
     "servicios": ("servicios", "Servicios"),
     "sobre-mi": ("esteban", "Sobre mí"),
+    "sobre-mi-propuesta": ("esteban-propuesta", "Sobre mí (propuesta)"),
     "cotizacion": ("cotizacion", "Cotización"),
     "conversemos": ("conversemos", "Conversemos"),
     "terminos": ("terminos-y-condiciones", "Términos y condiciones"),
