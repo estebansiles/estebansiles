@@ -631,3 +631,10 @@ body.siles .siles-legal h2 { font-size: 24px; line-height: 1.3; margin-top: var(
 body.siles .siles-legal__lista { padding-left: var(--space-5); margin: 0 0 var(--space-5); list-style: square; }
 body.siles .siles-legal__lista li { margin-bottom: var(--space-2); }
 body.siles .siles-pie-legal p:last-child { display: flex; flex-wrap: wrap; gap: 0 var(--space-6); }
+
+/* Entradas con formato Enlace, Cita o Audio en la rejilla: sin márgenes negativos y con contraste */
+body.siles .siles-blog .et_pb_post .et_link_content, body.siles .siles-blog .et_pb_post .et_quote_content, body.siles .siles-blog .et_pb_post .et_audio_content {
+  margin: 0; padding: var(--space-6); background: var(--gradiente-profundo);
+}
+body.siles #page-container .siles-blog .et_pb_post .et_link_content h2 a, body.siles #page-container .siles-blog .et_pb_post .et_quote_content a,
+body.siles #page-container .siles-blog .et_pb_post .et_link_main_url { color: var(--blanco); }
