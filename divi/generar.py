@@ -222,8 +222,7 @@ def contacto():
 
 # ---------- Términos y condiciones ----------
 
-def terminos():
-    from legales import TERMINOS as T
+def pagina_legal(T):
 
     def bloque(b):
         if isinstance(b, list):
@@ -244,8 +243,18 @@ def terminos():
                             texto(f'<dl class="siles-legal__datos">{datos}</dl>', clase="siles-entra siles-retraso-2"),
                             texto(cuerpo, clase="siles-lectura siles-legal siles-entra siles-retraso-3")),
              clase="siles-fila-angosta"),
-        admin_label="Términos y condiciones",
+        admin_label=T["titulo"],
     )
+
+
+def terminos():
+    from legales import TERMINOS
+    return pagina_legal(TERMINOS)
+
+
+def privacidad():
+    from legales import PRIVACIDAD
+    return pagina_legal(PRIVACIDAD)
 
 
 # ---------- Conversemos (agenda) ----------
@@ -567,6 +576,7 @@ if __name__ == "__main__":
     guardar_pagina("servicios", servicios())
     guardar_pagina("conversemos", conversemos())
     guardar_pagina("terminos", terminos())
+    guardar_pagina("privacidad", privacidad())
     guardar_pagina("cotizacion", cotizacion())
     exportar_layout("blog.json", plantilla_blog())
     exportar_layout("articulo.json", plantilla_articulo())

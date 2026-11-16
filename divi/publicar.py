@@ -19,6 +19,7 @@ PAGINAS = {
     "cotizacion": ("cotizacion", "Cotización"),
     "conversemos": ("conversemos", "Conversemos"),
     "terminos": ("terminos-y-condiciones", "Términos y condiciones"),
+    "privacidad": ("politica-de-privacidad", "Política de privacidad"),
     "conversemos-prueba": ("prueba-conversemos", "Conversemos (vista previa)"),
 }
 
@@ -53,7 +54,7 @@ def main():
         with open(os.path.join(AQUI, "paginas", clave.replace("-prueba", "") + ".txt"), encoding="utf-8") as f:
             contenido = f.read()
         datos = {"title": titulo, "slug": slug, "status": "publish", "content": contenido,
-                 "meta": {"_et_pb_use_builder": "on", "_et_pb_old_content": ""}}
+                 "meta": {"_et_pb_use_builder": "on", "_et_pb_old_content": ""}, "template": ""}
         existentes = api(base, "GET", f"/pages?slug={slug}&status=publish,draft,private&context=edit&_fields=id")
         if existentes:
             p = api(base, "POST", f"/pages/{existentes[0]['id']}", datos)
