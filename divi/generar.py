@@ -14,7 +14,7 @@ import os
 VERSION = "4.27.9"
 TEMA = "/wp-content/themes/divi-child-siles/assets"
 MENU_PRINCIPAL = "579983389"  # "Principal Siles", creado en el staging por la API
-CORREO = "esteban@siles.cr"
+CORREO = "contact@siles.cr"
 WHATSAPP = "8865 9046"
 WHATSAPP_URL = "https://wa.me/50688659046"
 

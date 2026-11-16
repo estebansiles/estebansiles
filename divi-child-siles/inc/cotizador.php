@@ -3,8 +3,8 @@
  * Cotizador: [siles_cotizador]
  *
  * Lista de servicios con casillas y una cotización en borrador que se arma en vivo (assets/siles-cotizador.js).
- * Sin JavaScript sigue funcionando como formulario normal. El envío llega por correo a la dirección de
- * administración del sitio (filtro siles_cotizacion_destino). No guarda datos en la base: solo envía el correo,
+ * Sin JavaScript sigue funcionando como formulario normal. El envío llega por correo a SILES_DIVI_CORREO
+ * (filtro siles_cotizacion_destino). No guarda datos en la base: solo envía el correo,
  * con el consentimiento según la Ley 8968.
  *
  * @package siles-divi
@@ -117,7 +117,7 @@ add_action( 'wp_enqueue_scripts', 'siles_cotizador_script' );
  * @return string
  */
 function siles_cotizador_destino() {
-	return apply_filters( 'siles_cotizacion_destino', get_option( 'admin_email' ) );
+	return apply_filters( 'siles_cotizacion_destino', SILES_DIVI_CORREO );
 }
 
 /**

@@ -9,7 +9,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'SILES_DIVI_VERSION', '0.4.0' );
+define( 'SILES_DIVI_VERSION', '0.5.0' );
+define( 'SILES_DIVI_CORREO', 'contact@siles.cr' ); // Recibe las cotizaciones.
 
 /**
  * Carga el estilo de Divi y, después, las hojas del sistema de diseño.
