@@ -47,7 +47,7 @@ PRIVACIDAD = {
     "titulo": "Política de privacidad",
     "datos": [("Sitio web", "www.siles.cr"),
               ("Responsable", "Esteban Díaz Siles"),
-              ("Última actualización", "15 de noviembre de 2026")],
+              ("Última actualización", "16 de noviembre de 2026")],
     "intro": "En siles.cr respetamos tu privacidad y estamos comprometidos con la protección de tus datos personales. Esta Política de Privacidad explica cómo recopilamos, utilizamos, compartimos y protegemos tu información cuando visitas nuestro sitio web, en cumplimiento con la Ley de Protección de la Persona frente al Tratamiento de sus Datos Personales (Ley N° 8968) de Costa Rica, el Reglamento General de Protección de Datos (GDPR) de la Unión Europea y las leyes de privacidad aplicables en los Estados Unidos.",
     "secciones": [
         ("1. Identidad del Responsable de los Datos", [
@@ -60,7 +60,7 @@ PRIVACIDAD = {
             "Recopilamos información personal de las siguientes maneras:",
             ["Información proporcionada voluntariamente: Datos ingresados a través de nuestros formularios de contacto (como nombre, correo electrónico y cualquier mensaje que decidás enviarnos).",
              "Información recopilada automáticamente (Cookies y Píxeles): Utilizamos cookies de rastreo y tecnologías similares, incluyendo el Píxel de Meta, el Píxel de TikTok y el Píxel de LinkedIn. Estas herramientas pueden recopilar tu dirección IP, tipo de navegador, sistema operativo y comportamiento de navegación en nuestro sitio web.",
-             'Cotización, boletín y agenda: Si solicitás una cotización, recibimos por correo electrónico los servicios que elegiste, tu nombre, tu correo y el comentario que agregués; no los guardamos en la base de datos del sitio. Si te suscribís al boletín, usamos tu correo únicamente para avisarte de publicaciones nuevas y podés darte de baja cuando querás. Si agendás una llamada en <a href="/conversemos/">siles.cr/conversemos</a>, la reserva se hace en Google Calendar, que recibe tu nombre, tu correo y lo que agregués, y los trata según su propia política de privacidad. En el formulario de contacto también podés indicar, de forma opcional, el nombre de tu empresa.',
+             'Cotización, boletín y agenda: Si solicitás una cotización, recibimos por correo electrónico los servicios que elegiste, tu nombre, tu correo y el comentario que agregués, y los registramos en nuestro CRM para dar seguimiento a tu solicitud. Si te suscribís al boletín, usamos tu correo únicamente para avisarte de publicaciones nuevas y podés darte de baja cuando querás. Si agendás una llamada en <a href="/conversemos/">siles.cr/conversemos</a>, la reserva se hace en Google Calendar, que recibe tu nombre, tu correo y lo que agregués, y los trata según su propia política de privacidad. En el formulario de contacto también podés indicar, de forma opcional, el nombre de tu empresa.',
              "Datos Sensibles: Declaramos expresamente que no solicitamos ni recopilamos datos personales sensibles (como origen racial, opiniones políticas, convicciones religiosas, datos de salud o de orientación sexual)."]]),
         ("3. ¿Para qué utilizamos tu información?", [
             "Los datos recopilados se utilizan exclusivamente para las siguientes finalidades:",

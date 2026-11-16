@@ -306,6 +306,48 @@ def opt_out():
     )
 
 
+# ---------- 404 ----------
+
+GIF_404 = "g01ZnwAUvutuK8GIQn"  # Confused Travolta, inserción oficial de GIPHY (480 × 270)
+
+
+def plantilla_404():
+    """Cuerpo del Theme Builder para la página 404."""
+    gif = (f'<figure class="siles-404__gif siles-papel"><div class="siles-404__marco">'
+           f'<iframe src="https://giphy.com/embed/{GIF_404}" title="John Travolta mira a todos lados, confundido" '
+           f'width="480" height="270" frameborder="0" loading="lazy" allowfullscreen></iframe></div>'
+           f'<figcaption><span>Nosotros también la estamos buscando.</span>'
+           f'<a href="https://giphy.com/gifs/high-quality-highqualitygifs-{GIF_404}" target="_blank" rel="noopener">vía GIPHY</a></figcaption></figure>')
+    portada = seccion(
+        fila("1_2,1_2",
+             columna("1_2",
+                     texto(antetitulo("Error 404"), clase="siles-entra"),
+                     texto("<h1>¿Y la página?</h1>", clase="siles-firma siles-display siles-entra siles-retraso-1"),
+                     texto("<p>Buscamos por todos lados y no aparece. Puede que haya cambiado de lugar o que el enlace tenga un error.</p>",
+                           clase="siles-subtitulo siles-entra siles-retraso-2"),
+                     boton("Volvé al inicio", "/", clase="siles-boton--flecha siles-entra siles-retraso-3"),
+                     boton("Contame qué buscabas", "/contacto/", clase="siles-boton--secundario siles-entra siles-retraso-3"),
+                     clase="siles-botones"),
+             columna("1_2", texto(gif, clase="siles-entra siles-retraso-2")),
+             clase="siles-fila-centro"),
+        admin_label="404",
+    )
+    destinos = [("diseno-web", "Servicios", "Qué hago y cómo trabajo, por fases.", "/servicios/"),
+                ("estrategia", "Proyectos", "Casos reales con pymes de Costa Rica.", "/portafolio/"),
+                ("investigar", "Blog", "Ideas para transformar tu negocio.", "/blog/"),
+                ("factura-electronica", "Cotización", "Elegí servicios y armá tu cotización.", "/cotizacion/")]
+    sugerencias = seccion(
+        fila("3_5,2_5",
+             columna("3_5", texto(antetitulo("Mientras tanto") + "<h2>Quizá buscabas esto</h2>", clase="siles-firma siles-revela")),
+             columna("2_5", sc("et_pb_search", "", show_button="on", placeholder="Buscá en el sitio", module_class="siles-busqueda siles-revela")),
+             clase="siles-fila-abajo"),
+        fila("1_4,1_4,1_4,1_4", *[columna("1_4", anuncio(t, c, i, url=u)) for i, t, c, u in destinos], make_equal="on"),
+        fila("4_4", columna("4_4", texto("<p>Casi todo se puede automatizar. Encontrar esta página, por lo visto, no.</p>", clase="siles-nota siles-revela"))),
+        clase="siles-alterna", admin_label="Sugerencias",
+    )
+    return portada + sugerencias
+
+
 # ---------- Conversemos (agenda) ----------
 
 AGENDA_GOOGLE = ("https://calendar.google.com/calendar/appointments/schedules/"
@@ -629,6 +671,7 @@ if __name__ == "__main__":
     guardar_pagina("opt-out", opt_out())
     guardar_pagina("cotizacion", cotizacion())
     exportar_layout("blog.json", plantilla_blog())
+    exportar_layout("404.json", plantilla_404())
     exportar_layout("articulo.json", plantilla_articulo())
     exportar_layout("proyecto.json", plantilla_proyecto())
     exportar_layout("proyectos.json", plantilla_proyectos())
