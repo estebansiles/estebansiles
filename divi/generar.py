@@ -107,7 +107,7 @@ def pie():
              columna("1_4", texto(
                  antetitulo("Sitio") + "".join(f'<p><a href="{u}">{t}</a></p>' for t, u in sitio), clase="siles-lista"))),
         fila("4_4", columna("4_4", texto(
-            '<p>© 2026 Siles Comunicación</p><p><a href="/politica-de-privacidad/">Privacidad</a></p>',
+            '<p>© 2026 Siles Comunicación</p><p><a href="/politica-de-privacidad/">Privacidad</a><a href="/terminos-y-condiciones/">Términos y condiciones</a></p>',
             clase="siles-pie-legal"))),
         clase="siles-oscuro", custom_padding="64px||32px||false|false", admin_label="Pie Siles",
     )
@@ -193,6 +193,7 @@ def contacto():
     campos = "".join([
         sc("et_pb_contact_field", "", field_id="nombre", field_title="Nombre", field_type="input", fullwidth_field="off", required_mark="on"),
         sc("et_pb_contact_field", "", field_id="correo", field_title="Correo", field_type="email", fullwidth_field="off", required_mark="on"),
+        sc("et_pb_contact_field", "", field_id="empresa", field_title="Empresa (opcional)", field_type="input", fullwidth_field="on", required_mark="off"),
         sc("et_pb_contact_field", "", field_id="interes", field_title="¿Qué te interesa?", field_type="select",
            select_options=json.dumps(opciones, ensure_ascii=False, separators=(",", ":")), fullwidth_field="on", required_mark="off"),
         sc("et_pb_contact_field", "", field_id="proyecto", field_title="Contame tu proyecto", field_type="text", fullwidth_field="on", required_mark="off"),
@@ -205,7 +206,7 @@ def contacto():
                     module_id="formulario", module_class="siles-entra siles-retraso-4")
     filas = (f'<a href="mailto:{CORREO}">{icono("correo")}{CORREO}</a>'
              f'<a href="{WHATSAPP_URL}" target="_blank" rel="noopener">{icono("mensaje")}WhatsApp: {WHATSAPP}</a>'
-             f'<a href="#formulario">{icono("calendario")}Agendá una llamada de 30 minutos</a>'
+             f'<a href="/conversemos/">{icono("calendario")}Agendá una llamada de 30 minutos</a>'
              f'<span class="siles-fila">{icono("ubicacion")}San José, Costa Rica</span>')
     return seccion(
         fila("2_5,3_5",
@@ -216,6 +217,73 @@ def contacto():
                      texto(filas, clase="siles-filas siles-entra siles-retraso-3")),
              columna("3_5", formulario)),
         admin_label="Contacto",
+    )
+
+
+# ---------- Términos y condiciones ----------
+
+def terminos():
+    from legales import TERMINOS as T
+
+    def bloque(b):
+        if isinstance(b, list):
+            items = []
+            for i in b:
+                etiqueta, _, resto = i.partition(": ")
+                items.append(f"<li><strong>{etiqueta}:</strong> {resto}</li>" if resto else f"<li>{i}</li>")
+            return '<ul class="siles-legal__lista">' + "".join(items) + "</ul>"
+        return f"<p>{b}</p>"
+
+    datos = "".join(f"<div><dt>{k}</dt><dd>{v}</dd></div>" for k, v in T["datos"])
+    cuerpo = f'<p class="siles-legal__intro">{T["intro"]}</p>' + "".join(
+        f"<h2>{titulo}</h2>" + "".join(bloque(b) for b in bloques) for titulo, bloques in T["secciones"])
+    return seccion(
+        fila("4_4", columna("4_4",
+                            texto(antetitulo("Legal"), clase="siles-entra"),
+                            texto(f"<h1>{T['titulo']}</h1>", clase="siles-firma siles-entra siles-retraso-1"),
+                            texto(f'<dl class="siles-legal__datos">{datos}</dl>', clase="siles-entra siles-retraso-2"),
+                            texto(cuerpo, clase="siles-lectura siles-legal siles-entra siles-retraso-3")),
+             clase="siles-fila-angosta"),
+        admin_label="Términos y condiciones",
+    )
+
+
+# ---------- Conversemos (agenda) ----------
+
+AGENDA_GOOGLE = ("https://calendar.google.com/calendar/appointments/schedules/"
+                 "AcZssZ3eUg16uQIP1KHTJMEyckMF69E27mp1vaxvPcb1a10RtqBnVaNmhOwffirPnZYJaH1ObUAmbO8P?gv=true")
+
+
+def conversemos():
+    agenda = ('<!-- Google Calendar Appointment Scheduling begin -->'
+              f'<iframe src="{AGENDA_GOOGLE}" title="Agenda de llamadas con Esteban Siles" style="border: 0;" width="100%" height="1200" frameborder="0" loading="lazy"></iframe>'
+              '<!-- end Google Calendar Appointment Scheduling -->')
+    temas = ["Qué hace tu negocio hoy y qué querés transformar", "El primer proceso que conviene digitalizar o automatizar",
+             "Los siguientes pasos, por fases y a tu ritmo"]
+    pasos = [("1", "Elegí un espacio", "Escogé el día y la hora que te queden mejor en la agenda."),
+             ("2", "Confirmá tus datos", "Google Calendar te envía la confirmación por correo."),
+             ("3", "Conversamos", "30 minutos para entender tu caso y proponerte un primer paso.")]
+    otros = (f'<a href="https://wa.me/50688659046" target="_blank" rel="noopener">{icono("mensaje")}WhatsApp: {WHATSAPP}</a>'
+             f'<a href="mailto:{CORREO}">{icono("correo")}{CORREO}</a>'
+             f'<a href="/contacto/#formulario">{icono("calendario")}Prefiero escribir un mensaje</a>')
+    return seccion(
+        fila("4_4", columna("4_4",
+                            texto(antetitulo("Agenda"), clase="siles-entra"),
+                            texto("<h1>Conversemos</h1>", clase="siles-firma siles-entra siles-retraso-1"),
+                            texto("<p>Agendá una llamada de 30 minutos. Elegí el espacio que mejor te quede y te llega la confirmación por correo.</p>",
+                                  clase="siles-subtitulo siles-medida siles-entra siles-retraso-2"))),
+        fila("1_3,2_3",
+             columna("1_3",
+                     texto(antetitulo("En la llamada vemos") + lista_checks(temas), clase="siles-entra siles-retraso-3"),
+                     texto(antetitulo("Cómo funciona") + '<ol class="siles-pasos siles-pasos--vertical">' + "".join(
+                         f'<li class="siles-paso"><span class="siles-paso__marca">{n}</span><h3>{t}</h3><p>{c}</p></li>' for n, t, c in pasos) + "</ol>",
+                         clase="siles-entra siles-retraso-3"),
+                     texto(antetitulo("¿Ningún horario te sirve?") + otros, clase="siles-filas siles-entra siles-retraso-4"),
+                     texto('<p>Al agendar, Google Calendar procesa tus datos según su propia política de privacidad. '
+                           'Yo los uso solo para coordinar la llamada, según la Ley 8968. <a href="/politica-de-privacidad/">Política de privacidad</a>.</p>',
+                           clase="siles-nota siles-entra siles-retraso-4")),
+             columna("2_3", sc("et_pb_code", agenda, module_class="siles-agenda siles-papel siles-entra siles-retraso-2"))),
+        admin_label="Conversemos",
     )
 
 
@@ -497,6 +565,8 @@ if __name__ == "__main__":
     guardar_pagina("inicio", inicio())
     guardar_pagina("contacto", contacto())
     guardar_pagina("servicios", servicios())
+    guardar_pagina("conversemos", conversemos())
+    guardar_pagina("terminos", terminos())
     guardar_pagina("cotizacion", cotizacion())
     exportar_layout("blog.json", plantilla_blog())
     exportar_layout("articulo.json", plantilla_articulo())

@@ -17,6 +17,9 @@ PAGINAS = {
     "contacto": ("contacto", "Contacto"),
     "servicios": ("servicios", "Servicios"),
     "cotizacion": ("cotizacion", "Cotización"),
+    "conversemos": ("conversemos", "Conversemos"),
+    "terminos": ("terminos-y-condiciones", "Términos y condiciones"),
+    "conversemos-prueba": ("prueba-conversemos", "Conversemos (vista previa)"),
 }
 
 
@@ -47,7 +50,7 @@ def main():
             subir_proyectos(base)
             continue
         slug, titulo = PAGINAS[clave]
-        with open(os.path.join(AQUI, "paginas", clave + ".txt"), encoding="utf-8") as f:
+        with open(os.path.join(AQUI, "paginas", clave.replace("-prueba", "") + ".txt"), encoding="utf-8") as f:
             contenido = f.read()
         datos = {"title": titulo, "slug": slug, "status": "publish", "content": contenido,
                  "meta": {"_et_pb_use_builder": "on", "_et_pb_old_content": ""}}
