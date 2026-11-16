@@ -64,16 +64,35 @@ function red(seed, cols, rows) {
   });
   return { n, e, acento: Math.floor(r() * n.length) };
 }
-function patron(semilla, densidad, alto, ancho = 1440) {
+/* Colores de la paleta para los nodos que se encienden en la portada */
+const PALETA_NODOS = ['#008C99', '#00D1B1', '#5FE3CE', '#00737E', '#1E2020'];
+
+function patron(semilla, densidad, alto, ancho = 1440, animado = false) {
   const rows = Math.max(3, Math.round(densidad * alto / 1120));
   const { n, e, acento } = red(semilla, densidad, rows);
   const X = (p) => +(p.x / 100 * ancho).toFixed(1), Y = (p) => +(p.y / 100 * alto).toFixed(1);
   const lineas = e.map(([a, b]) => `<line x1="${X(n[a])}" y1="${Y(n[a])}" x2="${X(n[b])}" y2="${Y(n[b])}"/>`).join('');
   const nodos = n.map((p, i) => { const s = i === acento ? 12 : 5; return `<rect x="${X(p) - s / 2}" y="${Y(p) - s / 2}" width="${s}" height="${s}"${i === acento ? ` fill="${REALCE}"` : ''}/>`; }).join('');
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${ancho} ${alto}" preserveAspectRatio="xMidYMid slice"><rect width="100%" height="100%" fill="#F4F5F5"/><g stroke="#BFC3C3" stroke-width="1">${lineas}</g><g fill="#8A8F8F">${nodos}</g></svg>\n`;
+  let brillos = '', estilo = '';
+  if (animado) {
+    /* Una capa de nodos que se encienden y se apagan. Retraso y duración salen de otra semilla:
+       cada nodo sigue su propio ciclo y en pantalla se ve aleatorio. Retrasos negativos: arranca ya en marcha. */
+    const r = rng(semilla * 7919 + 17);
+    brillos = n.map((p, i) => {
+      if (i === acento || r() > 0.42) return '';
+      const s = 11, color = PALETA_NODOS[Math.floor(r() * PALETA_NODOS.length)];
+      const dur = (7 + r() * 7).toFixed(1), retraso = (-r() * 14).toFixed(1);
+      return `<rect class="b" x="${X(p) - s / 2}" y="${Y(p) - s / 2}" width="${s}" height="${s}" fill="${color}" style="animation-duration:${dur}s;animation-delay:${retraso}s"/>`;
+    }).join('');
+    estilo = '<style>.b{opacity:0;transform-box:fill-box;transform-origin:center;animation:brilla 10s ease-in-out infinite}'
+      + '@keyframes brilla{0%,30%,100%{opacity:0;transform:scale(.45)}10%,18%{opacity:1;transform:scale(1)}}'
+      + '@media (prefers-reduced-motion:reduce){.b{animation:none;opacity:0}}</style>';
+  }
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${ancho} ${alto}" preserveAspectRatio="xMidYMid slice">${estilo}<rect width="100%" height="100%" fill="#F4F5F5"/><g stroke="#BFC3C3" stroke-width="1">${lineas}</g><g fill="#8A8F8F">${nodos}</g>${brillos ? `<g>${brillos}</g>` : ''}</svg>\n`;
 }
 /* Semillas del prototipo: 11 portada de Inicio, 5 caso destacado de Proyectos, 23 destacado del Blog */
-escribir('assets/marca/patron-11.svg', patron(11, 14, 600));
+escribir('assets/marca/patron-11.svg', patron(11, 14, 600, 1440, true)); /* portada: nodos que se encienden */
+escribir('assets/marca/patron-11-quieto.svg', patron(11, 14, 600)); /* la misma red sin animación, para "reducir movimiento" */
 escribir('assets/marca/patron-5.svg', patron(5, 10, 280, 640));
 escribir('assets/marca/patron-23.svg', patron(23, 10, 280, 640));
 

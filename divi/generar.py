@@ -129,8 +129,7 @@ PROCESO = [
     ("desarrollo", "Implemento", "Construyo y conecto las herramientas."),
     ("mejorar", "Mejoro", "Mido resultados y ajusto."),
 ]
-TEMAS = ["Transformación digital", "Automatización", "Agentes de IA", "Factura electrónica 4.4",
-         "Integración SINPE Móvil", "Firma digital", "Ley 8968", "Experiencia de usuario"]
+TEMAS = ["Transformación digital", "Automatización", "Agentes de IA", "Factura electrónica 4.4", "Experiencia de usuario"]
 
 
 def franja_cierre(titulo, bajada, textob, url):
@@ -154,10 +153,13 @@ def inicio():
                             boton("Agendá una llamada", "/contacto/", clase="siles-boton--flecha siles-entra siles-retraso-3"),
                             boton("Escribime por WhatsApp", WHATSAPP_URL, url_new_window="on", clase="siles-boton--secundario siles-boton--mensaje siles-entra siles-retraso-3"),
                             clase="siles-bloque siles-botones")),
-        clase="siles-portada", background_image=f"{TEMA}/marca/patron-11.svg", background_size="cover",
+        clase="siles-portada", background_image=f"{TEMA}/marca/patron-11.svg?v=0.7.0", background_size="cover",
         admin_label="Portada",
     )
-    items = "".join(f"<span>{t}</span>" for t in TEMAS + TEMAS)
+    # La pista se desplaza la mitad de su ancho: cada mitad debe cubrir una pantalla ancha, así que con
+    # pocos temas cada mitad lleva la lista dos veces.
+    mitad = TEMAS * (2 if len(TEMAS) < 8 else 1)
+    items = "".join(f"<span>{t}</span>" for t in mitad + mitad)
     cinta = seccion(
         fila("4_4", columna("4_4", sc("et_pb_code", f'<div class="siles-cinta" aria-hidden="true"><div class="siles-cinta__pista">{items}</div></div>')),
              clase="siles-fila-completa"),

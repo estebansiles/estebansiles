@@ -657,3 +657,8 @@ body.siles .et_pb_search.siles-busqueda input.et_pb_searchsubmit { background: v
 /* En columnas de 1/4, Divi centra la imagen del anuncio: las tarjetas mantienen el ícono a la izquierda */
 body.siles .et_pb_column .et_pb_blurb.siles-tarjeta .et_pb_main_blurb_image { text-align: left; }
 body.siles .et_pb_column .et_pb_blurb.siles-tarjeta .et_pb_blurb_content { text-align: left; margin-left: 0; }
+
+/* Portada: con "reducir movimiento", el patrón sin nodos animados. Divi pone el fondo en su propia hoja; !important lo reemplaza. */
+@media (prefers-reduced-motion: reduce) {
+  body.siles .et_pb_section.siles-portada { background-image: url("marca/patron-11-quieto.svg") !important; }
+}
