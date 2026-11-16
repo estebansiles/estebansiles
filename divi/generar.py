@@ -85,14 +85,14 @@ def encabezado():
              columna("1_2", sc("et_pb_menu", "", menu_id=MENU_PRINCIPAL, menu_style="left_aligned",
                                  submenu_direction="downwards", fullwidth_menu="off",
                                  background_color="rgba(0,0,0,0)", active_link_color="#1E2020")),
-             columna("1_4", boton("Agendá una llamada", "/contacto/", clase="siles-boton--secundario siles-boton--sm")),
+             columna("1_4", boton("Agendá una llamada", "/conversemos/", clase="siles-boton--contorno siles-boton--sm")),
              clase="siles-cabecera"),
         custom_padding="0px||0px||false|false", sticky_position="top", admin_label="Encabezado Siles",
     )
 
 
 def pie():
-    sitio = [("Servicios", "/servicios/"), ("Proyectos", "/portafolio/"), ("Blog", "/blog/"),
+    sitio = [("Sobre mí", "/esteban/"), ("Servicios", "/servicios/"), ("Proyectos", "/portafolio/"), ("Blog", "/blog/"),
              ("Cotización", "/cotizacion/"), ("Contacto", "/contacto/")]
     return seccion(
         fila("1_2,1_4,1_4",
@@ -150,7 +150,7 @@ def inicio():
                             texto("<h1>Todo se puede transformar</h1>", clase="siles-firma siles-display siles-entra siles-retraso-1"),
                             texto("<p>Hola, soy Esteban. Me dedico a la comunicación estratégica y a la transformación digital. No hay excusas.</p>",
                                   clase="siles-subtitulo siles-entra siles-retraso-2"),
-                            boton("Agendá una llamada", "/contacto/", clase="siles-boton--flecha siles-entra siles-retraso-3"),
+                            boton("Agendá una llamada", "/conversemos/", clase="siles-boton--flecha siles-entra siles-retraso-3"),
                             boton("Escribime por WhatsApp", WHATSAPP_URL, url_new_window="on", clase="siles-boton--secundario siles-boton--mensaje siles-entra siles-retraso-3"),
                             clase="siles-bloque siles-botones")),
         clase="siles-portada", background_image=f"{TEMA}/marca/patron-11.svg?v=0.7.0", background_size="cover",
@@ -185,7 +185,7 @@ def inicio():
     )
     cierre = franja_cierre("Casi todo se puede automatizar",
                            "Una llamada de 30 minutos basta para encontrar el primer proceso que podés automatizar.",
-                           "Agendá una llamada", "/contacto/")
+                           "Agendá una llamada", "/conversemos/")
     return portada + cinta + servicios + proceso + cierre
 
 
@@ -306,6 +306,81 @@ def opt_out():
              columna("3_5", formulario)),
         admin_label="Opt-out",
     )
+
+
+# ---------- Sobre mí (/esteban/) ----------
+
+def sobre_mi():
+    import sobre_mi as S
+    I = S.INTRO
+    portada = seccion(
+        fila("1_2,1_2",
+             columna("1_2",
+                     texto(antetitulo(I["antetitulo"]), clase="siles-entra"),
+                     texto(f"<h1>{I['titulo']}</h1>", clase="siles-firma siles-display siles-entra siles-retraso-1"),
+                     texto(f"<p>{I['bajada']}</p>", clase="siles-subtitulo siles-entra siles-retraso-2"),
+                     boton("Agendá una llamada", "/conversemos/", clase="siles-boton--flecha siles-entra siles-retraso-3"),
+                     boton("Mirá mi trabajo", "/portafolio/", clase="siles-boton--secundario siles-entra siles-retraso-3"),
+                     clase="siles-botones"),
+             columna("1_2", imagen(I["foto"], "Esteban Siles frente a un tablero de notas en una sesión de trabajo",
+                                   clase="siles-retrato siles-papel siles-entra siles-retraso-2", animation="off")),
+             clase="siles-fila-centro"),
+        admin_label="Portada",
+    )
+    barras = '<div class="siles-barras">' + "".join(
+        f'<div class="siles-barra"><div class="siles-barra__cabeza"><span>{n}</span><span>{v} %</span></div>'
+        f'<div class="siles-barra__pista" role="img" aria-label="{n}: {v} %"><i style="width: {v}%"></i></div></div>' for n, v in S.HABILIDADES) + "</div>"
+    bio = seccion(
+        fila("3_5,2_5",
+             columna("3_5",
+                     texto(antetitulo("Quién soy") + "<h2>Me dedico a la comunicación estratégica</h2>", clase="siles-firma siles-revela"),
+                     texto(parrafos(S.BIO), clase="siles-cuerpo-lg siles-revela")),
+             columna("2_5", texto(antetitulo("Lo que más hago") + barras, clase="siles-revela"))),
+        fila("1_3,1_3,1_3", *[columna("1_3", texto(f'<p class="siles-cifra">{c}</p><p class="siles-antetitulo">{t}</p>', clase="siles-traza siles-revela"))
+                              for c, t in S.CIFRAS]),
+        admin_label="Quién soy",
+    )
+    pasos = [texto(f'<div class="siles-paso-cabeza"><span class="siles-antetitulo">Paso {n}</span>{icono(i, 32)}</div>'
+                   f'<h3>{t}</h3><p style="color: var(--texto-suave)">{c}</p>', clase="siles-traza siles-revela")
+             for n, (i, t, c) in enumerate(S.METODO, 1)]
+    vision = seccion(
+        fila("1_2,1_2",
+             columna("1_2", texto(antetitulo("Visión y método") + "<h2>Mi visión</h2>", clase="siles-firma siles-revela"),
+                     texto(parrafos(S.VISION), clase="siles-revela")),
+             columna("1_2", texto("".join(f"<p>{l}</p>" for l in S.LEMAS), clase="siles-lema siles-revela"))),
+        fila("1_4,1_4,1_4,1_4", *[columna("1_4", p) for p in pasos]),
+        clase="siles-alterna", admin_label="Visión y método",
+    )
+    def lista(titulo):
+        return texto(f"<h3>{titulo}</h3>" + '<ul class="siles-trayectoria">' + "".join(
+            f"<li><span>{a}</span><span>{t}</span></li>" for a, t in S.TRAYECTORIA[titulo]) + "</ul>", clase="siles-revela")
+    trayectoria = seccion(
+        fila("4_4", columna("4_4", texto(antetitulo("Trayectoria") + "<h2>De dónde vengo</h2>", clase="siles-firma siles-revela"))),
+        fila("1_2,1_2", columna("1_2", lista("Experiencia")), columna("1_2", lista("Educación"), lista("Certificaciones"))),
+        fila("1_2,1_2", columna("1_2", lista("Otras cosas")), columna("1_2")),
+        admin_label="Trayectoria",
+    )
+    miniaturas = [imagen(src, f"Proyecto para {nombre}", url=url, clase="siles-trabajo siles-revela", animation="off") for src, nombre, url in S.TRABAJOS]
+    trabajo = seccion(
+        fila("3_5,2_5",
+             columna("3_5", texto(antetitulo("Portafolio") + "<h2>Un poco de mi trabajo</h2>", clase="siles-firma siles-revela")),
+             columna("2_5", texto('<p><a class="siles-enlace" href="/portafolio/">Mirá todos los proyectos</a></p>', clase="siles-revela")),
+             clase="siles-fila-abajo"),
+        fila("1_4,1_4,1_4,1_4", *[columna("1_4", m) for m in miniaturas[:4]]),
+        fila("1_4,1_4,1_4,1_4", *[columna("1_4", m) for m in miniaturas[4:]]),
+        clase="siles-alterna", admin_label="Trabajo",
+    )
+    testimonios = seccion(
+        fila("4_4", columna("4_4", texto(antetitulo("Testimonios") + "<h2>Lo que dicen de mi trabajo</h2>", clase="siles-firma siles-revela"))),
+        fila("1_3,1_3,1_3", *[columna("1_3", texto(
+            f'<figure class="siles-testimonio"><blockquote>«{cita}»</blockquote><figcaption>'
+            f'<img src="{foto}" alt="" width="56" height="56" loading="lazy"><span><strong>{autor}</strong><br>{cargo}</span></figcaption></figure>',
+            clase="siles-testimonio-mod siles-revela")) for cita, autor, cargo, foto in S.TESTIMONIOS], make_equal="on"),
+        admin_label="Testimonios",
+    )
+    cierre = franja_cierre("Conversemos", "Contame qué querés transformar y te propongo un primer paso en una llamada de 30 minutos.",
+                           "Agendá una llamada", "/conversemos/")
+    return portada + bio + vision + trayectoria + trabajo + testimonios + cierre
 
 
 # ---------- 404 ----------
@@ -555,7 +630,7 @@ def servicios():
              columna("2_3",
                      texto("<h2>¿No sabés por dónde empezar?</h2>", clase="siles-firma siles-revela"),
                      texto("<p>Contame qué hacés hoy y te digo cuál es el primer paso.</p>", clase="siles-subtitulo siles-medida siles-revela")),
-             columna("1_3", texto('<p><a class="siles-enlace" href="/contacto/">Hablemos</a></p>', clase="siles-revela")),
+             columna("1_3", texto('<p><a class="siles-enlace" href="/conversemos/">Hablemos</a></p>', clase="siles-revela")),
              clase="siles-fila-abajo"),
         admin_label="Cierre",
     )
@@ -640,7 +715,7 @@ def plantilla_articulo():
                                featured_image="on", featured_placement="below", module_class="siles-articulo"),
                             sc("et_pb_post_content", "", module_class="siles-lectura"),
                             texto('<p>¿Querés aplicar esto en tu negocio? Lo vemos en una llamada de 30 minutos.</p>'
-                                  '<a class="siles-boton siles-boton--flecha" href="/contacto/">Agendá una llamada</a>', clase="siles-llamado")),
+                                  '<a class="siles-boton siles-boton--flecha" href="/conversemos/">Agendá una llamada</a>', clase="siles-llamado")),
              clase="siles-fila-angosta"),
         admin_label="Artículo",
     )
@@ -667,6 +742,7 @@ if __name__ == "__main__":
     guardar_pagina("inicio", inicio())
     guardar_pagina("contacto", contacto())
     guardar_pagina("servicios", servicios())
+    guardar_pagina("sobre-mi", sobre_mi())
     guardar_pagina("conversemos", conversemos())
     guardar_pagina("terminos", terminos())
     guardar_pagina("privacidad", privacidad())
