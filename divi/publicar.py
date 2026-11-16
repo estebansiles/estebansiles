@@ -20,6 +20,7 @@ PAGINAS = {
     "conversemos": ("conversemos", "Conversemos"),
     "terminos": ("terminos-y-condiciones", "Términos y condiciones"),
     "privacidad": ("politica-de-privacidad", "Política de privacidad"),
+    "opt-out": ("opt-out", "Tus datos, tus derechos"),
     "conversemos-prueba": ("prueba-conversemos", "Conversemos (vista previa)"),
 }
 

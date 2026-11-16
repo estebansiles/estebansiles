@@ -257,6 +257,55 @@ def privacidad():
     return pagina_legal(PRIVACIDAD)
 
 
+# ---------- Opt-out (derechos sobre los datos) ----------
+
+SOLICITUDES = ["Acceso y portabilidad: quiero una copia de mis datos", "Rectificación: quiero corregir mis datos",
+               "Borrado: quiero que eliminen mis datos", "Oposición o exclusión (opt-out): no quiero que se usen mis datos ni que se me rastree"]
+
+
+def opt_out():
+    """Formulario para ejercer los derechos de la política de privacidad (sección 7). Sigue el tuteo de la política."""
+    opciones = [{"value": s, "checked": 0, "dragID": n} for n, s in enumerate(SOLICITUDES)]
+    confirma = [{"value": "Confirmo que la solicitud es sobre mis propios datos o que tengo autorización para hacerla.", "checked": 0, "dragID": 0}]
+    campos = "".join([
+        sc("et_pb_contact_field", "", field_id="nombre", field_title="Nombre", field_type="input", fullwidth_field="off", required_mark="on"),
+        sc("et_pb_contact_field", "", field_id="correo", field_title="Correo con el que nos contactaste", field_type="email", fullwidth_field="off", required_mark="on"),
+        sc("et_pb_contact_field", "", field_id="solicitud", field_title="Tipo de solicitud", field_type="select",
+           select_options=json.dumps(opciones, ensure_ascii=False, separators=(",", ":")), fullwidth_field="on", required_mark="on"),
+        sc("et_pb_contact_field", "", field_id="detalle", field_title="Detalle de tu solicitud (opcional)", field_type="text", fullwidth_field="on", required_mark="off"),
+        sc("et_pb_contact_field", "", field_id="confirmacion", field_title="Confirmación", field_type="checkbox",
+           checkbox_options=json.dumps(confirma, ensure_ascii=False, separators=(",", ":")), fullwidth_field="on", required_mark="on"),
+    ])
+    formulario = sc("et_pb_contact_form", campos, email=CORREO, title="", captcha="on", submit_button_text="Enviar solicitud",
+                    success_message="Recibimos tu solicitud. Te responderemos en los plazos que establece la legislación aplicable a tu país de residencia.",
+                    custom_message="Solicitud de privacidad (opt-out)||et_pb_line_break_holder||Tipo: %%solicitud%%||et_pb_line_break_holder||Nombre: %%nombre%%||et_pb_line_break_holder||Correo: %%correo%%||et_pb_line_break_holder||Detalle: %%detalle%%",
+                    module_id="solicitud", module_class="siles-entra siles-retraso-3")
+    derechos = [("Acceso y portabilidad", "Una copia de los datos personales que tenemos sobre ti."),
+                ("Rectificación", "Corregir información inexacta o incompleta."),
+                ("Borrado", "Eliminar tus datos de nuestras bases de datos."),
+                ("Oposición o exclusión", "Oponerte a ciertos usos de tus datos o al rastreo de píxeles de terceros.")]
+    lista = '<ul class="siles-legal__lista">' + "".join(f"<li><strong>{t}:</strong> {c}</li>" for t, c in derechos) + "</ul>"
+    return seccion(
+        fila("4_4", columna("4_4",
+                            texto(antetitulo("Privacidad"), clase="siles-entra"),
+                            texto("<h1>Tus datos, tus derechos</h1>", clase="siles-firma siles-entra siles-retraso-1"),
+                            texto("<p>Usa este formulario para pedir acceso, corrección, borrado o exclusión de tus datos personales, según nuestra "
+                                  '<a href="/politica-de-privacidad/">Política de privacidad</a>.</p>', clase="siles-subtitulo siles-medida siles-entra siles-retraso-2"))),
+        fila("2_5,3_5",
+             columna("2_5",
+                     texto(antetitulo("Lo que puedes pedir") + lista, clase="siles-entra siles-retraso-2"),
+                     texto(antetitulo("Cookies y píxeles") + "<p>Para dejar de ser rastreado por Google Analytics y los píxeles de redes sociales en este navegador, "
+                           "cambia tus preferencias de cookies. Si además quieres que borremos datos asociados a ti, envía también el formulario.</p>"
+                           '<p><a class="siles-boton siles-boton--secundario-html siles-gestionar-cookies" href="/politica-de-privacidad/" '
+                           "onclick=\"if (typeof cmplz_set_banner_status === 'function') { cmplz_set_banner_status('show'); return false; }\">Gestionar cookies</a></p>",
+                           clase="siles-entra siles-retraso-3"),
+                     texto(f'<p>También puedes escribirnos a <a href="mailto:{CORREO}">{CORREO}</a>. Para proteger tus datos, podemos pedirte que confirmes tu identidad antes de responder.</p>',
+                           clase="siles-nota siles-entra siles-retraso-4")),
+             columna("3_5", formulario)),
+        admin_label="Opt-out",
+    )
+
+
 # ---------- Conversemos (agenda) ----------
 
 AGENDA_GOOGLE = ("https://calendar.google.com/calendar/appointments/schedules/"
@@ -577,6 +626,7 @@ if __name__ == "__main__":
     guardar_pagina("conversemos", conversemos())
     guardar_pagina("terminos", terminos())
     guardar_pagina("privacidad", privacidad())
+    guardar_pagina("opt-out", opt_out())
     guardar_pagina("cotizacion", cotizacion())
     exportar_layout("blog.json", plantilla_blog())
     exportar_layout("articulo.json", plantilla_articulo())

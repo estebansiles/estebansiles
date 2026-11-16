@@ -638,3 +638,7 @@ body.siles .siles-blog .et_pb_post .et_link_content, body.siles .siles-blog .et_
 }
 body.siles #page-container .siles-blog .et_pb_post .et_link_content h2 a, body.siles #page-container .siles-blog .et_pb_post .et_quote_content a,
 body.siles #page-container .siles-blog .et_pb_post .et_link_main_url { color: var(--blanco); }
+
+/* Botón secundario en HTML (fuera del módulo Botón) */
+body.siles #page-container a.siles-boton.siles-boton--secundario-html { background: transparent; color: var(--texto); border-color: var(--texto); }
+body.siles #page-container a.siles-boton.siles-boton--secundario-html:hover { background: var(--texto); color: var(--fondo); box-shadow: 0 8px 16px -12px rgba(30, 32, 32, .4); }
