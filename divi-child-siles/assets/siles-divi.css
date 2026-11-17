@@ -642,3 +642,65 @@ body.siles #page-container .siles-blog .et_pb_post .et_link_main_url { color: va
 /* Botón secundario en HTML (fuera del módulo Botón) */
 body.siles #page-container a.siles-boton.siles-boton--secundario-html { background: transparent; color: var(--texto); border-color: var(--texto); }
 body.siles #page-container a.siles-boton.siles-boton--secundario-html:hover { background: var(--texto); color: var(--fondo); box-shadow: 0 8px 16px -12px rgba(30, 32, 32, .4); }
+
+/* ============ Parte 6 · Página 404 ============ */
+@media (min-width: 981px) { body.siles .et_pb_row.siles-fila-centro { display: flex; align-items: center; } }
+body.siles .siles-404__gif { margin: 0; background: var(--superficie); padding: var(--space-3); }
+body.siles .siles-404__marco { position: relative; aspect-ratio: 16 / 9; background: var(--fondo-suave); }
+body.siles .siles-404__marco iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; pointer-events: none; }
+body.siles .siles-404__gif figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--space-2); padding: var(--space-3) var(--space-1) 0; font-style: italic; font-weight: 300; font-size: 15px; color: var(--texto-suave); }
+body.siles #page-container .siles-404__gif figcaption a { font-style: normal; font-size: 13px; letter-spacing: .2em; text-transform: uppercase; color: var(--texto-suave); text-decoration: none; }
+/* Búsqueda (módulo Buscar) con el estilo de campo del sistema */
+body.siles .et_pb_search.siles-busqueda { border: 1px solid var(--linea-fuerte); border-radius: var(--radio-sm); background: var(--superficie); }
+body.siles .et_pb_search.siles-busqueda input.et_pb_s { min-height: var(--control-alto); padding: var(--space-3); font-family: var(--font-texto); font-size: 15px; background: transparent; color: var(--texto); }
+body.siles .et_pb_search.siles-busqueda input.et_pb_searchsubmit { background: var(--accion); color: var(--accion-texto); font-family: var(--font-titulos); font-weight: 500; font-size: 15px; border-radius: 0 var(--radio-sm) var(--radio-sm) 0; }
+/* En columnas de 1/4, Divi centra la imagen del anuncio: las tarjetas mantienen el ícono a la izquierda */
+body.siles .et_pb_column .et_pb_blurb.siles-tarjeta .et_pb_main_blurb_image { text-align: left; }
+body.siles .et_pb_column .et_pb_blurb.siles-tarjeta .et_pb_blurb_content { text-align: left; margin-left: 0; }
+
+/* Portada: con "reducir movimiento", el patrón sin nodos animados. Divi pone el fondo en su propia hoja; !important lo reemplaza. */
+@media (prefers-reduced-motion: reduce) {
+  body.siles .et_pb_section.siles-portada { background-image: url("marca/patron-11-quieto.svg") !important; }
+}
+body.siles .et_pb_column .et_pb_blurb.siles-tarjeta .et_pb_image_wrap { margin-left: 0; margin-right: auto; }
+
+/* Botón de contorno verde (encabezado): letra y borde #00737e; al pasar el cursor, fondo #00737e y letra blanca */
+body.siles #page-container .et_pb_button.siles-boton--contorno { background: transparent; color: var(--verde-1-oscuro); border-color: var(--verde-1-oscuro); }
+body.siles #page-container .et_pb_button.siles-boton--contorno:hover,
+body.siles #page-container .et_pb_button.siles-boton--contorno:focus-visible { background: var(--verde-1-oscuro); color: var(--blanco); border-color: var(--verde-1-oscuro); box-shadow: var(--sombra-accion); }
+
+/* ============ Parte 7 · Sobre mí ============ */
+/* Habilidades: barra con filete y relleno de marca */
+body.siles .siles-barras { display: flex; flex-direction: column; gap: var(--space-5); }
+body.siles .siles-barra__cabeza { display: flex; justify-content: space-between; gap: var(--space-4); margin-bottom: var(--space-2); font-weight: 400; font-size: 15px; }
+body.siles .siles-barra__cabeza span:last-child { color: var(--texto-suave); font-variant-numeric: tabular-nums; }
+body.siles .siles-barra__pista { height: 6px; background: var(--superficie-hundida); }
+body.siles .siles-barra__pista i { display: block; height: 100%; background: var(--verde-1); }
+/* Trayectoria: año a la izquierda, cargo a la derecha */
+body.siles .siles-trayectoria { list-style: none; margin: 0; padding: 0; }
+body.siles .siles-trayectoria li { display: grid; grid-template-columns: 9.5em 1fr; gap: var(--space-4); padding: var(--space-3) 0; border-bottom: 1px solid var(--linea); font-weight: 400; font-size: 15px; line-height: 1.45; }
+body.siles .siles-trayectoria li > span:first-child { font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--texto-suave); padding-top: 2px; }
+@media (max-width: 480px) { body.siles .siles-trayectoria li { grid-template-columns: 1fr; gap: var(--space-1); } }
+
+/* El personalizador de Divi fija "body .et_pb_button:hover { color: #008C99 !important }". Se respeta el color de texto de
+   cada variante del sistema con la misma prioridad y más especificidad. */
+body.siles #page-container .et_pb_button:hover,
+body.siles #page-container .et_pb_contact_submit:hover { color: var(--accion-texto) !important; }
+body.siles #page-container .et_pb_button.siles-boton--secundario:hover { color: var(--fondo) !important; }
+body.siles #page-container .et_pb_button.siles-boton--acento:hover { color: var(--acento-texto) !important; }
+body.siles #page-container .et_pb_button.siles-boton--contorno:hover,
+body.siles #page-container .et_pb_button.siles-boton--contorno:focus-visible { color: var(--blanco) !important; }
+
+/* Redes sociales ([siles_redes]): botones cuadrados con filete; al pasar el cursor, relleno de acento */
+body.siles .siles-redes { list-style: none; display: flex; flex-wrap: wrap; gap: var(--space-2); margin: var(--space-6) 0 0; padding: 0; }
+body.siles .siles-redes li { margin: 0; padding: 0; list-style: none; }
+body.siles #page-container a.siles-redes__enlace {
+  display: grid; place-items: center; width: 44px; height: 44px; box-sizing: border-box;
+  border: 1px solid var(--linea); color: var(--texto); text-decoration: none;
+  transition: background-color .16s var(--curva), border-color .16s var(--curva), color .16s var(--curva), transform .12s var(--curva);
+}
+body.siles #page-container a.siles-redes__enlace:hover, body.siles #page-container a.siles-redes__enlace:focus-visible {
+  background: var(--acento); border-color: var(--acento); color: var(--acento-texto); transform: translateY(-2px);
+}
+body.siles .siles-redes svg { display: block; width: 20px; height: 20px; }
+@media (prefers-reduced-motion: reduce) { body.siles #page-container a.siles-redes__enlace { transition: none; } body.siles #page-container a.siles-redes__enlace:hover { transform: none; } }

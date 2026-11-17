@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'SILES_DIVI_VERSION', '0.6.0' );
+define( 'SILES_DIVI_VERSION', '0.9.4' );
 define( 'SILES_DIVI_CORREO', 'contact@siles.cr' ); // Recibe las cotizaciones.
 
 /**
@@ -23,6 +23,8 @@ function siles_divi_estilos() {
 	wp_enqueue_style( 'siles-tokens', $base . '/tokens.css', array(), SILES_DIVI_VERSION );
 	wp_enqueue_style( 'siles-divi', $base . '/siles-divi.css', array( 'parent-style', 'siles-tokens' ), SILES_DIVI_VERSION );
 	wp_enqueue_style( 'siles-movimiento', $base . '/siles-movimiento.css', array( 'siles-divi' ), SILES_DIVI_VERSION );
+	wp_enqueue_style( 'siles-animaciones', $base . '/siles-animaciones.css', array( 'siles-movimiento' ), SILES_DIVI_VERSION );
+	wp_enqueue_script( 'siles-animaciones', $base . '/siles-animaciones.js', array(), SILES_DIVI_VERSION, array( 'in_footer' => true, 'strategy' => 'defer' ) );
 }
 add_action( 'wp_enqueue_scripts', 'siles_divi_estilos', 20 );
 
@@ -84,3 +86,43 @@ function siles_divi_icono( $atts ) {
 add_shortcode( 'siles_icono', 'siles_divi_icono' );
 
 require_once __DIR__ . '/inc/cotizador.php';
+require_once __DIR__ . '/inc/redes.php';
+
+/**
+ * Imagen para redes sociales: si la versión principal es AVIF (la crea el plugin "Formatos modernos de imagen"),
+ * Yoast publica la imagen original, porque Facebook, LinkedIn y WhatsApp no muestran AVIF en sus vistas previas.
+ *
+ * @param string $url URL de la imagen que Yoast va a publicar.
+ * @return string
+ */
+function siles_divi_imagen_social( $url ) {
+	if ( ! is_string( $url ) || ! preg_match( '/\.avif(\?.*)?$/i', $url ) ) {
+		return $url;
+	}
+	$adjunto = attachment_url_to_postid( preg_replace( '/\?.*$/', '', $url ) );
+	if ( ! $adjunto ) {
+		return $url;
+	}
+	$original = wp_get_original_image_url( $adjunto );
+	return ( $original && ! preg_match( '/\.avif$/i', $original ) ) ? $original : $url;
+}
+add_filter( 'wpseo_opengraph_image', 'siles_divi_imagen_social' );
+add_filter( 'wpseo_twitter_image', 'siles_divi_imagen_social' );
+
+/**
+ * Staging sin www: si se entra por stagingN.siles.cr (sin www), WordPress usa ese host en lugar de www.stagingN.siles.cr.
+ * La base de datos sigue con www, así que al desplegar, SiteGround mantiene https://www.siles.cr en producción.
+ * Fuera de un staging (producción incluida) no cambia nada.
+ *
+ * @param string $url Valor de home o siteurl guardado en la base.
+ * @return string
+ */
+function siles_divi_host_staging( $url ) {
+	$host = isset( $_SERVER['HTTP_HOST'] ) ? strtolower( sanitize_text_field( wp_unslash( $_SERVER['HTTP_HOST'] ) ) ) : '';
+	if ( ! is_string( $url ) || ! preg_match( '/^staging\d+\.siles\.cr$/', $host ) ) {
+		return $url;
+	}
+	return preg_replace( '#^https?://www\.(staging\d+\.siles\.cr)#i', 'https://$1', $url );
+}
+add_filter( 'option_home', 'siles_divi_host_staging' );
+add_filter( 'option_siteurl', 'siles_divi_host_staging' );
