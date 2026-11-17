@@ -1,4 +1,4 @@
-/* Siles · animaciones y piezas de "Sobre mí" (propuesta con más movimiento).
+/* Siles · animaciones y piezas de "Sobre mí" (/esteban/).
    Curva del sistema, sin rebotes. Lo que depende de JavaScript solo se oculta bajo .siles-js (la clase la pone el tema
    en <head>), así que sin JS todo se ve. Con "reducir movimiento" se apaga todo al final de esta hoja. */
 
@@ -52,14 +52,6 @@ body.siles .siles-sm-hero .siles-botones { animation: siles-sube .8s var(--curva
 /* Indicador para bajar */
 .siles-sm-baja { display: flex; align-items: center; gap: var(--space-3); margin-top: var(--space-12); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: #8a8f8f; }
 .siles-sm-baja::before { content: ""; width: 1px; height: 40px; background: var(--verde-2); animation: siles-indica 2.4s var(--curva) infinite; }
-
-/* ---------- Banda de organizaciones ---------- */
-body.siles .et_pb_section.siles-sm-orgs { padding: var(--space-10) 0; border-bottom: 1px solid var(--linea); overflow: hidden; }
-.siles-sm-orgs__pista { display: flex; width: max-content; animation: siles-cinta 60s linear infinite; }
-.siles-sm-orgs:hover .siles-sm-orgs__pista { animation-play-state: paused; }
-.siles-sm-orgs__pista span { display: flex; align-items: center; gap: var(--space-8); padding-right: var(--space-8); white-space: nowrap; font-family: var(--font-titulos); font-weight: 600; font-size: clamp(32px, 5vw, 64px); line-height: 1.1; color: var(--texto); }
-.siles-sm-orgs__pista span:nth-child(even) { color: transparent; -webkit-text-stroke: 1.2px var(--texto); }
-.siles-sm-orgs__pista span::after { content: ""; width: 14px; height: 14px; background: var(--verde-1); flex: none; }
 
 /* ---------- Cifras y barras que se llenan ---------- */
 .siles-sm-cifras { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-6); margin-top: var(--space-10); }
@@ -194,13 +186,11 @@ body.siles .siles-sm-cierre .siles-bloque { float: none; margin-inline: auto !im
 /* ---------- Reducir movimiento: todo quieto y visible ---------- */
 @media (prefers-reduced-motion: reduce) {
   .siles-linea > span, .siles-sm-foto::before, .siles-sm-foto img, .siles-sm-chip, .siles-sm-bajada, .siles-sm-hero .siles-botones,
-  .siles-sm-orgs__pista, .siles-sm-galeria__pista, .siles-sm-baja::before { animation: none !important; }
+  .siles-sm-galeria__pista, .siles-sm-baja::before { animation: none !important; }
   .siles-rotador > span { animation: none; opacity: 0; }
   .siles-rotador > span:first-child { opacity: 1; }
   body.siles .et_pb_section.siles-sm-hero { background-image: url("marca/patron-oscuro-quieto.svg"); }
   body.siles .et_pb_section.siles-sm-cierre { background-image: url("marca/patron-11-quieto.svg"); }
   .siles-sm-galeria__pista { flex-wrap: wrap; width: auto; justify-content: center; }
   .siles-sm-galeria__pista > :nth-child(n+9) { display: none; }
-  .siles-sm-orgs__pista { flex-wrap: wrap; width: auto; }
-  .siles-sm-orgs__pista > :nth-child(n+11) { display: none; }
 }

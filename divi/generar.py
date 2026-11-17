@@ -308,88 +308,12 @@ def opt_out():
     )
 
 
-# ---------- Sobre mí (/esteban/) ----------
+# ---------- Sobre mí (/esteban/), con movimiento ----------
 
-def sobre_mi():
-    import sobre_mi as S
-    I = S.INTRO
-    portada = seccion(
-        fila("1_2,1_2",
-             columna("1_2",
-                     texto(antetitulo(I["antetitulo"]), clase="siles-entra"),
-                     texto(f"<h1>{I['titulo']}</h1>", clase="siles-firma siles-display siles-entra siles-retraso-1"),
-                     texto(f"<p>{I['bajada']}</p>", clase="siles-subtitulo siles-entra siles-retraso-2"),
-                     boton("Agendá una llamada", "/conversemos/", clase="siles-boton--flecha siles-entra siles-retraso-3"),
-                     boton("Mirá mi trabajo", "/portafolio/", clase="siles-boton--secundario siles-entra siles-retraso-3"),
-                     clase="siles-botones"),
-             columna("1_2", imagen(I["foto"], "Esteban Siles frente a un tablero de notas en una sesión de trabajo",
-                                   clase="siles-retrato siles-papel siles-entra siles-retraso-2", animation="off")),
-             clase="siles-fila-centro"),
-        admin_label="Portada",
-    )
-    barras = '<div class="siles-barras">' + "".join(
-        f'<div class="siles-barra"><div class="siles-barra__cabeza"><span>{n}</span><span>{v} %</span></div>'
-        f'<div class="siles-barra__pista" role="img" aria-label="{n}: {v} %"><i style="width: {v}%"></i></div></div>' for n, v in S.HABILIDADES) + "</div>"
-    bio = seccion(
-        fila("3_5,2_5",
-             columna("3_5",
-                     texto(antetitulo("Quién soy") + "<h2>Me dedico a la comunicación estratégica</h2>", clase="siles-firma siles-revela"),
-                     texto(parrafos(S.BIO), clase="siles-cuerpo-lg siles-revela")),
-             columna("2_5", texto(antetitulo("Lo que más hago") + barras, clase="siles-revela"))),
-        fila("1_3,1_3,1_3", *[columna("1_3", texto(f'<p class="siles-cifra">{c}</p><p class="siles-antetitulo">{t}</p>', clase="siles-traza siles-revela"))
-                              for c, t in S.CIFRAS]),
-        admin_label="Quién soy",
-    )
-    pasos = [texto(f'<div class="siles-paso-cabeza"><span class="siles-antetitulo">Paso {n}</span>{icono(i, 32)}</div>'
-                   f'<h3>{t}</h3><p style="color: var(--texto-suave)">{c}</p>', clase="siles-traza siles-revela")
-             for n, (i, t, c) in enumerate(S.METODO, 1)]
-    vision = seccion(
-        fila("1_2,1_2",
-             columna("1_2", texto(antetitulo("Visión y método") + "<h2>Mi visión</h2>", clase="siles-firma siles-revela"),
-                     texto(parrafos(S.VISION), clase="siles-revela")),
-             columna("1_2", texto("".join(f"<p>{l}</p>" for l in S.LEMAS), clase="siles-lema siles-revela"))),
-        fila("1_4,1_4,1_4,1_4", *[columna("1_4", p) for p in pasos]),
-        clase="siles-alterna", admin_label="Visión y método",
-    )
-    def lista(titulo):
-        return texto(f"<h3>{titulo}</h3>" + '<ul class="siles-trayectoria">' + "".join(
-            f"<li><span>{a}</span><span>{t}</span></li>" for a, t in S.TRAYECTORIA[titulo]) + "</ul>", clase="siles-revela")
-    trayectoria = seccion(
-        fila("4_4", columna("4_4", texto(antetitulo("Trayectoria") + "<h2>De dónde vengo</h2>", clase="siles-firma siles-revela"))),
-        fila("1_2,1_2", columna("1_2", lista("Experiencia")), columna("1_2", lista("Educación"), lista("Certificaciones"))),
-        fila("1_2,1_2", columna("1_2", lista("Otras cosas")), columna("1_2")),
-        admin_label="Trayectoria",
-    )
-    miniaturas = [imagen(src, f"Proyecto para {nombre}", url=url, clase="siles-trabajo siles-revela", animation="off") for src, nombre, url in S.TRABAJOS]
-    trabajo = seccion(
-        fila("3_5,2_5",
-             columna("3_5", texto(antetitulo("Portafolio") + "<h2>Un poco de mi trabajo</h2>", clase="siles-firma siles-revela")),
-             columna("2_5", texto('<p><a class="siles-enlace" href="/portafolio/">Mirá todos los proyectos</a></p>', clase="siles-revela")),
-             clase="siles-fila-abajo"),
-        fila("1_4,1_4,1_4,1_4", *[columna("1_4", m) for m in miniaturas[:4]]),
-        fila("1_4,1_4,1_4,1_4", *[columna("1_4", m) for m in miniaturas[4:]]),
-        clase="siles-alterna", admin_label="Trabajo",
-    )
-    testimonios = seccion(
-        fila("4_4", columna("4_4", texto(antetitulo("Testimonios") + "<h2>Lo que dicen de mi trabajo</h2>", clase="siles-firma siles-revela"))),
-        fila("1_3,1_3,1_3", *[columna("1_3", texto(
-            f'<figure class="siles-testimonio"><blockquote>«{cita}»</blockquote><figcaption>'
-            f'<img src="{foto}" alt="" width="56" height="56" loading="lazy"><span><strong>{autor}</strong><br>{cargo}</span></figcaption></figure>',
-            clase="siles-testimonio-mod siles-revela")) for cita, autor, cargo, foto in S.TESTIMONIOS], make_equal="on"),
-        admin_label="Testimonios",
-    )
-    cierre = franja_cierre("Conversemos", "Contame qué querés transformar y te propongo un primer paso en una llamada de 30 minutos.",
-                           "Agendá una llamada", "/conversemos/")
-    return portada + bio + vision + trayectoria + trabajo + testimonios + cierre
-
-
-# ---------- Sobre mí, propuesta con más movimiento (/esteban-propuesta/) ----------
-
-ORGANIZACIONES = ["PROSIC", "CIEP", "TECHO", "Entebbe", "Uniko Branding", "ALICE", "Guías y Scouts", "AD San Carlos", "Coopelesca", "COOCIQUE"]
 ROLES = ["la comunicación estratégica", "la transformación digital", "la automatización", "la IA generativa"]
 
 
-def sobre_mi_propuesta():
+def sobre_mi():
     import sobre_mi as S
     I = S.INTRO
     # Portada oscura
@@ -411,14 +335,6 @@ def sobre_mi_propuesta():
              columna("1_2", texto(foto)),
              clase="siles-fila-centro"),
         clase="siles-sm-hero siles-oscuro", admin_label="Portada",
-    )
-    # Banda de organizaciones
-    pista = "".join(f"<span>{o}</span>" for o in ORGANIZACIONES * 2)
-    orgs = seccion(
-        fila("4_4", columna("4_4", sc("et_pb_code", f'<div class="siles-sm-orgs__marco" aria-label="Organizaciones con las que he trabajado: {", ".join(ORGANIZACIONES)}">'
-                                                    f'<div class="siles-sm-orgs__pista" aria-hidden="true">{pista}</div></div>')),
-             clase="siles-fila-completa"),
-        clase="siles-sm-orgs", custom_padding="40px||40px||false|false", admin_label="Organizaciones",
     )
     # Quién soy: biografía, cifras que cuentan y barras que se llenan
     barras = '<div class="siles-barras">' + "".join(
@@ -516,7 +432,7 @@ def sobre_mi_propuesta():
                             clase="siles-bloque siles-anima siles-anima--sube")),
         clase="siles-sm-cierre", admin_label="Cierre",
     )
-    return portada + orgs + bio + manifiesto + metodo + trayectoria + trabajo + testimonios + cierre
+    return portada + bio + manifiesto + metodo + trayectoria + trabajo + testimonios + cierre
 
 
 # ---------- 404 ----------
@@ -879,7 +795,6 @@ if __name__ == "__main__":
     guardar_pagina("contacto", contacto())
     guardar_pagina("servicios", servicios())
     guardar_pagina("sobre-mi", sobre_mi())
-    guardar_pagina("sobre-mi-propuesta", sobre_mi_propuesta())
     guardar_pagina("conversemos", conversemos())
     guardar_pagina("terminos", terminos())
     guardar_pagina("privacidad", privacidad())
