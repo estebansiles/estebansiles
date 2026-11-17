@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Sube las páginas de divi/paginas/ al WordPress por la API REST, con el constructor de Divi activo.
 
-Uso:  python3 divi/publicar.py https://staging3.siles.cr inicio contacto proyectos
+Uso:  python3 divi/publicar.py https://staging2.siles.cr inicio contacto proyectos
 La autenticación (contraseña de aplicación) la agrega el entorno; este script no maneja credenciales.
 Si la página ya existe (mismo slug), la actualiza; si no, la crea publicada.
 """

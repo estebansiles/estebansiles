@@ -1,6 +1,10 @@
 # Lista de verificación: paso a producción de siles.cr
 
-De `staging3.siles.cr` a `www.siles.cr` en SiteGround. Marcá cada casilla al terminar.
+De `staging2.siles.cr` a `www.siles.cr` en SiteGround. Marcá cada casilla al terminar.
+
+**Sobre el staging:** el staging está registrado en WordPress como `www.staging2.siles.cr`, y así debe quedar: al desplegar, SiteGround mantiene `www.siles.cr` en producción. Se trabaja entrando por `staging2.siles.cr` (sin www); el tema (0.9.4 o posterior) sirve el sitio con esa dirección sin tocar la base. Para eso, en el `.htaccess` del staging están comentadas las dos líneas de SG Optimizer que obligan a usar www. Si SG Optimizer las vuelve a escribir, hay que comentarlas de nuevo. En producción, WordPress redirige `siles.cr` a `www.siles.cr` por su cuenta.
+
+**Después de cada lanzamiento,** recreá el staging desde producción.
 
 **Tiempo estimado:** 60 a 90 minutos, más una revisión a las 48 horas.
 
@@ -41,7 +45,7 @@ Esto puede esperar a después del lanzamiento, pero decidilo antes:
 
 ## 3. El paso
 
-- [ ] **Abrí el despliegue:** en Site Tools › WordPress › Staging, en `staging3.siles.cr`, elegí **Deploy › Full Deploy** (archivos y base de datos). El rediseño vive casi todo en la base de datos (páginas, plantillas del Theme Builder, menús, proyectos y ajustes), así que un despliegue solo de archivos no alcanza.
+- [ ] **Abrí el despliegue:** en Site Tools › WordPress › Staging, en `www.staging2.siles.cr`, elegí **Deploy › Full Deploy** (archivos y base de datos). El rediseño vive casi todo en la base de datos (páginas, plantillas del Theme Builder, menús, proyectos y ajustes), así que un despliegue solo de archivos no alcanza.
 - [ ] **Esperá:** dejá que termine sin tocar el sitio.
 
 ---
