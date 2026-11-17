@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'SILES_DIVI_VERSION', '0.10.3' );
+define( 'SILES_DIVI_VERSION', '0.11.0' );
 define( 'SILES_DIVI_CORREO', 'contact@siles.cr' ); // Recibe las cotizaciones.
 
 /**
@@ -87,6 +87,8 @@ function siles_divi_icono( $atts ) {
 }
 add_shortcode( 'siles_icono', 'siles_divi_icono' );
 
+require_once __DIR__ . '/inc/idiomas.php';
+require_once __DIR__ . '/inc/api-traducciones.php';
 require_once __DIR__ . '/inc/cotizador.php';
 require_once __DIR__ . '/inc/redes.php';
 require_once __DIR__ . '/inc/menu-movil.php';

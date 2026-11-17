@@ -41,7 +41,7 @@ function siles_divi_redes_shortcode() {
 			esc_attr( $clave ),
 			esc_url( $red['url'] ),
 			/* translators: %s: nombre de la red social. */
-			esc_attr( sprintf( 'Siles Comunicación en %s (se abre en otra pestaña)', $red['nombre'] ) ),
+			esc_attr( sprintf( siles_t( 'Siles Comunicación en %s (se abre en otra pestaña)' ), $red['nombre'] ) ),
 			esc_attr( $red['vista'] ),
 			esc_attr( $red['d'] )
 		);

@@ -736,3 +736,16 @@ body.siles .siles-redes svg { display: block; width: 20px; height: 20px; }
   body.siles .et-l--footer .et_pb_row:first-of-type > .et_pb_column:nth-child(3) .siles-lista .et_pb_text_inner > .siles-antetitulo { grid-column: 1 / -1; }
   body.siles .siles-pie-legal .et_pb_text_inner { letter-spacing: .12em; }
 }
+
+/* ---------- Parte 9. Selector de idioma en el encabezado de escritorio ([siles_idiomas]) ----------
+   Códigos cortos (ES, EN, PT, FR) junto al botón; el idioma actual en negrita con la barra de realce. */
+body.siles .et-l--header .siles-idiomas ul { display: flex; align-items: center; gap: var(--space-1); margin: 0; padding: 0; list-style: none; }
+body.siles .et-l--header .siles-idiomas li { margin: 0; padding: 0; list-style: none; }
+body.siles #page-container .et-l--header .siles-idiomas a {
+  display: inline-grid; place-items: center; min-width: 32px; min-height: 40px; padding: 0 2px;
+  font: 400 13px/1 var(--font-texto); letter-spacing: .12em; color: var(--texto-suave); text-decoration: none;
+}
+body.siles #page-container .et-l--header .siles-idiomas a:hover { color: var(--texto); }
+body.siles #page-container .et-l--header .siles-idiomas a[aria-current] { color: var(--texto); font-weight: 700; box-shadow: inset 0 -2px 0 var(--realce); }
+body.siles .et_pb_row.siles-cabecera > .et_pb_column:nth-child(3) { display: flex; align-items: center; justify-content: flex-end; gap: var(--space-4); }
+body.siles .et_pb_row.siles-cabecera > .et_pb_column:nth-child(3) > .et_pb_module { margin-bottom: 0; }

@@ -64,7 +64,7 @@
     raiz.classList.add('siles-movil--abierto');
     html.classList.add('siles-menu-abierto');
     botonMenu.setAttribute('aria-expanded', 'true');
-    textoMenu.textContent = 'Cerrar el menú';
+    textoMenu.textContent = botonMenu.getAttribute('data-texto-cerrar') || 'Cerrar el menú';
     var primero = panel.querySelector('a');
     if (primero) setTimeout(function () { primero.focus({ preventScroll: true }); }, reducido.matches ? 0 : 120);
   }
@@ -72,7 +72,7 @@
   function cerrarMenu(devolverFoco) {
     if (!abierto()) return;
     botonMenu.setAttribute('aria-expanded', 'false');
-    textoMenu.textContent = 'Abrir el menú';
+    textoMenu.textContent = botonMenu.getAttribute('data-texto-abrir') || 'Abrir el menú';
     raiz.classList.add('siles-movil--cerrando');
     raiz.classList.remove('siles-movil--abierto');
     html.classList.remove('siles-menu-abierto');
@@ -88,7 +88,7 @@
     if (abierto()) cerrarMenu(false);
     buscador.hidden = false;
     botonBuscar.setAttribute('aria-expanded', 'true');
-    textoBuscar.textContent = 'Cerrar el buscador';
+    textoBuscar.textContent = botonBuscar.getAttribute('data-texto-cerrar') || 'Cerrar el buscador';
     campo.focus();
   }
 
@@ -96,7 +96,7 @@
     if (buscador.hidden) return;
     buscador.hidden = true;
     botonBuscar.setAttribute('aria-expanded', 'false');
-    textoBuscar.textContent = 'Buscar';
+    textoBuscar.textContent = botonBuscar.getAttribute('data-texto-abrir') || 'Buscar';
     if (devolverFoco !== false) botonBuscar.focus({ preventScroll: true });
   }
 
