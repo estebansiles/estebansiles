@@ -148,6 +148,8 @@ Con **Vista previa** de GTM (versión del espacio de trabajo) sobre `https://www
 
 Con sesión de administrador el banner no se muestra; las elecciones se simularon con las funciones de Complianz que usan sus botones (`cmplz_deny_all`, `cmplz_set_consent`). La prueba envió datos reales desde `staging2.siles.cr` (una visita en GA4, una sesión en Clarity, una visita en Meta y en TikTok).
 
+**Verificación desde la sesión en la nube (17 de noviembre de 2026):** sin tocar el banner, GTM está en el `<head>`, Complianz solo envía `cmplz_event_functional` y retiene como `text/plain` (marketing) el píxel de Meta, su `PageView`, el SDK de Facebook y el reCAPTCHA de Divi. Los casos de rechazar y aceptar no se pudieron repetir desde la nube: la protección contra bots de SiteGround respondió `202` a varios scripts, entre ellos el de Complianz. Valen los resultados de la Vista previa de arriba.
+
 Ojo: mientras la versión nueva no se publique, el staging carga la versión publicada de GTM, que todavía dispara GA4 y Clarity en All Pages sin consentimiento.
 
 ### 7. Producción ⏳
