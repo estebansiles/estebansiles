@@ -62,7 +62,8 @@ Pasos, en el staging primero:
 - **Mailchimp:** no se usa; se quita.
 - **TikTok:** píxel `DBTUGSJC77U5KA7Q8O2G`, en GTM y con consentimiento de marketing.
 - **LinkedIn:** no se agrega. La política ya no lo menciona y ahora nombra a Microsoft Clarity (en el staging).
-- **Consentimiento:** Esteban prefiere pedirlo solo en Europa. Con Complianz gratuito no se puede (un solo banner para todos y sin detección de país); hace falta **Complianz Premium** (aceptación previa en la UE y aviso con opción de rechazar en el resto). Pendiente de decidir: Premium, o aceptación previa para todos con la versión gratuita.
+- **Consentimiento:** aceptación previa para **todos** los visitantes, con Complianz gratuito (opción 2). Pedirlo solo en Europa requería Complianz Premium.
+- **Píxel de Meta:** el del navegador se queda en el plugin, no pasa a GTM. Así el plugin envía el mismo evento por el navegador y por la API de Conversiones con un identificador común, y Meta no lo cuenta dos veces. Complianz bloquea el plugin hasta que haya consentimiento de marketing.
 
 ## Tabla final de etiquetas
 
@@ -70,5 +71,59 @@ Pasos, en el staging primero:
 | --- | --- |
 | GA4 (`G-1FEPWW0E8H`) | Estadísticas (`analytics_storage`) |
 | Clarity (`lmigexys8q`) | Estadísticas (`analytics_storage`) |
-| Píxel de Meta (`300361413088359`) | Marketing (`ad_storage`, `ad_user_data`, `ad_personalization`) |
-| Píxel de TikTok (`DBTUGSJC77U5KA7Q8O2G`) | Marketing |
+| Píxel de TikTok (`DBTUGSJC77U5KA7Q8O2G`) | Marketing (`ad_storage`, `ad_user_data`, `ad_personalization`) |
+
+Fuera de GTM: el **píxel de Meta** (`300361413088359`) queda en su plugin, bloqueado por la integración de Complianz hasta el consentimiento de marketing.
+
+## Guía paso a paso
+
+Todo en el **staging** (`www.staging2.siles.cr/wp-admin`), salvo GTM, que es un solo contenedor para el staging y para producción. En GTM se prepara todo en el espacio de trabajo y **no se publica** hasta después del despliegue.
+
+### 1. Divi: quitar los fragmentos pegados a mano
+En **Divi › Opciones del tema › Integración**:
+- **"Agregar código al `<head>`":** borrá todo el bloque. Incluye el fragmento de GA4 (`gtag/js?id=G-1FEPWW0E8H`), el de Mailchimp (`mcjs`) y el de GTM (`GTM-THQ5FK5`). Si hay otra cosa ahí, dejala y avisá.
+- **"Agregar código al `<body>`":** borrá el `<noscript>` de GTM (`googletagmanager.com/ns.html?id=GTM-THQ5FK5`).
+- Guardá.
+
+### 2. Site Kit: que no inserte nada
+Site Kit se queda para ver los informes en el escritorio de WordPress.
+- **Analytics:** en Site Kit › Ajustes › Servicios conectados, abrí **Analytics** › Editar y desactivá **"Insertar el fragmento de código de Google Analytics"**.
+- **Tag Manager:** en el mismo lugar, abrí **Tag Manager** › Editar y desactivá **"Insertar el fragmento de código"**.
+- **Modo de consentimiento:** en Site Kit › Ajustes › Administrador, desactivá **"Modo de consentimiento"**. Lo maneja Complianz, para todos los países.
+
+### 3. Plugins
+- Desactivá **Microsoft Clarity**: Clarity se carga desde GTM.
+- **Meta pixel for WordPress** se queda.
+
+### 4. Complianz
+En **Complianz › Asistente**:
+- **Región:** Unión Europea (aceptación previa). En la versión gratuita se aplica a todos los visitantes.
+- **Estadísticas:** elegí **Google Tag Manager** con el ID `GTM-THQ5FK5`; Complianz pasa a insertarlo. A la pregunta de si las estadísticas son respetuosas con la privacidad o anónimas, respondé **No**. Así dejan de permitirse por defecto.
+- **Modo de consentimiento de Google (Consent Mode v2):** activalo.
+- **Integraciones › Plugins:** verificá que esté activa la integración con el plugin del píxel de Meta.
+- **Servicios de terceros:** que estén **Meta (Facebook)**, **TikTok** y **Microsoft Clarity**, para la política de cookies.
+- Terminá el asistente y guardá. Si Complianz lo pide, regenerá la política de cookies.
+
+### 5. Google Tag Manager (contenedor `GTM-THQ5FK5`), sin publicar
+- **Descripción general del consentimiento:** en Administrar › Configuración del contenedor, activá **"Habilitar la descripción general del consentimiento"**.
+- **Etiqueta de Google `G-1FEPWW0E8H`:** en Configuración avanzada › Configuración del consentimiento, elegí **"Requerir consentimiento adicional"** y agregá `analytics_storage`.
+- **Etiqueta de Clarity** (HTML personalizado): lo mismo, con `analytics_storage`.
+- **Etiqueta nueva de TikTok:**
+  - En Etiquetas › Nueva › Galería de plantillas de la comunidad, elegí **"TikTok Pixel"** (de TikTok).
+  - ID del píxel: `DBTUGSJC77U5KA7Q8O2G`.
+  - Consentimiento requerido: `ad_storage`, `ad_user_data` y `ad_personalization`.
+  - Activador: **All Pages**.
+- **No agregues** el píxel de Meta.
+- Probá con **Vista previa** sobre `https://www.staging2.siles.cr`. **No publiques todavía.**
+
+### 6. Prueba en el staging
+Aviso, y desde acá reviso qué se envía sin tocar el banner, rechazando y aceptando. Bloqueo los envíos para no ensuciar las estadísticas.
+
+### 7. Producción
+1. Comparación previa con producción.
+2. Respaldo y *Full Deploy*.
+3. **Recién ahí, publicar la versión nueva de GTM.**
+4. Revisión en producción.
+
+### A verificar después
+- **API de Conversiones de Meta:** los eventos del servidor no se ven desde el navegador. Hay que confirmar en el plugin, o en el Administrador de eventos de Meta, que sin consentimiento no se envíen eventos `PageView` desde el servidor.
