@@ -73,14 +73,12 @@ function siles_menu_movil_es_actual( $url ) {
 }
 
 /**
- * Imprime la barra, el buscador y el panel del menú.
+ * Marcado de la barra, el buscador y el panel del menú.
+ *
+ * @return string
  */
-function siles_menu_movil() {
-	static $hecho = false;
-	if ( $hecho || is_admin() ) {
-		return;
-	}
-	$hecho     = true;
+function siles_menu_movil_marcado() {
+	ob_start();
 	$marca     = get_stylesheet_directory_uri() . '/assets/marca';
 	$elementos = siles_menu_movil_elementos();
 	?>
@@ -139,15 +137,22 @@ function siles_menu_movil() {
 			</div>
 		</div>
 	</div>
-	<script>(function(){var b=document.querySelector('[data-siles-movil]');if(b&&document.body&&document.body.firstElementChild!==b){document.body.insertBefore(b,document.body.firstChild);}})();</script>
 	<?php
+	return trim( ob_get_clean() );
 }
 /*
- * Con plantillas de encabezado del Theme Builder, Divi no siempre ejecuta wp_body_open. Por eso la barra se engancha
- * a las acciones de inicio de página de Divi y, si ninguna corre, se imprime al final y el script la mueve al inicio
- * del <body>. La variable estática evita que salga dos veces.
+ * Con el encabezado del Theme Builder, lo que el tema imprime en wp_body_open o wp_footer no llega a la página del
+ * staging. Por eso el marcado viaja como dato del script del menú, que sí se publica, y el script arma la barra al
+ * inicio del <body>. Sin JavaScript no hay barra y queda el encabezado de Divi.
  */
-add_action( 'wp_body_open', 'siles_menu_movil', 5 );
-add_action( 'et_theme_builder_template_before_header', 'siles_menu_movil', 5 );
-add_action( 'et_before_main_content', 'siles_menu_movil', 5 );
-add_action( 'wp_footer', 'siles_menu_movil', 1 );
+function siles_menu_movil_datos() {
+	if ( is_admin() || ! wp_script_is( 'siles-menu-movil', 'enqueued' ) ) {
+		return;
+	}
+	wp_add_inline_script(
+		'siles-menu-movil',
+		'window.silesMenuMovil = ' . wp_json_encode( array( 'html' => siles_menu_movil_marcado() ) ) . ';',
+		'before'
+	);
+}
+add_action( 'wp_enqueue_scripts', 'siles_menu_movil_datos', 30 );
