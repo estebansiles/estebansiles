@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'SILES_DIVI_VERSION', '0.9.1' );
+define( 'SILES_DIVI_VERSION', '0.9.2' );
 define( 'SILES_DIVI_CORREO', 'contact@siles.cr' ); // Recibe las cotizaciones.
 
 /**
@@ -86,6 +86,7 @@ function siles_divi_icono( $atts ) {
 add_shortcode( 'siles_icono', 'siles_divi_icono' );
 
 require_once __DIR__ . '/inc/cotizador.php';
+require_once __DIR__ . '/inc/redes.php';
 
 /**
  * Imagen para redes sociales: si la versión principal es AVIF (la crea el plugin "Formatos modernos de imagen"),

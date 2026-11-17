@@ -98,7 +98,8 @@ def pie():
         fila("1_2,1_4,1_4",
              columna("1_2",
                      imagen(f"{TEMA}/marca/logo-blanco.svg", "Siles Comunicación", url="/", clase="siles-logo"),
-                     texto('<p style="max-width: 36ch; color: var(--texto-suave)">Todo se puede transformar digitalmente, no hay excusas.</p>')),
+                     texto('<p style="max-width: 36ch; color: var(--texto-suave)">Todo se puede transformar digitalmente, no hay excusas.</p>'),
+                     texto("[siles_redes]")),
              columna("1_4", texto(
                  antetitulo("Contacto")
                  + f'<p>{icono("correo", 20)}<a href="mailto:{CORREO}">{CORREO}</a></p>'

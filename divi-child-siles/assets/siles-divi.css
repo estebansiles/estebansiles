@@ -690,3 +690,17 @@ body.siles #page-container .et_pb_button.siles-boton--secundario:hover { color: 
 body.siles #page-container .et_pb_button.siles-boton--acento:hover { color: var(--acento-texto) !important; }
 body.siles #page-container .et_pb_button.siles-boton--contorno:hover,
 body.siles #page-container .et_pb_button.siles-boton--contorno:focus-visible { color: var(--blanco) !important; }
+
+/* Redes sociales ([siles_redes]): botones cuadrados con filete; al pasar el cursor, relleno de acento */
+body.siles .siles-redes { list-style: none; display: flex; flex-wrap: wrap; gap: var(--space-2); margin: var(--space-6) 0 0; padding: 0; }
+body.siles .siles-redes li { margin: 0; padding: 0; list-style: none; }
+body.siles #page-container a.siles-redes__enlace {
+  display: grid; place-items: center; width: 44px; height: 44px; box-sizing: border-box;
+  border: 1px solid var(--linea); color: var(--texto); text-decoration: none;
+  transition: background-color .16s var(--curva), border-color .16s var(--curva), color .16s var(--curva), transform .12s var(--curva);
+}
+body.siles #page-container a.siles-redes__enlace:hover, body.siles #page-container a.siles-redes__enlace:focus-visible {
+  background: var(--acento); border-color: var(--acento); color: var(--acento-texto); transform: translateY(-2px);
+}
+body.siles .siles-redes svg { display: block; width: 20px; height: 20px; }
+@media (prefers-reduced-motion: reduce) { body.siles #page-container a.siles-redes__enlace { transition: none; } body.siles #page-container a.siles-redes__enlace:hover { transform: none; } }
