@@ -4,6 +4,8 @@
   'use strict';
   var raiz = document.querySelector('[data-siles-movil]');
   if (!raiz) return;
+  /* Si la barra quedó al final de la página (sin wp_body_open), va al inicio del <body> para que se quede arriba. */
+  if (document.body.firstElementChild !== raiz) document.body.insertBefore(raiz, document.body.firstChild);
 
   var botonMenu = raiz.querySelector('[data-siles-menu]');
   var textoMenu = raiz.querySelector('[data-siles-menu-texto]');

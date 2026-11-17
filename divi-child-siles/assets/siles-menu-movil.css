@@ -4,9 +4,10 @@
 .siles-movil { display: none; }
 
 @media (max-width: 980px) and (scripting: enabled) {
-  body.siles .et-l--header { display: none; }
+  /* Solo si la barra propia está en la página: si faltara, queda el encabezado de Divi. */
+  body.siles:has(.siles-movil) .et-l--header { display: none; }
   /* Divi deja en línea el alto de su encabezado fijo como relleno del contenido; con la barra propia no hace falta. */
-  body.siles #et-main-area { padding-top: 0 !important; }
+  body.siles:has(.siles-movil) #et-main-area { padding-top: 0 !important; }
 
   .siles-movil {
     --movil-alto: 64px;

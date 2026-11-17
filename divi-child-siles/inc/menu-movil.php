@@ -139,6 +139,15 @@ function siles_menu_movil() {
 			</div>
 		</div>
 	</div>
+	<script>(function(){var b=document.querySelector('[data-siles-movil]');if(b&&document.body&&document.body.firstElementChild!==b){document.body.insertBefore(b,document.body.firstChild);}})();</script>
 	<?php
 }
+/*
+ * Con plantillas de encabezado del Theme Builder, Divi no siempre ejecuta wp_body_open. Por eso la barra se engancha
+ * a las acciones de inicio de página de Divi y, si ninguna corre, se imprime al final y el script la mueve al inicio
+ * del <body>. La variable estática evita que salga dos veces.
+ */
 add_action( 'wp_body_open', 'siles_menu_movil', 5 );
+add_action( 'et_theme_builder_template_before_header', 'siles_menu_movil', 5 );
+add_action( 'et_before_main_content', 'siles_menu_movil', 5 );
+add_action( 'wp_footer', 'siles_menu_movil', 1 );
