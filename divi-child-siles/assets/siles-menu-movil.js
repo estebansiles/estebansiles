@@ -2,6 +2,19 @@
    Marcado en inc/menu-movil.php y estilos en siles-menu-movil.css. */
 (function () {
   'use strict';
+  /* Speed Optimizer mueve el dato con el marcado (window.silesMenuMovil) a su archivo combinado, que puede correr
+     después de este script: si todavía no está, se espera a que termine de cargar el documento. */
+  var iniciado = false;
+  if (document.querySelector('[data-siles-movil]') || window.silesMenuMovil || document.readyState === 'complete') {
+    iniciar();
+  } else {
+    /* Un script diferido corre antes de DOMContentLoaded; el combinado de Speed Optimizer también, pero después. */
+    document.addEventListener('DOMContentLoaded', iniciar);
+    window.addEventListener('load', iniciar);
+  }
+
+  function iniciar() {
+  if (iniciado) return;
   var raiz = document.querySelector('[data-siles-movil]');
   if (!raiz && window.silesMenuMovil && window.silesMenuMovil.html) {
     var molde = document.createElement('div');
@@ -9,6 +22,7 @@
     raiz = molde.querySelector('[data-siles-movil]');
   }
   if (!raiz) return;
+  iniciado = true;
   /* Si la barra quedó al final de la página (sin wp_body_open), va al inicio del <body> para que se quede arriba. */
   if (document.body.firstElementChild !== raiz) document.body.insertBefore(raiz, document.body.firstChild);
 
@@ -131,4 +145,5 @@
       panel.hidden = true;
     }
   });
+  }
 })();
