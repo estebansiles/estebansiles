@@ -130,7 +130,7 @@ PROCESO = [
     ("desarrollo", "Implemento", "Construyo y conecto las herramientas."),
     ("mejorar", "Mejoro", "Mido resultados y ajusto."),
 ]
-TEMAS = ["Transformación digital", "Automatización", "Agentes de IA", "Factura electrónica 4.4", "Experiencia de usuario"]
+TEMAS = ["Transformación digital", "Automatización", "Agentes de IA", "Factura electrónica", "Experiencia de usuario"]
 
 
 def franja_cierre(titulo, bajada, textob, url):
