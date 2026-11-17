@@ -80,9 +80,9 @@ Pasos, en el staging primero:
 | --- | --- | --- |
 | GA4 (`G-1FEPWW0E8H`) | "Complianz – statistics" (`cmplz_event_statistics`) | Estadísticas |
 | Clarity (`lmigexys8q`) | "Complianz – statistics" (`cmplz_event_statistics`) | Estadísticas |
-| Píxel de TikTok (`DBTUGSJC77U5KA7Q8O2G`) | "Complianz – marketing" (`cmplz_event_marketing`) | Marketing |
+| Píxel de TikTok (`DBTUGSJC77U5KA7Q8O2G`): etiqueta "TikTok – base" (HTML personalizado) | "Complianz – marketing" (`cmplz_event_marketing`) | Marketing |
 
-En la etiqueta de TikTok, "Event Name" es la variable constante **"TikTok – page_view"** (`page_view`), que la plantilla traduce a `Pageview`. Con el valor por defecto (`{{Event}}`) enviaría a TikTok un evento inválido llamado `cmplz_event_marketing`.
+**TikTok va como HTML personalizado, no con la plantilla.** La plantilla de la comunidad "TikTok Pixel" no carga el código base: espera que `ttq` ya exista en la página (lo ponía el plugin TikTok for Business). Sin el plugin, en la Vista previa falló con `[ERROR] ttq not found`. Por eso "TikTok – base" lleva el código base oficial de TikTok con `ttq.load('DBTUGSJC77U5KA7Q8O2G')` y `ttq.page()`, y la etiqueta de la plantilla queda **en pausa** (junto con su variable "TikTok – page_view"), por si más adelante se quieren eventos de TikTok además de la visita.
 
 Fuera de GTM: el **píxel de Meta** (`300361413088359`) queda en su plugin, bloqueado por la integración de Complianz hasta el consentimiento de marketing.
 
@@ -127,21 +127,26 @@ Complianz no inserta GTM (eso lo hace Divi, paso 1) y envía a la capa de datos 
   - **"Complianz – marketing"**: `cmplz_event_marketing`.
 - **Etiqueta de Google `G-1FEPWW0E8H`** ("Google Analytics 4 silescr"): activador "Complianz – statistics" en lugar de All Pages. Consentimiento adicional: "Sin establecer".
 - **Etiqueta de Clarity** ("Microsoft Clarity - Official"): lo mismo.
-- **Etiqueta nueva "TikTok Pixel":**
-  - Plantilla de la comunidad **"TikTok Pixel"** (de TikTok).
-  - ID del píxel: `DBTUGSJC77U5KA7Q8O2G`.
-  - Event Name: variable constante nueva **"TikTok – page_view"** con valor `page_view`.
-  - Activador: **"Complianz – marketing"**. Consentimiento adicional: "Sin establecer".
+- **Etiqueta nueva "TikTok – base"** (HTML personalizado):
+  - Código base oficial de TikTok, con `ttq.load('DBTUGSJC77U5KA7Q8O2G');` y `ttq.page();`.
+  - Activador: **"Complianz – marketing"**.
+- **Etiqueta "TikTok Pixel"** (plantilla de la comunidad de TikTok, con Event Name = variable constante **"TikTok – page_view"**): **en pausa**. No carga el código base y sola falla.
 - **No agregues** el píxel de Meta.
-- Quedan 7 cambios en el espacio de trabajo. **No publiques todavía.**
+- Quedan 8 cambios en el espacio de trabajo. **No publiques todavía.**
 
-### 6. Prueba en el staging ⏳
-Ya verificado, como visitante sin aceptar: GTM se carga, aparece el banner, y el píxel de Meta, el SDK de Facebook y (antes de desactivarlo) el script del plugin de TikTok salen bloqueados como `text/plain`, categoría marketing.
+### 6. Prueba en el staging ✅
+Como visitante sin aceptar: GTM se carga, aparece el banner, y el píxel de Meta, el SDK de Facebook y (antes de desactivarlo) el script del plugin de TikTok salen bloqueados como `text/plain`, categoría marketing.
 
-Falta, con **Vista previa** de GTM sobre `https://www.staging2.siles.cr`:
-- sin tocar el banner y rechazando: no se dispara ninguna etiqueta;
-- aceptando estadísticas: GA4 y Clarity;
-- aceptando marketing: TikTok (`Pageview`) y el píxel de Meta.
+Con **Vista previa** de GTM (versión del espacio de trabajo) sobre `https://www.staging2.siles.cr`, el 17 de noviembre de 2026:
+
+| Caso | Eventos de Complianz | Etiquetas de GTM | Envíos |
+| --- | --- | --- | --- |
+| Sin tocar el banner | `cmplz_event_functional` | ninguna | ninguno |
+| Rechazando (y recargando) | `cmplz_event_functional` | ninguna | ninguno |
+| Aceptando estadísticas | `cmplz_event_statistics` | GA4 y Clarity | `analytics.google.com/g/collect`, `p.clarity.ms/collect` |
+| Aceptando marketing | `cmplz_event_marketing` | TikTok – base | `analytics.tiktok.com/api/v2/pixel`; además Complianz libera el píxel de Meta (`fbevents.js`) y el SDK de Facebook |
+
+Con sesión de administrador el banner no se muestra; las elecciones se simularon con las funciones de Complianz que usan sus botones (`cmplz_deny_all`, `cmplz_set_consent`). La prueba envió datos reales desde `staging2.siles.cr` (una visita en GA4, una sesión en Clarity, una visita en Meta y en TikTok).
 
 Ojo: mientras la versión nueva no se publique, el staging carga la versión publicada de GTM, que todavía dispara GA4 y Clarity en All Pages sin consentimiento.
 
