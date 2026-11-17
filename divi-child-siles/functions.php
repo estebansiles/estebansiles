@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'SILES_DIVI_VERSION', '0.9.2' );
+define( 'SILES_DIVI_VERSION', '0.9.3' );
 define( 'SILES_DIVI_CORREO', 'contact@siles.cr' ); // Recibe las cotizaciones.
 
 /**
@@ -108,11 +108,3 @@ function siles_divi_imagen_social( $url ) {
 }
 add_filter( 'wpseo_opengraph_image', 'siles_divi_imagen_social' );
 add_filter( 'wpseo_twitter_image', 'siles_divi_imagen_social' );
-
-/**
- * Marca el documento con .siles-js antes de pintar: lo que se anima al entrar en pantalla solo se oculta si hay JavaScript.
- */
-function siles_divi_marca_js() {
-	echo "<script>document.documentElement.classList.add('siles-js');</script>\n";
-}
-add_action( 'wp_head', 'siles_divi_marca_js', 0 );
