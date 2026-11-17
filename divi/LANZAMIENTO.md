@@ -55,6 +55,13 @@ Esto puede esperar a después del lanzamiento, pero decidilo antes:
   - Si dice `Disallow: /`, borrá `public_html/robots.txt` en Site Tools › Sitio › Administrador de archivos.
 - [ ] **Lectura:** en Ajustes › Lectura, verificá que **no** esté marcada "Disuadir a los motores de búsqueda".
 
+**Dominio con www** (el despliegue anterior dejó `siles.cr`; se vuelve a `www.siles.cr`)
+
+- [ ] **Ajustes:** en Ajustes › Generales, poné `https://www.siles.cr` en la dirección de WordPress y en la del sitio. WordPress va a pedir que vuelvas a iniciar sesión.
+- [ ] **Redirección:** en Site Tools › Dominio, `siles.cr` tiene que redirigir a `www.siles.cr`, no al revés.
+- [ ] **Reemplazo en la base:** con el plugin Better Search Replace, cambiá `https://siles.cr` por `https://www.siles.cr` en todas las tablas. Corré primero la prueba en seco y revisá el conteo. El patrón incluye `https://`, así que `contact@siles.cr` no se toca.
+- [ ] **Prueba:** abrí `https://siles.cr/servicios/` y confirmá que termine en `https://www.siles.cr/servicios/`.
+
 **Direcciones y caché**
 
 - [ ] **Dominio:** en Ajustes › Generales, la dirección de WordPress y la del sitio deben ser `https://www.siles.cr`.
@@ -84,6 +91,7 @@ Esto puede esperar a después del lanzamiento, pero decidilo antes:
 
 ## 5. Google
 
+- [ ] **Propiedad:** en Search Console, usá la propiedad de dominio `siles.cr` o la de `https://www.siles.cr`.
 - [ ] **Sitemap:** en Search Console, enviá `https://www.siles.cr/sitemap_index.xml`.
 - [ ] **Indexación:** en Search Console › Inspección de URL, pedí indexar la portada, `/servicios/`, `/portafolio/` y `/cotizacion/`.
 - [ ] **Analytics:** en GA4 › Tiempo real, confirmá que entren visitas a `www.siles.cr`.
