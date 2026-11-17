@@ -70,7 +70,7 @@ Esto puede esperar a después del lanzamiento, pero decidilo antes:
 
 - [ ] **Dominio:** en Ajustes › Generales, la dirección de WordPress y la del sitio deben ser `https://www.siles.cr`.
 - [ ] **Enlaces permanentes:** en Ajustes › Enlaces permanentes, hacé clic en **Guardar** sin cambiar nada; eso regenera las reglas de URL.
-- [ ] **Caché de Divi:** en Divi › Opciones del tema › Constructor › Avanzado, vaciá la caché de CSS estático.
+- [ ] **Caché de Divi (obligatorio en cada despliegue):** en Divi › Opciones del tema › Constructor › Avanzado, hacé clic en **Vaciar** en "Hojas de estilo estáticas". Si no, el CSS crítico sigue cargando las fuentes de íconos de Divi desde el staging (pasó en los dos despliegues).
 - [ ] **Caché del servidor:** en Speed Optimizer, vaciá la caché.
 - [ ] **Yoast:** en Yoast › Herramientas, ejecutá "Optimizar los datos de SEO" para que tome el dominio nuevo.
 - [ ] **Complianz:** en Complianz › Asistente, volvé a escanear las cookies del dominio de producción y guardá.
