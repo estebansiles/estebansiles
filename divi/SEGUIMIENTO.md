@@ -65,13 +65,24 @@ Pasos, en el staging primero:
 - **Consentimiento:** aceptación previa para **todos** los visitantes, con Complianz gratuito (opción 2). Pedirlo solo en Europa requería Complianz Premium.
 - **Píxel de Meta:** el del navegador se queda en el plugin, no pasa a GTM. Así el plugin envía el mismo evento por el navegador y por la API de Conversiones con un identificador común, y Meta no lo cuenta dos veces. Complianz bloquea el plugin hasta que haya consentimiento de marketing.
 
+### Cambios al configurar el staging (17 de noviembre de 2026)
+
+- **Sin modo de consentimiento v2:** en Complianz gratuito la opción "modo de consentimiento V2 de Google" es Premium (no se puede activar). Tampoco hay campo para el ID de GTM: **Complianz gratuito no inserta GTM**.
+- **Etiquetas activadas por eventos de Complianz:** en lugar de los requisitos de consentimiento de GTM, cada etiqueta se activa con el evento que Complianz envía a la capa de datos cuando hay consentimiento (y en cada página, si ya lo había): `cmplz_event_statistics` y `cmplz_event_marketing`. Los requisitos de consentimiento adicionales de las etiquetas quedan en "Sin establecer", porque nadie actualiza `analytics_storage` ni `ad_storage`.
+- **GTM vuelve a Divi:** como Complianz no lo inserta, el fragmento de GTM (solo ese, sin `<noscript>`) se pega en Divi › Integración › `<head>`. El contenedor no deja cookies por sí solo; las etiquetas esperan el evento de Complianz.
+- **TikTok, solo en GTM:** el plugin **TikTok for Business** usaba el mismo píxel (`DBTUGSJC77U5KA7Q8O2G`), sin catálogo ni eventos configurados, y podía enviar eventos desde el servidor sin pasar por Complianz. Se desactiva.
+- **SDK de Facebook en Divi:** en Divi › Integración › `<body>` hay un SDK de JavaScript de Facebook (`FB.init`, v19.0) que llama a `FB.AppEvents.logPageView()`, probablemente para el botón "Me gusta" de las entradas. Se deja por ahora; Complianz lo bloquea como marketing.
+- **Script de diseño en Divi:** el `<head>` también tenía un script de jQuery que ajusta el `padding-top` del contenido según la altura del encabezado. No es seguimiento; se queda.
+
 ## Tabla final de etiquetas
 
-| Etiqueta en GTM | Espera el consentimiento de |
-| --- | --- |
-| GA4 (`G-1FEPWW0E8H`) | Estadísticas (`analytics_storage`) |
-| Clarity (`lmigexys8q`) | Estadísticas (`analytics_storage`) |
-| Píxel de TikTok (`DBTUGSJC77U5KA7Q8O2G`) | Marketing (`ad_storage`, `ad_user_data`, `ad_personalization`) |
+| Etiqueta en GTM | Activador | Categoría de Complianz |
+| --- | --- | --- |
+| GA4 (`G-1FEPWW0E8H`) | "Complianz – statistics" (`cmplz_event_statistics`) | Estadísticas |
+| Clarity (`lmigexys8q`) | "Complianz – statistics" (`cmplz_event_statistics`) | Estadísticas |
+| Píxel de TikTok (`DBTUGSJC77U5KA7Q8O2G`) | "Complianz – marketing" (`cmplz_event_marketing`) | Marketing |
+
+En la etiqueta de TikTok, "Event Name" es la variable constante **"TikTok – page_view"** (`page_view`), que la plantilla traduce a `Pageview`. Con el valor por defecto (`{{Event}}`) enviaría a TikTok un evento inválido llamado `cmplz_event_marketing`.
 
 Fuera de GTM: el **píxel de Meta** (`300361413088359`) queda en su plugin, bloqueado por la integración de Complianz hasta el consentimiento de marketing.
 
@@ -79,51 +90,68 @@ Fuera de GTM: el **píxel de Meta** (`300361413088359`) queda en su plugin, bloq
 
 Todo en el **staging** (`www.staging2.siles.cr/wp-admin`), salvo GTM, que es un solo contenedor para el staging y para producción. En GTM se prepara todo en el espacio de trabajo y **no se publica** hasta después del despliegue.
 
-### 1. Divi: quitar los fragmentos pegados a mano
+Estado al 17 de noviembre de 2026: ✅ hecho en el staging · ⏳ pendiente.
+
+### 1. Divi: dejar solo GTM ✅
 En **Divi › Opciones del tema › Integración**:
-- **"Agregar código al `<head>`":** borrá todo el bloque. Incluye el fragmento de GA4 (`gtag/js?id=G-1FEPWW0E8H`), el de Mailchimp (`mcjs`) y el de GTM (`GTM-THQ5FK5`). Si hay otra cosa ahí, dejala y avisá.
-- **"Agregar código al `<body>`":** borrá el `<noscript>` de GTM (`googletagmanager.com/ns.html?id=GTM-THQ5FK5`).
+- **"Agregar código al `<head>`":** borrá el fragmento de GA4 (`gtag/js?id=G-1FEPWW0E8H` y su configuración), el de Mailchimp (`mcjs`) y el de GTM viejo. Pegá **solo** el fragmento estándar de GTM (`GTM-THQ5FK5`) al principio. El script de jQuery del encabezado se queda.
+- **"Agregar código al `<body>`":** borrá el `<noscript>` de GTM (`googletagmanager.com/ns.html?id=GTM-THQ5FK5`). El SDK de Facebook se queda por ahora (ver "A verificar después").
 - Guardá.
 
 ### 2. Site Kit: que no inserte nada
 Site Kit se queda para ver los informes en el escritorio de WordPress.
-- **Analytics:** en Site Kit › Ajustes › Servicios conectados, abrí **Analytics** › Editar y desactivá **"Insertar el fragmento de código de Google Analytics"**.
-- **Tag Manager:** en el mismo lugar, abrí **Tag Manager** › Editar y desactivá **"Insertar el fragmento de código"**.
-- **Modo de consentimiento:** en Site Kit › Ajustes › Administrador, desactivá **"Modo de consentimiento"**. Lo maneja Complianz, para todos los países.
+- **Analytics** ✅ y **Tag Manager** ✅: "Insertar el fragmento de código" desactivado.
+- **Modo de consentimiento** ⏳: en Site Kit › Ajustes › Administrador, desactivá **"Modo de consentimiento"**. Solo puede hacerlo un usuario conectado a Site Kit (el usuario "Claude" del staging no lo está).
 
-### 3. Plugins
-- Desactivá **Microsoft Clarity**: Clarity se carga desde GTM.
-- **Meta pixel for WordPress** se queda.
+### 3. Plugins ✅
+- **Microsoft Clarity:** desactivado. Clarity se carga desde GTM.
+- **TikTok for Business:** desactivado. El píxel de TikTok se carga solo desde GTM.
+- **Meta pixel for WordPress:** se queda.
 
-### 4. Complianz
+### 4. Complianz ✅
 En **Complianz › Asistente**:
 - **Región:** Unión Europea (aceptación previa). En la versión gratuita se aplica a todos los visitantes.
-- **Estadísticas:** elegí **Google Tag Manager** con el ID `GTM-THQ5FK5`; Complianz pasa a insertarlo. A la pregunta de si las estadísticas son respetuosas con la privacidad o anónimas, respondé **No**. Así dejan de permitirse por defecto.
-- **Modo de consentimiento de Google (Consent Mode v2):** activalo.
-- **Integraciones › Plugins:** verificá que esté activa la integración con el plugin del píxel de Meta.
-- **Servicios de terceros:** que estén **Meta (Facebook)**, **TikTok** y **Microsoft Clarity**, para la política de cookies.
-- Terminá el asistente y guardá. Si Complianz lo pide, regenerá la política de cookies.
+- **Estadísticas:** **"Sí, y Google Tag Manager ejecuta este script"**. Dejá sin marcar las condiciones de anonimización: así las estadísticas no se permiten por defecto.
+- **Modo de consentimiento V2:** queda en **No** (es Premium).
+- **Servicios:** consentimiento por servicio **No**; redes sociales con **Facebook** y **TikTok**; scripts con fines publicitarios **Sí**, sin framework adicional (así existe la categoría Marketing).
+- **Plugins:** verificá que esté activa la integración **"Official Facebook Pixel"**.
+- **Cookiedatabase.org:** **Microsoft Clarity** ya figura entre los servicios.
+- **Concluir:** banner **Sí** y bloqueador de cookies y scripts **Sí**. Sin el bloqueador, Complianz no frena el plugin de Meta.
 
-### 5. Google Tag Manager (contenedor `GTM-THQ5FK5`), sin publicar
-- **Descripción general del consentimiento:** en Administrar › Configuración del contenedor, activá **"Habilitar la descripción general del consentimiento"**.
-- **Etiqueta de Google `G-1FEPWW0E8H`:** en Configuración avanzada › Configuración del consentimiento, elegí **"Requerir consentimiento adicional"** y agregá `analytics_storage`.
-- **Etiqueta de Clarity** (HTML personalizado): lo mismo, con `analytics_storage`.
-- **Etiqueta nueva de TikTok:**
-  - En Etiquetas › Nueva › Galería de plantillas de la comunidad, elegí **"TikTok Pixel"** (de TikTok).
+Complianz no inserta GTM (eso lo hace Divi, paso 1) y envía a la capa de datos `cmplz_event_functional`, `cmplz_event_statistics` y `cmplz_event_marketing` según lo que se acepte.
+
+### 5. Google Tag Manager (contenedor `GTM-THQ5FK5`), sin publicar ✅
+- **Descripción general del consentimiento:** ya estaba activada.
+- **Activadores nuevos** (Evento personalizado):
+  - **"Complianz – statistics"**: `cmplz_event_statistics`.
+  - **"Complianz – marketing"**: `cmplz_event_marketing`.
+- **Etiqueta de Google `G-1FEPWW0E8H`** ("Google Analytics 4 silescr"): activador "Complianz – statistics" en lugar de All Pages. Consentimiento adicional: "Sin establecer".
+- **Etiqueta de Clarity** ("Microsoft Clarity - Official"): lo mismo.
+- **Etiqueta nueva "TikTok Pixel":**
+  - Plantilla de la comunidad **"TikTok Pixel"** (de TikTok).
   - ID del píxel: `DBTUGSJC77U5KA7Q8O2G`.
-  - Consentimiento requerido: `ad_storage`, `ad_user_data` y `ad_personalization`.
-  - Activador: **All Pages**.
+  - Event Name: variable constante nueva **"TikTok – page_view"** con valor `page_view`.
+  - Activador: **"Complianz – marketing"**. Consentimiento adicional: "Sin establecer".
 - **No agregues** el píxel de Meta.
-- Probá con **Vista previa** sobre `https://www.staging2.siles.cr`. **No publiques todavía.**
+- Quedan 7 cambios en el espacio de trabajo. **No publiques todavía.**
 
-### 6. Prueba en el staging
-Aviso, y desde acá reviso qué se envía sin tocar el banner, rechazando y aceptando. Bloqueo los envíos para no ensuciar las estadísticas.
+### 6. Prueba en el staging ⏳
+Ya verificado, como visitante sin aceptar: GTM se carga, aparece el banner, y el píxel de Meta, el SDK de Facebook y (antes de desactivarlo) el script del plugin de TikTok salen bloqueados como `text/plain`, categoría marketing.
 
-### 7. Producción
+Falta, con **Vista previa** de GTM sobre `https://www.staging2.siles.cr`:
+- sin tocar el banner y rechazando: no se dispara ninguna etiqueta;
+- aceptando estadísticas: GA4 y Clarity;
+- aceptando marketing: TikTok (`Pageview`) y el píxel de Meta.
+
+Ojo: mientras la versión nueva no se publique, el staging carga la versión publicada de GTM, que todavía dispara GA4 y Clarity en All Pages sin consentimiento.
+
+### 7. Producción ⏳
 1. Comparación previa con producción.
-2. Respaldo y *Full Deploy*.
+2. Respaldo y *Full Deploy*. Revisá que en producción queden: el `<head>` de Divi solo con GTM, Clarity y TikTok for Business desactivados, el asistente de Complianz con el bloqueador activo, y el modo de consentimiento de Site Kit desactivado.
 3. **Recién ahí, publicar la versión nueva de GTM.**
 4. Revisión en producción.
 
 ### A verificar después
 - **API de Conversiones de Meta:** los eventos del servidor no se ven desde el navegador. Hay que confirmar en el plugin, o en el Administrador de eventos de Meta, que sin consentimiento no se envíen eventos `PageView` desde el servidor.
+- **SDK de Facebook en Divi (`<body>`):** decidir si se quita. Si el botón "Me gusta" de las entradas no hace falta, se borran el SDK y el `fb-like` de "parte superior de las entradas".
+- **Datos de Complianz › Información de la web:** tienen el correo `esteban@siles.cr` y la dirección "Contiguo a Coopelesca, Avenida 5, Calle del Comercio"; la Política de privacidad dice `contact@siles.cr` y "Ciudad Quesada, San Carlos, Alajuela, 21001". Conviene unificarlos.
