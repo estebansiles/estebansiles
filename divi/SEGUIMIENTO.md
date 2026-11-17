@@ -55,9 +55,20 @@ Pasos, en el staging primero:
 6. **Política de privacidad:** agregar Clarity y Mailchimp en la sección 4.
 7. **Prueba:** verificar qué se envía en cada caso: sin tocar el banner, rechazando y aceptando.
 
-## Decisiones pendientes
+## Decisiones (17 de noviembre de 2026)
 
-- **Plugin de Meta:** además del píxel, puede enviar eventos por la API de Conversiones (del servidor a Meta). Si lo usás para campañas, se deja el plugin solo para eso, conectado al consentimiento, y el píxel del navegador pasa a GTM. Si no, se quita.
-- **Consentimiento para todos:** la recomendación es pedirlo a todos los visitantes, que es lo que promete la política y lo más seguro con la Ley 8968. La alternativa es pedirlo solo en la UE y el Reino Unido, con aviso y opción de exclusión para el resto.
-- **Mailchimp:** confirmar si el script de conexión se usa (formularios emergentes o seguimiento de campañas) o si se puede quitar.
-- **TikTok y LinkedIn:** se necesitan los identificadores de cada píxel.
+- **Fragmentos a mano:** están en Divi › Opciones del tema › Integración. Se quitan GA4 y Mailchimp; GTM queda una sola vez.
+- **Plugin de Meta:** se queda para la API de Conversiones (eventos desde el servidor), conectado al consentimiento; el píxel del navegador pasa a GTM. El aviso de Meta sobre el SDK de iOS (app `439714358517446`) es de apps de iPhone y no afecta al sitio. Si no hay app de iOS, se quita esa plataforma de la app en developers.facebook.com.
+- **Mailchimp:** no se usa; se quita.
+- **TikTok:** píxel `DBTUGSJC77U5KA7Q8O2G`, en GTM y con consentimiento de marketing.
+- **LinkedIn:** no se agrega. La política ya no lo menciona y ahora nombra a Microsoft Clarity (en el staging).
+- **Consentimiento:** Esteban prefiere pedirlo solo en Europa. Con Complianz gratuito no se puede (un solo banner para todos y sin detección de país); hace falta **Complianz Premium** (aceptación previa en la UE y aviso con opción de rechazar en el resto). Pendiente de decidir: Premium, o aceptación previa para todos con la versión gratuita.
+
+## Tabla final de etiquetas
+
+| Etiqueta en GTM | Espera el consentimiento de |
+| --- | --- |
+| GA4 (`G-1FEPWW0E8H`) | Estadísticas (`analytics_storage`) |
+| Clarity (`lmigexys8q`) | Estadísticas (`analytics_storage`) |
+| Píxel de Meta (`300361413088359`) | Marketing (`ad_storage`, `ad_user_data`, `ad_personalization`) |
+| Píxel de TikTok (`DBTUGSJC77U5KA7Q8O2G`) | Marketing |
