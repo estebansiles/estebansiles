@@ -148,7 +148,7 @@ def inicio():
     portada = seccion(
         fila("4_4", columna("4_4",
                             texto(antetitulo("Comunicación estratégica"), clase="siles-entra"),
-                            texto("<h1>Todo se puede transformar</h1>", clase="siles-firma siles-display siles-entra siles-retraso-1"),
+                            texto("<h1>Tu negocio se puede transformar digitalmente.</h1>", clase="siles-firma siles-display siles-entra siles-retraso-1"),
                             texto("<p>Hola, soy Esteban. Me dedico a la comunicación estratégica y a la transformación digital. No hay excusas.</p>",
                                   clase="siles-subtitulo siles-entra siles-retraso-2"),
                             boton("Agendá una llamada", "/conversemos/", clase="siles-boton--flecha siles-entra siles-retraso-3"),
