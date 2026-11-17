@@ -90,7 +90,7 @@ Fuera de GTM: el **píxel de Meta** (`300361413088359`) queda en su plugin, bloq
 
 Todo en el **staging** (`www.staging2.siles.cr/wp-admin`), salvo GTM, que es un solo contenedor para el staging y para producción. En GTM se prepara todo en el espacio de trabajo y **no se publica** hasta después del despliegue.
 
-Estado al 17 de noviembre de 2026: ✅ hecho en el staging · ⏳ pendiente.
+Estado al 17 de noviembre de 2026: ✅ hecho · ⏳ pendiente. Desplegado a producción y GTM publicado (versión 4).
 
 ### 1. Divi: dejar solo GTM ✅
 En **Divi › Opciones del tema › Integración**:
@@ -101,7 +101,8 @@ En **Divi › Opciones del tema › Integración**:
 ### 2. Site Kit: que no inserte nada
 Site Kit se queda para ver los informes en el escritorio de WordPress.
 - **Analytics** ✅ y **Tag Manager** ✅: "Insertar el fragmento de código" desactivado.
-- **Modo de consentimiento** ⏳: en Site Kit › Ajustes › Administrador, desactivá **"Modo de consentimiento"**. Solo puede hacerlo un usuario conectado a Site Kit (el usuario "Claude" del staging no lo está).
+- **Modo de consentimiento** ✅ en producción: en Site Kit › Settings › Admin Settings, **"Enable consent mode"** desactivado. Ya no aparece el script `google_gtagjs-js-consent-mode-data-layer`, que denegaba por defecto solo en el Espacio Económico Europeo, el Reino Unido y Suiza. En el staging no se pudo cambiar (el usuario "Claude" no está conectado a Site Kit).
+- **Acceder con Google** (Sign in with Google, beta) está conectado y carga scripts de `accounts.google.com` en el sitio. No es seguimiento; revisar si se usa.
 
 ### 3. Plugins ✅
 - **Microsoft Clarity:** desactivado. Clarity se carga desde GTM.
@@ -132,7 +133,7 @@ Complianz no inserta GTM (eso lo hace Divi, paso 1) y envía a la capa de datos 
   - Activador: **"Complianz – marketing"**.
 - **Etiqueta "TikTok Pixel"** (plantilla de la comunidad de TikTok, con Event Name = variable constante **"TikTok – page_view"**): **en pausa**. No carga el código base y sola falla.
 - **No agregues** el píxel de Meta.
-- Quedan 8 cambios en el espacio de trabajo. **No publiques todavía.**
+- Los 8 cambios se publicaron como **versión 4, "Consentimiento con Complianz + TikTok"** (17/11/2026, 0:56), después del despliegue.
 
 ### 6. Prueba en el staging ✅
 Como visitante sin aceptar: GTM se carga, aparece el banner, y el píxel de Meta, el SDK de Facebook y (antes de desactivarlo) el script del plugin de TikTok salen bloqueados como `text/plain`, categoría marketing.
@@ -152,11 +153,14 @@ Con sesión de administrador el banner no se muestra; las elecciones se simularo
 
 Ojo: mientras la versión nueva no se publique, el staging carga la versión publicada de GTM, que todavía dispara GA4 y Clarity en All Pages sin consentimiento.
 
-### 7. Producción ⏳
+### 7. Producción ✅
 1. Comparación previa con producción.
-2. Respaldo y *Full Deploy*. Revisá que en producción queden: el `<head>` de Divi solo con GTM, Clarity y TikTok for Business desactivados, el asistente de Complianz con el bloqueador activo, y el modo de consentimiento de Site Kit desactivado.
-3. **Recién ahí, publicar la versión nueva de GTM.**
-4. Revisión en producción.
+2. Respaldo y *Full Deploy*. Verificado en producción antes de publicar GTM: un solo fragmento de GTM, sin GA4 pegado a mano ni Mailchimp, sin el plugin de TikTok, banner de Complianz visible, y el píxel de Meta y el SDK de Facebook bloqueados (`text/plain`).
+3. **GTM publicado:** versión 4. El servidor de Google ya la entrega; un navegador que tenía `gtm.js` en caché siguió usando la versión vieja hasta una recarga forzada (la caché dura unos 15 minutos).
+4. Revisión en producción, como visitante sin aceptar y con la versión 4: ningún envío a GA4, Clarity, TikTok ni Meta.
+5. Site Kit: modo de consentimiento desactivado (paso 2).
+
+En GTM, "TikTok Pixel" (la plantilla) sigue en pausa en la versión publicada. Se deja así por si más adelante se quieren enviar otros eventos a TikTok: alcanza con darle otro activador y reactivarla, porque "TikTok – base" ya carga el código. Si no se va a usar, se borran la etiqueta, la variable "TikTok – page_view" y la plantilla, y se publica otra versión.
 
 ### A verificar después
 - **API de Conversiones de Meta:** los eventos del servidor no se ven desde el navegador. Hay que confirmar en el plugin, o en el Administrador de eventos de Meta, que sin consentimiento no se envíen eventos `PageView` desde el servidor.
