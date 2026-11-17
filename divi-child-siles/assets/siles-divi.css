@@ -704,3 +704,35 @@ body.siles #page-container a.siles-redes__enlace:hover, body.siles #page-contain
 }
 body.siles .siles-redes svg { display: block; width: 20px; height: 20px; }
 @media (prefers-reduced-motion: reduce) { body.siles #page-container a.siles-redes__enlace { transition: none; } body.siles #page-container a.siles-redes__enlace:hover { transform: none; } }
+
+/* ---------- Parte 8. Pie en celular y tableta ----------
+   Más compacto: menos aire entre bloques, Contacto y Sitio lado a lado desde 600 px,
+   los enlaces de Sitio en dos columnas y los legales en una sola línea. */
+@media (max-width: 980px) {
+  body.siles .et-l--footer .et_pb_section { padding-top: var(--space-12); padding-bottom: var(--space-8); }
+  body.siles .et-l--footer .et_pb_row { padding-top: 0; padding-bottom: 0; }
+  body.siles .et-l--footer .et_pb_row:first-of-type { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-8) var(--space-6); }
+  body.siles .et-l--footer .et_pb_row:first-of-type::after { display: none; }
+  body.siles .et-l--footer .et_pb_row:first-of-type > .et_pb_column { width: auto !important; margin: 0 !important; float: none; }
+  body.siles .et-l--footer .et_pb_row:first-of-type > .et_pb_column:first-child { grid-column: 1 / -1; }
+  body.siles .et-l--footer .et_pb_column .et_pb_module { margin-bottom: 0; }
+  body.siles .et-l--footer .et_pb_column:first-child .et_pb_text { margin-top: var(--space-4); }
+  body.siles .et-l--footer .siles-redes { margin-top: var(--space-5); }
+  body.siles .siles-lista .et_pb_text_inner { gap: var(--space-1); }
+  body.siles .siles-lista .et_pb_text_inner > .siles-antetitulo { margin-bottom: var(--space-2); }
+  body.siles .siles-lista .et_pb_text_inner a { min-height: 40px; }
+  body.siles .siles-lista p { min-height: 40px; }
+  body.siles .et-l--footer .et_pb_row:last-of-type { margin-top: var(--space-8); }
+  body.siles .siles-pie-legal .et_pb_text_inner { padding-top: var(--space-5); gap: var(--space-2); }
+  body.siles .siles-pie-legal p:last-child { gap: 0 var(--space-5); }
+  body.siles .siles-pie-legal p:last-child a { display: inline-flex; align-items: center; min-height: 40px; }
+}
+@media (max-width: 599px) {
+  body.siles .et-l--footer .et_pb_row:first-of-type { grid-template-columns: minmax(0, 1fr); gap: var(--space-8); }
+  /* Sitio: seis enlaces en dos columnas de tres */
+  body.siles .et-l--footer .et_pb_row:first-of-type > .et_pb_column:nth-child(3) .siles-lista .et_pb_text_inner {
+    display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 var(--space-6); align-items: center;
+  }
+  body.siles .et-l--footer .et_pb_row:first-of-type > .et_pb_column:nth-child(3) .siles-lista .et_pb_text_inner > .siles-antetitulo { grid-column: 1 / -1; }
+  body.siles .siles-pie-legal .et_pb_text_inner { letter-spacing: .12em; }
+}
