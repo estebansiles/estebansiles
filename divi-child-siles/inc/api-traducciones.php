@@ -685,3 +685,41 @@ function siles_api_rutas_cadenas() {
 	);
 }
 add_action( 'rest_api_init', 'siles_api_rutas_cadenas' );
+
+/**
+ * Corrige el idioma de origen de cadenas que un plugin registró en otro idioma (Complianz registró sus textos en
+ * español como si fueran inglés, y así WPML no deja traducirlos al inglés).
+ *   POST /wp-json/siles/v1/cadenas-origen   { "contexto": "complianz", "idioma": "es" }
+ */
+function siles_api_ruta_origen() {
+	register_rest_route(
+		'siles/v1',
+		'/cadenas-origen',
+		array(
+			'methods'             => 'POST',
+			'permission_callback' => function () {
+				return current_user_can( 'manage_options' );
+			},
+			'args'                => array(
+				'contexto' => array( 'required' => true, 'type' => 'string' ),
+				'idioma'   => array( 'required' => true, 'type' => 'string', 'enum' => array( 'es', 'en', 'en-us', 'pt-br', 'fr' ) ),
+			),
+			'callback'            => function ( $req ) {
+				global $wpdb;
+				$tabla  = $wpdb->prefix . 'icl_strings';
+				$idioma = siles_api_codigo( (string) $req['idioma'] );
+				// phpcs:ignore WordPress.DB.DirectDatabaseQuery
+				$cambio = $wpdb->update( $tabla, array( 'language' => $idioma ), array( 'context' => (string) $req['contexto'] ) );
+				if ( false === $cambio ) {
+					return new WP_Error( 'siles_origen', 'No se pudo cambiar el idioma de las cadenas.', array( 'status' => 500 ) );
+				}
+				// Si alguna cadena ya tenía una "traducción" a ese mismo idioma, sobra.
+				// phpcs:ignore WordPress.DB.DirectDatabaseQuery, WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+				$wpdb->query( $wpdb->prepare( "DELETE t FROM {$wpdb->prefix}icl_string_translations t JOIN {$tabla} s ON s.id = t.string_id WHERE s.context = %s AND t.language = %s", (string) $req['contexto'], $idioma ) );
+				wp_cache_flush();
+				return array( 'contexto' => (string) $req['contexto'], 'idioma' => $idioma, 'cadenas' => (int) $cambio );
+			},
+		)
+	);
+}
+add_action( 'rest_api_init', 'siles_api_ruta_origen' );
