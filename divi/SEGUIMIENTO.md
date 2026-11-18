@@ -166,3 +166,13 @@ En GTM, "TikTok Pixel" (la plantilla) sigue en pausa en la versión publicada. S
 - **API de Conversiones de Meta:** los eventos del servidor no se ven desde el navegador. Hay que confirmar en el plugin, o en el Administrador de eventos de Meta, que sin consentimiento no se envíen eventos `PageView` desde el servidor.
 - **SDK de Facebook en Divi (`<body>`):** decidir si se quita. Si el botón "Me gusta" de las entradas no hace falta, se borran el SDK y el `fb-like` de "parte superior de las entradas".
 - **Datos de Complianz › Información de la web:** tienen el correo `esteban@siles.cr` y la dirección "Contiguo a Coopelesca, Avenida 5, Calle del Comercio"; la Política de privacidad dice `contact@siles.cr` y "Ciudad Quesada, San Carlos, Alajuela, 21001". Conviene unificarlos.
+
+## 8. Cookie `_fbp` desde el servidor (19 de noviembre de 2026)
+
+**Hallazgo:** en producción, la primera visita recibía `Set-Cookie: _fbp=…` antes de aceptar el banner. La pone el plugin **Meta pixel for WordPress** (5.2.2) con la biblioteca de parámetros de la API de Conversiones (`FacebookParamBuilder::server_setup()`), apenas se carga el plugin y sin mirar el consentimiento. Además, como la respuesta trae una cookie, SiteGround no guardaba las páginas en caché (`UP:SKIP_CACHE_SET_COOKIE`).
+
+**Solución:** el plugin obligatorio `mu-plugins/siles-consentimiento-meta.php` usa el filtro del propio plugin `facebook_signals_held`: mientras la persona no acepte marketing en Complianz (cookie `cmplz_marketing=allow` o `wp_consent_marketing=allow`), las señales quedan retenidas. Sin consentimiento, el servidor no crea `_fbp` ni `_fbc`, no envía eventos por la API de Conversiones y el píxel queda en cola (y Complianz lo sigue bloqueando).
+
+**Instalación:** subir el archivo a `public_html/wp-content/mu-plugins/` (crear la carpeta si no existe), en producción y en el staging. No se activa: WordPress carga solo los plugins obligatorios.
+
+**Verificación:** una visita sin cookies no debe recibir `Set-Cookie: _fbp`; con `cmplz_marketing=allow`, sí.
