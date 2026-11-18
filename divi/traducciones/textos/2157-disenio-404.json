@@ -2,15 +2,15 @@
  "pagina": {
   "titulo": {
    "es": "404 página",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "404 page (EN)",
+   "pt-br": "Página 404 (PT)",
+   "fr": "Page 404 (FR)"
   },
   "slug": {
    "es": "theme-builder-layout-4",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "theme-builder-layout-4",
+   "pt-br": "theme-builder-layout-4",
+   "fr": "theme-builder-layout-4"
   },
   "yoast_titulo": {
    "es": "",
@@ -28,117 +28,117 @@
  "textos": [
   {
    "es": "Error 404",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Error 404",
+   "pt-br": "Erro 404",
+   "fr": "Erreur 404"
   },
   {
    "es": "¿Y la página?",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Where did the page go?",
+   "pt-br": "Cadê a página?",
+   "fr": "Où est passée la page ?"
   },
   {
    "es": "Buscamos por todos lados y no aparece. Puede que haya cambiado de lugar o que el enlace tenga un error.",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "We looked everywhere and it’s not here. It may have moved, or the link may have a typo.",
+   "pt-br": "Procuramos por toda parte e ela não aparece. Talvez tenha mudado de lugar ou o link esteja com erro.",
+   "fr": "Nous avons cherché partout, elle reste introuvable. Elle a peut-être changé de place, ou le lien contient une erreur."
   },
   {
    "es": "Volvé al inicio",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Back to home",
+   "pt-br": "Voltar ao início",
+   "fr": "Retour à l’accueil"
   },
   {
    "es": "Contame qué buscabas",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Tell me what you were looking for",
+   "pt-br": "Conte o que você procurava",
+   "fr": "Dites-moi ce que vous cherchiez"
   },
   {
    "es": "John Travolta mira a todos lados, confundido",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "John Travolta looking around, confused",
+   "pt-br": "John Travolta olhando para todos os lados, confuso",
+   "fr": "John Travolta regarde partout, perplexe"
   },
   {
    "es": "<span>Nosotros también la estamos buscando.</span><a href=\"https://giphy.com/gifs/high-quality-highqualitygifs-g01ZnwAUvutuK8GIQn\" target=\"_blank\" rel=\"noopener\">vía GIPHY</a>",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "<span>We’re looking for it too.</span><a href=\"https://giphy.com/gifs/high-quality-highqualitygifs-g01ZnwAUvutuK8GIQn\" target=\"_blank\" rel=\"noopener\">via GIPHY</a>",
+   "pt-br": "<span>Nós também estamos procurando.</span><a href=\"https://giphy.com/gifs/high-quality-highqualitygifs-g01ZnwAUvutuK8GIQn\" target=\"_blank\" rel=\"noopener\">via GIPHY</a>",
+   "fr": "<span>Nous aussi, nous la cherchons.</span><a href=\"https://giphy.com/gifs/high-quality-highqualitygifs-g01ZnwAUvutuK8GIQn\" target=\"_blank\" rel=\"noopener\">via GIPHY</a>"
   },
   {
    "es": "Mientras tanto",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Meanwhile",
+   "pt-br": "Enquanto isso",
+   "fr": "En attendant"
   },
   {
    "es": "Quizá buscabas esto",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Maybe you were looking for this",
+   "pt-br": "Talvez você procurasse isto",
+   "fr": "Vous cherchiez peut-être ceci"
   },
   {
    "es": "Buscá en el sitio",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Search the site",
+   "pt-br": "Buscar no site",
+   "fr": "Rechercher sur le site"
   },
   {
    "es": "Servicios",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Services",
+   "pt-br": "Serviços",
+   "fr": "Services"
   },
   {
    "es": "Qué hago y cómo trabajo, por fases.",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "What I do and how I work, in phases.",
+   "pt-br": "O que eu faço e como trabalho, em fases.",
+   "fr": "Ce que je fais et comment je travaille, par étapes."
   },
   {
    "es": "Proyectos",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Projects",
+   "pt-br": "Projetos",
+   "fr": "Projets"
   },
   {
    "es": "Casos reales con pymes de Costa Rica.",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Real cases with small businesses in Costa Rica.",
+   "pt-br": "Casos reais com pequenas e médias empresas da Costa Rica.",
+   "fr": "Des cas réels avec des PME du Costa Rica."
   },
   {
    "es": "Blog",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Blog (Spanish)",
+   "pt-br": "Blog (espanhol)",
+   "fr": "Blog (espagnol)"
   },
   {
    "es": "Ideas para transformar tu negocio.",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Ideas to transform your business.",
+   "pt-br": "Ideias para transformar seu negócio.",
+   "fr": "Des idées pour transformer votre entreprise."
   },
   {
    "es": "Cotización",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Get a quote",
+   "pt-br": "Orçamento",
+   "fr": "Devis"
   },
   {
    "es": "Elegí servicios y armá tu cotización.",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Choose services and build your quote.",
+   "pt-br": "Escolha os serviços e monte seu orçamento.",
+   "fr": "Choisissez vos services et préparez votre devis."
   },
   {
    "es": "Casi todo se puede automatizar. Encontrar esta página, por lo visto, no.",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Almost anything can be automated. Finding this page, apparently, can’t.",
+   "pt-br": "Quase tudo pode ser automatizado. Encontrar esta página, pelo visto, não.",
+   "fr": "Presque tout peut être automatisé. Trouver cette page, visiblement, non."
   }
  ]
 }

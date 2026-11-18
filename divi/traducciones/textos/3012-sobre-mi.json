@@ -2,725 +2,725 @@
  "pagina": {
   "titulo": {
    "es": "Sobre mí",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "About me",
+   "pt-br": "Sobre mim",
+   "fr": "À propos"
   },
   "slug": {
    "es": "esteban",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "esteban",
+   "pt-br": "esteban",
+   "fr": "esteban"
   },
   "yoast_titulo": {
    "es": "Esteban Siles %%sep%% Comunicación Estratégica y Transformación Digital",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Esteban Siles %%sep%% Strategic Communication and Digital Transformation",
+   "pt-br": "Esteban Siles %%sep%% Comunicação Estratégica e Transformação Digital",
+   "fr": "Esteban Siles %%sep%% Communication stratégique et transformation numérique"
   },
   "yoast_descripcion": {
    "es": "Más de 16 años ayudando a organizaciones con comunicación estratégica, transformación digital e IA. Conocé mi trayectoria, método y trabajo.",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "More than 16 years helping organizations with strategic communication, digital transformation, and AI. Learn about my background, method, and work.",
+   "pt-br": "Mais de 16 anos ajudando organizações com comunicação estratégica, transformação digital e IA. Conheça minha trajetória, meu método e meu trabalho.",
+   "fr": "Plus de 16 ans à accompagner des organisations en communication stratégique, transformation numérique et IA. Découvrez mon parcours, ma méthode et mon travail."
   }
  },
  "textos": [
   {
    "es": "Sobre mí",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "About me",
+   "pt-br": "Sobre mim",
+   "fr": "À propos"
   },
   {
    "es": "<span class=\"siles-linea\"><span>Hola,</span></span><span class=\"siles-linea\"><span>soy <em>Esteban</em>.</span></span>",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "<span class=\"siles-linea\"><span>Hi,</span></span><span class=\"siles-linea\"><span>I’m <em>Esteban</em>.</span></span>",
+   "pt-br": "<span class=\"siles-linea\"><span>Olá,</span></span><span class=\"siles-linea\"><span>sou o <em>Esteban</em>.</span></span>",
+   "fr": "<span class=\"siles-linea\"><span>Bonjour,</span></span><span class=\"siles-linea\"><span>je suis <em>Esteban</em>.</span></span>"
   },
   {
    "es": "Me dedico a <span class=\"siles-rotador\"><span>la comunicación estratégica</span><span>la transformación digital</span><span>la automatización</span><span>la IA generativa</span></span>",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "I work in <span class=\"siles-rotador\"><span>strategic communication</span><span>digital transformation</span><span>automation</span><span>generative AI</span></span>",
+   "pt-br": "Trabalho com <span class=\"siles-rotador\"><span>comunicação estratégica</span><span>transformação digital</span><span>automação</span><span>IA generativa</span></span>",
+   "fr": "Mon métier : <span class=\"siles-rotador\"><span>la communication stratégique</span><span>la transformation numérique</span><span>l’automatisation</span><span>l’IA générative</span></span>"
   },
   {
    "es": "Consultor en comunicación estratégica. Apoyo a equipos a gestionar procesos de transformación digital centrada en el usuario.",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Strategic communication consultant. I help teams manage user-centered digital transformation processes.",
+   "pt-br": "Consultor em comunicação estratégica. Ajudo equipes a conduzir processos de transformação digital centrados no usuário.",
+   "fr": "Consultant en communication stratégique. J’aide les équipes à mener des projets de transformation numérique centrés sur l’utilisateur."
   },
   {
    "es": "Agendá una llamada",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Book a call",
+   "pt-br": "Agende uma conversa",
+   "fr": "Réservez un appel"
   },
   {
    "es": "Mirá mi trabajo",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "See my work",
+   "pt-br": "Veja meu trabalho",
+   "fr": "Voir mon travail"
   },
   {
    "es": "Seguí bajando",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Keep scrolling",
+   "pt-br": "Continue descendo",
+   "fr": "Faites défiler"
   },
   {
    "es": "Esteban Siles frente a un tablero de notas en una sesión de trabajo",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Esteban Siles in front of a board of sticky notes during a work session",
+   "pt-br": "Esteban Siles diante de um quadro de notas em uma sessão de trabalho",
+   "fr": "Esteban Siles devant un tableau de notes lors d’une séance de travail"
   },
   {
    "es": "<span class=\"siles-sm-chip siles-sm-chip--1 siles-anima\"><strong data-contar=\"16\" data-prefijo=\"+\">+16</strong>años de experiencia</span><span class=\"siles-sm-chip siles-sm-chip--2 siles-anima\"><strong data-contar=\"44\">44</strong>proyectos</span>",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "<span class=\"siles-sm-chip siles-sm-chip--1 siles-anima\"><strong data-contar=\"16\" data-prefijo=\"+\">+16</strong>years of experience</span><span class=\"siles-sm-chip siles-sm-chip--2 siles-anima\"><strong data-contar=\"44\">44</strong>projects</span>",
+   "pt-br": "<span class=\"siles-sm-chip siles-sm-chip--1 siles-anima\"><strong data-contar=\"16\" data-prefijo=\"+\">+16</strong>anos de experiência</span><span class=\"siles-sm-chip siles-sm-chip--2 siles-anima\"><strong data-contar=\"44\">44</strong>projetos</span>",
+   "fr": "<span class=\"siles-sm-chip siles-sm-chip--1 siles-anima\"><strong data-contar=\"16\" data-prefijo=\"+\">+16</strong>ans d’expérience</span><span class=\"siles-sm-chip siles-sm-chip--2 siles-anima\"><strong data-contar=\"44\">44</strong>projets</span>"
   },
   {
    "es": "Quién soy",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Who I am",
+   "pt-br": "Quem sou",
+   "fr": "Qui je suis"
   },
   {
    "es": "Me dedico a la comunicación estratégica",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "I work in strategic communication",
+   "pt-br": "Trabalho com comunicação estratégica",
+   "fr": "Je travaille en communication stratégique"
   },
   {
    "es": "Por más de quince años me he dedicado a la comunicación estratégica. He trabajado marketing y relaciones públicas apoyado en medios digitales para organizaciones como <a href=\"http://www.prosic.ucr.ac.cr/\" target=\"_blank\" rel=\"noopener\">PROSIC</a>, <a href=\"https://ciep.ucr.ac.cr/\" target=\"_blank\" rel=\"noopener\">CIEP</a>, <a href=\"https://www.techo.org/costarica/techo/\" target=\"_blank\" rel=\"noopener\">TECHO</a>, <a href=\"https://www.facebook.com/viacostarricense/\" target=\"_blank\" rel=\"noopener\">Entebbe</a>, <a href=\"https://www.unikomarcas.com/\" target=\"_blank\" rel=\"noopener\">Uniko Branding</a>, partidos políticos y decenas de empresas y organizaciones públicas y privadas.",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "For more than fifteen years I’ve worked in strategic communication. I’ve done marketing and public relations, supported by digital media, for organizations such as <a href=\"http://www.prosic.ucr.ac.cr/\" target=\"_blank\" rel=\"noopener\">PROSIC</a>, <a href=\"https://ciep.ucr.ac.cr/\" target=\"_blank\" rel=\"noopener\">CIEP</a>, <a href=\"https://www.techo.org/costarica/techo/\" target=\"_blank\" rel=\"noopener\">TECHO</a>, <a href=\"https://www.facebook.com/viacostarricense/\" target=\"_blank\" rel=\"noopener\">Entebbe</a>, <a href=\"https://www.unikomarcas.com/\" target=\"_blank\" rel=\"noopener\">Uniko Branding</a>, political parties, and dozens of public and private companies and organizations.",
+   "pt-br": "Há mais de quinze anos me dedico à comunicação estratégica. Trabalhei com marketing e relações públicas apoiado em mídias digitais para organizações como <a href=\"http://www.prosic.ucr.ac.cr/\" target=\"_blank\" rel=\"noopener\">PROSIC</a>, <a href=\"https://ciep.ucr.ac.cr/\" target=\"_blank\" rel=\"noopener\">CIEP</a>, <a href=\"https://www.techo.org/costarica/techo/\" target=\"_blank\" rel=\"noopener\">TECHO</a>, <a href=\"https://www.facebook.com/viacostarricense/\" target=\"_blank\" rel=\"noopener\">Entebbe</a>, <a href=\"https://www.unikomarcas.com/\" target=\"_blank\" rel=\"noopener\">Uniko Branding</a>, partidos políticos e dezenas de empresas e organizações públicas e privadas.",
+   "fr": "Depuis plus de quinze ans, je me consacre à la communication stratégique. J’ai travaillé le marketing et les relations publiques en m’appuyant sur les médias numériques pour des organisations comme <a href=\"http://www.prosic.ucr.ac.cr/\" target=\"_blank\" rel=\"noopener\">PROSIC</a>, <a href=\"https://ciep.ucr.ac.cr/\" target=\"_blank\" rel=\"noopener\">CIEP</a>, <a href=\"https://www.techo.org/costarica/techo/\" target=\"_blank\" rel=\"noopener\">TECHO</a>, <a href=\"https://www.facebook.com/viacostarricense/\" target=\"_blank\" rel=\"noopener\">Entebbe</a>, <a href=\"https://www.unikomarcas.com/\" target=\"_blank\" rel=\"noopener\">Uniko Branding</a>, des partis politiques et des dizaines d’entreprises et d’organisations publiques et privées."
   },
   {
    "es": "Soy miembro de <a href=\"http://www.alice-comunicacionpolitica.com/\" target=\"_blank\" rel=\"noopener\">ALICE</a>, <a href=\"https://siemprelistos.com/\" target=\"_blank\" rel=\"noopener\">Guías y Scouts</a> y socio de la <a href=\"https://www.torosdelnorte.com/\" target=\"_blank\" rel=\"noopener\">AD San Carlos</a>, el equipo de mis amores, del cual fui Gerente Administrativo entre 2022 y 2023.",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "I’m a member of <a href=\"http://www.alice-comunicacionpolitica.com/\" target=\"_blank\" rel=\"noopener\">ALICE</a> and <a href=\"https://siemprelistos.com/\" target=\"_blank\" rel=\"noopener\">Guías y Scouts</a>, and a club member of <a href=\"https://www.torosdelnorte.com/\" target=\"_blank\" rel=\"noopener\">AD San Carlos</a>, the team I love, where I was General Manager from 2022 to 2023.",
+   "pt-br": "Sou membro da <a href=\"http://www.alice-comunicacionpolitica.com/\" target=\"_blank\" rel=\"noopener\">ALICE</a> e dos <a href=\"https://siemprelistos.com/\" target=\"_blank\" rel=\"noopener\">Guías y Scouts</a>, e sócio da <a href=\"https://www.torosdelnorte.com/\" target=\"_blank\" rel=\"noopener\">AD San Carlos</a>, o time do meu coração, onde fui Gerente Administrativo entre 2022 e 2023.",
+   "fr": "Je suis membre de l’<a href=\"http://www.alice-comunicacionpolitica.com/\" target=\"_blank\" rel=\"noopener\">ALICE</a> et des <a href=\"https://siemprelistos.com/\" target=\"_blank\" rel=\"noopener\">Guías y Scouts</a>, et sociétaire de l’<a href=\"https://www.torosdelnorte.com/\" target=\"_blank\" rel=\"noopener\">AD San Carlos</a>, l’équipe de mon cœur, dont j’ai été directeur administratif de 2022 à 2023."
   },
   {
    "es": "Actualmente lidero un talentoso equipo de marketing digital, desarrollo web y aplicación de IA generativa, y tengo mis servicios a tu disposición.",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Today I lead a talented team in digital marketing, web development, and applied generative AI, and my services are available to you.",
+   "pt-br": "Hoje lidero uma equipe talentosa de marketing digital, desenvolvimento web e aplicação de IA generativa, e meus serviços estão à sua disposição.",
+   "fr": "Aujourd’hui, je dirige une équipe talentueuse en marketing numérique, développement web et IA générative appliquée, et mes services sont à votre disposition."
   },
   {
    "es": "<strong data-contar=\"16\" data-prefijo=\"+\">+16</strong><span>Años de experiencia</span>",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "<strong data-contar=\"16\" data-prefijo=\"+\">+16</strong><span>Years of experience</span>",
+   "pt-br": "<strong data-contar=\"16\" data-prefijo=\"+\">+16</strong><span>Anos de experiência</span>",
+   "fr": "<strong data-contar=\"16\" data-prefijo=\"+\">+16</strong><span>Ans d’expérience</span>"
   },
   {
    "es": "<strong data-contar=\"16\" data-prefijo=\"\">16</strong><span>Proyectos independientes</span>",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "<strong data-contar=\"16\" data-prefijo=\"\">16</strong><span>Independent projects</span>",
+   "pt-br": "<strong data-contar=\"16\" data-prefijo=\"\">16</strong><span>Projetos independentes</span>",
+   "fr": "<strong data-contar=\"16\" data-prefijo=\"\">16</strong><span>Projets indépendants</span>"
   },
   {
    "es": "<strong data-contar=\"28\" data-prefijo=\"\">28</strong><span>Proyectos con agencias</span>",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "<strong data-contar=\"28\" data-prefijo=\"\">28</strong><span>Agency projects</span>",
+   "pt-br": "<strong data-contar=\"28\" data-prefijo=\"\">28</strong><span>Projetos com agências</span>",
+   "fr": "<strong data-contar=\"28\" data-prefijo=\"\">28</strong><span>Projets en agence</span>"
   },
   {
    "es": "Lo que más hago",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "What I do most",
+   "pt-br": "O que mais faço",
+   "fr": "Ce que je fais le plus"
   },
   {
    "es": "<span>Transformación digital</span><span><b data-contar=\"90\">90</b> %</span>",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "<span>Digital transformation</span><span><b data-contar=\"90\">90</b> %</span>",
+   "pt-br": "<span>Transformação digital</span><span><b data-contar=\"90\">90</b> %</span>",
+   "fr": "<span>Transformation numérique</span><span><b data-contar=\"90\">90</b> %</span>"
   },
   {
    "es": "Transformación digital: 90 %",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Digital transformation: 90 %",
+   "pt-br": "Transformação digital: 90 %",
+   "fr": "Transformation numérique: 90 %"
   },
   {
    "es": "<span>Design thinking</span><span><b data-contar=\"100\">100</b> %</span>",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "<span>Design thinking</span><span><b data-contar=\"100\">100</b> %</span>",
+   "pt-br": "<span>Design thinking</span><span><b data-contar=\"100\">100</b> %</span>",
+   "fr": "<span>Design thinking</span><span><b data-contar=\"100\">100</b> %</span>"
   },
   {
    "es": "Design thinking: 100 %",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Design thinking: 100 %",
+   "pt-br": "Design thinking: 100 %",
+   "fr": "Design thinking: 100 %"
   },
   {
    "es": "<span>Diseño UX</span><span><b data-contar=\"85\">85</b> %</span>",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "<span>UX design</span><span><b data-contar=\"85\">85</b> %</span>",
+   "pt-br": "<span>Design UX</span><span><b data-contar=\"85\">85</b> %</span>",
+   "fr": "<span>Design UX</span><span><b data-contar=\"85\">85</b> %</span>"
   },
   {
    "es": "Diseño UX: 85 %",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "UX design: 85 %",
+   "pt-br": "Design UX: 85 %",
+   "fr": "Design UX: 85 %"
   },
   {
    "es": "<span>SEO y SEM</span><span><b data-contar=\"75\">75</b> %</span>",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "<span>SEO and SEM</span><span><b data-contar=\"75\">75</b> %</span>",
+   "pt-br": "<span>SEO e SEM</span><span><b data-contar=\"75\">75</b> %</span>",
+   "fr": "<span>SEO et SEA</span><span><b data-contar=\"75\">75</b> %</span>"
   },
   {
    "es": "SEO y SEM: 75 %",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "SEO and SEM: 75 %",
+   "pt-br": "SEO e SEM: 75 %",
+   "fr": "SEO et SEA: 75 %"
   },
   {
    "es": "<span>Marketing político</span><span><b data-contar=\"100\">100</b> %</span>",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "<span>Political marketing</span><span><b data-contar=\"100\">100</b> %</span>",
+   "pt-br": "<span>Marketing político</span><span><b data-contar=\"100\">100</b> %</span>",
+   "fr": "<span>Marketing politique</span><span><b data-contar=\"100\">100</b> %</span>"
   },
   {
    "es": "Marketing político: 100 %",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Political marketing: 100 %",
+   "pt-br": "Marketing político: 100 %",
+   "fr": "Marketing politique: 100 %"
   },
   {
    "es": "<span>Redes sociales</span><span><b data-contar=\"95\">95</b> %</span>",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "<span>Social media</span><span><b data-contar=\"95\">95</b> %</span>",
+   "pt-br": "<span>Redes sociais</span><span><b data-contar=\"95\">95</b> %</span>",
+   "fr": "<span>Réseaux sociaux</span><span><b data-contar=\"95\">95</b> %</span>"
   },
   {
    "es": "Redes sociales: 95 %",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Social media: 95 %",
+   "pt-br": "Redes sociais: 95 %",
+   "fr": "Réseaux sociaux: 95 %"
   },
   {
    "es": "Lo que creo",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "What I believe",
+   "pt-br": "No que acredito",
+   "fr": "Ce que je crois"
   },
   {
    "es": "<span class=\"p\" style=\"--i: 0\">Todo</span> <span class=\"p\" style=\"--i: 1\">se</span> <span class=\"p\" style=\"--i: 2\">puede</span> <span class=\"p\" style=\"--i: 3\">transformar</span> <span class=\"p\" style=\"--i: 4\">digitalmente,</span> <span class=\"p p--acento\" style=\"--i: 5\">no</span> <span class=\"p p--acento\" style=\"--i: 6\">hay</span> <span class=\"p p--acento\" style=\"--i: 7\">excusas.</span>",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "@palabras:Anything can be transformed digitally. | No excuses.",
+   "pt-br": "@palabras:Tudo pode ser transformado digitalmente, | sem desculpas.",
+   "fr": "@palabras:Tout peut se transformer grâce au numérique, | aucune excuse."
   },
   {
    "es": "<span class=\"p\" style=\"--i: 0\">Casi</span> <span class=\"p\" style=\"--i: 1\">todo</span> <span class=\"p\" style=\"--i: 2\">se</span> <span class=\"p\" style=\"--i: 3\">puede</span> <span class=\"p\" style=\"--i: 4\">automatizar,</span> <span class=\"p p--acento\" style=\"--i: 5\">no</span> <span class=\"p p--acento\" style=\"--i: 6\">hay</span> <span class=\"p p--acento\" style=\"--i: 7\">motivo</span> <span class=\"p p--acento\" style=\"--i: 8\">para</span> <span class=\"p p--acento\" style=\"--i: 9\">no</span> <span class=\"p p--acento\" style=\"--i: 10\">intentarlo.</span>",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "@palabras:Almost anything can be automated, | so there’s no reason not to try.",
+   "pt-br": "@palabras:Quase tudo pode ser automatizado, | não há motivo para não tentar.",
+   "fr": "@palabras:Presque tout peut être automatisé, | aucune raison de ne pas essayer."
   },
   {
    "es": "Visión y método",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Vision and method",
+   "pt-br": "Visão e método",
+   "fr": "Vision et méthode"
   },
   {
    "es": "Mi visión",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "My vision",
+   "pt-br": "Minha visão",
+   "fr": "Ma vision"
   },
   {
    "es": "Las personas y las organizaciones debemos aprovechar las oportunidades que nos ofrecen las tecnologías disruptivas para hacer que nuestro paso por este planeta sea más eficiente, sostenible y significativo.",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "People and organizations should seize the opportunities that disruptive technologies offer to make our time on this planet more efficient, sustainable, and meaningful.",
+   "pt-br": "Pessoas e organizações devem aproveitar as oportunidades que as tecnologias disruptivas oferecem para tornar nossa passagem por este planeta mais eficiente, sustentável e significativa.",
+   "fr": "Les personnes et les organisations doivent saisir les occasions qu’offrent les technologies de rupture pour rendre notre passage sur cette planète plus efficace, durable et porteur de sens."
   },
   {
    "es": "Mi desarrollo profesional ha coincidido con el auge de las herramientas de comunicación digital, lo cual me ha permitido abrir camino en disciplinas que han ayudado a decenas de organizaciones a digitalizar y automatizar procesos de forma simple, efectiva y enfocada en la gente. Actualmente estoy brindando servicios de integración de herramientas de inteligencia artificial para empresas.",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "My career has grown alongside the rise of digital communication tools, which has let me break ground in disciplines that have helped dozens of organizations digitize and automate processes in a simple, effective, people-focused way. Today I provide services to integrate artificial intelligence tools into businesses.",
+   "pt-br": "Meu desenvolvimento profissional coincidiu com o auge das ferramentas de comunicação digital, o que me permitiu abrir caminho em disciplinas que ajudaram dezenas de organizações a digitalizar e automatizar processos de forma simples, eficaz e focada nas pessoas. Atualmente ofereço serviços de integração de ferramentas de inteligência artificial para empresas.",
+   "fr": "Mon parcours a coïncidé avec l’essor des outils de communication numérique, ce qui m’a permis d’ouvrir la voie dans des disciplines qui ont aidé des dizaines d’organisations à numériser et à automatiser leurs processus de façon simple, efficace et centrée sur les personnes. Aujourd’hui, je propose aux entreprises des services d’intégration d’outils d’intelligence artificielle."
   },
   {
    "es": "Investigar y definir",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Research and define",
+   "pt-br": "Investigar e definir",
+   "fr": "Analyser et définir"
   },
   {
    "es": "Hay que encontrar los <em>insights</em>. Desde el producto hasta el público meta, pasando por la competencia y el mercado.",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "You have to find the <em>insights</em>, from the product to the target audience, including the competition and the market.",
+   "pt-br": "É preciso encontrar os <em>insights</em>. Do produto ao público-alvo, passando pela concorrência e pelo mercado.",
+   "fr": "Il faut trouver les <em>insights</em>, du produit au public cible, en passant par la concurrence et le marché."
   },
   {
    "es": "Planear y diseñar",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Plan and design",
+   "pt-br": "Planejar e desenhar",
+   "fr": "Planifier et concevoir"
   },
   {
    "es": "Poner todo en papel para luego echar a volar la imaginación. Todo ocurre dos veces: cuando lo pensamos y cuando lo hacemos.",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Put everything on paper, then let your imagination fly. Everything happens twice: when we think it and when we do it.",
+   "pt-br": "Colocar tudo no papel para depois soltar a imaginação. Tudo acontece duas vezes: quando pensamos e quando fazemos.",
+   "fr": "Tout mettre sur papier, puis laisser libre cours à l’imagination. Tout se produit deux fois : quand on le pense et quand on le fait."
   },
   {
    "es": "Probar, probar, probar",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Test, test, test",
+   "pt-br": "Testar, testar, testar",
+   "fr": "Tester, tester, tester"
   },
   {
    "es": "La clave de una buena ejecución está en probar antes de lanzar, da igual si estamos hablando de un sitio web o una campaña de marketing.",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "The key to good execution is testing before launch, whether it’s a website or a marketing campaign.",
+   "pt-br": "O segredo de uma boa execução é testar antes de lançar, seja um site ou uma campanha de marketing.",
+   "fr": "La clé d’une bonne exécution, c’est de tester avant de lancer, qu’il s’agisse d’un site web ou d’une campagne marketing."
   },
   {
    "es": "Desarrollar y mejorar",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Build and improve",
+   "pt-br": "Desenvolver e melhorar",
+   "fr": "Développer et améliorer"
   },
   {
    "es": "Una vez que terminamos todo, hay que volverlo a hacer. El buen producto se mantiene en el tiempo porque se adapta a los cambios.",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Once everything is done, you do it again. A good product lasts because it adapts to change.",
+   "pt-br": "Quando terminamos tudo, é preciso fazer de novo. O bom produto se mantém no tempo porque se adapta às mudanças.",
+   "fr": "Une fois que tout est terminé, il faut recommencer. Un bon produit dure parce qu’il s’adapte au changement."
   },
   {
    "es": "Trayectoria",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Career",
+   "pt-br": "Trajetória",
+   "fr": "Parcours"
   },
   {
    "es": "De dónde vengo",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Where I come from",
+   "pt-br": "De onde venho",
+   "fr": "D’où je viens"
   },
   {
    "es": "<span class=\"anio\">2023 – actualidad</span><span class=\"cargo\">Líder de Unidad de Análisis de Datos de Marketing</span><span class=\"lugar\">Coopelesca.</span>",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "<span class=\"anio\">2023 – present</span><span class=\"cargo\">Marketing Data Analytics Unit Lead</span><span class=\"lugar\">Coopelesca.</span>",
+   "pt-br": "<span class=\"anio\">2023 – atual</span><span class=\"cargo\">Líder da Unidade de Análise de Dados de Marketing</span><span class=\"lugar\">Coopelesca.</span>",
+   "fr": "<span class=\"anio\">2023 – aujourd’hui</span><span class=\"cargo\">Responsable de l’unité d’analyse des données marketing</span><span class=\"lugar\">Coopelesca.</span>"
   },
   {
    "es": "<span class=\"anio\">2022 – 2023</span><span class=\"cargo\">Gerente Administrativo</span><span class=\"lugar\">Asociación Deportiva San Carlos.</span>",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "<span class=\"anio\">2022 – 2023</span><span class=\"cargo\">General Manager</span><span class=\"lugar\">Asociación Deportiva San Carlos.</span>",
+   "pt-br": "<span class=\"anio\">2022 – 2023</span><span class=\"cargo\">Gerente Administrativo</span><span class=\"lugar\">Asociación Deportiva San Carlos.</span>",
+   "fr": "<span class=\"anio\">2022 – 2023</span><span class=\"cargo\">Directeur administratif</span><span class=\"lugar\">Asociación Deportiva San Carlos.</span>"
   },
   {
    "es": "<span class=\"anio\">2017 – 2022</span><span class=\"cargo\">Director de Proyectos</span><span class=\"lugar\">Uniko Branding Agency.</span>",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "<span class=\"anio\">2017 – 2022</span><span class=\"cargo\">Project Director</span><span class=\"lugar\">Uniko Branding Agency.</span>",
+   "pt-br": "<span class=\"anio\">2017 – 2022</span><span class=\"cargo\">Diretor de Projetos</span><span class=\"lugar\">Uniko Branding Agency.</span>",
+   "fr": "<span class=\"anio\">2017 – 2022</span><span class=\"cargo\">Directeur de projets</span><span class=\"lugar\">Uniko Branding Agency.</span>"
   },
   {
    "es": "<span class=\"anio\">2012 – 2017</span><span class=\"cargo\">Asesor en Comunicación Política</span><span class=\"lugar\">Fundación Costa Rica para el Desarrollo Sostenible.</span>",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "<span class=\"anio\">2012 – 2017</span><span class=\"cargo\">Political Communication Advisor</span><span class=\"lugar\">Fundación Costa Rica para el Desarrollo Sostenible.</span>",
+   "pt-br": "<span class=\"anio\">2012 – 2017</span><span class=\"cargo\">Assessor de Comunicação Política</span><span class=\"lugar\">Fundación Costa Rica para el Desarrollo Sostenible.</span>",
+   "fr": "<span class=\"anio\">2012 – 2017</span><span class=\"cargo\">Conseiller en communication politique</span><span class=\"lugar\">Fundación Costa Rica para el Desarrollo Sostenible.</span>"
   },
   {
    "es": "<span class=\"anio\">2011 – 2012</span><span class=\"cargo\">Asistente de Investigación</span><span class=\"lugar\">Programa de la Sociedad de la Información y el Conocimiento, Universidad de Costa Rica.</span>",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "<span class=\"anio\">2011 – 2012</span><span class=\"cargo\">Research Assistant</span><span class=\"lugar\">Information and Knowledge Society Program (PROSIC), University of Costa Rica.</span>",
+   "pt-br": "<span class=\"anio\">2011 – 2012</span><span class=\"cargo\">Assistente de Pesquisa</span><span class=\"lugar\">Programa da Sociedade da Informação e do Conhecimento (PROSIC), Universidade da Costa Rica.</span>",
+   "fr": "<span class=\"anio\">2011 – 2012</span><span class=\"cargo\">Assistant de recherche</span><span class=\"lugar\">Programme sur la société de l’information et de la connaissance (PROSIC), Université du Costa Rica.</span>"
   },
   {
    "es": "<span class=\"anio\">2010 – 2011</span><span class=\"cargo\">Asistente de Investigación</span><span class=\"lugar\">Centro de Investigación en Estudios Políticos, Universidad de Costa Rica.</span>",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "<span class=\"anio\">2010 – 2011</span><span class=\"cargo\">Research Assistant</span><span class=\"lugar\">Center for Research in Political Studies (CIEP), University of Costa Rica.</span>",
+   "pt-br": "<span class=\"anio\">2010 – 2011</span><span class=\"cargo\">Assistente de Pesquisa</span><span class=\"lugar\">Centro de Pesquisa em Estudos Políticos (CIEP), Universidade da Costa Rica.</span>",
+   "fr": "<span class=\"anio\">2010 – 2011</span><span class=\"cargo\">Assistant de recherche</span><span class=\"lugar\">Centre de recherche en études politiques (CIEP), Université du Costa Rica.</span>"
   },
   {
    "es": "<span class=\"anio\">2009 – 2010</span><span class=\"cargo\">Community Manager y editor de contenidos</span><span class=\"lugar\">Un Techo para mi país.</span>",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "<span class=\"anio\">2009 – 2010</span><span class=\"cargo\">Community Manager and content editor</span><span class=\"lugar\">Un Techo para mi país.</span>",
+   "pt-br": "<span class=\"anio\">2009 – 2010</span><span class=\"cargo\">Community manager e editor de conteúdo</span><span class=\"lugar\">Un Techo para mi país.</span>",
+   "fr": "<span class=\"anio\">2009 – 2010</span><span class=\"cargo\">Community manager et éditeur de contenu</span><span class=\"lugar\">Un Techo para mi país.</span>"
   },
   {
    "es": "Educación",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Education",
+   "pt-br": "Formação",
+   "fr": "Formation"
   },
   {
    "es": "<span>2012</span><span>B.A. Ciencias Políticas, Universidad de Costa Rica.</span>",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "<span>2012</span><span>B.A. in Political Science, University of Costa Rica.</span>",
+   "pt-br": "<span>2012</span><span>Bacharelado em Ciência Política, Universidade da Costa Rica.</span>",
+   "fr": "<span>2012</span><span>Licence en sciences politiques, Université du Costa Rica.</span>"
   },
   {
    "es": "<span>DNF</span><span>Comercio Exterior, Universidad de Costa Rica.</span>",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "<span>Coursework</span><span>International Trade, University of Costa Rica.</span>",
+   "pt-br": "<span>Cursado</span><span>Comércio Exterior, Universidade da Costa Rica.</span>",
+   "fr": "<span>Suivi</span><span>Commerce international, Université du Costa Rica.</span>"
   },
   {
    "es": "Certificaciones",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Certifications",
+   "pt-br": "Certificações",
+   "fr": "Certifications"
   },
   {
    "es": "<span>2025</span><span>Transformación Digital con IA Generativa, Instituto Tecnológico de Costa Rica.</span>",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "<span>2025</span><span>Digital Transformation with Generative AI, Costa Rica Institute of Technology.</span>",
+   "pt-br": "<span>2025</span><span>Transformação Digital com IA Generativa, Instituto Tecnológico da Costa Rica.</span>",
+   "fr": "<span>2025</span><span>Transformation numérique avec l’IA générative, Institut technologique du Costa Rica.</span>"
   },
   {
    "es": "<span>2022</span><span>Gestión Ágil de Proyectos con el marco de trabajo SCRUM, TEC.</span>",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "<span>2022</span><span>Agile Project Management with the Scrum framework, TEC.</span>",
+   "pt-br": "<span>2022</span><span>Gestão Ágil de Projetos com o framework Scrum, TEC.</span>",
+   "fr": "<span>2022</span><span>Gestion de projet agile avec le cadre Scrum, TEC.</span>"
   },
   {
    "es": "<span>2022</span><span>BluePrint Media Buyer, Meta.</span>",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "<span>2022</span><span>BluePrint Media Buyer, Meta.</span>",
+   "pt-br": "<span>2022</span><span>BluePrint Media Buyer, Meta.</span>",
+   "fr": "<span>2022</span><span>BluePrint Media Buyer, Meta.</span>"
   },
   {
    "es": "<span>2022</span><span>English Certificate 71/100 (C2 Proficient), <a href=\"https://www.efset.org/cert/tuYc1z\" target=\"_blank\" rel=\"noopener\">EF SET</a>.</span>",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "<span>2022</span><span>English Certificate 71/100 (C2 Proficient), <a href=\"https://www.efset.org/cert/tuYc1z\" target=\"_blank\" rel=\"noopener\">EF SET</a>.</span>",
+   "pt-br": "<span>2022</span><span>English Certificate 71/100 (C2 Proficient), <a href=\"https://www.efset.org/cert/tuYc1z\" target=\"_blank\" rel=\"noopener\">EF SET</a>.</span>",
+   "fr": "<span>2022</span><span>English Certificate 71/100 (C2 Proficient), <a href=\"https://www.efset.org/cert/tuYc1z\" target=\"_blank\" rel=\"noopener\">EF SET</a>.</span>"
   },
   {
    "es": "<span>2021</span><span>SEO Fundamentals, LinkedIn Learning.</span>",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "<span>2021</span><span>SEO Fundamentals, LinkedIn Learning.</span>",
+   "pt-br": "<span>2021</span><span>SEO Fundamentals, LinkedIn Learning.</span>",
+   "fr": "<span>2021</span><span>SEO Fundamentals, LinkedIn Learning.</span>"
   },
   {
    "es": "<span>2020</span><span>Design Thinking: Innovación Centrada en el Usuario, INCAE.</span>",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "<span>2020</span><span>Design Thinking: User-Centered Innovation, INCAE.</span>",
+   "pt-br": "<span>2020</span><span>Design Thinking: Inovação Centrada no Usuário, INCAE.</span>",
+   "fr": "<span>2020</span><span>Design Thinking : l’innovation centrée sur l’utilisateur, INCAE.</span>"
   },
   {
    "es": "<span>2012</span><span>Certificado IHMC, Cmap Tools.</span>",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "<span>2012</span><span>IHMC Certificate, Cmap Tools.</span>",
+   "pt-br": "<span>2012</span><span>Certificado IHMC, Cmap Tools.</span>",
+   "fr": "<span>2012</span><span>Certificat IHMC, Cmap Tools.</span>"
   },
   {
    "es": "Otras cosas",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Other things",
+   "pt-br": "Outras coisas",
+   "fr": "Autres activités"
   },
   {
    "es": "<span>2026 – actualidad</span><span>Secretario del Tribunal Electoral, COOCIQUE R.L.</span>",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "<span>2026 – present</span><span>Secretary of the Electoral Tribunal, COOCIQUE R.L.</span>",
+   "pt-br": "<span>2026 – atual</span><span>Secretário do Tribunal Eleitoral, COOCIQUE R.L.</span>",
+   "fr": "<span>2026 – aujourd’hui</span><span>Secrétaire du tribunal électoral, COOCIQUE R.L.</span>"
   },
   {
    "es": "<span>2024 – actualidad</span><span>Delegado de la Asamblea General, COOCIQUE R.L.</span>",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "<span>2024 – present</span><span>Delegate to the General Assembly, COOCIQUE R.L.</span>",
+   "pt-br": "<span>2024 – atual</span><span>Delegado da Assembleia Geral, COOCIQUE R.L.</span>",
+   "fr": "<span>2024 – aujourd’hui</span><span>Délégué à l’assemblée générale, COOCIQUE R.L.</span>"
   },
   {
    "es": "<span>2024</span><span>Postulante a Dirigente Scout.</span>",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "<span>2024</span><span>Scout Leader candidate.</span>",
+   "pt-br": "<span>2024</span><span>Candidato a Dirigente Escoteiro.</span>",
+   "fr": "<span>2024</span><span>Candidat chef scout.</span>"
   },
   {
    "es": "<span>2012</span><span>II Congreso Internacional de Comunicación Política y Estrategias de Campaña.</span>",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "<span>2012</span><span>2nd International Congress on Political Communication and Campaign Strategy.</span>",
+   "pt-br": "<span>2012</span><span>II Congresso Internacional de Comunicação Política e Estratégias de Campanha.</span>",
+   "fr": "<span>2012</span><span>IIe Congrès international de communication politique et de stratégies de campagne.</span>"
   },
   {
    "es": "<span>2007 – 2010</span><span>Voluntario, Un Techo.</span>",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "<span>2007 – 2010</span><span>Volunteer, Un Techo.</span>",
+   "pt-br": "<span>2007 – 2010</span><span>Voluntário, Un Techo.</span>",
+   "fr": "<span>2007 – 2010</span><span>Bénévole, Un Techo.</span>"
   },
   {
    "es": "<span>2007</span><span>Premio Mejor Negociador, MOEA.</span>",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "<span>2007</span><span>Best Negotiator Award, MOEA.</span>",
+   "pt-br": "<span>2007</span><span>Prêmio de Melhor Negociador, MOEA.</span>",
+   "fr": "<span>2007</span><span>Prix du meilleur négociateur, MOEA.</span>"
   },
   {
    "es": "<span>2002</span><span>Insignia Guaria Morada, Guías y Scouts de Costa Rica.</span>",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "<span>2002</span><span>Guaria Morada Badge, Guías y Scouts de Costa Rica.</span>",
+   "pt-br": "<span>2002</span><span>Insígnia Guaria Morada, Guías y Scouts de Costa Rica.</span>",
+   "fr": "<span>2002</span><span>Insigne Guaria Morada, Guías y Scouts de Costa Rica.</span>"
   },
   {
    "es": "<span>2001</span><span>Seminario Trabajo en Equipo y Liderazgo, CENECOOP R.L.</span>",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "<span>2001</span><span>Teamwork and Leadership Seminar, CENECOOP R.L.</span>",
+   "pt-br": "<span>2001</span><span>Seminário de Trabalho em Equipe e Liderança, CENECOOP R.L.</span>",
+   "fr": "<span>2001</span><span>Séminaire sur le travail d’équipe et le leadership, CENECOOP R.L.</span>"
   },
   {
    "es": "Portafolio",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Portfolio",
+   "pt-br": "Portfólio",
+   "fr": "Portfolio"
   },
   {
    "es": "Un poco de mi trabajo",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "A bit of my work",
+   "pt-br": "Um pouco do meu trabalho",
+   "fr": "Un aperçu de mon travail"
   },
   {
    "es": "<a class=\"siles-enlace\" href=\"/portafolio/\">Mirá todos los proyectos</a>",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "<a class=\"siles-enlace\" href=\"/portafolio/\">See all projects</a>",
+   "pt-br": "<a class=\"siles-enlace\" href=\"/portafolio/\">Veja todos os projetos</a>",
+   "fr": "<a class=\"siles-enlace\" href=\"/portafolio/\">Voir tous les projets</a>"
   },
   {
    "es": "Proyecto para Global Chemical Group",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Project for Global Chemical Group",
+   "pt-br": "Projeto para Global Chemical Group",
+   "fr": "Projet pour Global Chemical Group"
   },
   {
    "es": "<span>Global Chemical Group</span></a><a class=\"siles-sm-galeria__item\" href=\"/portafolio/tienda-en-linea-para-los-toros-del-norte/\">",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "<span>Global Chemical Group</span></a><a class=\"siles-sm-galeria__item\" href=\"/portafolio/tienda-en-linea-para-los-toros-del-norte/\">",
+   "pt-br": "<span>Global Chemical Group</span></a><a class=\"siles-sm-galeria__item\" href=\"/portafolio/tienda-en-linea-para-los-toros-del-norte/\">",
+   "fr": "<span>Global Chemical Group</span></a><a class=\"siles-sm-galeria__item\" href=\"/portafolio/tienda-en-linea-para-los-toros-del-norte/\">"
   },
   {
    "es": "Proyecto para Toros del Norte",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Project for Toros del Norte",
+   "pt-br": "Projeto para Toros del Norte",
+   "fr": "Projet pour Toros del Norte"
   },
   {
    "es": "<span>Toros del Norte</span></a><a class=\"siles-sm-galeria__item\" href=\"/portafolio/sitio-web-para-doctor/\">",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "<span>Toros del Norte</span></a><a class=\"siles-sm-galeria__item\" href=\"/portafolio/sitio-web-para-doctor/\">",
+   "pt-br": "<span>Toros del Norte</span></a><a class=\"siles-sm-galeria__item\" href=\"/portafolio/sitio-web-para-doctor/\">",
+   "fr": "<span>Toros del Norte</span></a><a class=\"siles-sm-galeria__item\" href=\"/portafolio/sitio-web-para-doctor/\">"
   },
   {
    "es": "Proyecto para Dr. Gabriel Vargas Kelsh",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Project for Dr. Gabriel Vargas Kelsh",
+   "pt-br": "Projeto para Dr. Gabriel Vargas Kelsh",
+   "fr": "Projet pour Dr. Gabriel Vargas Kelsh"
   },
   {
    "es": "<span>Dr. Gabriel Vargas Kelsh</span></a>",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "<span>Dr. Gabriel Vargas Kelsh</span></a>",
+   "pt-br": "<span>Dr. Gabriel Vargas Kelsh</span></a>",
+   "fr": "<span>Dr. Gabriel Vargas Kelsh</span></a>"
   },
   {
    "es": "Proyecto para Grupo Avanpro",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Project for Grupo Avanpro",
+   "pt-br": "Projeto para Grupo Avanpro",
+   "fr": "Projet pour Grupo Avanpro"
   },
   {
    "es": "<span>Grupo Avanpro</span>",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "<span>Grupo Avanpro</span>",
+   "pt-br": "<span>Grupo Avanpro</span>",
+   "fr": "<span>Grupo Avanpro</span>"
   },
   {
    "es": "Proyecto para EarthCrop",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Project for EarthCrop",
+   "pt-br": "Projeto para EarthCrop",
+   "fr": "Projet pour EarthCrop"
   },
   {
    "es": "<span>EarthCrop</span></a>",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "<span>EarthCrop</span></a>",
+   "pt-br": "<span>EarthCrop</span></a>",
+   "fr": "<span>EarthCrop</span></a>"
   },
   {
    "es": "Proyecto para Grupo HM",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Project for Grupo HM",
+   "pt-br": "Projeto para Grupo HM",
+   "fr": "Projet pour Grupo HM"
   },
   {
    "es": "<span>Grupo HM</span>",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "<span>Grupo HM</span>",
+   "pt-br": "<span>Grupo HM</span>",
+   "fr": "<span>Grupo HM</span>"
   },
   {
    "es": "Proyecto para NST Freight",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Project for NST Freight",
+   "pt-br": "Projeto para NST Freight",
+   "fr": "Projet pour NST Freight"
   },
   {
    "es": "<span>NST Freight</span>",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "<span>NST Freight</span>",
+   "pt-br": "<span>NST Freight</span>",
+   "fr": "<span>NST Freight</span>"
   },
   {
    "es": "Proyecto para Probio Fruits",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Project for Probio Fruits",
+   "pt-br": "Projeto para Probio Fruits",
+   "fr": "Projet pour Probio Fruits"
   },
   {
    "es": "<span>Probio Fruits</span>",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "<span>Probio Fruits</span>",
+   "pt-br": "<span>Probio Fruits</span>",
+   "fr": "<span>Probio Fruits</span>"
   },
   {
    "es": "<span>Global Chemical Group</span></a><a class=\"siles-sm-galeria__item\" href=\"/portafolio/tienda-en-linea-para-los-toros-del-norte/\" tabindex=\"-1\">",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "<span>Global Chemical Group</span></a><a class=\"siles-sm-galeria__item\" href=\"/portafolio/tienda-en-linea-para-los-toros-del-norte/\" tabindex=\"-1\">",
+   "pt-br": "<span>Global Chemical Group</span></a><a class=\"siles-sm-galeria__item\" href=\"/portafolio/tienda-en-linea-para-los-toros-del-norte/\" tabindex=\"-1\">",
+   "fr": "<span>Global Chemical Group</span></a><a class=\"siles-sm-galeria__item\" href=\"/portafolio/tienda-en-linea-para-los-toros-del-norte/\" tabindex=\"-1\">"
   },
   {
    "es": "<span>Toros del Norte</span></a><a class=\"siles-sm-galeria__item\" href=\"/portafolio/sitio-web-para-doctor/\" tabindex=\"-1\">",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "<span>Toros del Norte</span></a><a class=\"siles-sm-galeria__item\" href=\"/portafolio/sitio-web-para-doctor/\" tabindex=\"-1\">",
+   "pt-br": "<span>Toros del Norte</span></a><a class=\"siles-sm-galeria__item\" href=\"/portafolio/sitio-web-para-doctor/\" tabindex=\"-1\">",
+   "fr": "<span>Toros del Norte</span></a><a class=\"siles-sm-galeria__item\" href=\"/portafolio/sitio-web-para-doctor/\" tabindex=\"-1\">"
   },
   {
    "es": "Testimonios",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Testimonials",
+   "pt-br": "Depoimentos",
+   "fr": "Témoignages"
   },
   {
    "es": "Lo que dicen de mi trabajo",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "What people say about my work",
+   "pt-br": "O que dizem do meu trabalho",
+   "fr": "Ce qu’on dit de mon travail"
   },
   {
    "es": "1 de 3",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "1 of 3",
+   "pt-br": "1 de 3",
+   "fr": "1 sur 3"
   },
   {
    "es": "José María Figueres Olsen",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "José María Figueres Olsen",
+   "pt-br": "José María Figueres Olsen",
+   "fr": "José María Figueres Olsen"
   },
   {
    "es": "Esteban hizo un aporte muy valioso para la ejecución de las estrategias de comunicación digital en proyectos como Vía Costarricense, el Congreso Nacional de Liberacionista 2015, y formó parte del Equipo de Coordinación Nacional de las Elecciones Municipales 2016 y la Convención Liberacionista 2017.",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Esteban made a very valuable contribution to carrying out the digital communication strategies for projects such as Vía Costarricense and the 2015 National Liberacionista Congress, and he was part of the National Coordination Team for the 2016 Municipal Elections and the 2017 Liberacionista Convention.",
+   "pt-br": "Esteban deu uma contribuição muito valiosa para a execução das estratégias de comunicação digital em projetos como o Vía Costarricense e o Congresso Nacional Liberacionista de 2015, e fez parte da Equipe de Coordenação Nacional das Eleições Municipais de 2016 e da Convenção Liberacionista de 2017.",
+   "fr": "Esteban a apporté une contribution très précieuse à la mise en œuvre des stratégies de communication numérique de projets comme Vía Costarricense et le Congrès national libérationniste de 2015, et il a fait partie de l’équipe de coordination nationale des élections municipales de 2016 et de la Convention libérationniste de 2017."
   },
   {
    "es": "<strong>José María Figueres Olsen</strong>Expresidente de Costa Rica (1994 – 1998), PLN y Vía Costarricense",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "<strong>José María Figueres Olsen</strong>Former President of Costa Rica (1994 – 1998), PLN and Vía Costarricense",
+   "pt-br": "<strong>José María Figueres Olsen</strong>Ex-presidente da Costa Rica (1994 – 1998), PLN e Vía Costarricense",
+   "fr": "<strong>José María Figueres Olsen</strong>Ancien président du Costa Rica (1994 – 1998), PLN et Vía Costarricense"
   },
   {
    "es": "2 de 3",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "2 of 3",
+   "pt-br": "2 de 3",
+   "fr": "2 sur 3"
   },
   {
    "es": "Sergio Chávez Acevedo",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Sergio Chávez Acevedo",
+   "pt-br": "Sergio Chávez Acevedo",
+   "fr": "Sergio Chávez Acevedo"
   },
   {
    "es": "Esteban y el equipo de Uniko jugaron un papel fundamental en la modernización y transformación digital de la Asociación Deportiva San Carlos. Desde el Estadio hasta las formas de comunicación interna y externa se han convertido en un ejemplo para el ámbito costarricense.",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Esteban and the Uniko team played a key role in the modernization and digital transformation of the Asociación Deportiva San Carlos. From the stadium to the way the club communicates internally and externally, it has become an example in Costa Rica.",
+   "pt-br": "Esteban e a equipe da Uniko tiveram um papel fundamental na modernização e na transformação digital da Asociación Deportiva San Carlos. Do estádio às formas de comunicação interna e externa, o clube se tornou um exemplo na Costa Rica.",
+   "fr": "Esteban et l’équipe d’Uniko ont joué un rôle essentiel dans la modernisation et la transformation numérique de l’Asociación Deportiva San Carlos. Du stade à la communication interne et externe, le club est devenu un exemple au Costa Rica."
   },
   {
    "es": "<strong>Sergio Chávez Acevedo</strong>Presidente (2015 – 2023), Asociación Deportiva San Carlos",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "<strong>Sergio Chávez Acevedo</strong>President (2015 – 2023), Asociación Deportiva San Carlos",
+   "pt-br": "<strong>Sergio Chávez Acevedo</strong>Presidente (2015 – 2023), Asociación Deportiva San Carlos",
+   "fr": "<strong>Sergio Chávez Acevedo</strong>Président (2015 – 2023), Asociación Deportiva San Carlos"
   },
   {
    "es": "3 de 3",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "3 of 3",
+   "pt-br": "3 de 3",
+   "fr": "3 sur 3"
   },
   {
    "es": "Dr. Gabriel Vargas Kelsh",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Dr. Gabriel Vargas Kelsh",
+   "pt-br": "Dr. Gabriel Vargas Kelsh",
+   "fr": "Dr. Gabriel Vargas Kelsh"
   },
   {
    "es": "Esteban diseñó una web enfocada en la rama médica de la oftalmología. Desde el primer contacto materializó todas mis ideas, y las fue mejorando hasta entregar el producto que yo buscaba. Es un profesional conocedor, entregado y apasionado por su trabajo. Uno le entrega una bola de plastilina, y él la convierte en una escultura.",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Esteban designed a website focused on the medical field of ophthalmology. From our first contact, he brought all my ideas to life and kept improving them until he delivered exactly what I was looking for. He’s a knowledgeable, dedicated professional who is passionate about his work. You hand him a ball of clay, and he turns it into a sculpture.",
+   "pt-br": "Esteban criou um site voltado para a área médica da oftalmologia. Desde o primeiro contato, materializou todas as minhas ideias e foi aprimorando-as até entregar o produto que eu buscava. É um profissional experiente, dedicado e apaixonado pelo que faz. A gente entrega a ele uma bola de massinha, e ele a transforma em uma escultura.",
+   "fr": "Esteban a conçu un site web consacré à l’ophtalmologie. Dès le premier contact, il a concrétisé toutes mes idées et les a améliorées jusqu’à livrer exactement ce que je cherchais. C’est un professionnel compétent, investi et passionné par son travail. On lui confie une boule de pâte à modeler, et il en fait une sculpture."
   },
   {
    "es": "<strong>Dr. Gabriel Vargas Kelsh</strong>Oftalmólogo costarricense",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "<strong>Dr. Gabriel Vargas Kelsh</strong>Costa Rican ophthalmologist",
+   "pt-br": "<strong>Dr. Gabriel Vargas Kelsh</strong>Oftalmologista costarriquenho",
+   "fr": "<strong>Dr Gabriel Vargas Kelsh</strong>Ophtalmologue costaricien"
   },
   {
    "es": "Testimonio anterior",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Previous testimonial",
+   "pt-br": "Depoimento anterior",
+   "fr": "Témoignage précédent"
   },
   {
    "es": "Testimonio 1",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Testimonial 1",
+   "pt-br": "Depoimento 1",
+   "fr": "Témoignage 1"
   },
   {
    "es": "Testimonio 2",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Testimonial 2",
+   "pt-br": "Depoimento 2",
+   "fr": "Témoignage 2"
   },
   {
    "es": "Testimonio 3",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Testimonial 3",
+   "pt-br": "Depoimento 3",
+   "fr": "Témoignage 3"
   },
   {
    "es": "Testimonio siguiente",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Next testimonial",
+   "pt-br": "Próximo depoimento",
+   "fr": "Témoignage suivant"
   },
   {
    "es": "Conversemos",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Let’s talk",
+   "pt-br": "Vamos conversar",
+   "fr": "Parlons-en"
   },
   {
    "es": "Contame qué querés transformar y te propongo un primer paso en una llamada de 30 minutos.",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Tell me what you want to transform, and I’ll suggest a first step in a 30-minute call.",
+   "pt-br": "Conte o que você quer transformar e eu proponho um primeiro passo em uma conversa de 30 minutos.",
+   "fr": "Dites-moi ce que vous voulez transformer et je vous propose une première étape lors d’un appel de 30 minutes."
   }
  ]
 }

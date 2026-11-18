@@ -2,83 +2,83 @@
  "pagina": {
   "titulo": {
    "es": "Cotización",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Quote",
+   "pt-br": "Orçamento",
+   "fr": "Devis"
   },
   "slug": {
    "es": "cotizacion",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "quote",
+   "pt-br": "orcamento",
+   "fr": "devis"
   },
   "yoast_titulo": {
    "es": "Cotización de proyectos de transformación digital %%sep%% %%sitename%%",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Digital transformation project quote %%sep%% %%sitename%%",
+   "pt-br": "Orçamento de projetos de transformação digital %%sep%% %%sitename%%",
+   "fr": "Devis pour vos projets de transformation numérique %%sep%% %%sitename%%"
   },
   "yoast_descripcion": {
    "es": "Elegí los servicios que necesitás y recibí tu cotización en colones, con el IVA desglosado, después de una llamada de 30 minutos.",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Choose the services you need and get your quote in US dollars, with taxes itemized, after a 30-minute call.",
+   "pt-br": "Escolha os serviços de que precisa e receba seu orçamento em dólares americanos, com os impostos discriminados, depois de uma conversa de 30 minutos.",
+   "fr": "Choisissez les services dont vous avez besoin et recevez votre devis en dollars américains, taxes détaillées, après un appel de 30 minutes."
   }
  },
  "textos": [
   {
    "es": "Cotización",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Quote",
+   "pt-br": "Orçamento",
+   "fr": "Devis"
   },
   {
    "es": "Condiciones",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Terms",
+   "pt-br": "Condições",
+   "fr": "Conditions"
   },
   {
    "es": "Claro desde el inicio",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Clear from the start",
+   "pt-br": "Claro desde o início",
+   "fr": "Clair dès le départ"
   },
   {
    "es": "Factura electrónica",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Electronic invoice",
+   "pt-br": "Fatura eletrônica",
+   "fr": "Facture électronique"
   },
   {
    "es": "Cada pago lleva su comprobante, con el IVA del 13 % en fila aparte.",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Every payment comes with its receipt, with the 13% VAT on a separate line.",
+   "pt-br": "Cada pagamento tem seu comprovante, com o IVA de 13% em uma linha separada.",
+   "fr": "Chaque paiement est accompagné de son justificatif, avec la TVA de 13 % sur une ligne à part."
   },
   {
    "es": "Pago por fases",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Phased payments",
+   "pt-br": "Pagamento em fases",
+   "fr": "Paiement par étapes"
   },
   {
    "es": "La mitad al iniciar y la otra mitad contra entrega, por transferencia o SINPE Móvil.",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Half up front and the other half on delivery, by bank transfer or SINPE Móvil.",
+   "pt-br": "Metade no início e a outra metade na entrega, por transferência bancária ou SINPE Móvil.",
+   "fr": "La moitié au démarrage et l’autre moitié à la livraison, par virement bancaire ou SINPE Móvil."
   },
   {
    "es": "Firma digital",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Digital signature",
+   "pt-br": "Assinatura digital",
+   "fr": "Signature électronique"
   },
   {
    "es": "Aprobás la propuesta con firma digital certificada, sin imprimir nada.",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "You approve the proposal with a certified digital signature, no printing needed.",
+   "pt-br": "Você aprova a proposta com assinatura digital certificada, sem imprimir nada.",
+   "fr": "Vous approuvez la proposition par signature électronique certifiée, sans rien imprimer."
   }
  ]
 }

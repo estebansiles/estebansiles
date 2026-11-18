@@ -2,15 +2,15 @@
  "pagina": {
   "titulo": {
    "es": "Theme Builder Layout",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Project (EN)",
+   "pt-br": "Projeto (PT)",
+   "fr": "Projet (FR)"
   },
   "slug": {
    "es": "theme-builder-layout-6",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "theme-builder-layout-6",
+   "pt-br": "theme-builder-layout-6",
+   "fr": "theme-builder-layout-6"
   },
   "yoast_titulo": {
    "es": "",
@@ -28,33 +28,33 @@
  "textos": [
   {
    "es": "Otros proyectos",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Other projects",
+   "pt-br": "Outros projetos",
+   "fr": "Autres projets"
   },
   {
    "es": "<a class=\"siles-enlace\" href=\"/portafolio/\">Mirá todos los proyectos</a>",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "<a class=\"siles-enlace\" href=\"/portafolio/\">See all projects</a>",
+   "pt-br": "<a class=\"siles-enlace\" href=\"/portafolio/\">Veja todos os projetos</a>",
+   "fr": "<a class=\"siles-enlace\" href=\"/portafolio/\">Voir tous les projets</a>"
   },
   {
    "es": "Tu proyecto puede ser el siguiente",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Your project could be next",
+   "pt-br": "Seu projeto pode ser o próximo",
+   "fr": "Votre projet pourrait être le prochain"
   },
   {
    "es": "Contame qué querés transformar y armamos el plan por fases.",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Tell me what you want to transform, and we’ll build a phased plan.",
+   "pt-br": "Conte o que você quer transformar e montamos um plano em fases.",
+   "fr": "Dites-moi ce que vous voulez transformer et nous construirons un plan par étapes."
   },
   {
    "es": "Pedí una cotización",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Request a quote",
+   "pt-br": "Peça um orçamento",
+   "fr": "Demandez un devis"
   }
  ]
 }

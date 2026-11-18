@@ -2,15 +2,15 @@
  "pagina": {
   "titulo": {
    "es": "Contacto",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Contact",
+   "pt-br": "Contato",
+   "fr": "Contact"
   },
   "slug": {
    "es": "contacto",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "contact",
+   "pt-br": "contato",
+   "fr": "contact"
   },
   "yoast_titulo": {
    "es": "",
@@ -20,143 +20,143 @@
   },
   "yoast_descripcion": {
    "es": "Póngase en contacto con Siles Comunicación, profesional con más de 15 años de experiencia en Transformación Digital",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Get in touch with Siles Comunicación, a professional with more than 15 years of experience in digital transformation.",
+   "pt-br": "Entre em contato com a Siles Comunicación, profissional com mais de 15 anos de experiência em transformação digital.",
+   "fr": "Contactez Siles Comunicación, un professionnel avec plus de 15 ans d’expérience en transformation numérique."
   }
  },
  "textos": [
   {
    "es": "Contacto",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Contact",
+   "pt-br": "Contato",
+   "fr": "Contact"
   },
   {
    "es": "Hablemos",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Let’s talk",
+   "pt-br": "Vamos conversar",
+   "fr": "Parlons-en"
   },
   {
    "es": "Contame qué querés transformar. Te respondo en menos de 24 horas.",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Tell me what you want to transform. I’ll reply within 24 hours.",
+   "pt-br": "Conte o que você quer transformar. Respondo em menos de 24 horas.",
+   "fr": "Dites-moi ce que vous voulez transformer. Je vous réponds sous 24 heures."
   },
   {
    "es": "contact@siles.cr</a><a href=\"https://wa.me/50688659046\" target=\"_blank\" rel=\"noopener\">",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "contact@siles.cr</a><a href=\"https://wa.me/50688659046\" target=\"_blank\" rel=\"noopener\">",
+   "pt-br": "contact@siles.cr</a><a href=\"https://wa.me/50688659046\" target=\"_blank\" rel=\"noopener\">",
+   "fr": "contact@siles.cr</a><a href=\"https://wa.me/50688659046\" target=\"_blank\" rel=\"noopener\">"
   },
   {
    "es": "WhatsApp: 8865 9046</a><a href=\"/conversemos/\">",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "WhatsApp: +506 8865 9046</a><a href=\"/conversemos/\">",
+   "pt-br": "WhatsApp: +506 8865 9046</a><a href=\"/conversemos/\">",
+   "fr": "WhatsApp: +506 8865 9046</a><a href=\"/conversemos/\">"
   },
   {
    "es": "Agendá una llamada de 30 minutos</a><span class=\"siles-fila\">",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Book a 30-minute call</a><span class=\"siles-fila\">",
+   "pt-br": "Agende uma conversa de 30 minutos</a><span class=\"siles-fila\">",
+   "fr": "Réservez un appel de 30 minutes</a><span class=\"siles-fila\">"
   },
   {
    "es": "San José, Costa Rica</span>",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "San José, Costa Rica</span>",
+   "pt-br": "San José, Costa Rica</span>",
+   "fr": "San José, Costa Rica</span>"
   },
   {
    "es": "Enviá tu mensaje",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Send your message",
+   "pt-br": "Envie sua mensagem",
+   "fr": "Envoyez votre message"
   },
   {
    "es": "Recibí tu mensaje. Te respondo en menos de 24 horas.",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "I got your message. I’ll reply within 24 hours.",
+   "pt-br": "Recebi sua mensagem. Respondo em menos de 24 horas.",
+   "fr": "J’ai bien reçu votre message. Je vous réponds sous 24 heures."
   },
   {
    "es": "Nombre",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Name",
+   "pt-br": "Nome",
+   "fr": "Nom"
   },
   {
    "es": "Correo",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Email",
+   "pt-br": "E-mail",
+   "fr": "E-mail"
   },
   {
    "es": "Empresa (opcional)",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Company (optional)",
+   "pt-br": "Empresa (opcional)",
+   "fr": "Entreprise (facultatif)"
   },
   {
    "es": "¿Qué te interesa?",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "What are you interested in?",
+   "pt-br": "O que te interessa?",
+   "fr": "Qu’est-ce qui vous intéresse ?"
   },
   {
    "es": "Transformación digital",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Digital transformation",
+   "pt-br": "Transformação digital",
+   "fr": "Transformation numérique"
   },
   {
    "es": "Automatización",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Automation",
+   "pt-br": "Automação",
+   "fr": "Automatisation"
   },
   {
    "es": "Marketing digital",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Digital marketing",
+   "pt-br": "Marketing digital",
+   "fr": "Marketing numérique"
   },
   {
    "es": "Experiencia de usuario",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "User experience",
+   "pt-br": "Experiência do usuário",
+   "fr": "Expérience utilisateur"
   },
   {
    "es": "Factura electrónica",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "E-invoicing",
+   "pt-br": "Faturamento eletrônico",
+   "fr": "Facturation électronique"
   },
   {
    "es": "Agentes de IA",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "AI agents",
+   "pt-br": "Agentes de IA",
+   "fr": "Agents IA"
   },
   {
    "es": "Contame tu proyecto",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Tell me about your project",
+   "pt-br": "Conte sobre o seu projeto",
+   "fr": "Parlez-moi de votre projet"
   },
   {
    "es": "Consentimiento",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "Consent",
+   "pt-br": "Consentimento",
+   "fr": "Consentement"
   },
   {
    "es": "Acepto que Siles Comunicación use estos datos solo para responderme, según la Ley 8968.",
-   "en": "",
-   "pt-br": "",
-   "fr": ""
+   "en": "I agree that Siles Comunicación will use this information only to reply to me, under Costa Rica’s Law 8968.",
+   "pt-br": "Autorizo a Siles Comunicación a usar estes dados apenas para me responder, conforme a Lei 8968 da Costa Rica.",
+   "fr": "J’accepte que Siles Comunicación utilise ces données uniquement pour me répondre, conformément à la loi 8968 du Costa Rica."
   }
  ]
 }

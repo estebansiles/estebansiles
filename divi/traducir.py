@@ -37,6 +37,17 @@ RUTAS = {
     "/opt-out/": {"en": "/opt-out/", "pt-br": "/opt-out/", "fr": "/opt-out/"},
     "/esteban/": {"en": "/esteban/", "pt-br": "/esteban/", "fr": "/esteban/"},
     "/portafolio/": {"en": "/portafolio/", "pt-br": "/portafolio/", "fr": "/portafolio/"},
+    "/portafolio/sitio-web-para-doctor/": {"en": "/portafolio/website-for-a-doctor/", "pt-br": "/portafolio/site-para-medico/",
+                                           "fr": "/portafolio/site-web-pour-medecin/"},
+    "/portafolio/landing-page-para-empresa-de-logistica/": {"en": "/portafolio/logistics-company-landing-page/",
+                                                            "pt-br": "/portafolio/landing-page-empresa-de-logistica/",
+                                                            "fr": "/portafolio/landing-page-logistique/"},
+    "/portafolio/tienda-en-linea-para-los-toros-del-norte/": {"en": "/portafolio/toros-del-norte-online-store/",
+                                                              "pt-br": "/portafolio/loja-virtual-toros-del-norte/",
+                                                              "fr": "/portafolio/boutique-en-ligne-toros-del-norte/"},
+    "/portafolio/landing-page-para-empresa-agroindustrial/": {"en": "/portafolio/agribusiness-landing-page/",
+                                                              "pt-br": "/portafolio/landing-page-agronegocio/",
+                                                              "fr": "/portafolio/landing-page-agro-industrie/"},
 }
 # El blog queda en español: sus enlaces no llevan carpeta de idioma.
 SIN_TRADUCIR = ("/blog/", "/category/", "/wp-content/")
@@ -125,7 +136,7 @@ def enlaces(contenido, idioma):
             return m.group(0)
         base, _, resto = ruta.partition("#")
         destino = None
-        for es, trad in RUTAS.items():
+        for es, trad in sorted(RUTAS.items(), key=lambda x: -len(x[0])):
             if base == es:
                 destino = trad[idioma]
             elif es != "/" and base.startswith(es):
@@ -215,6 +226,14 @@ def construir(f, idioma):
         hl = {"en": "en", "pt-br": "pt-BR", "fr": "fr"}[idioma]
         contenido = re.sub(r"(calendar\.google\.com/calendar/appointments/schedules/[^\"\s?]+\?gv=true)(?:&amp;hl=[\w-]+|&hl=[\w-]+)?",
                            rf"\1&hl={hl}", contenido)
+    mapa_terminos = os.path.join(DIR, "terminos.json")
+    if os.path.exists(mapa_terminos) and "include_categories=" in contenido:
+        cats = json.load(open(mapa_terminos, encoding="utf-8")).get("project_category", {})
+
+        def categorias(m):
+            ids = [str(cats.get(i, {}).get(idioma, i)) for i in m.group(1).split(",")]
+            return f'include_categories="{",".join(ids)}"'
+        contenido = re.sub(r'include_categories="([\d,]+)"', categorias, contenido)
     pagina = {k: v[idioma] for k, v in datos["pagina"].items()}
     return orig, contenido, pagina
 
@@ -242,7 +261,7 @@ def subir(base, nombre, idiomas):
             terminos = os.path.join(DIR, "terminos.json")
             if orig["terminos"] and os.path.exists(terminos):
                 mapa = json.load(open(terminos, encoding="utf-8"))
-                cuerpo["terminos"] = {tax: [mapa[tax][str(t)][idioma] for t in ids if str(t) in mapa.get(tax, {})]
+                cuerpo["terminos"] = {tax: [mapa[tax][str(t)][idioma] for t in ids if idioma in mapa.get(tax, {}).get(str(t), {})]
                                       for tax, ids in orig["terminos"].items()}
             req = urllib.request.Request(base.rstrip("/") + "/wp-json/siles/v1/traduccion", data=json.dumps(cuerpo).encode(),
                                          method="POST", headers={"Content-Type": "application/json", "User-Agent": "siles-divi-publicar"})

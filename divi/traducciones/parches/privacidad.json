@@ -1,0 +1,256 @@
+{
+ "pagina": {
+  "titulo": [
+   "Privacy policy",
+   "Política de privacidade",
+   "Politique de confidentialité"
+  ],
+  "slug": [
+   "privacy-policy",
+   "politica-de-privacidade",
+   "politique-de-confidentialite"
+  ],
+  "yoast_descripcion": [
+   "How we collect, use, and protect your data at siles.cr, under Costa Rica’s Law 8968, the GDPR, and US laws.",
+   "Como coletamos, usamos e protegemos seus dados na siles.cr, conforme a Lei 8968 da Costa Rica, o GDPR e as leis dos EUA.",
+   "Comment nous collectons, utilisons et protégeons vos données sur siles.cr, conformément à la loi 8968 du Costa Rica, au RGPD et aux lois américaines."
+  ]
+ },
+ "textos": {
+  "0": [
+   "Legal",
+   "Jurídico",
+   "Mentions légales"
+  ],
+  "1": [
+   "Privacy policy",
+   "Política de privacidade",
+   "Politique de confidentialité"
+  ],
+  "2": [
+   "Website",
+   "Site",
+   "Site web"
+  ],
+  "3": [
+   "www.siles.cr",
+   "www.siles.cr",
+   "www.siles.cr"
+  ],
+  "4": [
+   "Data controller",
+   "Responsável",
+   "Responsable du traitement"
+  ],
+  "5": [
+   "Esteban Díaz Siles",
+   "Esteban Díaz Siles",
+   "Esteban Díaz Siles"
+  ],
+  "6": [
+   "Last updated",
+   "Última atualização",
+   "Dernière mise à jour"
+  ],
+  "7": [
+   "November 17, 2026",
+   "17 de novembro de 2026",
+   "17 novembre 2026"
+  ],
+  "8": [
+   "At siles.cr we respect your privacy and are committed to protecting your personal data. This Privacy Policy explains how we collect, use, share, and protect your information when you visit our website, in compliance with Costa Rica’s Law on the Protection of Individuals Regarding the Processing of Their Personal Data (Law No. 8968), the European Union’s General Data Protection Regulation (GDPR), and applicable privacy laws in the United States.",
+   "Na siles.cr respeitamos sua privacidade e temos o compromisso de proteger seus dados pessoais. Esta Política de Privacidade explica como coletamos, usamos, compartilhamos e protegemos suas informações quando você visita nosso site, em conformidade com a Lei de Proteção da Pessoa frente ao Tratamento de seus Dados Pessoais (Lei nº 8968) da Costa Rica, o Regulamento Geral de Proteção de Dados (GDPR) da União Europeia e as leis de privacidade aplicáveis nos Estados Unidos.",
+   "Chez siles.cr, nous respectons votre vie privée et nous nous engageons à protéger vos données personnelles. La présente Politique de confidentialité explique comment nous collectons, utilisons, partageons et protégeons vos informations lorsque vous visitez notre site web, conformément à la loi costaricienne sur la protection des personnes à l’égard du traitement de leurs données personnelles (loi n° 8968), au Règlement général sur la protection des données (RGPD) de l’Union européenne et aux lois applicables en matière de vie privée aux États-Unis."
+  ],
+  "9": [
+   "1. Identity of the Data Controller",
+   "1. Identidade do Responsável pelos Dados",
+   "1. Identité du responsable du traitement"
+  ],
+  "10": [
+   "The controller of the data collected on this website is:",
+   "O responsável pelo tratamento dos dados coletados neste site é:",
+   "Le responsable du traitement des données collectées sur ce site web est :"
+  ],
+  "11": [
+   "<strong>Name:</strong> Esteban Díaz Siles",
+   "<strong>Nome:</strong> Esteban Díaz Siles",
+   "<strong>Nom :</strong> Esteban Díaz Siles"
+  ],
+  "12": [
+   "<strong>Address:</strong> Contiguo a Coopelesca, Ciudad Quesada, San Carlos, Alajuela, Costa Rica, 21001",
+   "<strong>Endereço:</strong> Contiguo a Coopelesca, Ciudad Quesada, San Carlos, Alajuela, Costa Rica, 21001",
+   "<strong>Adresse :</strong> Contiguo a Coopelesca, Ciudad Quesada, San Carlos, Alajuela, Costa Rica, 21001"
+  ],
+  "13": [
+   "<strong>Email:</strong> <a href=\"mailto:contact@siles.cr\">contact@siles.cr</a>",
+   "<strong>E-mail:</strong> <a href=\"mailto:contact@siles.cr\">contact@siles.cr</a>",
+   "<strong>E-mail :</strong> <a href=\"mailto:contact@siles.cr\">contact@siles.cr</a>"
+  ],
+  "14": [
+   "<strong>Phone:</strong> <a href=\"tel:+50688659046\">+506 8865-9046</a>",
+   "<strong>Telefone:</strong> <a href=\"tel:+50688659046\">+506 8865-9046</a>",
+   "<strong>Téléphone :</strong> <a href=\"tel:+50688659046\">+506 8865-9046</a>"
+  ],
+  "15": [
+   "2. What data do we collect and how do we obtain it?",
+   "2. Quais dados coletamos e como os obtemos?",
+   "2. Quelles données collectons-nous et comment les obtenons-nous ?"
+  ],
+  "16": [
+   "We collect personal information in the following ways:",
+   "Coletamos informações pessoais das seguintes maneiras:",
+   "Nous collectons des informations personnelles de la manière suivante :"
+  ],
+  "17": [
+   "<strong>Information you provide voluntarily:</strong> Data entered through our contact forms (such as your name, email address, and any message you choose to send us).",
+   "<strong>Informações fornecidas voluntariamente:</strong> Dados inseridos por meio dos nossos formulários de contato (como nome, e-mail e qualquer mensagem que você decida nos enviar).",
+   "<strong>Informations fournies volontairement :</strong> Les données saisies dans nos formulaires de contact (comme votre nom, votre adresse e-mail et tout message que vous choisissez de nous envoyer)."
+  ],
+  "18": [
+   "<strong>Information collected automatically (cookies and pixels):</strong> We use tracking cookies and similar technologies, including the Meta Pixel, the TikTok Pixel, and Microsoft Clarity. These tools may collect your IP address, browser type, operating system, and browsing behavior on our website.",
+   "<strong>Informações coletadas automaticamente (cookies e pixels):</strong> Usamos cookies de rastreamento e tecnologias semelhantes, incluindo o Pixel da Meta, o Pixel do TikTok e o Microsoft Clarity. Essas ferramentas podem coletar seu endereço IP, tipo de navegador, sistema operacional e comportamento de navegação em nosso site.",
+   "<strong>Informations collectées automatiquement (cookies et pixels) :</strong> Nous utilisons des cookies de suivi et des technologies similaires, dont le pixel Meta, le pixel TikTok et Microsoft Clarity. Ces outils peuvent collecter votre adresse IP, le type de navigateur, le système d’exploitation et votre comportement de navigation sur notre site."
+  ],
+  "19": [
+   "<strong>Quotes, newsletter, and scheduling:</strong> If you request a quote, we receive by email the services you chose, your name, your email address, and any comment you add, and we record them in our CRM to follow up on your request. If you subscribe to the newsletter, we use your email only to let you know about new posts, and you can unsubscribe whenever you want. If you book a call at <a href=\"/conversemos/\">siles.cr/conversemos</a>, the booking is made in Google Calendar, which receives your name, your email, and anything you add, and handles them under its own privacy policy. On the contact form, you can also optionally include your company name.",
+   "<strong>Orçamento, boletim e agenda:</strong> Se você solicitar um orçamento, recebemos por e-mail os serviços que escolheu, seu nome, seu e-mail e o comentário que adicionar, e os registramos em nosso CRM para acompanhar sua solicitação. Se você assinar o boletim, usamos seu e-mail apenas para avisar sobre novas publicações, e você pode cancelar a assinatura quando quiser. Se você agendar uma conversa em <a href=\"/conversemos/\">siles.cr/conversemos</a>, a reserva é feita no Google Agenda, que recebe seu nome, seu e-mail e o que você adicionar, e os trata conforme a própria política de privacidade. No formulário de contato, você também pode informar, de forma opcional, o nome da sua empresa.",
+   "<strong>Devis, newsletter et prise de rendez-vous :</strong> Si vous demandez un devis, nous recevons par e-mail les services choisis, votre nom, votre adresse e-mail et le commentaire que vous ajoutez, et nous les enregistrons dans notre CRM pour assurer le suivi de votre demande. Si vous vous abonnez à la newsletter, nous utilisons votre adresse uniquement pour vous informer des nouvelles publications, et vous pouvez vous désabonner à tout moment. Si vous réservez un appel sur <a href=\"/conversemos/\">siles.cr/conversemos</a>, la réservation se fait dans Google Agenda, qui reçoit votre nom, votre adresse e-mail et ce que vous ajoutez, et les traite selon sa propre politique de confidentialité. Dans le formulaire de contact, vous pouvez aussi indiquer, si vous le souhaitez, le nom de votre entreprise."
+  ],
+  "20": [
+   "<strong>Sensitive data:</strong> We expressly state that we do not request or collect sensitive personal data (such as racial origin, political opinions, religious beliefs, or data about health or sexual orientation).",
+   "<strong>Dados sensíveis:</strong> Declaramos expressamente que não solicitamos nem coletamos dados pessoais sensíveis (como origem racial, opiniões políticas, convicções religiosas, dados de saúde ou de orientação sexual).",
+   "<strong>Données sensibles :</strong> Nous déclarons expressément que nous ne demandons ni ne collectons de données personnelles sensibles (comme l’origine raciale, les opinions politiques, les convictions religieuses, les données de santé ou d’orientation sexuelle)."
+  ],
+  "21": [
+   "3. How do we use your information?",
+   "3. Para que usamos suas informações?",
+   "3. À quoi servent vos informations ?"
+  ],
+  "22": [
+   "The data collected is used exclusively for the following purposes:",
+   "Os dados coletados são usados exclusivamente para as seguintes finalidades:",
+   "Les données collectées sont utilisées exclusivement aux fins suivantes :"
+  ],
+  "23": [
+   "Responding to your questions, messages, or requests sent through our contact forms.",
+   "Responder às suas consultas, mensagens ou solicitações enviadas por meio dos nossos formulários de contato.",
+   "Répondre à vos questions, messages ou demandes envoyés via nos formulaires de contact."
+  ],
+  "24": [
+   "Analyzing our website traffic and understanding how users interact with our content to improve the user experience.",
+   "Analisar o tráfego do nosso site e entender como os usuários interagem com nosso conteúdo para melhorar a experiência do usuário.",
+   "Analyser le trafic de notre site et comprendre comment les utilisateurs interagissent avec nos contenus afin d’améliorer l’expérience utilisateur."
+  ],
+  "25": [
+   "Optimizing content delivery and measuring the effectiveness of our digital campaigns through the integrated social media pixels.",
+   "Otimizar a entrega de conteúdo e medir a eficácia de nossas campanhas digitais por meio dos pixels de redes sociais integrados.",
+   "Optimiser la diffusion des contenus et mesurer l’efficacité de nos campagnes numériques grâce aux pixels des réseaux sociaux intégrés."
+  ],
+  "26": [
+   "4. Data Sharing and Third Parties",
+   "4. Compartilhamento de Dados e Terceiros",
+   "4. Partage des données et tiers"
+  ],
+  "27": [
+   "We do not sell, rent, or trade your personal information with third parties. However, we share anonymous or pseudonymized browsing data with external service providers that help us run the site:",
+   "Não vendemos, alugamos nem comercializamos suas informações pessoais com terceiros. No entanto, compartilhamos dados de navegação anônimos ou pseudonimizados com prestadores de serviços externos que nos ajudam a operar o site:",
+   "Nous ne vendons, ne louons ni ne commercialisons vos informations personnelles auprès de tiers. Toutefois, nous partageons des données de navigation anonymes ou pseudonymisées avec des prestataires externes qui nous aident à faire fonctionner le site :"
+  ],
+  "28": [
+   "<strong>Google Analytics:</strong> For web traffic analysis and usage metrics.",
+   "<strong>Google Analytics:</strong> Para análise de tráfego web e métricas de uso.",
+   "<strong>Google Analytics :</strong> Pour l’analyse du trafic web et les statistiques d’utilisation."
+  ],
+  "29": [
+   "<strong>Meta and TikTok:</strong> Through their respective pixels, for engagement analysis.",
+   "<strong>Meta e TikTok:</strong> Por meio de seus respectivos pixels, para análise de interação.",
+   "<strong>Meta et TikTok :</strong> Au moyen de leurs pixels respectifs, pour l’analyse des interactions."
+  ],
+  "30": [
+   "<strong>Microsoft Clarity:</strong> To understand how the site is used through heatmaps and anonymized session recordings.",
+   "<strong>Microsoft Clarity:</strong> Para entender como o site é usado por meio de mapas de calor e gravações de sessão anonimizadas.",
+   "<strong>Microsoft Clarity :</strong> Pour comprendre l’utilisation du site grâce à des cartes de chaleur et à des enregistrements de session anonymisés."
+  ],
+  "31": [
+   "<strong>Note for US residents (CCPA/CPRA):</strong> Although we do not \"sell\" data in the traditional sense, the use of third-party pixels may be considered \"sharing\" for cross-context behavioral advertising under certain state laws. You can opt out of this tracking at any time (see the rights section).",
+   "<strong>Nota para residentes nos EUA (CCPA/CPRA):</strong> Embora não \"vendamos\" dados no sentido tradicional, o uso de pixels de terceiros pode ser considerado \"compartilhamento\" para publicidade comportamental segundo certas leis estaduais. Você pode se excluir desse rastreamento a qualquer momento (veja a seção de direitos).",
+   "<strong>Note pour les résidents des États-Unis (CCPA/CPRA) :</strong> Bien que nous ne « vendions » pas de données au sens traditionnel, l’utilisation de pixels tiers peut être considérée comme un « partage » à des fins de publicité comportementale au regard de certaines lois d’État. Vous pouvez refuser ce suivi à tout moment (voir la section sur vos droits)."
+  ],
+  "32": [
+   "These platforms may transfer and process data on servers located outside Costa Rica or the European Union (such as in the United States). We make sure to use providers that meet international security standards (such as the GDPR Standard Contractual Clauses).",
+   "Essas plataformas podem transferir e processar dados em servidores localizados fora da Costa Rica ou da União Europeia (como nos Estados Unidos). Garantimos o uso de prestadores que cumprem padrões internacionais de segurança (como as Cláusulas Contratuais Padrão do GDPR).",
+   "Ces plateformes peuvent transférer et traiter des données sur des serveurs situés hors du Costa Rica ou de l’Union européenne (par exemple aux États-Unis). Nous veillons à recourir à des prestataires qui respectent les normes internationales de sécurité (comme les clauses contractuelles types du RGPD)."
+  ],
+  "33": [
+   "5. Data Security and Retention",
+   "5. Segurança e Retenção dos Dados",
+   "5. Sécurité et conservation des données"
+  ],
+  "34": [
+   "We implement rigorous technical and organizational measures to protect your information against unauthorized access, alteration, disclosure, or destruction. Our website uses security certificates (SSL) to ensure data is encrypted in transit, and we store information in encrypted databases. We will keep your personal information only for as long as strictly necessary to fulfill the purposes described in this policy or to meet legal obligations.",
+   "Implementamos medidas técnicas e organizacionais rigorosas para proteger suas informações contra acesso não autorizado, alteração, divulgação ou destruição. Nosso site usa certificados de segurança (SSL) para garantir que a transmissão de dados seja criptografada, e armazenamos as informações em bancos de dados criptografados. Manteremos suas informações pessoais apenas pelo tempo estritamente necessário para cumprir as finalidades descritas nesta política ou obrigações legais.",
+   "Nous mettons en œuvre des mesures techniques et organisationnelles rigoureuses pour protéger vos informations contre tout accès non autorisé, toute modification, divulgation ou destruction. Notre site utilise des certificats de sécurité (SSL) pour chiffrer la transmission des données, et nous stockons les informations dans des bases de données chiffrées. Nous conservons vos informations personnelles uniquement pendant la durée strictement nécessaire aux finalités décrites dans la présente politique ou au respect de nos obligations légales."
+  ],
+  "35": [
+   "6. Children’s Privacy",
+   "6. Privacidade Infantil",
+   "6. Protection des mineurs"
+  ],
+  "36": [
+   "Our website and its content are intended for a general audience and are not designed for or directed at children under 13 (under US law) or under 16 (under the GDPR). We do not knowingly collect information from minors.",
+   "Nosso site e seu conteúdo são destinados ao público em geral e não foram criados nem são direcionados a menores de 13 anos (segundo as leis dos EUA) ou de 16 anos (segundo o GDPR). Não coletamos intencionalmente informações de menores de idade.",
+   "Notre site et ses contenus s’adressent au grand public et ne sont ni conçus ni destinés aux enfants de moins de 13 ans (selon le droit américain) ou de moins de 16 ans (selon le RGPD). Nous ne collectons pas sciemment d’informations sur des mineurs."
+  ],
+  "37": [
+   "7. Your Rights (ARCO, GDPR, and US Rights)",
+   "7. Seus Direitos (Direitos ARCO, GDPR e EUA)",
+   "7. Vos droits (droits ARCO, RGPD et États-Unis)"
+  ],
+  "38": [
+   "As a user, you have the right to full control over your information. Depending on your jurisdiction, you can exercise the following rights:",
+   "Como usuário, você tem o direito de ter controle total sobre suas informações. Dependendo da sua jurisdição, você pode exercer os seguintes direitos:",
+   "En tant qu’utilisateur, vous avez le droit de contrôler pleinement vos informations. Selon votre juridiction, vous pouvez exercer les droits suivants :"
+  ],
+  "39": [
+   "<strong>Access and portability:</strong> Request a copy of the personal data we hold about you.",
+   "<strong>Acesso e portabilidade:</strong> Solicitar uma cópia dos dados pessoais que temos sobre você.",
+   "<strong>Accès et portabilité :</strong> Demander une copie des données personnelles que nous détenons sur vous."
+  ],
+  "40": [
+   "<strong>Rectification:</strong> Correct inaccurate or incomplete information.",
+   "<strong>Retificação:</strong> Corrigir informações inexatas ou incompletas.",
+   "<strong>Rectification :</strong> Corriger des informations inexactes ou incomplètes."
+  ],
+  "41": [
+   "<strong>Cancellation / Deletion (right to be forgotten):</strong> Request that your data be deleted from our databases.",
+   "<strong>Cancelamento / Exclusão (direito ao esquecimento):</strong> Solicitar a eliminação dos seus dados das nossas bases de dados.",
+   "<strong>Annulation / Effacement (droit à l’oubli) :</strong> Demander la suppression de vos données de nos bases de données."
+  ],
+  "42": [
+   "<strong>Objection / Opt-out:</strong> Object to the processing of your data for certain purposes or ask not to be tracked by third-party pixels.",
+   "<strong>Oposição / Exclusão (opt-out):</strong> Opor-se ao tratamento dos seus dados para certas finalidades ou solicitar que não seja rastreado por pixels de terceiros.",
+   "<strong>Opposition / Exclusion (opt-out) :</strong> Vous opposer au traitement de vos données à certaines fins ou demander à ne pas être suivi par des pixels tiers."
+  ],
+  "43": [
+   "<strong>How do I exercise my rights?</strong> You can make any request related to your data (including requests for full deletion or opt-out) by completing the form at: <a href=\"/opt-out/\">www.siles.cr/opt-out</a>",
+   "<strong>Como exercer seus direitos?</strong> Você pode fazer qualquer solicitação relacionada aos seus dados (incluindo pedidos de exclusão total ou opt-out) preenchendo o formulário disponível em: <a href=\"/opt-out/\">www.siles.cr/opt-out</a>",
+   "<strong>Comment exercer vos droits ?</strong> Vous pouvez faire toute demande concernant vos données (y compris une demande d’effacement total ou d’opposition) en remplissant le formulaire disponible à l’adresse : <a href=\"/opt-out/\">www.siles.cr/opt-out</a>"
+  ],
+  "44": [
+   "We will respond to your request within the time frames set by the laws that apply in your country of residence.",
+   "Responderemos à sua solicitação nos prazos estabelecidos pela legislação aplicável ao seu país de residência.",
+   "Nous répondrons à votre demande dans les délais prévus par la législation applicable dans votre pays de résidence."
+  ],
+  "45": [
+   "8. Changes to This Policy",
+   "8. Alterações a esta Política",
+   "8. Modifications de la présente politique"
+  ],
+  "46": [
+   "We reserve the right to modify this Privacy Policy at any time. Any change will be posted on this page and, if significant, we will update the \"Last updated\" date at the top.",
+   "Reservamo-nos o direito de modificar esta Política de Privacidade a qualquer momento. Qualquer alteração será publicada nesta página e, se for significativa, atualizaremos a data de \"Última atualização\" no topo.",
+   "Nous nous réservons le droit de modifier la présente Politique de confidentialité à tout moment. Toute modification sera publiée sur cette page et, si elle est importante, nous mettrons à jour la date de « Dernière mise à jour » en haut de la page."
+  ]
+ }
+}

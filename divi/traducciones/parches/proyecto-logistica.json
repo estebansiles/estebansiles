@@ -1,0 +1,206 @@
+{
+ "pagina": {
+  "titulo": [
+   "Landing page for an international logistics company",
+   "Landing page para empresa de logística internacional",
+   "Page d’atterrissage pour une entreprise de logistique internationale"
+  ],
+  "slug": [
+   "logistics-company-landing-page",
+   "landing-page-empresa-de-logistica",
+   "landing-page-logistique"
+  ],
+  "yoast_descripcion": [
+   "Landing page for the logistics company Global Chemical Group. A project featured in Esteban Siles’s website portfolio.",
+   "Landing page para a empresa de logística Global Chemical Group. Projeto apresentado no portfólio do site de Esteban Siles.",
+   "Page d’atterrissage pour l’entreprise de logistique Global Chemical Group. Un projet présenté dans le portfolio du site d’Esteban Siles."
+  ]
+ },
+ "textos": {
+  "0": [
+   "Breadcrumbs",
+   "Trilha de navegação",
+   "Fil d’Ariane"
+  ],
+  "1": [
+   "<a href=\"/\">Home</a><span aria-hidden=\"true\">/</span><a href=\"/portafolio/\">Projects</a><span aria-hidden=\"true\">/</span><span aria-current=\"page\">Landing page for an international logistics company</span>",
+   "<a href=\"/\">Início</a><span aria-hidden=\"true\">/</span><a href=\"/portafolio/\">Projetos</a><span aria-hidden=\"true\">/</span><span aria-current=\"page\">Landing page para empresa de logística internacional</span>",
+   "<a href=\"/\">Accueil</a><span aria-hidden=\"true\">/</span><a href=\"/portafolio/\">Projets</a><span aria-hidden=\"true\">/</span><span aria-current=\"page\">Page d’atterrissage pour une entreprise de logistique internationale</span>"
+  ],
+  "2": [
+   "Commerce · Web design <span class=\"siles-estado siles-estado--exito\">Live</span>",
+   "Comércio · Web design <span class=\"siles-estado siles-estado--exito\">No ar</span>",
+   "Commerce · Conception web <span class=\"siles-estado siles-estado--exito\">En ligne</span>"
+  ],
+  "3": [
+   "Landing page for an international logistics company",
+   "Landing page para empresa de logística internacional",
+   "Page d’atterrissage pour une entreprise de logistique internationale"
+  ],
+  "4": [
+   "Global Chemical Group’s first online presence, built to be found in search engines.",
+   "A primeira presença on-line da Global Chemical Group, pensada para ser encontrada nos buscadores.",
+   "La première présence en ligne de Global Chemical Group, conçue pour être trouvée dans les moteurs de recherche."
+  ],
+  "5": [
+   "Visit the site",
+   "Visite o site",
+   "Visiter le site"
+  ],
+  "6": [
+   "I want something like this",
+   "Quero algo assim",
+   "Je veux quelque chose de similaire"
+  ],
+  "7": [
+   "Client",
+   "Cliente",
+   "Client"
+  ],
+  "8": [
+   "Global Chemical Group",
+   "Global Chemical Group",
+   "Global Chemical Group"
+  ],
+  "9": [
+   "Year",
+   "Ano",
+   "Année"
+  ],
+  "10": [
+   "Industry",
+   "Setor",
+   "Secteur"
+  ],
+  "11": [
+   "Commerce",
+   "Comércio",
+   "Commerce"
+  ],
+  "12": [
+   "Type",
+   "Tipo",
+   "Type"
+  ],
+  "13": [
+   "Web design",
+   "Web design",
+   "Conception web"
+  ],
+  "14": [
+   "Services",
+   "Serviços",
+   "Services"
+  ],
+  "15": [
+   "Project management, WordPress development, Web design, Copywriting",
+   "Gestão de projeto, Desenvolvimento em WordPress, Web design, Copywriting",
+   "Gestion de projet, Développement WordPress, Conception web, Rédaction"
+  ],
+  "16": [
+   "Credits",
+   "Créditos",
+   "Crédits"
+  ],
+  "17": [
+   "Branding: Uniko",
+   "Branding: Uniko",
+   "Branding: Uniko"
+  ],
+  "18": [
+   "Development: Emanuel Borbón",
+   "Desenvolvimento: Emanuel Borbón",
+   "Développement : Emanuel Borbón"
+  ],
+  "19": [
+   "Screenshot of the project Landing page for an international logistics company",
+   "Captura do projeto Landing page para empresa de logística internacional",
+   "Capture du projet Page d’atterrissage pour une entreprise de logistique internationale"
+  ],
+  "20": [
+   "The case",
+   "O caso",
+   "Le cas"
+  ],
+  "21": [
+   "From challenge to solution",
+   "Do desafio à solução",
+   "Du défi à la solution"
+  ],
+  "22": [
+   "<span class=\"siles-antetitulo\">Challenge</span>",
+   "<span class=\"siles-antetitulo\">Desafio</span>",
+   "<span class=\"siles-antetitulo\">Défi</span>"
+  ],
+  "23": [
+   "A logistics company that advises other businesses needed a landing page to rank in search results and show its services to potential clients.",
+   "Uma empresa de logística que assessora outras empresas precisava de uma landing page para se posicionar nas buscas e mostrar seus serviços a clientes em potencial.",
+   "Une entreprise de logistique qui conseille d’autres entreprises avait besoin d’une page d’atterrissage pour se positionner dans les recherches et présenter ses services à des clients potentiels."
+  ],
+  "24": [
+   "Without a website, it relied on word of mouth among industry professionals to build credibility and trust, and it needed search engines to reach a global audience.",
+   "Sem site, dependia do boca a boca entre profissionais do setor para gerar credibilidade e confiança, e precisava dos buscadores para ter alcance global.",
+   "Sans site web, elle dépendait du bouche-à-oreille entre professionnels du secteur pour gagner en crédibilité et en confiance, et elle avait besoin des moteurs de recherche pour une portée mondiale."
+  ],
+  "25": [
+   "<span class=\"siles-antetitulo\">Solution</span>",
+   "<span class=\"siles-antetitulo\">Solução</span>",
+   "<span class=\"siles-antetitulo\">Solution</span>"
+  ],
+  "26": [
+   "A site that attracts potential clients with information about its services, experience, and capabilities. Search engine optimization helps it reach a wider audience and grow brand awareness.",
+   "Um site que atrai clientes em potencial com informações sobre seus serviços, sua experiência e suas capacidades. Com otimização para buscadores, chega a um público mais amplo e aumenta o reconhecimento da marca.",
+   "Un site qui attire des clients potentiels grâce à des informations sur ses services, son expérience et ses capacités. L’optimisation pour les moteurs de recherche lui permet de toucher un public plus large et de renforcer la notoriété de la marque."
+  ],
+  "27": [
+   "It’s the first step in the company’s online presence; in the medium term, a transactional site is planned for tracking orders, requesting quotes, and contacting customer service.",
+   "É o primeiro passo da sua presença on-line; a médio prazo, está previsto um site transacional para acompanhar pedidos, solicitar orçamentos e falar com o atendimento ao cliente.",
+   "C’est la première étape de sa présence en ligne ; à moyen terme, un site transactionnel est prévu pour suivre les commandes, demander des devis et contacter le service client."
+  ],
+  "28": [
+   "Main deliverable",
+   "Entrega principal",
+   "Livrable principal"
+  ],
+  "29": [
+   "Landing page design",
+   "Design de landing page",
+   "Conception de page d’atterrissage"
+  ],
+  "30": [
+   "Global Chemical Group is a logistics solutions company: transportation, warehousing, distribution, and inventory management.",
+   "A Global Chemical Group é uma empresa de soluções logísticas: transporte, armazenagem, distribuição e gestão de estoques.",
+   "Global Chemical Group est une entreprise de solutions logistiques : transport, entreposage, distribution et gestion des stocks."
+  ],
+  "31": [
+   "What it included",
+   "O que incluiu",
+   "Ce qui était inclus"
+  ],
+  "32": [
+   "Figma prototype",
+   "Protótipo no Figma",
+   "Prototype sur Figma"
+  ],
+  "33": [
+   "Copywriting",
+   "Copywriting",
+   "Rédaction"
+  ],
+  "34": [
+   "Translation with WPML",
+   "Tradução com WPML",
+   "Traduction avec WPML"
+  ],
+  "35": [
+   "SEO setup with Yoast",
+   "Configuração de SEO com Yoast",
+   "Configuration SEO avec Yoast"
+  ],
+  "36": [
+   "View of the project Landing page for an international logistics company",
+   "Visão do projeto Landing page para empresa de logística internacional",
+   "Aperçu du projet Page d’atterrissage pour une entreprise de logistique internationale"
+  ]
+ }
+}

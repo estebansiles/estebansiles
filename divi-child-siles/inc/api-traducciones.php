@@ -193,7 +193,7 @@ function siles_api_slug( $id, $slug ) {
  * @return bool
  */
 function siles_api_meta_propia( $clave ) {
-	return (bool) preg_match( '/^(_edit_|_wp_old_|_icl_|_wpml_|_yoast_wpseo_(title|metadesc|focuskw|opengraph-|twitter-|canonical|linkdex|content_score))/', $clave );
+	return (bool) preg_match( '/^(_edit_|_wp_old_|_icl_|_wpml_|_last_translation_edit_mode|_yoast_wpseo_(title|metadesc|focuskw|opengraph-|twitter-|canonical|linkdex|content_score))/', $clave );
 }
 
 /**
@@ -231,7 +231,14 @@ function siles_api_traduccion( WP_REST_Request $req ) {
 		$datos['post_parent'] = $padre ? $padre : $original->post_parent;
 	}
 
+	// WPML reconstruye las traducciones de páginas de Divi desde el original y sus cadenas traducidas, salvo que la
+	// traducción se haya editado con el editor de WordPress. Estas traducciones son a mano: se marcan así antes y
+	// después de guardar, para que WPML no las sobrescriba con el texto en español.
+	$datos['meta_input'] = siles_api_meta_manual();
 	if ( $existente ) {
+		foreach ( siles_api_meta_manual() as $clave => $valor ) {
+			update_post_meta( $existente, $clave, $valor );
+		}
 		$datos['ID'] = $existente;
 		$id          = wp_update_post( $datos, true );
 	} else {
@@ -275,9 +282,31 @@ function siles_api_traduccion( WP_REST_Request $req ) {
 		update_post_meta( $id, '_yoast_wpseo_metadesc', sanitize_text_field( (string) $req['yoast_descripcion'] ) );
 	}
 
+	// Si WPML cambió el contenido al enlazar la traducción, se vuelve a poner el traducido.
+	foreach ( siles_api_meta_manual() as $clave => $valor ) {
+		update_post_meta( $id, $clave, $valor );
+	}
+	if ( get_post_field( 'post_content', $id ) !== (string) $req['contenido'] ) {
+		global $wpdb;
+		$wpdb->update( $wpdb->posts, array( 'post_content' => (string) $req['contenido'] ), array( 'ID' => $id ) ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery
+		clean_post_cache( $id );
+	}
+
 	$post = get_post( $id );
 	siles_api_vaciar_cache( $post );
 	return siles_api_ficha( $post );
+}
+
+/**
+ * Marcas de WPML para una traducción hecha a mano en el editor de WordPress.
+ *
+ * @return array<string,string>
+ */
+function siles_api_meta_manual() {
+	return array(
+		'_last_translation_edit_mode'          => 'native-editor',
+		'_wpml_post_translation_editor_native' => 'yes',
+	);
 }
 
 /**

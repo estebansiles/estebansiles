@@ -1,0 +1,41 @@
+{
+ "pagina": {
+  "titulo": [
+   "Project (EN)",
+   "Projeto (PT)",
+   "Projet (FR)"
+  ],
+  "slug": [
+   "theme-builder-layout-6",
+   "theme-builder-layout-6",
+   "theme-builder-layout-6"
+  ]
+ },
+ "textos": {
+  "0": [
+   "Other projects",
+   "Outros projetos",
+   "Autres projets"
+  ],
+  "1": [
+   "<a class=\"siles-enlace\" href=\"/portafolio/\">See all projects</a>",
+   "<a class=\"siles-enlace\" href=\"/portafolio/\">Veja todos os projetos</a>",
+   "<a class=\"siles-enlace\" href=\"/portafolio/\">Voir tous les projets</a>"
+  ],
+  "2": [
+   "Your project could be next",
+   "Seu projeto pode ser o próximo",
+   "Votre projet pourrait être le prochain"
+  ],
+  "3": [
+   "Tell me what you want to transform, and we’ll build a phased plan.",
+   "Conte o que você quer transformar e montamos um plano em fases.",
+   "Dites-moi ce que vous voulez transformer et nous construirons un plan par étapes."
+  ],
+  "4": [
+   "Request a quote",
+   "Peça um orçamento",
+   "Demandez un devis"
+  ]
+ }
+}
