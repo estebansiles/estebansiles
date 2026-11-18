@@ -51,7 +51,11 @@ body.siles .siles-sm-hero .siles-botones { animation: siles-sube .8s var(--curva
 .siles-sm-chip--2 { right: -8px; top: 10%; animation-delay: 1.4s, 3.4s; }
 @media (max-width: 980px) { .siles-sm-foto { margin: var(--space-12) auto 0; } .siles-sm-chip--1 { left: 0; } .siles-sm-chip--2 { right: 0; } }
 /* Indicador para bajar */
-.siles-sm-baja { display: flex; align-items: center; gap: var(--space-3); margin-top: var(--space-12); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: #8a8f8f; }
+.siles-sm-baja { display: flex; align-items: center; gap: var(--space-3); margin-top: var(--space-12); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: #b5b9b9; }
+/* Un fondo propio para que ningún nodo de la red quede detrás del texto */
+body.siles .siles-sm-hero .siles-sm-baja { width: fit-content; padding: var(--space-2) var(--space-4) var(--space-2) var(--space-3); background: rgba(30, 32, 32, .88); box-shadow: 0 0 0 6px rgba(30, 32, 32, .88); }
+/* En el celular, una red vertical con más nodos que se encienden (la horizontal solo mostraba una franja) */
+@media (max-width: 767px) { body.siles .et_pb_section.siles-sm-hero { background-image: url("marca/patron-oscuro-movil.svg"); } }
 .siles-sm-baja::before { content: ""; width: 1px; height: 40px; background: var(--verde-2); animation: siles-indica 2.4s var(--curva) infinite; }
 
 /* ---------- Cifras y barras que se llenan ---------- */
@@ -96,8 +100,9 @@ body.siles .et_pb_section.siles-sm-manifiesto-sec { background: var(--gradiente-
 .siles-sm-metodo li:nth-child(4) > *, .siles-sm-metodo li:nth-child(4) .marca { transition-delay: .9s; }
 .siles-sm-metodo .siles-icono { position: absolute; right: 0; top: 6px; }
 @media (max-width: 980px) {
-  .siles-sm-metodo { grid-template-columns: 1fr; gap: var(--space-8); padding-left: 64px; }
+  .siles-sm-metodo, body.siles .et_pb_text.et_pb_module ol.siles-sm-metodo { grid-template-columns: 1fr; gap: var(--space-8); padding-left: 64px; }
   .siles-sm-metodo::before { left: 21px; right: auto; top: 0; bottom: 0; width: 2px; height: auto; transform-origin: top; }
+  .siles-sm-metodo h3 { padding-right: 40px; } /* espacio para el ícono de la derecha */
   @media (scripting: enabled) { .siles-anima .siles-sm-metodo::before { transform: scaleY(0); } }
   @media (scripting: enabled) { .siles-anima.es-visible .siles-sm-metodo::before { transform: scaleY(1); } }
   .siles-sm-metodo .marca { position: absolute; left: -64px; top: 0; }
@@ -120,7 +125,7 @@ body.siles .et_pb_text ol.siles-sm-tiempo > li, body.siles .et_pb_text ol.siles-
 .siles-sm-tiempo .lugar { display: block; margin-top: var(--space-1); color: var(--texto-suave); font-size: 16px; }
 @media (scripting: enabled) { .siles-anima .siles-sm-tiempo li { opacity: 0; transform: translateX(-24px); transition: opacity .7s var(--curva), transform .7s var(--curva); } }
 @media (scripting: enabled) { .siles-anima .siles-sm-tiempo li:nth-child(even) { transform: translateX(24px); } }
-@media (scripting: enabled) { .siles-anima.es-visible .siles-sm-tiempo li { opacity: 1; transform: none; } }
+@media (scripting: enabled) { .siles-anima.es-visible .siles-sm-tiempo li, .siles-anima.es-visible .siles-sm-tiempo li:nth-child(even) { opacity: 1; transform: none; } }
 .siles-sm-tiempo li:nth-child(2) { transition-delay: .2s; } .siles-sm-tiempo li:nth-child(3) { transition-delay: .4s; }
 .siles-sm-tiempo li:nth-child(4) { transition-delay: .6s; } .siles-sm-tiempo li:nth-child(5) { transition-delay: .8s; }
 .siles-sm-tiempo li:nth-child(6) { transition-delay: 1s; } .siles-sm-tiempo li:nth-child(7) { transition-delay: 1.2s; }
@@ -191,6 +196,7 @@ body.siles .siles-sm-cierre .siles-bloque { float: none; margin-inline: auto !im
   .siles-rotador > span { animation: none; opacity: 0; }
   .siles-rotador > span:first-child { opacity: 1; }
   body.siles .et_pb_section.siles-sm-hero { background-image: url("marca/patron-oscuro-quieto.svg"); }
+  @media (max-width: 767px) { body.siles .et_pb_section.siles-sm-hero { background-image: url("marca/patron-oscuro-movil-quieto.svg"); } }
   body.siles .et_pb_section.siles-sm-cierre { background-image: url("marca/patron-11-quieto.svg"); }
   .siles-sm-galeria__pista { flex-wrap: wrap; width: auto; justify-content: center; }
   .siles-sm-galeria__pista > :nth-child(n+9) { display: none; }

@@ -67,21 +67,21 @@ function red(seed, cols, rows) {
 /* Colores de la paleta para los nodos que se encienden en la portada */
 const PALETA_NODOS = ['#008C99', '#00D1B1', '#5FE3CE', '#00737E', '#1E2020'];
 
-function patron(semilla, densidad, alto, ancho = 1440, animado = false, oscuro = false) {
+function patron(semilla, densidad, alto, ancho = 1440, animado = false, oscuro = false, cuota = 0.42, conAcento = true) {
   const C = oscuro ? { fondo: '#1E2020', linea: '#3A3E3E', nodo: '#555A5A', paleta: ['#008C99', '#00D1B1', '#5FE3CE', '#00737E', '#FFFFFF'] }
                    : { fondo: '#F4F5F5', linea: '#BFC3C3', nodo: '#8A8F8F', paleta: PALETA_NODOS };
   const rows = Math.max(3, Math.round(densidad * alto / 1120));
   const { n, e, acento } = red(semilla, densidad, rows);
   const X = (p) => +(p.x / 100 * ancho).toFixed(1), Y = (p) => +(p.y / 100 * alto).toFixed(1);
   const lineas = e.map(([a, b]) => `<line x1="${X(n[a])}" y1="${Y(n[a])}" x2="${X(n[b])}" y2="${Y(n[b])}"/>`).join('');
-  const nodos = n.map((p, i) => { const s = i === acento ? 12 : 5; return `<rect x="${X(p) - s / 2}" y="${Y(p) - s / 2}" width="${s}" height="${s}"${i === acento ? ` fill="${REALCE}"` : ''}/>`; }).join('');
+  const nodos = n.map((p, i) => { if (i === acento && !conAcento) return ''; const s = i === acento ? 12 : 5; return `<rect x="${X(p) - s / 2}" y="${Y(p) - s / 2}" width="${s}" height="${s}"${i === acento ? ` fill="${REALCE}"` : ''}/>`; }).join('');
   let brillos = '', estilo = '';
   if (animado) {
     /* Una capa de nodos que se encienden y se apagan. Retraso y duración salen de otra semilla:
        cada nodo sigue su propio ciclo y en pantalla se ve aleatorio. Retrasos negativos: arranca ya en marcha. */
     const r = rng(semilla * 7919 + 17);
     brillos = n.map((p, i) => {
-      if (i === acento || r() > 0.42) return '';
+      if (i === acento || r() > cuota) return '';
       const s = 11, color = C.paleta[Math.floor(r() * C.paleta.length)];
       const dur = (7 + r() * 7).toFixed(1), retraso = (-r() * 14).toFixed(1);
       return `<rect class="b" x="${X(p) - s / 2}" y="${Y(p) - s / 2}" width="${s}" height="${s}" fill="${color}" style="animation-duration:${dur}s;animation-delay:${retraso}s"/>`;
@@ -98,6 +98,9 @@ escribir('assets/marca/patron-11-quieto.svg', patron(11, 14, 600));
 /* Versión oscura para portadas en tema oscuro (Sobre mí) */
 escribir('assets/marca/patron-oscuro.svg', patron(29, 14, 760, 1440, true, true));
 escribir('assets/marca/patron-oscuro-quieto.svg', patron(29, 14, 760, 1440, false, true)); /* la misma red sin animación, para "reducir movimiento" */
+/* Sobre mí en el celular: red vertical, más nodos encendidos y sin el nodo de acento fijo (tapaba el indicador para bajar) */
+escribir('assets/marca/patron-oscuro-movil.svg', patron(31, 6, 1400, 720, true, true, 0.6, false));
+escribir('assets/marca/patron-oscuro-movil-quieto.svg', patron(31, 6, 1400, 720, false, true, 0.6, false));
 escribir('assets/marca/patron-5.svg', patron(5, 10, 280, 640));
 /* Imagen para redes sociales (1200 × 630): misma red de la portada, con nodos de la paleta encendidos */
 escribir('herramientas/patron-social.svg', patron(11, 14, 630, 1200, true));

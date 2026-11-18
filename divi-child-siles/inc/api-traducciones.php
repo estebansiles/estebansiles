@@ -601,3 +601,87 @@ function siles_api_rutas() {
 	);
 }
 add_action( 'rest_api_init', 'siles_api_rutas' );
+
+/**
+ * Cadenas de WPML String Translation (textos de plugins como Complianz y Yoast, lema del sitio, etc.).
+ *   GET  /wp-json/siles/v1/cadenas?contexto=…&buscar=…   Cadenas con sus traducciones (contextos, si no se indica ninguno).
+ *   POST /wp-json/siles/v1/cadena                         Guarda la traducción de una cadena: { id, idioma, valor }.
+ * Solo administradores. Sin WPML String Translation responden con un error.
+ */
+function siles_api_rutas_cadenas() {
+	$permiso = function () {
+		return current_user_can( 'manage_options' );
+	};
+	register_rest_route(
+		'siles/v1',
+		'/cadenas',
+		array(
+			'methods'             => 'GET',
+			'permission_callback' => $permiso,
+			'args'                => array(
+				'contexto' => array( 'type' => 'string' ),
+				'buscar'   => array( 'type' => 'string' ),
+			),
+			'callback'            => function ( $req ) {
+				global $wpdb;
+				$tabla = $wpdb->prefix . 'icl_strings';
+				if ( $wpdb->get_var( $wpdb->prepare( 'SHOW TABLES LIKE %s', $tabla ) ) !== $tabla ) { // phpcs:ignore WordPress.DB.DirectDatabaseQuery
+					return new WP_Error( 'siles_sin_cadenas', 'WPML String Translation no está activo.', array( 'status' => 409 ) );
+				}
+				$contexto = (string) $req['contexto'];
+				$buscar   = (string) $req['buscar'];
+				if ( '' === $contexto && '' === $buscar ) {
+					// phpcs:ignore WordPress.DB.DirectDatabaseQuery, WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+					return $wpdb->get_results( "SELECT context AS contexto, COUNT(*) AS cadenas FROM {$tabla} GROUP BY context ORDER BY context" );
+				}
+				$donde = array( '1=1' );
+				$vals  = array();
+				if ( '' !== $contexto ) {
+					$donde[] = 'context = %s';
+					$vals[]  = $contexto;
+				}
+				if ( '' !== $buscar ) {
+					$donde[] = '(value LIKE %s OR name LIKE %s)';
+					$vals[]  = '%' . $wpdb->esc_like( $buscar ) . '%';
+					$vals[]  = '%' . $wpdb->esc_like( $buscar ) . '%';
+				}
+				// phpcs:ignore WordPress.DB.DirectDatabaseQuery, WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQL.NotPrepared
+				$filas = $wpdb->get_results( $wpdb->prepare( "SELECT id, context AS contexto, name AS nombre, value AS valor, language AS idioma FROM {$tabla} WHERE " . implode( ' AND ', $donde ) . ' ORDER BY id LIMIT 300', $vals ) );
+				foreach ( $filas as $f ) {
+					// phpcs:ignore WordPress.DB.DirectDatabaseQuery
+					$trads = $wpdb->get_results( $wpdb->prepare( "SELECT language, value, status FROM {$wpdb->prefix}icl_string_translations WHERE string_id = %d", $f->id ) );
+					$f->traducciones = array();
+					foreach ( $trads as $t ) {
+						$f->traducciones[ $t->language ] = array( 'valor' => $t->value, 'estado' => (int) $t->status );
+					}
+				}
+				return $filas;
+			},
+		)
+	);
+	register_rest_route(
+		'siles/v1',
+		'/cadena',
+		array(
+			'methods'             => 'POST',
+			'permission_callback' => $permiso,
+			'args'                => array(
+				'id'     => array( 'required' => true, 'type' => 'integer' ),
+				'idioma' => array( 'required' => true, 'type' => 'string', 'enum' => SILES_API_IDIOMAS ),
+				'valor'  => array( 'required' => true, 'type' => 'string' ),
+			),
+			'callback'            => function ( $req ) {
+				if ( ! function_exists( 'icl_add_string_translation' ) ) {
+					return new WP_Error( 'siles_sin_cadenas', 'WPML String Translation no está activo.', array( 'status' => 409 ) );
+				}
+				$idioma = siles_api_codigo( (string) $req['idioma'] );
+				$res    = icl_add_string_translation( (int) $req['id'], $idioma, (string) $req['valor'], 10 ); // 10 = traducción completa.
+				if ( ! $res ) {
+					return new WP_Error( 'siles_cadena', 'WPML no guardó la traducción.', array( 'status' => 500 ) );
+				}
+				return array( 'id' => (int) $req['id'], 'idioma' => $idioma, 'traduccion' => (int) $res );
+			},
+		)
+	);
+}
+add_action( 'rest_api_init', 'siles_api_rutas_cadenas' );
