@@ -17,7 +17,7 @@ De `staging2.siles.cr` a `www.siles.cr` en SiteGround, con WPML: español (raíz
 ## 1. Antes del paso
 
 - [ ] **Licencia de WPML:** en tu cuenta de wpml.org › Sitios, agregá `www.siles.cr` y copiá su clave de sitio. La vas a pegar en el paso 4.
-- [ ] **Tema:** el staging tiene el tema hijo **0.11.9** activo.
+- [ ] **Tema:** el staging tiene el tema hijo **0.11.10** activo.
 - [ ] **Horario:** de poco tráfico, con acceso a Site Tools, al administrador de WordPress, a Search Console y a contact@siles.cr.
 
 ## 2. Respaldo

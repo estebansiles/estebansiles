@@ -634,6 +634,7 @@ body.siles .siles-pie-legal p + p { display: flex; flex-wrap: wrap; gap: 0 var(-
 /* Última línea del pie: el copyright a la izquierda; a la derecha, los enlaces legales y el selector de idioma, centrados entre sí */
 body.siles .siles-pie-legal .et_pb_text_inner { justify-content: flex-start; align-items: center; column-gap: var(--space-6); }
 body.siles .siles-pie-legal .et_pb_text_inner > p:first-child { margin-right: auto; }
+body.siles .siles-pie-legal p:empty { display: none; } /* WordPress envuelve el shortcode del selector en un párrafo que queda vacío */
 
 /* Entradas con formato Enlace, Cita o Audio en la rejilla: sin márgenes negativos y con contraste */
 body.siles .siles-blog .et_pb_post .et_link_content, body.siles .siles-blog .et_pb_post .et_quote_content, body.siles .siles-blog .et_pb_post .et_audio_content {
@@ -729,7 +730,9 @@ body.siles .siles-redes svg { display: block; width: 20px; height: 20px; }
   body.siles .siles-pie-legal .et_pb_text_inner { padding-top: var(--space-5); gap: var(--space-2); }
   body.siles .siles-pie-legal p + p { gap: 0 var(--space-5); }
   body.siles .siles-pie-legal p + p a { display: inline-flex; align-items: center; min-height: 40px; }
-  body.siles .siles-pie-legal .siles-idiomas--pie summary { margin-left: calc(-1 * var(--space-2)); margin-right: 0; } /* el globo alineado con los textos de arriba */
+  body.siles .siles-pie-legal .et_pb_text_inner { flex-direction: column; align-items: flex-start; } /* en columna y a la izquierda */
+  body.siles .siles-pie-legal .siles-idiomas--pie { margin-left: auto; } /* en el celular, el selector va a la derecha */
+  body.siles .siles-pie-legal .siles-idiomas--pie summary { margin-right: calc(-1 * var(--space-2)); } /* borde derecho alineado con el contenido */
 }
 @media (max-width: 599px) {
   body.siles .et-l--footer .et_pb_row:first-of-type { grid-template-columns: minmax(0, 1fr); gap: var(--space-8); }
