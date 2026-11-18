@@ -123,38 +123,80 @@ function siles_idiomas_activos() {
 }
 
 /**
- * Selector de idioma: una lista de enlaces con el código corto (ES, EN, PT, FR) y el nombre para lectores de pantalla.
- * Con estilo="movil" muestra el nombre completo, para el menú del celular.
+ * Ícono de idioma: un globo con el trazo de la serie Siles (1,5 px, tinta) y un nodo de acento en verde,
+ * como los nodos de la red de la marca. Usa currentColor y --icono-acento, igual que [siles_icono].
+ *
+ * @param int $tamano Tamaño en píxeles.
+ * @return string
+ */
+function siles_icono_idioma( $tamano = 20 ) {
+	return sprintf(
+		'<svg class="siles-icono siles-icono--idioma" viewBox="0 0 24 24" width="%1$d" height="%1$d" aria-hidden="true" focusable="false">'
+		. '<g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter">'
+		. '<path d="M20.16 8.2A9 9 0 1 1 15.8 3.84"/><path d="M3.5 9h17M3.5 15h17"/>'
+		. '<path d="M12 3c-2.4 2.5-3.6 5.5-3.6 9s1.2 6.5 3.6 9c2.4-2.5 3.6-5.5 3.6-9S14.4 5.5 12 3z"/></g>'
+		. '<rect x="17.75" y="2.75" width="4.5" height="4.5" fill="var(--icono-acento, #008C99)"/></svg>',
+		(int) $tamano
+	);
+}
+
+/**
+ * Selector de idioma.
+ * - estilo="movil": lista con los nombres completos, para el menú del celular.
+ * - Por defecto (encabezado de escritorio): un botón con el globo y el código del idioma actual que despliega la
+ *   lista de idiomas. Está hecho con <details>, así funciona sin JavaScript; siles-idiomas.js lo cierra con Escape
+ *   o al hacer clic afuera.
  *
  * @param array $atts Atributos del shortcode.
  * @return string
  */
 function siles_selector_idiomas( $atts = array() ) {
-	$atts  = shortcode_atts( array( 'estilo' => 'compacto' ), $atts, 'siles_idiomas' );
+	$atts  = shortcode_atts( array( 'estilo' => 'desplegable' ), $atts, 'siles_idiomas' );
 	$lista = siles_idiomas_activos();
 	if ( count( $lista ) < 2 ) {
 		return '';
 	}
-	$movil  = 'movil' === $atts['estilo'];
-	$partes = array();
+	$etiqueta = siles_t( 'Idioma' );
+	$enlaces  = '';
+	$actual   = $lista[0];
 	foreach ( $lista as $idioma ) {
-		$texto = $movil ? $idioma['nombre'] : $idioma['corto'];
-		$partes[] = sprintf(
-			'<li><a href="%1$s" hreflang="%2$s" lang="%2$s"%3$s%4$s>%5$s</a></li>',
+		if ( $idioma['actual'] ) {
+			$actual = $idioma;
+		}
+		$enlaces .= sprintf(
+			'<li><a href="%1$s" hreflang="%2$s" lang="%2$s"%3$s>%4$s</a></li>',
 			esc_url( $idioma['url'] ),
 			esc_attr( $idioma['hreflang'] ),
 			$idioma['actual'] ? ' aria-current="true"' : '',
-			$movil ? '' : sprintf( ' title="%s"', esc_attr( $idioma['nombre'] ) ),
-			$movil ? esc_html( $texto ) : sprintf( '<span aria-hidden="true">%s</span><span class="screen-reader-text">%s</span>', esc_html( $texto ), esc_html( $idioma['nombre'] ) )
+			esc_html( $idioma['nombre'] )
 		);
 	}
+
+	if ( 'movil' === $atts['estilo'] ) {
+		return sprintf( '<nav class="siles-idiomas siles-idiomas--movil" aria-label="%1$s"><ul>%2$s</ul></nav>', esc_attr( $etiqueta ), $enlaces );
+	}
+
+	wp_enqueue_script( 'siles-idiomas' );
 	return sprintf(
-		'<nav class="siles-idiomas siles-idiomas--%1$s" aria-label="%2$s"><ul>%3$s</ul></nav>',
-		$movil ? 'movil' : 'compacto',
-		esc_attr( siles_t( 'Idioma' ) ),
-		implode( '', $partes )
+		'<nav class="siles-idiomas siles-idiomas--desplegable" aria-label="%1$s"><details data-siles-idiomas>'
+		. '<summary><span class="screen-reader-text">%1$s: %2$s</span>%3$s<span class="siles-idiomas__codigo" aria-hidden="true">%4$s</span>'
+		. '<svg class="siles-idiomas__flecha" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></summary>'
+		. '<ul class="siles-idiomas__lista">%5$s</ul></details></nav>',
+		esc_attr( $etiqueta ),
+		esc_html( $actual['nombre'] ),
+		siles_icono_idioma( 20 ),
+		esc_html( $actual['corto'] ),
+		$enlaces
 	);
 }
+
+/**
+ * Script del desplegable (se encola solo cuando se usa el selector).
+ */
+function siles_idiomas_script() {
+	wp_register_script( 'siles-idiomas', get_stylesheet_directory_uri() . '/assets/siles-idiomas.js', array(), SILES_DIVI_VERSION, array( 'in_footer' => true, 'strategy' => 'defer' ) );
+}
+add_action( 'wp_enqueue_scripts', 'siles_idiomas_script', 5 );
 add_shortcode( 'siles_idiomas', 'siles_selector_idiomas' );
 
 /**
