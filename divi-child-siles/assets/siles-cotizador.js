@@ -39,7 +39,8 @@
     var cabeza = partidas.querySelector('.siles-cotizador__cabeza');
     partidas.replaceChildren(cabeza);
     elegidas.forEach(function (c) { partidas.append(partida(c)); });
-    cabeza.querySelector('[data-cuenta]').textContent = elegidas.length === 1 ? '1 servicio' : elegidas.length + ' servicios';
+    var textos = window.silesCotizador || {};
+    cabeza.querySelector('[data-cuenta]').textContent = elegidas.length === 1 ? (textos.uno || '1 servicio') : (textos.varios || '%d servicios').replace('%d', elegidas.length);
     partidas.hidden = elegidas.length === 0;
     vacio.hidden = elegidas.length > 0;
     enviar.disabled = elegidas.length === 0;

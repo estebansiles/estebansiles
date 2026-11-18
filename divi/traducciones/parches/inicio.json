@@ -1,0 +1,211 @@
+{
+ "pagina": {
+  "titulo": [
+   "Home",
+   "Início",
+   "Accueil"
+  ],
+  "slug": [
+   "home",
+   "inicio",
+   "accueil"
+  ],
+  "yoast_titulo": [
+   "Siles Comunicación | Digital transformation and automation",
+   "Siles Comunicación | Transformação digital e automação",
+   "Siles Comunicación | Transformation numérique et automatisation"
+  ],
+  "yoast_descripcion": [
+   "I organize your processes, automate tasks, and connect your systems: AI agents and digital marketing for small and midsize businesses.",
+   "Organizo seus processos, automatizo tarefas e conecto seus sistemas: agentes de IA e marketing digital para pequenas e médias empresas.",
+   "J’organise vos processus, j’automatise vos tâches et je connecte vos systèmes : agents IA et marketing numérique pour les PME."
+  ]
+ },
+ "textos": {
+  "0": [
+   "Strategic communication",
+   "Comunicação estratégica",
+   "Communication stratégique"
+  ],
+  "1": [
+   "Your business can be transformed digitally.",
+   "Seu negócio pode se transformar digitalmente.",
+   "Votre entreprise peut se transformer grâce au numérique."
+  ],
+  "2": [
+   "The right digital transformation starts with sound strategic communication. Technology follows processes and people.",
+   "A transformação digital certa começa com uma boa comunicação estratégica. A tecnologia acompanha os processos e as pessoas.",
+   "Une transformation numérique réussie commence par une communication stratégique solide. La technologie suit les processus et les personnes."
+  ],
+  "3": [
+   "Book a call",
+   "Agende uma conversa",
+   "Réservez un appel"
+  ],
+  "4": [
+   "Message me on WhatsApp",
+   "Fale comigo no WhatsApp",
+   "Écrivez-moi sur WhatsApp"
+  ],
+  "5": [
+   "<span>Digital transformation</span><span>Automation</span><span>AI agents</span><span>E-invoicing</span><span>User experience</span><span>Digital transformation</span><span>Automation</span><span>AI agents</span><span>E-invoicing</span><span>User experience</span><span>Digital transformation</span><span>Automation</span><span>AI agents</span><span>E-invoicing</span><span>User experience</span><span>Digital transformation</span><span>Automation</span><span>AI agents</span><span>E-invoicing</span><span>User experience</span>",
+   "<span>Transformação digital</span><span>Automação</span><span>Agentes de IA</span><span>Faturamento eletrônico</span><span>Experiência do usuário</span><span>Transformação digital</span><span>Automação</span><span>Agentes de IA</span><span>Faturamento eletrônico</span><span>Experiência do usuário</span><span>Transformação digital</span><span>Automação</span><span>Agentes de IA</span><span>Faturamento eletrônico</span><span>Experiência do usuário</span><span>Transformação digital</span><span>Automação</span><span>Agentes de IA</span><span>Faturamento eletrônico</span><span>Experiência do usuário</span>",
+   "<span>Transformation numérique</span><span>Automatisation</span><span>Agents IA</span><span>Facturation électronique</span><span>Expérience utilisateur</span><span>Transformation numérique</span><span>Automatisation</span><span>Agents IA</span><span>Facturation électronique</span><span>Expérience utilisateur</span><span>Transformation numérique</span><span>Automatisation</span><span>Agents IA</span><span>Facturation électronique</span><span>Expérience utilisateur</span><span>Transformation numérique</span><span>Automatisation</span><span>Agents IA</span><span>Facturation électronique</span><span>Expérience utilisateur</span>"
+  ],
+  "6": [
+   "Services",
+   "Serviços",
+   "Services"
+  ],
+  "7": [
+   "What I do",
+   "O que eu faço",
+   "Ce que je fais"
+  ],
+  "8": [
+   "I’m with you from strategy all the way to implementation.",
+   "Acompanho você da estratégia à implementação.",
+   "Je vous accompagne de la stratégie jusqu’à la mise en œuvre."
+  ],
+  "9": [
+   "Digital transformation",
+   "Transformação digital",
+   "Transformation numérique"
+  ],
+  "10": [
+   "I organize your processes and help you choose the tools you’ll actually use.",
+   "Organizo seus processos e escolho com você as ferramentas que você vai realmente usar.",
+   "J’organise vos processus et je choisis avec vous les outils que vous utiliserez vraiment."
+  ],
+  "11": [
+   "Automation",
+   "Automação",
+   "Automatisation"
+  ],
+  "12": [
+   "Almost anything can be automated. I start with what takes up most of your time.",
+   "Quase tudo pode ser automatizado. Começo pelo que mais toma o seu tempo.",
+   "Presque tout peut être automatisé. Je commence par ce qui vous prend le plus de temps."
+  ],
+  "13": [
+   "Digital marketing",
+   "Marketing digital",
+   "Marketing numérique"
+  ],
+  "14": [
+   "Strategy, content, and measurement so every dollar you invest pays off.",
+   "Estratégia, conteúdo e mensuração para que cada dólar investido renda.",
+   "Stratégie, contenu et mesure pour que chaque dollar investi rapporte."
+  ],
+  "15": [
+   "User experience",
+   "Experiência do usuário",
+   "Expérience utilisateur"
+  ],
+  "16": [
+   "I design websites and apps with the people who use them in mind.",
+   "Crio sites e aplicativos pensando em quem vai usá-los.",
+   "Je conçois des sites et des applications en pensant à ceux qui les utilisent."
+  ],
+  "17": [
+   "E-invoicing",
+   "Faturamento eletrônico",
+   "Facturation électronique"
+  ],
+  "18": [
+   "I integrate invoicing with your accounting and sales systems.",
+   "Integro o faturamento à sua contabilidade e ao seu sistema de vendas.",
+   "J’intègre la facturation à votre comptabilité et à votre système de vente."
+  ],
+  "19": [
+   "AI agents",
+   "Agentes de IA",
+   "Agents IA"
+  ],
+  "20": [
+   "Assistants that answer, schedule, and follow up for you.",
+   "Assistentes que respondem, agendam e fazem o acompanhamento por você.",
+   "Des assistants qui répondent, prennent rendez-vous et assurent le suivi pour vous."
+  ],
+  "21": [
+   "Process",
+   "Processo",
+   "Méthode"
+  ],
+  "22": [
+   "How I work",
+   "Como eu trabalho",
+   "Comment je travaille"
+  ],
+  "23": [
+   "<span class=\"siles-antetitulo\">Step 1</span>",
+   "<span class=\"siles-antetitulo\">Passo 1</span>",
+   "<span class=\"siles-antetitulo\">Étape 1</span>"
+  ],
+  "24": [
+   "Research",
+   "Investigo",
+   "J’analyse"
+  ],
+  "25": [
+   "I get to know your business and your customers.",
+   "Entendo seu negócio e seus clientes.",
+   "Je comprends votre entreprise et vos clients."
+  ],
+  "26": [
+   "<span class=\"siles-antetitulo\">Step 2</span>",
+   "<span class=\"siles-antetitulo\">Passo 2</span>",
+   "<span class=\"siles-antetitulo\">Étape 2</span>"
+  ],
+  "27": [
+   "Plan",
+   "Planejo",
+   "Je planifie"
+  ],
+  "28": [
+   "I set priorities, costs, and timelines.",
+   "Defino prioridades, custos e prazos.",
+   "Je définis les priorités, les coûts et les délais."
+  ],
+  "29": [
+   "<span class=\"siles-antetitulo\">Step 3</span>",
+   "<span class=\"siles-antetitulo\">Passo 3</span>",
+   "<span class=\"siles-antetitulo\">Étape 3</span>"
+  ],
+  "30": [
+   "Build",
+   "Implemento",
+   "Je mets en œuvre"
+  ],
+  "31": [
+   "I build and connect the tools.",
+   "Construo e conecto as ferramentas.",
+   "Je construis et je connecte les outils."
+  ],
+  "32": [
+   "<span class=\"siles-antetitulo\">Step 4</span>",
+   "<span class=\"siles-antetitulo\">Passo 4</span>",
+   "<span class=\"siles-antetitulo\">Étape 4</span>"
+  ],
+  "33": [
+   "Improve",
+   "Melhoro",
+   "J’améliore"
+  ],
+  "34": [
+   "I measure results and fine-tune.",
+   "Meço os resultados e faço ajustes.",
+   "Je mesure les résultats et j’ajuste."
+  ],
+  "35": [
+   "Almost anything can be automated",
+   "Quase tudo pode ser automatizado",
+   "Presque tout peut être automatisé"
+  ],
+  "36": [
+   "A 30-minute call is all it takes to find the first process you can automate.",
+   "Uma conversa de 30 minutos basta para encontrar o primeiro processo que você pode automatizar.",
+   "Un appel de 30 minutes suffit pour trouver le premier processus que vous pouvez automatiser."
+  ]
+ }
+}

@@ -1,0 +1,131 @@
+{
+ "pagina": {
+  "titulo": [
+   "Contact",
+   "Contato",
+   "Contact"
+  ],
+  "slug": [
+   "contact",
+   "contato",
+   "contact"
+  ],
+  "yoast_descripcion": [
+   "Get in touch with Siles Comunicación, a professional with more than 15 years of experience in digital transformation.",
+   "Entre em contato com a Siles Comunicación, profissional com mais de 15 anos de experiência em transformação digital.",
+   "Contactez Siles Comunicación, un professionnel avec plus de 15 ans d’expérience en transformation numérique."
+  ]
+ },
+ "textos": {
+  "0": [
+   "Contact",
+   "Contato",
+   "Contact"
+  ],
+  "1": [
+   "Let’s talk",
+   "Vamos conversar",
+   "Parlons-en"
+  ],
+  "2": [
+   "Tell me what you want to transform. I’ll reply within 24 hours.",
+   "Conte o que você quer transformar. Respondo em menos de 24 horas.",
+   "Dites-moi ce que vous voulez transformer. Je vous réponds sous 24 heures."
+  ],
+  "3": [
+   "contact@siles.cr</a><a href=\"https://wa.me/50688659046\" target=\"_blank\" rel=\"noopener\">",
+   "contact@siles.cr</a><a href=\"https://wa.me/50688659046\" target=\"_blank\" rel=\"noopener\">",
+   "contact@siles.cr</a><a href=\"https://wa.me/50688659046\" target=\"_blank\" rel=\"noopener\">"
+  ],
+  "4": [
+   "WhatsApp: +506 8865 9046</a><a href=\"/conversemos/\">",
+   "WhatsApp: +506 8865 9046</a><a href=\"/conversemos/\">",
+   "WhatsApp: +506 8865 9046</a><a href=\"/conversemos/\">"
+  ],
+  "5": [
+   "Book a 30-minute call</a><span class=\"siles-fila\">",
+   "Agende uma conversa de 30 minutos</a><span class=\"siles-fila\">",
+   "Réservez un appel de 30 minutes</a><span class=\"siles-fila\">"
+  ],
+  "6": [
+   "San José, Costa Rica</span>",
+   "San José, Costa Rica</span>",
+   "San José, Costa Rica</span>"
+  ],
+  "7": [
+   "Send your message",
+   "Envie sua mensagem",
+   "Envoyez votre message"
+  ],
+  "8": [
+   "I got your message. I’ll reply within 24 hours.",
+   "Recebi sua mensagem. Respondo em menos de 24 horas.",
+   "J’ai bien reçu votre message. Je vous réponds sous 24 heures."
+  ],
+  "9": [
+   "Name",
+   "Nome",
+   "Nom"
+  ],
+  "10": [
+   "Email",
+   "E-mail",
+   "E-mail"
+  ],
+  "11": [
+   "Company (optional)",
+   "Empresa (opcional)",
+   "Entreprise (facultatif)"
+  ],
+  "12": [
+   "What are you interested in?",
+   "O que te interessa?",
+   "Qu’est-ce qui vous intéresse ?"
+  ],
+  "13": [
+   "Digital transformation",
+   "Transformação digital",
+   "Transformation numérique"
+  ],
+  "14": [
+   "Automation",
+   "Automação",
+   "Automatisation"
+  ],
+  "15": [
+   "Digital marketing",
+   "Marketing digital",
+   "Marketing numérique"
+  ],
+  "16": [
+   "User experience",
+   "Experiência do usuário",
+   "Expérience utilisateur"
+  ],
+  "17": [
+   "E-invoicing",
+   "Faturamento eletrônico",
+   "Facturation électronique"
+  ],
+  "18": [
+   "AI agents",
+   "Agentes de IA",
+   "Agents IA"
+  ],
+  "19": [
+   "Tell me about your project",
+   "Conte sobre o seu projeto",
+   "Parlez-moi de votre projet"
+  ],
+  "20": [
+   "Consent",
+   "Consentimento",
+   "Consentement"
+  ],
+  "21": [
+   "I agree that Siles Comunicación will use this information only to reply to me, under Costa Rica’s Law 8968.",
+   "Autorizo a Siles Comunicación a usar estes dados apenas para me responder, conforme a Lei 8968 da Costa Rica.",
+   "J’accepte que Siles Comunicación utilise ces données uniquement pour me répondre, conformément à la loi 8968 du Costa Rica."
+  ]
+ }
+}

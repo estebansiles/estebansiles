@@ -1,0 +1,258 @@
+{
+ "pagina": {
+  "titulo": {
+   "es": "Servicios",
+   "en": "Services",
+   "pt-br": "Serviços",
+   "fr": "Services"
+  },
+  "slug": {
+   "es": "servicios",
+   "en": "services",
+   "pt-br": "servicos",
+   "fr": "services"
+  },
+  "yoast_titulo": {
+   "es": "Servicios de transformación digital y automatización %%sep%% %%sitename%%",
+   "en": "Digital transformation and automation services %%sep%% %%sitename%%",
+   "pt-br": "Serviços de transformação digital e automação %%sep%% %%sitename%%",
+   "fr": "Services de transformation numérique et d’automatisation %%sep%% %%sitename%%"
+  },
+  "yoast_descripcion": {
+   "es": "Automatización, marketing digital, experiencia de usuario y agentes de IA. Trabajo por fases, con entregables que ya podés usar.",
+   "en": "Automation, digital marketing, user experience, and AI agents. I work in phases, with deliverables you can use right away.",
+   "pt-br": "Automação, marketing digital, experiência do usuário e agentes de IA. Trabalho em fases, com entregas que você já pode usar.",
+   "fr": "Automatisation, marketing numérique, expérience utilisateur et agents IA. Je travaille par étapes, avec des livrables utilisables tout de suite."
+  }
+ },
+ "textos": [
+  {
+   "es": "Servicios",
+   "en": "Services",
+   "pt-br": "Serviços",
+   "fr": "Services"
+  },
+  {
+   "es": "Elegí por dónde empezar. Todo se puede combinar.",
+   "en": "Choose where to start. Everything can be combined.",
+   "pt-br": "Escolha por onde começar. Tudo pode ser combinado.",
+   "fr": "Choisissez par où commencer. Tout peut se combiner."
+  },
+  {
+   "es": "Automatización",
+   "en": "Automation",
+   "pt-br": "Automação",
+   "fr": "Automatisation"
+  },
+  {
+   "es": "Reviso tus tareas repetitivas y las convierto en flujos que corren solos: aprobaciones, recordatorios, reportes y conciliaciones.",
+   "en": "I review your repetitive tasks and turn them into workflows that run on their own: approvals, reminders, reports, and reconciliations.",
+   "pt-br": "Analiso suas tarefas repetitivas e as transformo em fluxos que funcionam sozinhos: aprovações, lembretes, relatórios e conciliações.",
+   "fr": "J’examine vos tâches répétitives et je les transforme en flux qui tournent tout seuls : validations, rappels, rapports et rapprochements."
+  },
+  {
+   "es": "Mapa de procesos y priorización",
+   "en": "Process mapping and prioritization",
+   "pt-br": "Mapa de processos e priorização",
+   "fr": "Cartographie des processus et priorisation"
+  },
+  {
+   "es": "Integración entre sistemas existentes",
+   "en": "Integration between your existing systems",
+   "pt-br": "Integração entre os sistemas que você já usa",
+   "fr": "Intégration entre vos systèmes existants"
+  },
+  {
+   "es": "Capacitación para tu equipo",
+   "en": "Training for your team",
+   "pt-br": "Treinamento para sua equipe",
+   "fr": "Formation de votre équipe"
+  },
+  {
+   "es": "Plazo",
+   "en": "Timeline",
+   "pt-br": "Prazo",
+   "fr": "Délai"
+  },
+  {
+   "es": "<span class=\"siles-servicio__plazo\">4 a 8 semanas</span>",
+   "en": "<span class=\"siles-servicio__plazo\">4 to 8 weeks</span>",
+   "pt-br": "<span class=\"siles-servicio__plazo\">4 a 8 semanas</span>",
+   "fr": "<span class=\"siles-servicio__plazo\">4 à 8 semaines</span>"
+  },
+  {
+   "es": "Disponibilidad",
+   "en": "Availability",
+   "pt-br": "Disponibilidade",
+   "fr": "Disponibilité"
+  },
+  {
+   "es": "<span><span class=\"siles-estado siles-estado--exito\">Abierta</span></span><a class=\"siles-boton siles-boton--flecha siles-boton--bloque\" href=\"/cotizacion/\">Pedí una cotización</a></aside>",
+   "en": "<span><span class=\"siles-estado siles-estado--exito\">Open</span></span><a class=\"siles-boton siles-boton--flecha siles-boton--bloque\" href=\"/cotizacion/\">Request a quote</a></aside>",
+   "pt-br": "<span><span class=\"siles-estado siles-estado--exito\">Aberta</span></span><a class=\"siles-boton siles-boton--flecha siles-boton--bloque\" href=\"/cotizacion/\">Peça um orçamento</a></aside>",
+   "fr": "<span><span class=\"siles-estado siles-estado--exito\">Ouverte</span></span><a class=\"siles-boton siles-boton--flecha siles-boton--bloque\" href=\"/cotizacion/\">Demandez un devis</a></aside>"
+  },
+  {
+   "es": "Marketing digital",
+   "en": "Digital marketing",
+   "pt-br": "Marketing digital",
+   "fr": "Marketing numérique"
+  },
+  {
+   "es": "Defino con vos a quién le hablás, qué le decís y cómo medir si funciona. Sin campañas que nadie revisa.",
+   "en": "Together we define who you’re talking to, what you say, and how to measure whether it works. No campaigns that nobody reviews.",
+   "pt-br": "Defino com você para quem você fala, o que diz e como medir se funciona. Sem campanhas que ninguém acompanha.",
+   "fr": "Je définis avec vous à qui vous parlez, ce que vous dites et comment mesurer si ça marche. Pas de campagnes que personne ne suit."
+  },
+  {
+   "es": "Estrategia y calendario de contenido",
+   "en": "Content strategy and calendar",
+   "pt-br": "Estratégia e calendário de conteúdo",
+   "fr": "Stratégie et calendrier éditorial"
+  },
+  {
+   "es": "Pauta en redes y buscadores",
+   "en": "Social and search ads",
+   "pt-br": "Anúncios em redes sociais e buscadores",
+   "fr": "Publicité sur les réseaux sociaux et les moteurs de recherche"
+  },
+  {
+   "es": "Tablero de resultados mensual",
+   "en": "Monthly results dashboard",
+   "pt-br": "Painel mensal de resultados",
+   "fr": "Tableau de bord mensuel des résultats"
+  },
+  {
+   "es": "<span class=\"siles-servicio__plazo\">Mensual</span>",
+   "en": "<span class=\"siles-servicio__plazo\">Monthly</span>",
+   "pt-br": "<span class=\"siles-servicio__plazo\">Mensal</span>",
+   "fr": "<span class=\"siles-servicio__plazo\">Mensuel</span>"
+  },
+  {
+   "es": "Experiencia de usuario",
+   "en": "User experience",
+   "pt-br": "Experiência do usuário",
+   "fr": "Expérience utilisateur"
+  },
+  {
+   "es": "Investigo cómo usan tus clientes el sitio o la aplicación y rediseño lo que les estorba.",
+   "en": "I study how your customers use your website or app and redesign whatever gets in their way.",
+   "pt-br": "Investigo como seus clientes usam o site ou o aplicativo e redesenho o que atrapalha.",
+   "fr": "J’étudie comment vos clients utilisent votre site ou votre application et je reconçois ce qui les gêne."
+  },
+  {
+   "es": "Entrevistas y pruebas con usuarios",
+   "en": "User interviews and testing",
+   "pt-br": "Entrevistas e testes com usuários",
+   "fr": "Entretiens et tests utilisateurs"
+  },
+  {
+   "es": "Prototipos navegables",
+   "en": "Clickable prototypes",
+   "pt-br": "Protótipos navegáveis",
+   "fr": "Prototypes cliquables"
+  },
+  {
+   "es": "Guía de diseño para desarrollo",
+   "en": "Design guide for development",
+   "pt-br": "Guia de design para o desenvolvimento",
+   "fr": "Guide de conception pour le développement"
+  },
+  {
+   "es": "<span class=\"siles-servicio__plazo\">6 a 10 semanas</span>",
+   "en": "<span class=\"siles-servicio__plazo\">6 to 10 weeks</span>",
+   "pt-br": "<span class=\"siles-servicio__plazo\">6 a 10 semanas</span>",
+   "fr": "<span class=\"siles-servicio__plazo\">6 à 10 semaines</span>"
+  },
+  {
+   "es": "Método",
+   "en": "Method",
+   "pt-br": "Método",
+   "fr": "Méthode"
+  },
+  {
+   "es": "Por fases, sin saltos al vacío",
+   "en": "In phases, no leaps in the dark",
+   "pt-br": "Em fases, sem saltos no escuro",
+   "fr": "Par étapes, sans saut dans le vide"
+  },
+  {
+   "es": "Cada fase entrega algo que ya podés usar, y decidís si seguimos con la siguiente.",
+   "en": "Each phase delivers something you can already use, and you decide whether we move on to the next one.",
+   "pt-br": "Cada fase entrega algo que você já pode usar, e você decide se seguimos para a próxima.",
+   "fr": "Chaque étape livre quelque chose d’utilisable, et c’est vous qui décidez si nous passons à la suivante."
+  },
+  {
+   "es": "<span class=\"siles-paso__marca\">1</span><span class=\"siles-antetitulo\">Fase 1</span>",
+   "en": "<span class=\"siles-paso__marca\">1</span><span class=\"siles-antetitulo\">Phase 1</span>",
+   "pt-br": "<span class=\"siles-paso__marca\">1</span><span class=\"siles-antetitulo\">Fase 1</span>",
+   "fr": "<span class=\"siles-paso__marca\">1</span><span class=\"siles-antetitulo\">Étape 1</span>"
+  },
+  {
+   "es": "Diagnóstico",
+   "en": "Assessment",
+   "pt-br": "Diagnóstico",
+   "fr": "Diagnostic"
+  },
+  {
+   "es": "Reviso procesos y datos, y priorizo con vos.",
+   "en": "I review processes and data, and set priorities with you.",
+   "pt-br": "Analiso processos e dados, e priorizo com você.",
+   "fr": "J’examine les processus et les données, et je fixe les priorités avec vous."
+  },
+  {
+   "es": "<span class=\"siles-paso__marca\">2</span><span class=\"siles-antetitulo\">Fase 2</span>",
+   "en": "<span class=\"siles-paso__marca\">2</span><span class=\"siles-antetitulo\">Phase 2</span>",
+   "pt-br": "<span class=\"siles-paso__marca\">2</span><span class=\"siles-antetitulo\">Fase 2</span>",
+   "fr": "<span class=\"siles-paso__marca\">2</span><span class=\"siles-antetitulo\">Étape 2</span>"
+  },
+  {
+   "es": "Diseño",
+   "en": "Design",
+   "pt-br": "Design",
+   "fr": "Conception"
+  },
+  {
+   "es": "Defino la solución, los costos y los plazos.",
+   "en": "I define the solution, costs, and timelines.",
+   "pt-br": "Defino a solução, os custos e os prazos.",
+   "fr": "Je définis la solution, les coûts et les délais."
+  },
+  {
+   "es": "<span class=\"siles-paso__marca\">3</span><span class=\"siles-antetitulo\">Fase 3</span>",
+   "en": "<span class=\"siles-paso__marca\">3</span><span class=\"siles-antetitulo\">Phase 3</span>",
+   "pt-br": "<span class=\"siles-paso__marca\">3</span><span class=\"siles-antetitulo\">Fase 3</span>",
+   "fr": "<span class=\"siles-paso__marca\">3</span><span class=\"siles-antetitulo\">Étape 3</span>"
+  },
+  {
+   "es": "Implementación",
+   "en": "Implementation",
+   "pt-br": "Implementação",
+   "fr": "Mise en œuvre"
+  },
+  {
+   "es": "Construyo, conecto y capacito a tu equipo.",
+   "en": "I build, connect, and train your team.",
+   "pt-br": "Construo, conecto e treino sua equipe.",
+   "fr": "Je construis, je connecte et je forme votre équipe."
+  },
+  {
+   "es": "¿No sabés por dónde empezar?",
+   "en": "Not sure where to start?",
+   "pt-br": "Não sabe por onde começar?",
+   "fr": "Vous ne savez pas par où commencer ?"
+  },
+  {
+   "es": "Contame qué hacés hoy y te digo cuál es el primer paso.",
+   "en": "Tell me what you do today, and I’ll tell you the first step.",
+   "pt-br": "Conte o que você faz hoje e eu digo qual é o primeiro passo.",
+   "fr": "Dites-moi ce que vous faites aujourd’hui et je vous indique la première étape."
+  },
+  {
+   "es": "<a class=\"siles-enlace\" href=\"/conversemos/\">Hablemos</a>",
+   "en": "<a class=\"siles-enlace\" href=\"/conversemos/\">Let’s talk</a>",
+   "pt-br": "<a class=\"siles-enlace\" href=\"/conversemos/\">Vamos conversar</a>",
+   "fr": "<a class=\"siles-enlace\" href=\"/conversemos/\">Parlons-en</a>"
+  }
+ ]
+}

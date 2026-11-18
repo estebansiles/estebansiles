@@ -1,0 +1,264 @@
+{
+ "pagina": {
+  "titulo": {
+   "es": "Tienda en línea para los Toros del Norte",
+   "en": "Online store for Toros del Norte",
+   "pt-br": "Loja virtual para os Toros del Norte",
+   "fr": "Boutique en ligne pour les Toros del Norte"
+  },
+  "slug": {
+   "es": "tienda-en-linea-para-los-toros-del-norte",
+   "en": "toros-del-norte-online-store",
+   "pt-br": "loja-virtual-toros-del-norte",
+   "fr": "boutique-en-ligne-toros-del-norte"
+  },
+  "yoast_titulo": {
+   "es": "",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  "yoast_descripcion": {
+   "es": "Tienda en línea para los Toros del Norte es un proyecto creado en el marco de la alianza comercial entre Uniko Branding y la AD San Carlos.",
+   "en": "The online store for Toros del Norte is a project created under the business partnership between Uniko Branding and AD San Carlos.",
+   "pt-br": "A loja virtual dos Toros del Norte é um projeto criado no âmbito da parceria comercial entre a Uniko Branding e a AD San Carlos.",
+   "fr": "La boutique en ligne des Toros del Norte est un projet réalisé dans le cadre du partenariat commercial entre Uniko Branding et l’AD San Carlos."
+  }
+ },
+ "textos": [
+  {
+   "es": "Migas de pan",
+   "en": "Breadcrumbs",
+   "pt-br": "Trilha de navegação",
+   "fr": "Fil d’Ariane"
+  },
+  {
+   "es": "<a href=\"/\">Inicio</a><span aria-hidden=\"true\">/</span><a href=\"/portafolio/\">Proyectos</a><span aria-hidden=\"true\">/</span><span aria-current=\"page\">Tienda en línea para los Toros del Norte</span>",
+   "en": "<a href=\"/\">Home</a><span aria-hidden=\"true\">/</span><a href=\"/portafolio/\">Projects</a><span aria-hidden=\"true\">/</span><span aria-current=\"page\">Online store for Toros del Norte</span>",
+   "pt-br": "<a href=\"/\">Início</a><span aria-hidden=\"true\">/</span><a href=\"/portafolio/\">Projetos</a><span aria-hidden=\"true\">/</span><span aria-current=\"page\">Loja virtual para os Toros del Norte</span>",
+   "fr": "<a href=\"/\">Accueil</a><span aria-hidden=\"true\">/</span><a href=\"/portafolio/\">Projets</a><span aria-hidden=\"true\">/</span><span aria-current=\"page\">Boutique en ligne pour les Toros del Norte</span>"
+  },
+  {
+   "es": "Comercio · Comercio electrónico <span class=\"siles-estado siles-estado--exito\">En producción</span>",
+   "en": "Commerce · E-commerce <span class=\"siles-estado siles-estado--exito\">Live</span>",
+   "pt-br": "Comércio · E-commerce <span class=\"siles-estado siles-estado--exito\">No ar</span>",
+   "fr": "Commerce · E-commerce <span class=\"siles-estado siles-estado--exito\">En ligne</span>"
+  },
+  {
+   "es": "Tienda en línea para los Toros del Norte",
+   "en": "Online store for Toros del Norte",
+   "pt-br": "Loja virtual para os Toros del Norte",
+   "fr": "Boutique en ligne pour les Toros del Norte"
+  },
+  {
+   "es": "El sitio oficial del equipo, con tienda de mercancía, como parte del relanzamiento de su marca.",
+   "en": "The team’s official website, with a merchandise store, as part of its brand relaunch.",
+   "pt-br": "O site oficial do time, com loja de produtos, como parte do relançamento da marca.",
+   "fr": "Le site officiel de l’équipe, avec une boutique de produits dérivés, dans le cadre de la relance de sa marque."
+  },
+  {
+   "es": "Visitá el sitio",
+   "en": "Visit the site",
+   "pt-br": "Visite o site",
+   "fr": "Visiter le site"
+  },
+  {
+   "es": "Quiero algo así",
+   "en": "I want something like this",
+   "pt-br": "Quero algo assim",
+   "fr": "Je veux quelque chose de similaire"
+  },
+  {
+   "es": "Cliente",
+   "en": "Client",
+   "pt-br": "Cliente",
+   "fr": "Client"
+  },
+  {
+   "es": "Asociación Deportiva San Carlos",
+   "en": "Asociación Deportiva San Carlos",
+   "pt-br": "Asociación Deportiva San Carlos",
+   "fr": "Asociación Deportiva San Carlos"
+  },
+  {
+   "es": "Año",
+   "en": "Year",
+   "pt-br": "Ano",
+   "fr": "Année"
+  },
+  {
+   "es": "Sector",
+   "en": "Industry",
+   "pt-br": "Setor",
+   "fr": "Secteur"
+  },
+  {
+   "es": "Comercio",
+   "en": "Commerce",
+   "pt-br": "Comércio",
+   "fr": "Commerce"
+  },
+  {
+   "es": "Tipo",
+   "en": "Type",
+   "pt-br": "Tipo",
+   "fr": "Type"
+  },
+  {
+   "es": "Comercio electrónico",
+   "en": "E-commerce",
+   "pt-br": "E-commerce",
+   "fr": "E-commerce"
+  },
+  {
+   "es": "Servicios",
+   "en": "Services",
+   "pt-br": "Serviços",
+   "fr": "Services"
+  },
+  {
+   "es": "Dirección del desarrollo de comercio electrónico, Coordinación de la estrategia de relanzamiento de marca",
+   "en": "E-commerce development lead, Brand relaunch strategy coordination",
+   "pt-br": "Direção do desenvolvimento de e-commerce, Coordenação da estratégia de relançamento da marca",
+   "fr": "Direction du développement e-commerce, Coordination de la stratégie de relance de la marque"
+  },
+  {
+   "es": "Créditos",
+   "en": "Credits",
+   "pt-br": "Créditos",
+   "fr": "Crédits"
+  },
+  {
+   "es": "Dirección ejecutiva: Roberto Siles",
+   "en": "Executive direction: Roberto Siles",
+   "pt-br": "Direção executiva: Roberto Siles",
+   "fr": "Direction générale : Roberto Siles"
+  },
+  {
+   "es": "Dirección creativa: Eduardo Arce",
+   "en": "Creative direction: Eduardo Arce",
+   "pt-br": "Direção criativa: Eduardo Arce",
+   "fr": "Direction de la création : Eduardo Arce"
+  },
+  {
+   "es": "Diseño: Eduardo Arce y Kevin Arias",
+   "en": "Design: Eduardo Arce and Kevin Arias",
+   "pt-br": "Design: Eduardo Arce e Kevin Arias",
+   "fr": "Design : Eduardo Arce et Kevin Arias"
+  },
+  {
+   "es": "Desarrollo: Kevin Arias y Arjun Kushwah",
+   "en": "Development: Kevin Arias and Arjun Kushwah",
+   "pt-br": "Desenvolvimento: Kevin Arias e Arjun Kushwah",
+   "fr": "Développement : Kevin Arias et Arjun Kushwah"
+  },
+  {
+   "es": "Captura del proyecto Tienda en línea para los Toros del Norte",
+   "en": "Screenshot of the project Online store for Toros del Norte",
+   "pt-br": "Captura do projeto Loja virtual para os Toros del Norte",
+   "fr": "Capture du projet Boutique en ligne pour les Toros del Norte"
+  },
+  {
+   "es": "El caso",
+   "en": "The case",
+   "pt-br": "O caso",
+   "fr": "Le cas"
+  },
+  {
+   "es": "Del reto a la solución",
+   "en": "From challenge to solution",
+   "pt-br": "Do desafio à solução",
+   "fr": "Du défi à la solution"
+  },
+  {
+   "es": "<span class=\"siles-antetitulo\">Reto</span>",
+   "en": "<span class=\"siles-antetitulo\">Challenge</span>",
+   "pt-br": "<span class=\"siles-antetitulo\">Desafio</span>",
+   "fr": "<span class=\"siles-antetitulo\">Défi</span>"
+  },
+  {
+   "es": "La renovación de marca de los Toros del Norte implicaba posicionar al equipo en el mundo digital sin un sitio web oficial.",
+   "en": "The Toros del Norte rebrand meant positioning the team in the digital world without an official website.",
+   "pt-br": "A renovação da marca dos Toros del Norte exigia posicionar o time no mundo digital sem um site oficial.",
+   "fr": "Le renouvellement de la marque des Toros del Norte impliquait de positionner l’équipe dans le monde numérique sans site officiel."
+  },
+  {
+   "es": "Había que crear una presencia en línea desde cero que sirviera de carta de presentación y permitiera vender sus productos, en un mercado competitivo y con una afición cada vez más cerca del comercio electrónico.",
+   "en": "We had to build an online presence from scratch that would serve as a calling card and let the team sell its products, in a competitive market with fans increasingly comfortable shopping online.",
+   "pt-br": "Era preciso criar uma presença on-line do zero que servisse de cartão de visita e permitisse vender seus produtos, em um mercado competitivo e com uma torcida cada vez mais próxima do comércio eletrônico.",
+   "fr": "Il fallait créer de toutes pièces une présence en ligne qui serve de carte de visite et permette de vendre ses produits, sur un marché concurrentiel et avec des supporters de plus en plus habitués au commerce en ligne."
+  },
+  {
+   "es": "<span class=\"siles-antetitulo\">Solución</span>",
+   "en": "<span class=\"siles-antetitulo\">Solution</span>",
+   "pt-br": "<span class=\"siles-antetitulo\">Solução</span>",
+   "fr": "<span class=\"siles-antetitulo\">Solution</span>"
+  },
+  {
+   "es": "Lideré el desarrollo de una plataforma de comercio electrónico que refleja los valores y la nueva imagen del equipo, con una compra fluida de mercancía oficial para la afición.",
+   "en": "I led the development of an e-commerce platform that reflects the team’s values and new image, with a smooth checkout for official merchandise.",
+   "pt-br": "Liderei o desenvolvimento de uma plataforma de e-commerce que reflete os valores e a nova imagem do time, com uma compra fluida de produtos oficiais para a torcida.",
+   "fr": "J’ai dirigé le développement d’une plateforme e-commerce qui reflète les valeurs et la nouvelle image de l’équipe, avec un achat fluide des produits officiels pour les supporters."
+  },
+  {
+   "es": "El lanzamiento incluyó campañas de marketing digital para generar tráfico y ventas desde el primer día.",
+   "en": "The launch included digital marketing campaigns to drive traffic and sales from day one.",
+   "pt-br": "O lançamento incluiu campanhas de marketing digital para gerar tráfego e vendas desde o primeiro dia.",
+   "fr": "Le lancement comprenait des campagnes de marketing numérique pour générer du trafic et des ventes dès le premier jour."
+  },
+  {
+   "es": "Entregable principal",
+   "en": "Main deliverable",
+   "pt-br": "Entrega principal",
+   "fr": "Livrable principal"
+  },
+  {
+   "es": "Sitio web con tienda en línea",
+   "en": "Website with an online store",
+   "pt-br": "Site com loja virtual",
+   "fr": "Site web avec boutique en ligne"
+  },
+  {
+   "es": "El sitio es la piedra angular de la presencia digital del equipo: noticias, calendario de partidos, perfiles de jugadores y la tienda oficial.",
+   "en": "The site is the cornerstone of the team’s digital presence: news, match schedule, player profiles, and the official store.",
+   "pt-br": "O site é a pedra angular da presença digital do time: notícias, calendário de jogos, perfis dos jogadores e a loja oficial.",
+   "fr": "Le site est la pierre angulaire de la présence numérique de l’équipe : actualités, calendrier des matchs, profils des joueurs et boutique officielle."
+  },
+  {
+   "es": "Lo que incluyó",
+   "en": "What it included",
+   "pt-br": "O que incluiu",
+   "fr": "Ce qui était inclus"
+  },
+  {
+   "es": "Interfaz pensada para la afición",
+   "en": "A fan-focused interface",
+   "pt-br": "Interface pensada para a torcida",
+   "fr": "Une interface pensée pour les supporters"
+  },
+  {
+   "es": "Tienda en línea con pago seguro y envíos",
+   "en": "Online store with secure payment and shipping",
+   "pt-br": "Loja virtual com pagamento seguro e envio",
+   "fr": "Boutique en ligne avec paiement sécurisé et livraison"
+  },
+  {
+   "es": "Noticias, galerías y videos",
+   "en": "News, galleries, and videos",
+   "pt-br": "Notícias, galerias e vídeos",
+   "fr": "Actualités, galeries et vidéos"
+  },
+  {
+   "es": "SEO, redes sociales y correo para el lanzamiento",
+   "en": "SEO, social media, and email for the launch",
+   "pt-br": "SEO, redes sociais e e-mail para o lançamento",
+   "fr": "SEO, réseaux sociaux et e-mail pour le lancement"
+  },
+  {
+   "es": "Vista del proyecto Tienda en línea para los Toros del Norte",
+   "en": "View of the project Online store for Toros del Norte",
+   "pt-br": "Visão do projeto Loja virtual para os Toros del Norte",
+   "fr": "Aperçu du projet Boutique en ligne pour les Toros del Norte"
+  }
+ ]
+}

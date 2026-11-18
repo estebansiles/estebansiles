@@ -1,0 +1,276 @@
+{
+ "pagina": {
+  "titulo": {
+   "es": "Sitio web para doctor",
+   "en": "Website for a doctor",
+   "pt-br": "Site para médico",
+   "fr": "Site web pour un médecin"
+  },
+  "slug": {
+   "es": "sitio-web-para-doctor",
+   "en": "website-for-a-doctor",
+   "pt-br": "site-para-medico",
+   "fr": "site-web-pour-medecin"
+  },
+  "yoast_titulo": {
+   "es": "Sitio Web para Doctor %%sep%% por %%sitename%%",
+   "en": "Website for a doctor %%sep%% by %%sitename%%",
+   "pt-br": "Site para médico %%sep%% por %%sitename%%",
+   "fr": "Site web pour un médecin %%sep%% par %%sitename%%"
+  },
+  "yoast_descripcion": {
+   "es": "Este Sitio Web para Doctor Gabriel Vargas Kelsh forma parte del portafolio de proyectos de Esteban Siles. ¡Ver el proyecto! ?",
+   "en": "This website for Dr. Gabriel Vargas Kelsh is part of Esteban Siles’s project portfolio. See the project!",
+   "pt-br": "Este site para o Dr. Gabriel Vargas Kelsh faz parte do portfólio de projetos de Esteban Siles. Veja o projeto!",
+   "fr": "Ce site web pour le Dr Gabriel Vargas Kelsh fait partie du portfolio de projets d’Esteban Siles. Découvrez le projet !"
+  }
+ },
+ "textos": [
+  {
+   "es": "Migas de pan",
+   "en": "Breadcrumbs",
+   "pt-br": "Trilha de navegação",
+   "fr": "Fil d’Ariane"
+  },
+  {
+   "es": "<a href=\"/\">Inicio</a><span aria-hidden=\"true\">/</span><a href=\"/portafolio/\">Proyectos</a><span aria-hidden=\"true\">/</span><span aria-current=\"page\">Sitio web para doctor</span>",
+   "en": "<a href=\"/\">Home</a><span aria-hidden=\"true\">/</span><a href=\"/portafolio/\">Projects</a><span aria-hidden=\"true\">/</span><span aria-current=\"page\">Website for a doctor</span>",
+   "pt-br": "<a href=\"/\">Início</a><span aria-hidden=\"true\">/</span><a href=\"/portafolio/\">Projetos</a><span aria-hidden=\"true\">/</span><span aria-current=\"page\">Site para médico</span>",
+   "fr": "<a href=\"/\">Accueil</a><span aria-hidden=\"true\">/</span><a href=\"/portafolio/\">Projets</a><span aria-hidden=\"true\">/</span><span aria-current=\"page\">Site web pour un médecin</span>"
+  },
+  {
+   "es": "Salud · Diseño web <span class=\"siles-estado siles-estado--exito\">En producción</span>",
+   "en": "Healthcare · Web design <span class=\"siles-estado siles-estado--exito\">Live</span>",
+   "pt-br": "Saúde · Web design <span class=\"siles-estado siles-estado--exito\">No ar</span>",
+   "fr": "Santé · Conception web <span class=\"siles-estado siles-estado--exito\">En ligne</span>"
+  },
+  {
+   "es": "Sitio web para doctor",
+   "en": "Website for a doctor",
+   "pt-br": "Site para médico",
+   "fr": "Site web pour un médecin"
+  },
+  {
+   "es": "Un sitio de marca personal con una landing page para la cirugía de pterigión, pensado para conseguir citas.",
+   "en": "A personal brand website with a landing page for pterygium surgery, built to book appointments.",
+   "pt-br": "Um site de marca pessoal com uma landing page para a cirurgia de pterígio, pensado para gerar consultas.",
+   "fr": "Un site de marque personnelle avec une page d’atterrissage pour la chirurgie du ptérygion, conçu pour obtenir des rendez-vous."
+  },
+  {
+   "es": "Visitá el sitio",
+   "en": "Visit the site",
+   "pt-br": "Visite o site",
+   "fr": "Visiter le site"
+  },
+  {
+   "es": "Quiero algo así",
+   "en": "I want something like this",
+   "pt-br": "Quero algo assim",
+   "fr": "Je veux quelque chose de similaire"
+  },
+  {
+   "es": "Cliente",
+   "en": "Client",
+   "pt-br": "Cliente",
+   "fr": "Client"
+  },
+  {
+   "es": "Dr. Gabriel Vargas Kelsh, oftalmólogo costarricense",
+   "en": "Dr. Gabriel Vargas Kelsh, Costa Rican ophthalmologist",
+   "pt-br": "Dr. Gabriel Vargas Kelsh, oftalmologista costarriquenho",
+   "fr": "Dr Gabriel Vargas Kelsh, ophtalmologue costaricien"
+  },
+  {
+   "es": "Año",
+   "en": "Year",
+   "pt-br": "Ano",
+   "fr": "Année"
+  },
+  {
+   "es": "Sector",
+   "en": "Industry",
+   "pt-br": "Setor",
+   "fr": "Secteur"
+  },
+  {
+   "es": "Salud",
+   "en": "Healthcare",
+   "pt-br": "Saúde",
+   "fr": "Santé"
+  },
+  {
+   "es": "Tipo",
+   "en": "Type",
+   "pt-br": "Tipo",
+   "fr": "Type"
+  },
+  {
+   "es": "Diseño web",
+   "en": "Web design",
+   "pt-br": "Web design",
+   "fr": "Conception web"
+  },
+  {
+   "es": "Servicios",
+   "en": "Services",
+   "pt-br": "Serviços",
+   "fr": "Services"
+  },
+  {
+   "es": "Desarrollo de sitio web para marca personal, Copywriting, Diseño UX",
+   "en": "Personal brand website development, Copywriting, UX design",
+   "pt-br": "Desenvolvimento de site de marca pessoal, Copywriting, Design UX",
+   "fr": "Développement de site de marque personnelle, Rédaction, Design UX"
+  },
+  {
+   "es": "Créditos",
+   "en": "Credits",
+   "pt-br": "Créditos",
+   "fr": "Crédits"
+  },
+  {
+   "es": "Branding: Level",
+   "en": "Branding: Level",
+   "pt-br": "Branding: Level",
+   "fr": "Branding: Level"
+  },
+  {
+   "es": "Fotografía: David Durán",
+   "en": "Photography: David Durán",
+   "pt-br": "Fotografia: David Durán",
+   "fr": "Photographie : David Durán"
+  },
+  {
+   "es": "Video: From Tiquicia Films",
+   "en": "Video: From Tiquicia Films",
+   "pt-br": "Vídeo: From Tiquicia Films",
+   "fr": "Vidéo : From Tiquicia Films"
+  },
+  {
+   "es": "Captura del proyecto Sitio web para doctor",
+   "en": "Screenshot of the project Website for a doctor",
+   "pt-br": "Captura do projeto Site para médico",
+   "fr": "Capture du projet Site web pour un médecin"
+  },
+  {
+   "es": "El caso",
+   "en": "The case",
+   "pt-br": "O caso",
+   "fr": "Le cas"
+  },
+  {
+   "es": "Del reto a la solución",
+   "en": "From challenge to solution",
+   "pt-br": "Do desafio à solução",
+   "fr": "Du défi à la solution"
+  },
+  {
+   "es": "<span class=\"siles-antetitulo\">Reto</span>",
+   "en": "<span class=\"siles-antetitulo\">Challenge</span>",
+   "pt-br": "<span class=\"siles-antetitulo\">Desafio</span>",
+   "fr": "<span class=\"siles-antetitulo\">Défi</span>"
+  },
+  {
+   "es": "El doctor Vargas Kelsh enfrentaba dificultades para llegar a un público más amplio. Su capacidad para informar a los pacientes sobre sus servicios y experiencia estaba limitada principalmente a consultas personales y referencias de boca a boca.",
+   "en": "Dr. Vargas Kelsh struggled to reach a wider audience. His ability to tell patients about his services and expertise was limited mostly to in-person consultations and word-of-mouth referrals.",
+   "pt-br": "O Dr. Vargas Kelsh tinha dificuldade para chegar a um público mais amplo. Sua capacidade de informar os pacientes sobre seus serviços e sua experiência se limitava principalmente às consultas presenciais e às indicações boca a boca.",
+   "fr": "Le Dr Vargas Kelsh avait du mal à toucher un public plus large. Il ne pouvait présenter ses services et son expertise aux patients qu’en consultation ou par le bouche-à-oreille."
+  },
+  {
+   "es": "Esto limitaba su alcance y dificultaba que los pacientes potenciales conocieran su experiencia y las soluciones que podía ofrecer para problemas oculares y su especialidad, la operación de pterigión.",
+   "en": "This limited his reach and made it hard for potential patients to learn about his expertise and the solutions he could offer for eye problems and his specialty, pterygium surgery.",
+   "pt-br": "Isso limitava seu alcance e dificultava que pacientes em potencial conhecessem sua experiência e as soluções que ele podia oferecer para problemas oculares e para sua especialidade, a cirurgia de pterígio.",
+   "fr": "Cela limitait sa portée et empêchait les patients potentiels de connaître son expertise et les solutions qu’il pouvait proposer pour les problèmes oculaires et sa spécialité, la chirurgie du ptérygion."
+  },
+  {
+   "es": "<span class=\"siles-antetitulo\">Solución</span>",
+   "en": "<span class=\"siles-antetitulo\">Solution</span>",
+   "pt-br": "<span class=\"siles-antetitulo\">Solução</span>",
+   "fr": "<span class=\"siles-antetitulo\">Solution</span>"
+  },
+  {
+   "es": "Con la creación de su sitio web, el doctor pudo superar sus desafíos de comunicación de manera efectiva. El sitio, junto con una estrategia de contenidos consistente, le permitió obtener alcance más allá de su ámbito local.",
+   "en": "With his new website, the doctor was able to overcome his communication challenges effectively. The site, together with a consistent content strategy, helped him reach beyond his local area.",
+   "pt-br": "Com a criação do site, o médico conseguiu superar de forma eficaz seus desafios de comunicação. O site, junto com uma estratégia de conteúdo consistente, permitiu que ele alcançasse pessoas além do seu âmbito local.",
+   "fr": "Grâce à son site web, le médecin a pu surmonter efficacement ses difficultés de communication. Le site, associé à une stratégie de contenu régulière, lui a permis d’aller au-delà de son secteur local."
+  },
+  {
+   "es": "Ahora puede llegar a pacientes potenciales en todo el mundo, lo que aumenta significativamente su posibilidad de ayudar mediante información detallada y contenido de valor.",
+   "en": "He can now reach potential patients around the world, which greatly increases his ability to help through detailed information and valuable content.",
+   "pt-br": "Agora ele pode chegar a pacientes em potencial no mundo todo, o que aumenta muito sua possibilidade de ajudar com informações detalhadas e conteúdo de valor.",
+   "fr": "Il peut désormais toucher des patients potentiels dans le monde entier, ce qui augmente nettement sa capacité à aider grâce à des informations détaillées et à un contenu utile."
+  },
+  {
+   "es": "Entregable principal",
+   "en": "Main deliverable",
+   "pt-br": "Entrega principal",
+   "fr": "Livrable principal"
+  },
+  {
+   "es": "Sitio web y landing page de pterigión",
+   "en": "Website and pterygium landing page",
+   "pt-br": "Site e landing page de pterígio",
+   "fr": "Site web et page d’atterrissage sur le ptérygion"
+  },
+  {
+   "es": "La tarea original era crear un sitio web que permitiera conseguir citas con el doctor. Posteriormente, el proyecto requirió agregar una landing page exclusiva para la cirugía de pterigión, su servicio principal.",
+   "en": "The original brief was a website that would make it easy to book appointments with the doctor. Later, the project added a dedicated landing page for pterygium surgery, his main service.",
+   "pt-br": "A tarefa original era criar um site que permitisse marcar consultas com o médico. Depois, o projeto exigiu uma landing page exclusiva para a cirurgia de pterígio, seu principal serviço.",
+   "fr": "La mission initiale était de créer un site web permettant de prendre rendez-vous avec le médecin. Le projet a ensuite intégré une page d’atterrissage dédiée à la chirurgie du ptérygion, son service principal."
+  },
+  {
+   "es": "Uno de los retos más grandes fue unir un sitio de marca personal con un sitio informativo acerca de los servicios profesionales. Esto derivó en una landing page principal y una secundaria para un servicio específico.",
+   "en": "One of the biggest challenges was combining a personal brand site with an informational site about his professional services. The result was a main landing page plus a secondary one for a specific service.",
+   "pt-br": "Um dos maiores desafios foi unir um site de marca pessoal com um site informativo sobre os serviços profissionais. Isso resultou em uma landing page principal e outra secundária para um serviço específico.",
+   "fr": "L’un des plus grands défis a été de réunir un site de marque personnelle et un site d’information sur ses services professionnels. Le résultat : une page d’atterrissage principale et une seconde pour un service précis."
+  },
+  {
+   "es": "Lo que incluyó",
+   "en": "What it included",
+   "pt-br": "O que incluiu",
+   "fr": "Ce qui était inclus"
+  },
+  {
+   "es": "Desarrollo en WordPress con Divi",
+   "en": "WordPress development with Divi",
+   "pt-br": "Desenvolvimento em WordPress com Divi",
+   "fr": "Développement WordPress avec Divi"
+  },
+  {
+   "es": "Dos landing pages adaptables a cualquier pantalla",
+   "en": "Two landing pages that adapt to any screen",
+   "pt-br": "Duas landing pages adaptáveis a qualquer tela",
+   "fr": "Deux pages d’atterrissage adaptées à tous les écrans"
+  },
+  {
+   "es": "Información de servicios",
+   "en": "Service information",
+   "pt-br": "Informações sobre os serviços",
+   "fr": "Informations sur les services"
+  },
+  {
+   "es": "Horarios y lugares de atención",
+   "en": "Office hours and locations",
+   "pt-br": "Horários e locais de atendimento",
+   "fr": "Horaires et lieux de consultation"
+  },
+  {
+   "es": "Información de contacto",
+   "en": "Contact information",
+   "pt-br": "Informações de contato",
+   "fr": "Coordonnées"
+  },
+  {
+   "es": "Agenda de citas",
+   "en": "Appointment booking",
+   "pt-br": "Agendamento de consultas",
+   "fr": "Prise de rendez-vous"
+  },
+  {
+   "es": "Vista del proyecto Sitio web para doctor",
+   "en": "View of the project Website for a doctor",
+   "pt-br": "Visão do projeto Site para médico",
+   "fr": "Aperçu du projet Site web pour un médecin"
+  }
+ ]
+}

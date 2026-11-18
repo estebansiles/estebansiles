@@ -1,0 +1,19 @@
+{
+ "id": 2935,
+ "tipo": "page",
+ "estado": "publish",
+ "titulo": "Cotización",
+ "slug": "cotizacion",
+ "extracto": "Elegí los servicios que necesitás y recibí tu cotización en colones, con el IVA desglosado, después de una llamada de 30 minutos.",
+ "contenido": "<!-- wp:divi/placeholder -->\n[et_pb_section fb_built=\"1\" admin_label=\"Cotizador\" _builder_version=\"4.27.9\"][et_pb_row column_structure=\"4_4\" _builder_version=\"4.27.9\"][et_pb_column type=\"4_4\" _builder_version=\"4.27.9\"][et_pb_text module_class=\"siles-firma siles-entra\" _builder_version=\"4.27.9\"]<h1>Cotización</h1>[/et_pb_text][et_pb_text module_class=\"siles-entra siles-retraso-1\" _builder_version=\"4.27.9\"][siles_cotizador][/et_pb_text][/et_pb_column][/et_pb_row][/et_pb_section][et_pb_section fb_built=\"1\" module_class=\"siles-alterna\" admin_label=\"Condiciones\" _builder_version=\"4.27.9\"][et_pb_row column_structure=\"4_4\" _builder_version=\"4.27.9\"][et_pb_column type=\"4_4\" _builder_version=\"4.27.9\"][et_pb_text module_class=\"siles-firma siles-revela\" _builder_version=\"4.27.9\"]<p class=\"siles-antetitulo\">Condiciones</p><h2>Claro desde el inicio</h2>[/et_pb_text][/et_pb_column][/et_pb_row][et_pb_row column_structure=\"1_3,1_3,1_3\" _builder_version=\"4.27.9\"][et_pb_column type=\"1_3\" _builder_version=\"4.27.9\"][et_pb_text module_class=\"siles-traza siles-revela\" _builder_version=\"4.27.9\"][siles_icono nombre=\"factura-electronica\" tamano=\"40\"]<h3 style=\"margin-top: var(--space-3)\">Factura electrónica</h3><p style=\"color: var(--texto-suave)\">Cada pago lleva su comprobante, con el IVA del 13 % en fila aparte.</p>[/et_pb_text][/et_pb_column][et_pb_column type=\"1_3\" _builder_version=\"4.27.9\"][et_pb_text module_class=\"siles-traza siles-revela\" _builder_version=\"4.27.9\"][siles_icono nombre=\"pagos\" tamano=\"40\"]<h3 style=\"margin-top: var(--space-3)\">Pago por fases</h3><p style=\"color: var(--texto-suave)\">La mitad al iniciar y la otra mitad contra entrega, por transferencia o SINPE Móvil.</p>[/et_pb_text][/et_pb_column][et_pb_column type=\"1_3\" _builder_version=\"4.27.9\"][et_pb_text module_class=\"siles-traza siles-revela\" _builder_version=\"4.27.9\"][siles_icono nombre=\"firma-digital\" tamano=\"40\"]<h3 style=\"margin-top: var(--space-3)\">Firma digital</h3><p style=\"color: var(--texto-suave)\">Aprobás la propuesta con firma digital certificada, sin imprimir nada.</p>[/et_pb_text][/et_pb_column][/et_pb_row][/et_pb_section]\n<!-- /wp:divi/placeholder -->",
+ "enlace": "https://staging2.siles.cr/cotizacion/",
+ "terminos": [],
+ "yoast": {
+  "titulo": "Cotización de proyectos de transformación digital %%sep%% %%sitename%%",
+  "descripcion": "Elegí los servicios que necesitás y recibí tu cotización en colones, con el IVA desglosado, después de una llamada de 30 minutos."
+ },
+ "idioma": "es",
+ "traducciones": {
+  "es": 2935
+ }
+}

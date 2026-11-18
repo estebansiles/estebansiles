@@ -1,0 +1,144 @@
+{
+ "pagina": {
+  "titulo": {
+   "es": "Página de archivo Proyectos",
+   "en": "Projects archive (EN)",
+   "pt-br": "Arquivo de projetos (PT)",
+   "fr": "Archive des projets (FR)"
+  },
+  "slug": {
+   "es": "theme-builder-layout",
+   "en": "theme-builder-layout",
+   "pt-br": "theme-builder-layout",
+   "fr": "theme-builder-layout"
+  },
+  "yoast_titulo": {
+   "es": "",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  "yoast_descripcion": {
+   "es": "",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  }
+ },
+ "textos": [
+  {
+   "es": "Portafolio",
+   "en": "Portfolio",
+   "pt-br": "Portfólio",
+   "fr": "Portfolio"
+  },
+  {
+   "es": "Proyectos",
+   "en": "Projects",
+   "pt-br": "Projetos",
+   "fr": "Projets"
+  },
+  {
+   "es": "Lo que ya transformé con pymes y empresas de Costa Rica. Cada caso cuenta el reto, lo que hice y el resultado.",
+   "en": "What I’ve already transformed with small and midsize businesses in Costa Rica. Each case covers the challenge, what I did, and the result.",
+   "pt-br": "O que eu já transformei com pequenas e médias empresas da Costa Rica. Cada caso conta o desafio, o que eu fiz e o resultado.",
+   "fr": "Ce que j’ai déjà transformé avec des PME et des entreprises du Costa Rica. Chaque cas présente le défi, ce que j’ai fait et le résultat."
+  },
+  {
+   "es": "Captura del sitio web para doctor",
+   "en": "Screenshot of the doctor’s website",
+   "pt-br": "Captura do site para médico",
+   "fr": "Capture du site pour médecin"
+  },
+  {
+   "es": "Caso destacado <span class=\"siles-estado siles-estado--exito\">En producción</span>",
+   "en": "Featured case <span class=\"siles-estado siles-estado--exito\">Live</span>",
+   "pt-br": "Caso em destaque <span class=\"siles-estado siles-estado--exito\">No ar</span>",
+   "fr": "Cas à la une <span class=\"siles-estado siles-estado--exito\">En ligne</span>"
+  },
+  {
+   "es": "Sitio web para doctor",
+   "en": "Website for a doctor",
+   "pt-br": "Site para médico",
+   "fr": "Site web pour un médecin"
+  },
+  {
+   "es": "Un sitio de marca personal con una landing page para la cirugía de pterigión, pensado para conseguir citas.",
+   "en": "A personal brand website with a landing page for pterygium surgery, built to book appointments.",
+   "pt-br": "Um site de marca pessoal com uma landing page para a cirurgia de pterígio, pensado para gerar consultas.",
+   "fr": "Un site de marque personnelle avec une page d’atterrissage pour la chirurgie du ptérygion, conçu pour obtenir des rendez-vous."
+  },
+  {
+   "es": "Reto",
+   "en": "Challenge",
+   "pt-br": "Desafio",
+   "fr": "Défi"
+  },
+  {
+   "es": "Llegar a pacientes más allá del boca a boca.",
+   "en": "Reach patients beyond word of mouth.",
+   "pt-br": "Alcançar pacientes além do boca a boca.",
+   "fr": "Toucher des patients au-delà du bouche-à-oreille."
+  },
+  {
+   "es": "Solución",
+   "en": "Solution",
+   "pt-br": "Solução",
+   "fr": "Solution"
+  },
+  {
+   "es": "Sitio de marca personal y landing page de pterigión.",
+   "en": "Personal brand website and a pterygium landing page.",
+   "pt-br": "Site de marca pessoal e landing page de pterígio.",
+   "fr": "Site de marque personnelle et page d’atterrissage sur le ptérygion."
+  },
+  {
+   "es": "Resultado",
+   "en": "Result",
+   "pt-br": "Resultado",
+   "fr": "Résultat"
+  },
+  {
+   "es": "Alcance más allá de su ámbito local.",
+   "en": "Reach beyond his local area.",
+   "pt-br": "Alcance além do seu âmbito local.",
+   "fr": "Une portée au-delà de son secteur local."
+  },
+  {
+   "es": "<a class=\"siles-enlace\" href=\"/portafolio/sitio-web-para-doctor/\">Mirá el caso completo</a>",
+   "en": "<a class=\"siles-enlace\" href=\"/portafolio/sitio-web-para-doctor/\">See the full case</a>",
+   "pt-br": "<a class=\"siles-enlace\" href=\"/portafolio/sitio-web-para-doctor/\">Veja o caso completo</a>",
+   "fr": "<a class=\"siles-enlace\" href=\"/portafolio/sitio-web-para-doctor/\">Voir le cas complet</a>"
+  },
+  {
+   "es": "Por sector",
+   "en": "By industry",
+   "pt-br": "Por setor",
+   "fr": "Par secteur"
+  },
+  {
+   "es": "Todos los proyectos",
+   "en": "All projects",
+   "pt-br": "Todos os projetos",
+   "fr": "Tous les projets"
+  },
+  {
+   "es": "Tu proyecto puede ser el siguiente",
+   "en": "Your project could be next",
+   "pt-br": "Seu projeto pode ser o próximo",
+   "fr": "Votre projet pourrait être le prochain"
+  },
+  {
+   "es": "Contame qué querés transformar y armamos el plan por fases.",
+   "en": "Tell me what you want to transform, and we’ll build a phased plan.",
+   "pt-br": "Conte o que você quer transformar e montamos um plano em fases.",
+   "fr": "Dites-moi ce que vous voulez transformer et nous construirons un plan par étapes."
+  },
+  {
+   "es": "Pedí una cotización",
+   "en": "Request a quote",
+   "pt-br": "Peça um orçamento",
+   "fr": "Demandez un devis"
+  }
+ ]
+}

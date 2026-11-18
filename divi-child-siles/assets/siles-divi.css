@@ -285,9 +285,9 @@ body.siles #page-container .et_pb_row.siles-cabecera {
 body.siles .et_pb_row.siles-cabecera > .et_pb_column { width: auto !important; margin: 0 !important; float: none; }
 body.siles .et_pb_row.siles-cabecera > .et_pb_column:nth-child(2) { flex: 1 1 auto; }
 body.siles .et_pb_row.siles-cabecera .et_pb_menu__wrap { justify-content: flex-end; }
-body.siles .et_pb_row.siles-cabecera .et_pb_menu .et-menu > li { padding-left: 0; padding-right: 0; margin-left: var(--space-6); }
-body.siles .et_pb_row.siles-cabecera .et_pb_menu .et-menu > li > a { padding-top: 20px; padding-bottom: 20px; }
-body.siles .et_pb_row.siles-cabecera .et_pb_menu .et-menu > li > a::before { bottom: 12px; }
+body.siles .et_pb_row.siles-cabecera .et_pb_menu .et-menu > li { padding-left: 0; padding-right: 0; margin-left: var(--space-6); margin-top: 0; } /* Divi les pone 8px arriba y bajaba el texto */
+body.siles .et_pb_row.siles-cabecera .et_pb_menu .et-menu > li > a { padding-top: 17px; padding-bottom: 17px; line-height: 20px; } /* centrado con el logo y el botón */
+body.siles .et_pb_row.siles-cabecera .et_pb_menu .et-menu > li > a::before { bottom: 9px; }
 body.siles .siles-logo img { display: block; height: 36px; width: auto; }
 body.siles .siles-oscuro .siles-logo img, body.siles .et-l--footer .siles-logo img { height: 40px; }
 /* Menú móvil de Divi con la marca */
@@ -704,3 +704,79 @@ body.siles #page-container a.siles-redes__enlace:hover, body.siles #page-contain
 }
 body.siles .siles-redes svg { display: block; width: 20px; height: 20px; }
 @media (prefers-reduced-motion: reduce) { body.siles #page-container a.siles-redes__enlace { transition: none; } body.siles #page-container a.siles-redes__enlace:hover { transform: none; } }
+
+/* ---------- Parte 8. Pie en celular y tableta ----------
+   Más compacto: menos aire entre bloques, Contacto y Sitio lado a lado desde 600 px,
+   los enlaces de Sitio en dos columnas y los legales en una sola línea. */
+@media (max-width: 980px) {
+  body.siles .et-l--footer .et_pb_section { padding-top: var(--space-12); padding-bottom: var(--space-8); }
+  body.siles .et-l--footer .et_pb_row { padding-top: 0; padding-bottom: 0; }
+  body.siles .et-l--footer .et_pb_row:first-of-type { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-8) var(--space-6); }
+  body.siles .et-l--footer .et_pb_row:first-of-type::after { display: none; }
+  body.siles .et-l--footer .et_pb_row:first-of-type > .et_pb_column { width: auto !important; margin: 0 !important; float: none; }
+  body.siles .et-l--footer .et_pb_row:first-of-type > .et_pb_column:first-child { grid-column: 1 / -1; }
+  body.siles .et-l--footer .et_pb_column .et_pb_module { margin-bottom: 0; }
+  body.siles .et-l--footer .et_pb_column:first-child .et_pb_text { margin-top: var(--space-4); }
+  body.siles .et-l--footer .siles-redes { margin-top: var(--space-5); }
+  body.siles .siles-lista .et_pb_text_inner { gap: var(--space-1); }
+  body.siles .siles-lista .et_pb_text_inner > .siles-antetitulo { margin-bottom: var(--space-2); }
+  body.siles .siles-lista .et_pb_text_inner a { min-height: 40px; }
+  body.siles .siles-lista p { min-height: 40px; }
+  body.siles .et-l--footer .et_pb_row:last-of-type { margin-top: var(--space-8); }
+  body.siles .siles-pie-legal .et_pb_text_inner { padding-top: var(--space-5); gap: var(--space-2); }
+  body.siles .siles-pie-legal p:last-child { gap: 0 var(--space-5); }
+  body.siles .siles-pie-legal p:last-child a { display: inline-flex; align-items: center; min-height: 40px; }
+}
+@media (max-width: 599px) {
+  body.siles .et-l--footer .et_pb_row:first-of-type { grid-template-columns: minmax(0, 1fr); gap: var(--space-8); }
+  /* Sitio: seis enlaces en dos columnas de tres */
+  body.siles .et-l--footer .et_pb_row:first-of-type > .et_pb_column:nth-child(3) .siles-lista .et_pb_text_inner {
+    display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 var(--space-6); align-items: center;
+  }
+  body.siles .et-l--footer .et_pb_row:first-of-type > .et_pb_column:nth-child(3) .siles-lista .et_pb_text_inner > .siles-antetitulo { grid-column: 1 / -1; }
+  body.siles .siles-pie-legal .et_pb_text_inner { letter-spacing: .12em; }
+}
+
+/* ---------- Parte 9. Selector de idioma en el encabezado de escritorio ([siles_idiomas]) ----------
+   Botón con el globo y el código del idioma actual; despliega la lista de idiomas con sus nombres. */
+body.siles .et_pb_row.siles-cabecera > .et_pb_column:nth-child(3) { display: flex; align-items: center; justify-content: flex-end; gap: var(--space-4); }
+body.siles .et_pb_row.siles-cabecera > .et_pb_column:nth-child(3) > .et_pb_module { margin-bottom: 0; }
+.siles-idiomas--desplegable { position: relative; }
+.siles-idiomas--desplegable details { position: relative; }
+.siles-idiomas--desplegable summary {
+  display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 0 var(--space-2);
+  border: 1px solid transparent; color: var(--texto); cursor: pointer; list-style: none;
+  font: 600 13px/1 var(--font-texto); letter-spacing: .12em;
+  transition: border-color .16s var(--curva), background-color .16s var(--curva);
+}
+.siles-idiomas--desplegable summary::-webkit-details-marker { display: none; }
+.siles-idiomas--desplegable summary::marker { content: ""; }
+.siles-idiomas--desplegable summary:hover { border-color: var(--linea); }
+.siles-idiomas--desplegable summary:focus-visible { outline: 2px solid var(--foco); outline-offset: 2px; }
+.siles-idiomas--desplegable details[open] summary { border-color: var(--texto); }
+.siles-idiomas__flecha { transition: transform .2s var(--curva); }
+.siles-idiomas--desplegable details[open] .siles-idiomas__flecha { transform: rotate(180deg); }
+.siles-idiomas__lista {
+  position: absolute; right: 0; top: calc(100% + var(--space-2)); z-index: 20; min-width: 190px;
+  margin: 0; padding: var(--space-2) 0; list-style: none;
+  background: var(--fondo); border: 1px solid var(--linea); box-shadow: 0 24px 48px -24px rgba(30, 32, 32, .45);
+  animation: siles-idiomas-abre .18s var(--curva) both;
+}
+body.siles #page-container .siles-idiomas__lista { padding: var(--space-2) 0; } /* Divi agrega relleno abajo a las listas */
+body.siles .siles-idiomas__lista li { margin: 0; padding: 0; list-style: none; }
+body.siles #page-container .siles-idiomas__lista a {
+  position: relative; display: block; padding: 10px var(--space-5); color: var(--texto);
+  font: 400 15px/1.3 var(--font-texto); letter-spacing: 0; text-decoration: none;
+}
+body.siles #page-container .siles-idiomas__lista a:hover, body.siles #page-container .siles-idiomas__lista a:focus-visible { background: var(--fondo-alterno); outline: none; }
+body.siles #page-container .siles-idiomas__lista a[aria-current] { font-weight: 700; }
+body.siles #page-container .siles-idiomas__lista a[aria-current]::before { content: ""; position: absolute; left: 0; top: 8px; bottom: 8px; width: 3px; background: var(--realce); }
+@keyframes siles-idiomas-abre { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .siles-idiomas__lista { animation: none; } .siles-idiomas__flecha { transition: none; } }
+
+/* Nota de las páginas legales traducidas: la versión en español prevalece. */
+body.siles .siles-legal .siles-legal__nota {
+  margin: 0 0 var(--space-6); padding: var(--space-4) var(--space-5);
+  background: var(--fondo-alterno); border-left: 3px solid var(--realce);
+  font-size: 15px; line-height: 1.5; color: var(--texto-suave);
+}

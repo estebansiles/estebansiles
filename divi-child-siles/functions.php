@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'SILES_DIVI_VERSION', '0.9.4' );
+define( 'SILES_DIVI_VERSION', '0.11.8' );
 define( 'SILES_DIVI_CORREO', 'contact@siles.cr' ); // Recibe las cotizaciones.
 
 /**
@@ -25,6 +25,8 @@ function siles_divi_estilos() {
 	wp_enqueue_style( 'siles-movimiento', $base . '/siles-movimiento.css', array( 'siles-divi' ), SILES_DIVI_VERSION );
 	wp_enqueue_style( 'siles-animaciones', $base . '/siles-animaciones.css', array( 'siles-movimiento' ), SILES_DIVI_VERSION );
 	wp_enqueue_script( 'siles-animaciones', $base . '/siles-animaciones.js', array(), SILES_DIVI_VERSION, array( 'in_footer' => true, 'strategy' => 'defer' ) );
+	wp_enqueue_style( 'siles-menu-movil', $base . '/siles-menu-movil.css', array( 'siles-divi' ), SILES_DIVI_VERSION );
+	wp_enqueue_script( 'siles-menu-movil', $base . '/siles-menu-movil.js', array(), SILES_DIVI_VERSION, array( 'in_footer' => true, 'strategy' => 'defer' ) );
 }
 add_action( 'wp_enqueue_scripts', 'siles_divi_estilos', 20 );
 
@@ -85,8 +87,11 @@ function siles_divi_icono( $atts ) {
 }
 add_shortcode( 'siles_icono', 'siles_divi_icono' );
 
+require_once __DIR__ . '/inc/idiomas.php';
+require_once __DIR__ . '/inc/api-traducciones.php';
 require_once __DIR__ . '/inc/cotizador.php';
 require_once __DIR__ . '/inc/redes.php';
+require_once __DIR__ . '/inc/menu-movil.php';
 
 /**
  * Imagen para redes sociales: si la versión principal es AVIF (la crea el plugin "Formatos modernos de imagen"),

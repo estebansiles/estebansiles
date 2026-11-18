@@ -1,0 +1,252 @@
+{
+ "pagina": {
+  "titulo": {
+   "es": "Landing page para empresa de logística internacional",
+   "en": "Landing page for an international logistics company",
+   "pt-br": "Landing page para empresa de logística internacional",
+   "fr": "Page d’atterrissage pour une entreprise de logistique internationale"
+  },
+  "slug": {
+   "es": "landing-page-para-empresa-de-logistica",
+   "en": "logistics-company-landing-page",
+   "pt-br": "landing-page-empresa-de-logistica",
+   "fr": "landing-page-logistique"
+  },
+  "yoast_titulo": {
+   "es": "",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  "yoast_descripcion": {
+   "es": "Landing Page para empresa de logística Global Chemical Group. Proyecto presentado en el portafolio del sitio web de Esteban Siles.",
+   "en": "Landing page for the logistics company Global Chemical Group. A project featured in Esteban Siles’s website portfolio.",
+   "pt-br": "Landing page para a empresa de logística Global Chemical Group. Projeto apresentado no portfólio do site de Esteban Siles.",
+   "fr": "Page d’atterrissage pour l’entreprise de logistique Global Chemical Group. Un projet présenté dans le portfolio du site d’Esteban Siles."
+  }
+ },
+ "textos": [
+  {
+   "es": "Migas de pan",
+   "en": "Breadcrumbs",
+   "pt-br": "Trilha de navegação",
+   "fr": "Fil d’Ariane"
+  },
+  {
+   "es": "<a href=\"/\">Inicio</a><span aria-hidden=\"true\">/</span><a href=\"/portafolio/\">Proyectos</a><span aria-hidden=\"true\">/</span><span aria-current=\"page\">Landing page para empresa de logística internacional</span>",
+   "en": "<a href=\"/\">Home</a><span aria-hidden=\"true\">/</span><a href=\"/portafolio/\">Projects</a><span aria-hidden=\"true\">/</span><span aria-current=\"page\">Landing page for an international logistics company</span>",
+   "pt-br": "<a href=\"/\">Início</a><span aria-hidden=\"true\">/</span><a href=\"/portafolio/\">Projetos</a><span aria-hidden=\"true\">/</span><span aria-current=\"page\">Landing page para empresa de logística internacional</span>",
+   "fr": "<a href=\"/\">Accueil</a><span aria-hidden=\"true\">/</span><a href=\"/portafolio/\">Projets</a><span aria-hidden=\"true\">/</span><span aria-current=\"page\">Page d’atterrissage pour une entreprise de logistique internationale</span>"
+  },
+  {
+   "es": "Comercio · Diseño web <span class=\"siles-estado siles-estado--exito\">En producción</span>",
+   "en": "Commerce · Web design <span class=\"siles-estado siles-estado--exito\">Live</span>",
+   "pt-br": "Comércio · Web design <span class=\"siles-estado siles-estado--exito\">No ar</span>",
+   "fr": "Commerce · Conception web <span class=\"siles-estado siles-estado--exito\">En ligne</span>"
+  },
+  {
+   "es": "Landing page para empresa de logística internacional",
+   "en": "Landing page for an international logistics company",
+   "pt-br": "Landing page para empresa de logística internacional",
+   "fr": "Page d’atterrissage pour une entreprise de logistique internationale"
+  },
+  {
+   "es": "La primera presencia en línea de Global Chemical Group, pensada para que la encuentren en buscadores.",
+   "en": "Global Chemical Group’s first online presence, built to be found in search engines.",
+   "pt-br": "A primeira presença on-line da Global Chemical Group, pensada para ser encontrada nos buscadores.",
+   "fr": "La première présence en ligne de Global Chemical Group, conçue pour être trouvée dans les moteurs de recherche."
+  },
+  {
+   "es": "Visitá el sitio",
+   "en": "Visit the site",
+   "pt-br": "Visite o site",
+   "fr": "Visiter le site"
+  },
+  {
+   "es": "Quiero algo así",
+   "en": "I want something like this",
+   "pt-br": "Quero algo assim",
+   "fr": "Je veux quelque chose de similaire"
+  },
+  {
+   "es": "Cliente",
+   "en": "Client",
+   "pt-br": "Cliente",
+   "fr": "Client"
+  },
+  {
+   "es": "Global Chemical Group",
+   "en": "Global Chemical Group",
+   "pt-br": "Global Chemical Group",
+   "fr": "Global Chemical Group"
+  },
+  {
+   "es": "Año",
+   "en": "Year",
+   "pt-br": "Ano",
+   "fr": "Année"
+  },
+  {
+   "es": "Sector",
+   "en": "Industry",
+   "pt-br": "Setor",
+   "fr": "Secteur"
+  },
+  {
+   "es": "Comercio",
+   "en": "Commerce",
+   "pt-br": "Comércio",
+   "fr": "Commerce"
+  },
+  {
+   "es": "Tipo",
+   "en": "Type",
+   "pt-br": "Tipo",
+   "fr": "Type"
+  },
+  {
+   "es": "Diseño web",
+   "en": "Web design",
+   "pt-br": "Web design",
+   "fr": "Conception web"
+  },
+  {
+   "es": "Servicios",
+   "en": "Services",
+   "pt-br": "Serviços",
+   "fr": "Services"
+  },
+  {
+   "es": "Gestión de proyecto, Desarrollo en WordPress, Diseño web, Copywriting",
+   "en": "Project management, WordPress development, Web design, Copywriting",
+   "pt-br": "Gestão de projeto, Desenvolvimento em WordPress, Web design, Copywriting",
+   "fr": "Gestion de projet, Développement WordPress, Conception web, Rédaction"
+  },
+  {
+   "es": "Créditos",
+   "en": "Credits",
+   "pt-br": "Créditos",
+   "fr": "Crédits"
+  },
+  {
+   "es": "Branding: Uniko",
+   "en": "Branding: Uniko",
+   "pt-br": "Branding: Uniko",
+   "fr": "Branding: Uniko"
+  },
+  {
+   "es": "Desarrollo: Emanuel Borbón",
+   "en": "Development: Emanuel Borbón",
+   "pt-br": "Desenvolvimento: Emanuel Borbón",
+   "fr": "Développement : Emanuel Borbón"
+  },
+  {
+   "es": "Captura del proyecto Landing page para empresa de logística internacional",
+   "en": "Screenshot of the project Landing page for an international logistics company",
+   "pt-br": "Captura do projeto Landing page para empresa de logística internacional",
+   "fr": "Capture du projet Page d’atterrissage pour une entreprise de logistique internationale"
+  },
+  {
+   "es": "El caso",
+   "en": "The case",
+   "pt-br": "O caso",
+   "fr": "Le cas"
+  },
+  {
+   "es": "Del reto a la solución",
+   "en": "From challenge to solution",
+   "pt-br": "Do desafio à solução",
+   "fr": "Du défi à la solution"
+  },
+  {
+   "es": "<span class=\"siles-antetitulo\">Reto</span>",
+   "en": "<span class=\"siles-antetitulo\">Challenge</span>",
+   "pt-br": "<span class=\"siles-antetitulo\">Desafio</span>",
+   "fr": "<span class=\"siles-antetitulo\">Défi</span>"
+  },
+  {
+   "es": "Una empresa de logística que asesora a otras empresas necesitaba una landing page para posicionarse en las búsquedas y mostrar sus servicios a clientes potenciales.",
+   "en": "A logistics company that advises other businesses needed a landing page to rank in search results and show its services to potential clients.",
+   "pt-br": "Uma empresa de logística que assessora outras empresas precisava de uma landing page para se posicionar nas buscas e mostrar seus serviços a clientes em potencial.",
+   "fr": "Une entreprise de logistique qui conseille d’autres entreprises avait besoin d’une page d’atterrissage pour se positionner dans les recherches et présenter ses services à des clients potentiels."
+  },
+  {
+   "es": "Sin sitio web, dependía del boca a boca entre profesionales del gremio para generar credibilidad y confianza, y necesitaba los motores de búsqueda para tener alcance global.",
+   "en": "Without a website, it relied on word of mouth among industry professionals to build credibility and trust, and it needed search engines to reach a global audience.",
+   "pt-br": "Sem site, dependia do boca a boca entre profissionais do setor para gerar credibilidade e confiança, e precisava dos buscadores para ter alcance global.",
+   "fr": "Sans site web, elle dépendait du bouche-à-oreille entre professionnels du secteur pour gagner en crédibilité et en confiance, et elle avait besoin des moteurs de recherche pour une portée mondiale."
+  },
+  {
+   "es": "<span class=\"siles-antetitulo\">Solución</span>",
+   "en": "<span class=\"siles-antetitulo\">Solution</span>",
+   "pt-br": "<span class=\"siles-antetitulo\">Solução</span>",
+   "fr": "<span class=\"siles-antetitulo\">Solution</span>"
+  },
+  {
+   "es": "Un sitio que atrae clientes potenciales con información sobre sus servicios, su experiencia y sus capacidades. Con optimización para buscadores llega a un público más amplio y aumenta el conocimiento de la marca.",
+   "en": "A site that attracts potential clients with information about its services, experience, and capabilities. Search engine optimization helps it reach a wider audience and grow brand awareness.",
+   "pt-br": "Um site que atrai clientes em potencial com informações sobre seus serviços, sua experiência e suas capacidades. Com otimização para buscadores, chega a um público mais amplo e aumenta o reconhecimento da marca.",
+   "fr": "Un site qui attire des clients potentiels grâce à des informations sur ses services, son expérience et ses capacités. L’optimisation pour les moteurs de recherche lui permet de toucher un public plus large et de renforcer la notoriété de la marque."
+  },
+  {
+   "es": "Es el primer paso de su presencia en línea; a mediano plazo se prevé un sitio transaccional para dar seguimiento a pedidos, pedir cotizaciones y contactar al servicio al cliente.",
+   "en": "It’s the first step in the company’s online presence; in the medium term, a transactional site is planned for tracking orders, requesting quotes, and contacting customer service.",
+   "pt-br": "É o primeiro passo da sua presença on-line; a médio prazo, está previsto um site transacional para acompanhar pedidos, solicitar orçamentos e falar com o atendimento ao cliente.",
+   "fr": "C’est la première étape de sa présence en ligne ; à moyen terme, un site transactionnel est prévu pour suivre les commandes, demander des devis et contacter le service client."
+  },
+  {
+   "es": "Entregable principal",
+   "en": "Main deliverable",
+   "pt-br": "Entrega principal",
+   "fr": "Livrable principal"
+  },
+  {
+   "es": "Diseño de landing page",
+   "en": "Landing page design",
+   "pt-br": "Design de landing page",
+   "fr": "Conception de page d’atterrissage"
+  },
+  {
+   "es": "Global Chemical Group es una empresa de soluciones logísticas: transporte, almacenamiento, distribución y gestión de inventarios.",
+   "en": "Global Chemical Group is a logistics solutions company: transportation, warehousing, distribution, and inventory management.",
+   "pt-br": "A Global Chemical Group é uma empresa de soluções logísticas: transporte, armazenagem, distribuição e gestão de estoques.",
+   "fr": "Global Chemical Group est une entreprise de solutions logistiques : transport, entreposage, distribution et gestion des stocks."
+  },
+  {
+   "es": "Lo que incluyó",
+   "en": "What it included",
+   "pt-br": "O que incluiu",
+   "fr": "Ce qui était inclus"
+  },
+  {
+   "es": "Prototipo en Figma",
+   "en": "Figma prototype",
+   "pt-br": "Protótipo no Figma",
+   "fr": "Prototype sur Figma"
+  },
+  {
+   "es": "Copywriting",
+   "en": "Copywriting",
+   "pt-br": "Copywriting",
+   "fr": "Rédaction"
+  },
+  {
+   "es": "Traducción con WPML",
+   "en": "Translation with WPML",
+   "pt-br": "Tradução com WPML",
+   "fr": "Traduction avec WPML"
+  },
+  {
+   "es": "Configuración SEO con Yoast",
+   "en": "SEO setup with Yoast",
+   "pt-br": "Configuração de SEO com Yoast",
+   "fr": "Configuration SEO avec Yoast"
+  },
+  {
+   "es": "Vista del proyecto Landing page para empresa de logística internacional",
+   "en": "View of the project Landing page for an international logistics company",
+   "pt-br": "Visão do projeto Landing page para empresa de logística internacional",
+   "fr": "Aperçu du projet Page d’atterrissage pour une entreprise de logistique internationale"
+  }
+ ]
+}

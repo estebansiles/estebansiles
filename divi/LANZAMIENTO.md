@@ -1,128 +1,96 @@
-# Lista de verificación: paso a producción de siles.cr
+# Lista de verificación: paso a producción de siles.cr (lanzamiento multilingüe)
 
-De `staging2.siles.cr` a `www.siles.cr` en SiteGround. Marcá cada casilla al terminar.
+De `staging2.siles.cr` a `www.siles.cr` en SiteGround, con WPML: español (raíz), inglés (`/en/`), portugués de Brasil (`/pt-br/`) y francés (`/fr/`). Marcá cada casilla al terminar.
 
-**Sobre el staging:** el staging está registrado en WordPress como `www.staging2.siles.cr`, y así debe quedar: al desplegar, SiteGround mantiene `www.siles.cr` en producción. Se trabaja entrando por `staging2.siles.cr` (sin www); el tema (0.9.4 o posterior) sirve el sitio con esa dirección sin tocar la base. Para eso, en el `.htaccess` del staging están comentadas las dos líneas de SG Optimizer que obligan a usar www. Si SG Optimizer las vuelve a escribir, hay que comentarlas de nuevo. En producción, WordPress redirige `siles.cr` a `www.siles.cr` por su cuenta.
+**Por qué un despliegue completo:** WPML guarda en la base de datos las traducciones, los enlaces entre idiomas, las cadenas (Yoast, Complianz), los menús y las categorías traducidas. Un despliegue solo de archivos no las lleva.
 
-**Después de cada lanzamiento,** recreá el staging desde producción.
+**Estado confirmado (18 de noviembre de 2026):** no hay publicaciones ni cambios en producción desde que se creó el staging; la revisión legal de Términos, Privacidad y Opt-out en los cuatro idiomas está hecha y se mantiene el texto actual.
+
+**Sobre el staging:** está registrado en WordPress como `www.staging2.siles.cr`, y así debe quedar: al desplegar, SiteGround cambia las direcciones a `www.siles.cr`. Se trabaja entrando por `staging2.siles.cr` (sin www) gracias al tema; para eso, en el `.htaccess` del staging están comentadas las dos líneas de SG Optimizer que obligan a usar www. En producción, WordPress redirige `siles.cr` a `www.siles.cr` por su cuenta.
+
+**Después del lanzamiento,** recreá el staging desde producción.
 
 **Tiempo estimado:** 60 a 90 minutos, más una revisión a las 48 horas.
 
-**Conviene hacerlo** en un horario de poco tráfico, por ejemplo un sábado temprano, con acceso a Site Tools, al administrador de WordPress, a Search Console y a tu correo contact@siles.cr.
-
 ---
 
-## 1. Antes del paso, en el staging
+## 1. Antes del paso
 
-**SEO (Yoast)**
-
-- [ ] **Imagen del sitio:** en Yoast › Ajustes › Información básica del sitio, elegí "Siles Comunicación: imagen para redes" (id 2990).
-- [ ] **Títulos y meta descripciones:** pegalos en cada página (Inicio, Servicios, Proyectos, Cotización, Contacto, Conversemos, Términos y Opt-out).
-- [ ] **Conversemos:** en su pestaña de Yoast › Social, borrá la descripción vieja ("En esta página tengo un calendario…") y la imagen vieja (el logo).
-- [ ] **Blog:** cambiá el título "Blog de Esteban Siles | UX & Digital Marketing" y su descripción por la marca nueva.
-- [ ] **Lema del sitio:** en Ajustes › Generales, decidí si cambiás "UX & MARKETING".
-
-**Contenido de producción**
-
-- [ ] **Cambios desde el 11 de noviembre:** confirmá si publicaste o editaste algo en producción desde que se creó el staging (entradas, páginas, comentarios, ajustes de plugins). El paso completo **reemplaza la base de datos de producción** con la del staging, así que cualquier cambio posterior en producción se pierde. Si hubo alguno, anotalo para repetirlo después.
-
-**Seguimiento y consentimiento**
-
-Esto puede esperar a después del lanzamiento, pero decidilo antes:
-
-- [ ] **Etiquetas antes del consentimiento:** el píxel de Meta, Clarity y Mailchimp se cargan antes de que la persona acepte cookies. Decidí si lo corregís antes del lanzamiento o justo después.
-- [ ] **Política de privacidad:** agregá Microsoft Clarity y Mailchimp a la sección 4 de terceros.
-- [ ] **AMP:** el plugin AMP está activo. Si no usás páginas AMP, desactivalo: Divi no genera AMP y puede mostrar versiones rotas.
-
----
+- [ ] **Licencia de WPML:** en tu cuenta de wpml.org › Sitios, agregá `www.siles.cr` y copiá su clave de sitio. La vas a pegar en el paso 4.
+- [ ] **Tema:** el staging tiene el tema hijo **0.11.8** activo.
+- [ ] **Horario:** de poco tráfico, con acceso a Site Tools, al administrador de WordPress, a Search Console y a contact@siles.cr.
 
 ## 2. Respaldo
 
-- [ ] **Copia de producción:** en Site Tools › Seguridad › Copias de seguridad, creá una copia a demanda de **www.siles.cr** y ponele de nombre "Antes del rediseño".
+- [ ] **Copia de producción:** en Site Tools › Seguridad › Copias de seguridad, creá una copia a demanda de **www.siles.cr** con el nombre "Antes de idiomas".
 - [ ] **Confirmación:** verificá que la copia aparezca en la lista con la fecha de hoy.
-
----
 
 ## 3. El paso
 
-- [ ] **Abrí el despliegue:** en Site Tools › WordPress › Staging, en `www.staging2.siles.cr`, elegí **Deploy › Full Deploy** (archivos y base de datos). El rediseño vive casi todo en la base de datos (páginas, plantillas del Theme Builder, menús, proyectos y ajustes), así que un despliegue solo de archivos no alcanza.
+- [ ] **Despliegue:** en Site Tools › WordPress › Staging, en `www.staging2.siles.cr`, elegí **Deploy › Full Deploy** (archivos y base de datos).
 - [ ] **Esperá:** dejá que termine sin tocar el sitio.
-
----
 
 ## 4. Inmediatamente después, en producción
 
-**Indexación**
+**WPML**
 
-- [ ] **robots.txt:** abrí `https://www.siles.cr/robots.txt`.
-  - Si empieza con `# START YOAST BLOCK` y dice `Disallow:` vacío, está bien.
-  - Si dice `Disallow: /`, borrá `public_html/robots.txt` en Site Tools › Sitio › Administrador de archivos.
-- [ ] **Lectura:** en Ajustes › Lectura, verificá que **no** esté marcada "Disuadir a los motores de búsqueda".
+- [ ] **Aviso de sitio movido:** si WPML muestra un aviso de que el sitio cambió de dirección, elegí la opción de que **el sitio se movió** (no "es una copia").
+- [ ] **Clave de sitio:** en Plugins › Añadir nuevo › Comercial (o WPML › Registro), pegá la clave de `www.siles.cr`.
+- [ ] **Idiomas:** en WPML › Idiomas, confirmá español como idioma principal y English, Português (Brasil) y Français activos, con el formato "Idiomas diferentes en directorios".
 
-**Dominio con www** (el despliegue anterior dejó `siles.cr`; se vuelve a `www.siles.cr`)
+**Dominio e indexación**
 
-- [ ] **Ajustes:** en Ajustes › Generales, poné `https://www.siles.cr` en la dirección de WordPress y en la del sitio. WordPress va a pedir que vuelvas a iniciar sesión.
-- [ ] **Redirección:** en Site Tools › Dominio, `siles.cr` tiene que redirigir a `www.siles.cr`, no al revés.
-- [ ] **Reemplazo en la base:** con el plugin Better Search Replace, cambiá `https://siles.cr` por `https://www.siles.cr` en todas las tablas. Corré primero la prueba en seco y revisá el conteo. El patrón incluye `https://`, así que `contact@siles.cr` no se toca.
-- [ ] **Prueba:** abrí `https://siles.cr/servicios/` y confirmá que termine en `https://www.siles.cr/servicios/`.
+- [ ] **Direcciones:** en Ajustes › Generales, la dirección de WordPress y la del sitio deben ser `https://www.siles.cr`.
+- [ ] **Lectura:** en Ajustes › Lectura, que **no** esté marcada "Disuadir a los motores de búsqueda".
+- [ ] **robots.txt:** `https://www.siles.cr/robots.txt` empieza con `# START YOAST BLOCK` y tiene `Disallow:` vacío. Si dice `Disallow: /`, borrá `public_html/robots.txt`.
+- [ ] **.htaccess:** el despliegue copia el del staging, con las líneas de SG Optimizer comentadas. En Speed Optimizer › Ambiente, volvé a guardar la opción que obliga a usar www (o confirmá que `https://siles.cr/servicios/` termine en `https://www.siles.cr/servicios/` en un solo salto).
 
-**Direcciones y caché**
+**Caché (obligatorio)**
 
-- [ ] **Dominio:** en Ajustes › Generales, la dirección de WordPress y la del sitio deben ser `https://www.siles.cr`.
-- [ ] **Enlaces permanentes:** en Ajustes › Enlaces permanentes, hacé clic en **Guardar** sin cambiar nada; eso regenera las reglas de URL.
-- [ ] **Caché de Divi (obligatorio en cada despliegue):** en Divi › Opciones del tema › Constructor › Avanzado, hacé clic en **Vaciar** en "Hojas de estilo estáticas". Si no, el CSS crítico sigue cargando las fuentes de íconos de Divi desde el staging (pasó en los dos despliegues).
-- [ ] **Caché del servidor:** en Speed Optimizer, vaciá la caché.
-- [ ] **Yoast:** en Yoast › Herramientas, ejecutá "Optimizar los datos de SEO" para que tome el dominio nuevo.
-- [ ] **Complianz:** en Complianz › Asistente, volvé a escanear las cookies del dominio de producción y guardá.
+- [ ] **Enlaces permanentes:** en Ajustes › Enlaces permanentes, hacé clic en **Guardar** sin cambiar nada (regenera las reglas de `/en/`, `/pt-br/` y `/fr/`).
+- [ ] **Divi:** en Divi › Opciones del tema › Constructor › Avanzado, **Vaciar** en "Hojas de estilo estáticas". Si no, el CSS sigue cargando fuentes desde el staging.
+- [ ] **Speed Optimizer:** vaciá la caché.
+- [ ] **Yoast:** en Yoast › Herramientas, ejecutá "Optimizar los datos de SEO".
 
-**Formularios** (enviá una prueba de cada uno y confirmá que llegue a contact@siles.cr)
+**Formularios** (una prueba de cada uno; confirmá que llegue a contact@siles.cr)
 
-- [ ] **Contacto:** `/contacto/`.
-- [ ] **Cotizador:** `/cotizacion/`.
+- [ ] **Contacto:** `/contacto/` y `/en/contact/`.
+- [ ] **Cotizador:** `/cotizacion/` y `/fr/devis/` (el correo indica el idioma de la página).
 - [ ] **Opt-out:** `/opt-out/`.
-- [ ] **Boletín:** al pie de `/blog/`.
 
-**Recorrido visual** (en el celular y en la computadora)
+**Recorrido en los cuatro idiomas** (celular y computadora)
 
-- [ ] **Portada:** carga la red animada, la cinta y los botones.
-- [ ] **Navegación:** el menú y el pie (Términos y Privacidad) funcionan.
-- [ ] **Proyectos:** el filtro por sector y un proyecto completo.
-- [ ] **Agenda:** `/conversemos/` carga la agenda de Google Calendar.
-- [ ] **404:** una dirección inventada, por ejemplo `/prueba-404/`, muestra la página 404 con Travolta.
-- [ ] **Redes:** pegá `https://www.siles.cr` en un chat de WhatsApp y verificá que se vea la imagen nueva.
+- [ ] **Portadas:** `/`, `/en/`, `/pt-br/`, `/fr/`: red animada, cinta y botones en su idioma.
+- [ ] **Selector de idioma:** en el encabezado, el globo con el código del idioma despliega los cuatro idiomas; en el menú móvil, la lista al pie. Cada idioma lleva a la misma página traducida.
+- [ ] **Menú y pie:** en el idioma de la página; el Blog figura como "Blog (Spanish)", "Blog (espanhol)" o "Blog (espagnol)".
+- [ ] **Sobre mí:** `/esteban/` en cada idioma; en el celular, la red animada, el método con sus números y la cronología alineada.
+- [ ] **Proyectos:** `/portafolio/` en cada idioma, con el filtro por sector traducido, y un proyecto completo.
+- [ ] **Cotización:** en inglés, portugués y francés dice dólares estadounidenses, impuestos aplicables, transferencia bancaria internacional y firma electrónica.
+- [ ] **Legales:** Términos y Privacidad en cada idioma muestran la nota de que prevalece la versión en español, con su enlace.
+- [ ] **Agenda:** `/conversemos/` y sus traducciones cargan Google Calendar en el idioma de la página.
+- [ ] **Banner de cookies:** aparece en los cuatro idiomas, en su idioma; en el celular, la ✕ de las preferencias se ve completa.
+- [ ] **404:** `/prueba-404/` y `/en/prueba-404/` muestran la 404 en su idioma.
 
----
+## 5. Google y redes
 
-## 5. Google
-
-- [ ] **Propiedad:** en Search Console, usá la propiedad de dominio `siles.cr` o la de `https://www.siles.cr`.
-- [ ] **Sitemap:** en Search Console, enviá `https://www.siles.cr/sitemap_index.xml`.
-- [ ] **Indexación:** en Search Console › Inspección de URL, pedí indexar la portada, `/servicios/`, `/portafolio/` y `/cotizacion/`.
-- [ ] **Analytics:** en GA4 › Tiempo real, confirmá que entren visitas a `www.siles.cr`.
-- [ ] **Vista previa en Facebook:** en el depurador de Facebook (developers.facebook.com/tools/debug), pegá la portada y hacé clic en "Volver a extraer", para que Facebook tome la imagen nueva.
-
----
+- [ ] **Sitemap:** en Search Console, volvé a enviar `https://www.siles.cr/sitemap_index.xml` (incluye los cuatro idiomas).
+- [ ] **Indexación:** en Inspección de URL, pedí indexar `/en/`, `/pt-br/` y `/fr/`.
+- [ ] **hreflang:** en el código de cualquier página traducida aparecen las etiquetas `hreflang` de los cuatro idiomas y `x-default`.
+- [ ] **Analytics:** en GA4 › Tiempo real, entran visitas a las páginas en otros idiomas (después de aceptar cookies).
+- [ ] **Vista previa en Facebook:** en el depurador de Facebook, "Volver a extraer" para `/en/`.
 
 ## 6. A las 48 horas
 
-- [ ] **Errores de indexación:** revisá Search Console › Páginas, con atención a 404 y "Página con redirección".
-- [ ] **Correos:** verificá que los formularios sigan llegando y que no caigan en spam.
-- [ ] **Limpieza:** borrá definitivamente lo que quedó en la papelera (Custom GPTs y las páginas de prueba) y la Inicio vieja en borrador, si ya no la necesitás.
-- [ ] **Plantillas viejas:** borrá las plantillas desactivadas del Theme Builder, si queda alguna.
-
----
+- [ ] **Errores de indexación:** en Search Console › Páginas, revisá 404 y "Página con redirección", con atención a `/en/`, `/pt-br/` y `/fr/`.
+- [ ] **Correos:** los formularios siguen llegando y no caen en spam.
+- [ ] **Staging:** recreá el staging desde producción.
 
 ## Si algo sale mal
 
-- [ ] **Restaurar:** en Site Tools › Seguridad › Copias de seguridad, restaurá la copia "Antes del rediseño". El staging no se toca, así que se puede corregir ahí y volver a desplegar.
+- [ ] **Restaurar:** en Site Tools › Seguridad › Copias de seguridad, restaurá "Antes de idiomas". El staging no se toca, así que se puede corregir ahí y volver a desplegar.
 
 ---
 
-## Lo que viene después del lanzamiento
+## Mantenimiento de las traducciones
 
-1. **Seguimiento:** todo pasa por Google Tag Manager, conectado al consentimiento de Complianz. Se suman los píxeles de TikTok y LinkedIn.
-2. **Versión en inglés con WPML:**
-   - instalar WPML y sus complementos;
-   - hacer traducibles los textos del tema;
-   - traducir páginas, proyectos y plantillas al inglés estadounidense;
-   - pasar los documentos legales en inglés por revisión legal.
+Las traducciones son manuales: si se edita una página en español, su traducción no cambia sola. El procedimiento está en `divi/IDIOMAS.md` (descargar el original, extraer, traducir lo nuevo y subir con `divi/traducir.py`).

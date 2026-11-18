@@ -1,0 +1,174 @@
+{
+ "pagina": {
+  "titulo": {
+   "es": "Tus datos, tus derechos",
+   "en": "Your data, your rights",
+   "pt-br": "Seus dados, seus direitos",
+   "fr": "Vos données, vos droits"
+  },
+  "slug": {
+   "es": "opt-out",
+   "en": "opt-out",
+   "pt-br": "opt-out",
+   "fr": "opt-out"
+  },
+  "yoast_titulo": {
+   "es": "",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  "yoast_descripcion": {
+   "es": "Con el Opt-Out Pedí acceso, corrección, borrado o exclusión de tus datos personales, según la Política de privacidad de siles.cr.",
+   "en": "Use the opt-out form to request access to, correction, deletion, or exclusion of your personal data, under the siles.cr Privacy Policy.",
+   "pt-br": "Use o formulário de opt-out para pedir acesso, correção, exclusão ou oposição ao uso dos seus dados pessoais, conforme a Política de Privacidade da siles.cr.",
+   "fr": "Utilisez le formulaire d’opposition pour demander l’accès, la rectification, l’effacement ou l’exclusion de vos données personnelles, conformément à la Politique de confidentialité de siles.cr."
+  }
+ },
+ "textos": [
+  {
+   "es": "Privacidad",
+   "en": "Privacy",
+   "pt-br": "Privacidade",
+   "fr": "Confidentialité"
+  },
+  {
+   "es": "Tus datos, tus derechos",
+   "en": "Your data, your rights",
+   "pt-br": "Seus dados, seus direitos",
+   "fr": "Vos données, vos droits"
+  },
+  {
+   "es": "Usá este formulario para pedir acceso, corrección, borrado o exclusión de tus datos personales, según nuestra <a href=\"/politica-de-privacidad/\">Política de privacidad</a>.",
+   "en": "Use this form to request access to, correction, deletion, or exclusion of your personal data, under our <a href=\"/politica-de-privacidad/\">Privacy policy</a>.",
+   "pt-br": "Use este formulário para pedir acesso, correção, exclusão ou oposição ao uso dos seus dados pessoais, conforme nossa <a href=\"/politica-de-privacidad/\">Política de privacidade</a>.",
+   "fr": "Utilisez ce formulaire pour demander l’accès, la rectification, l’effacement ou l’exclusion de vos données personnelles, conformément à notre <a href=\"/politica-de-privacidad/\">Politique de confidentialité</a>."
+  },
+  {
+   "es": "Lo que podés pedir",
+   "en": "What you can request",
+   "pt-br": "O que você pode pedir",
+   "fr": "Ce que vous pouvez demander"
+  },
+  {
+   "es": "<strong>Acceso y portabilidad:</strong> Una copia de los datos personales que tenemos sobre vos.",
+   "en": "<strong>Access and portability:</strong> A copy of the personal data we hold about you.",
+   "pt-br": "<strong>Acesso e portabilidade:</strong> Uma cópia dos dados pessoais que temos sobre você.",
+   "fr": "<strong>Accès et portabilité :</strong> Une copie des données personnelles que nous détenons sur vous."
+  },
+  {
+   "es": "<strong>Rectificación:</strong> Corregir información inexacta o incompleta.",
+   "en": "<strong>Rectification:</strong> Correct inaccurate or incomplete information.",
+   "pt-br": "<strong>Retificação:</strong> Corrigir informações inexatas ou incompletas.",
+   "fr": "<strong>Rectification :</strong> Corriger des informations inexactes ou incomplètes."
+  },
+  {
+   "es": "<strong>Borrado:</strong> Eliminar tus datos de nuestras bases de datos.",
+   "en": "<strong>Deletion:</strong> Remove your data from our databases.",
+   "pt-br": "<strong>Exclusão:</strong> Eliminar seus dados das nossas bases de dados.",
+   "fr": "<strong>Effacement :</strong> Supprimer vos données de nos bases de données."
+  },
+  {
+   "es": "<strong>Oposición o exclusión:</strong> Oponerte a ciertos usos de tus datos o al rastreo de píxeles de terceros.",
+   "en": "<strong>Objection or opt-out:</strong> Object to certain uses of your data or to tracking by third-party pixels.",
+   "pt-br": "<strong>Oposição ou opt-out:</strong> Opor-se a certos usos dos seus dados ou ao rastreamento por pixels de terceiros.",
+   "fr": "<strong>Opposition ou exclusion :</strong> Vous opposer à certains usages de vos données ou au suivi par des pixels tiers."
+  },
+  {
+   "es": "Cookies y píxeles",
+   "en": "Cookies and pixels",
+   "pt-br": "Cookies e pixels",
+   "fr": "Cookies et pixels"
+  },
+  {
+   "es": "Para dejar de ser rastreado por Google Analytics y los píxeles de redes sociales en este navegador, cambiá tus preferencias de cookies. Si además querés que borremos datos asociados a vos, enviá también el formulario.",
+   "en": "To stop being tracked by Google Analytics and social media pixels in this browser, change your cookie preferences. If you also want us to delete data linked to you, submit the form as well.",
+   "pt-br": "Para deixar de ser rastreado pelo Google Analytics e pelos pixels de redes sociais neste navegador, altere suas preferências de cookies. Se também quiser que apaguemos dados associados a você, envie o formulário.",
+   "fr": "Pour ne plus être suivi par Google Analytics et les pixels des réseaux sociaux dans ce navigateur, modifiez vos préférences de cookies. Si vous souhaitez aussi que nous supprimions les données vous concernant, envoyez également le formulaire."
+  },
+  {
+   "es": "<a class=\"siles-boton siles-boton--secundario-html siles-gestionar-cookies\" href=\"/politica-de-privacidad/\" onclick=\"if (typeof cmplz_set_banner_status === 'function') { cmplz_set_banner_status('show'); return false; }\">Gestionar cookies</a>",
+   "en": "<a class=\"siles-boton siles-boton--secundario-html siles-gestionar-cookies\" href=\"/politica-de-privacidad/\" onclick=\"if (typeof cmplz_set_banner_status === 'function') { cmplz_set_banner_status('show'); return false; }\">Manage cookies</a>",
+   "pt-br": "<a class=\"siles-boton siles-boton--secundario-html siles-gestionar-cookies\" href=\"/politica-de-privacidad/\" onclick=\"if (typeof cmplz_set_banner_status === 'function') { cmplz_set_banner_status('show'); return false; }\">Gerenciar cookies</a>",
+   "fr": "<a class=\"siles-boton siles-boton--secundario-html siles-gestionar-cookies\" href=\"/politica-de-privacidad/\" onclick=\"if (typeof cmplz_set_banner_status === 'function') { cmplz_set_banner_status('show'); return false; }\">Gérer les cookies</a>"
+  },
+  {
+   "es": "También podés escribirnos a <a href=\"mailto:contact@siles.cr\">contact@siles.cr</a>. Para proteger tus datos, podemos pedirte que confirmes tu identidad antes de responder.",
+   "en": "You can also write to us at <a href=\"mailto:contact@siles.cr\">contact@siles.cr</a>. To protect your data, we may ask you to confirm your identity before we respond.",
+   "pt-br": "Você também pode escrever para <a href=\"mailto:contact@siles.cr\">contact@siles.cr</a>. Para proteger seus dados, podemos pedir que você confirme sua identidade antes de responder.",
+   "fr": "Vous pouvez aussi nous écrire à <a href=\"mailto:contact@siles.cr\">contact@siles.cr</a>. Pour protéger vos données, nous pouvons vous demander de confirmer votre identité avant de répondre."
+  },
+  {
+   "es": "Enviar solicitud",
+   "en": "Submit request",
+   "pt-br": "Enviar solicitação",
+   "fr": "Envoyer la demande"
+  },
+  {
+   "es": "Recibimos tu solicitud. Te responderemos en los plazos que establece la legislación aplicable a tu país de residencia.",
+   "en": "We received your request. We’ll respond within the time frames set by the laws that apply in your country of residence.",
+   "pt-br": "Recebemos sua solicitação. Responderemos nos prazos estabelecidos pela legislação aplicável ao seu país de residência.",
+   "fr": "Nous avons bien reçu votre demande. Nous vous répondrons dans les délais prévus par la législation applicable dans votre pays de résidence."
+  },
+  {
+   "es": "Nombre",
+   "en": "Name",
+   "pt-br": "Nome",
+   "fr": "Nom"
+  },
+  {
+   "es": "Correo con el que nos contactaste",
+   "en": "Email you used to contact us",
+   "pt-br": "E-mail que você usou para nos contatar",
+   "fr": "E-mail utilisé pour nous contacter"
+  },
+  {
+   "es": "Tipo de solicitud",
+   "en": "Request type",
+   "pt-br": "Tipo de solicitação",
+   "fr": "Type de demande"
+  },
+  {
+   "es": "Acceso y portabilidad: quiero una copia de mis datos",
+   "en": "Access and portability: I want a copy of my data",
+   "pt-br": "Acesso e portabilidade: quero uma cópia dos meus dados",
+   "fr": "Accès et portabilité : je veux une copie de mes données"
+  },
+  {
+   "es": "Rectificación: quiero corregir mis datos",
+   "en": "Rectification: I want to correct my data",
+   "pt-br": "Retificação: quero corrigir meus dados",
+   "fr": "Rectification : je veux corriger mes données"
+  },
+  {
+   "es": "Borrado: quiero que eliminen mis datos",
+   "en": "Deletion: I want my data deleted",
+   "pt-br": "Exclusão: quero que meus dados sejam apagados",
+   "fr": "Effacement : je veux que mes données soient supprimées"
+  },
+  {
+   "es": "Oposición o exclusión (opt-out): no quiero que se usen mis datos ni que se me rastree",
+   "en": "Objection or opt-out: I don’t want my data used or to be tracked",
+   "pt-br": "Oposição ou opt-out: não quero que meus dados sejam usados nem ser rastreado",
+   "fr": "Opposition ou exclusion : je ne veux pas que mes données soient utilisées ni être suivi"
+  },
+  {
+   "es": "Detalle de tu solicitud (opcional)",
+   "en": "Details of your request (optional)",
+   "pt-br": "Detalhes da sua solicitação (opcional)",
+   "fr": "Détails de votre demande (facultatif)"
+  },
+  {
+   "es": "Confirmación",
+   "en": "Confirmation",
+   "pt-br": "Confirmação",
+   "fr": "Confirmation"
+  },
+  {
+   "es": "Confirmo que la solicitud es sobre mis propios datos o que tengo autorización para hacerla.",
+   "en": "I confirm that this request is about my own data or that I am authorized to make it.",
+   "pt-br": "Confirmo que a solicitação é sobre meus próprios dados ou que tenho autorização para fazê-la.",
+   "fr": "Je confirme que la demande concerne mes propres données ou que je suis autorisé à la faire."
+  }
+ ]
+}

@@ -1,0 +1,71 @@
+{
+ "pagina": {
+  "titulo": [
+   "Quote",
+   "Orçamento",
+   "Devis"
+  ],
+  "slug": [
+   "quote",
+   "orcamento",
+   "devis"
+  ],
+  "yoast_titulo": [
+   "Digital transformation project quote %%sep%% %%sitename%%",
+   "Orçamento de projetos de transformação digital %%sep%% %%sitename%%",
+   "Devis pour vos projets de transformation numérique %%sep%% %%sitename%%"
+  ],
+  "yoast_descripcion": [
+   "Choose the services you need and get your quote in US dollars, with taxes itemized, after a 30-minute call.",
+   "Escolha os serviços de que precisa e receba seu orçamento em dólares americanos, com os impostos discriminados, depois de uma conversa de 30 minutos.",
+   "Choisissez les services dont vous avez besoin et recevez votre devis en dollars américains, taxes détaillées, après un appel de 30 minutes."
+  ]
+ },
+ "textos": {
+  "0": [
+   "Quote",
+   "Orçamento",
+   "Devis"
+  ],
+  "1": [
+   "Terms",
+   "Condições",
+   "Conditions"
+  ],
+  "2": [
+   "Clear from the start",
+   "Claro desde o início",
+   "Clair dès le départ"
+  ],
+  "3": [
+   "Electronic invoice",
+   "Nota fiscal eletrônica",
+   "Facture électronique"
+  ],
+  "4": [
+   "Every payment comes with its receipt, with the 13% VAT on a separate line.",
+   "Cada pagamento tem seu comprovante, com o IVA de 13% em uma linha separada.",
+   "Chaque paiement est accompagné de son justificatif, avec la TVA de 13 % sur une ligne à part."
+  ],
+  "5": [
+   "Phased payments",
+   "Pagamento em fases",
+   "Paiement par étapes"
+  ],
+  "6": [
+   "Half up front and the other half on delivery, by bank transfer or SINPE Móvil.",
+   "Metade no início e a outra metade na entrega, por transferência bancária ou SINPE Móvil.",
+   "La moitié au démarrage et l’autre moitié à la livraison, par virement bancaire ou SINPE Móvil."
+  ],
+  "7": [
+   "Digital signature",
+   "Assinatura digital",
+   "Signature électronique"
+  ],
+  "8": [
+   "You approve the proposal with a certified digital signature, no printing needed.",
+   "Você aprova a proposta com assinatura digital certificada, sem imprimir nada.",
+   "Vous approuvez la proposition par signature électronique certifiée, sans rien imprimer."
+  ]
+ }
+}

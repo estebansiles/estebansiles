@@ -1,0 +1,26 @@
+{
+ "pagina": {
+  "titulo": [
+   "Siles header (EN)",
+   "Cabeçalho Siles (PT)",
+   "En-tête Siles (FR)"
+  ],
+  "slug": [
+   "theme-builder-layout",
+   "theme-builder-layout",
+   "theme-builder-layout"
+  ]
+ },
+ "textos": {
+  "0": [
+   "Siles Comunicación, home",
+   "Siles Comunicación, início",
+   "Siles Comunicación, accueil"
+  ],
+  "1": [
+   "Book a call",
+   "Agende uma conversa",
+   "Réservez un appel"
+  ]
+ }
+}
