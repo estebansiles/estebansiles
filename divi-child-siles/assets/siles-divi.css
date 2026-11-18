@@ -285,9 +285,9 @@ body.siles #page-container .et_pb_row.siles-cabecera {
 body.siles .et_pb_row.siles-cabecera > .et_pb_column { width: auto !important; margin: 0 !important; float: none; }
 body.siles .et_pb_row.siles-cabecera > .et_pb_column:nth-child(2) { flex: 1 1 auto; }
 body.siles .et_pb_row.siles-cabecera .et_pb_menu__wrap { justify-content: flex-end; }
-body.siles .et_pb_row.siles-cabecera .et_pb_menu .et-menu > li { padding-left: 0; padding-right: 0; margin-left: var(--space-6); }
-body.siles .et_pb_row.siles-cabecera .et_pb_menu .et-menu > li > a { padding-top: 20px; padding-bottom: 20px; }
-body.siles .et_pb_row.siles-cabecera .et_pb_menu .et-menu > li > a::before { bottom: 12px; }
+body.siles .et_pb_row.siles-cabecera .et_pb_menu .et-menu > li { padding-left: 0; padding-right: 0; margin-left: var(--space-6); margin-top: 0; } /* Divi les pone 8px arriba y bajaba el texto */
+body.siles .et_pb_row.siles-cabecera .et_pb_menu .et-menu > li > a { padding-top: 17px; padding-bottom: 17px; line-height: 20px; } /* centrado con el logo y el botón */
+body.siles .et_pb_row.siles-cabecera .et_pb_menu .et-menu > li > a::before { bottom: 9px; }
 body.siles .siles-logo img { display: block; height: 36px; width: auto; }
 body.siles .siles-oscuro .siles-logo img, body.siles .et-l--footer .siles-logo img { height: 40px; }
 /* Menú móvil de Divi con la marca */
