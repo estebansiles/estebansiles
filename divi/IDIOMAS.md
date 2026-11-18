@@ -73,7 +73,7 @@ Cuando termines, avisá. Claude sube el tema con el selector de idioma y la API 
 - [x] **Páginas, proyectos y plantillas:** traducidos a en, pt-BR y fr con `divi/traducir.py` (textos en `divi/traducciones/textos/`). La API marca cada traducción como manual para que WPML no la reconstruya con el texto en español.
 - [x] **Menús y categorías de proyecto:** traducidos (`divi/traducciones/menus.json` y `terminos.json`).
 - [x] **Yoast y Complianz:** cadenas traducidas por la API (`divi/traducciones/cadenas.json` y `cadenas-complianz.json`). Los textos de Complianz estaban registrados como inglés; se pasaron a español con `siles/v1/cadenas-origen`.
-- [ ] **Revisión legal** de Términos, Privacidad y Opt-out en cada idioma.
-- [ ] **Paso a producción** (ver "Antes de publicar en producción").
+- [x] **Revisión legal** de Términos, Privacidad y Opt-out en cada idioma: aprobada sin cambios.
+- [x] **Paso a producción:** desplegado en `www.siles.cr` con el tema 0.11.10. Revisión de solo lectura: 56 páginas en los cuatro idiomas responden, con su contenido traducido, `hreflang`, banner de cookies, sin restos del staging y con un solo contenedor de GTM.
 
 **Si se edita una página en español,** su traducción no se actualiza sola: hay que volver a descargar el original, extraer, traducir lo nuevo y subir (`python3 divi/traducir.py extraer|llenar|subir`).

@@ -177,8 +177,10 @@ function siles_selector_idiomas( $atts = array() ) {
 	}
 
 	wp_enqueue_script( 'siles-idiomas' );
+	// estilo="pie": el mismo desplegable con los colores del pie oscuro y la lista que abre hacia arriba.
+	$variante = 'pie' === $atts['estilo'] ? ' siles-idiomas--pie' : '';
 	return sprintf(
-		'<nav class="siles-idiomas siles-idiomas--desplegable" aria-label="%1$s"><details data-siles-idiomas>'
+		'<nav class="siles-idiomas siles-idiomas--desplegable%6$s" aria-label="%1$s"><details data-siles-idiomas>'
 		. '<summary><span class="screen-reader-text">%1$s: %2$s</span>%3$s<span class="siles-idiomas__codigo" aria-hidden="true">%4$s</span>'
 		. '<svg class="siles-idiomas__flecha" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></summary>'
 		. '<ul class="siles-idiomas__lista">%5$s</ul></details></nav>',
@@ -186,7 +188,8 @@ function siles_selector_idiomas( $atts = array() ) {
 		esc_html( $actual['nombre'] ),
 		siles_icono_idioma( 20 ),
 		esc_html( $actual['corto'] ),
-		$enlaces
+		$enlaces,
+		$variante
 	);
 }
 
@@ -248,3 +251,23 @@ function siles_nota_legal() {
 	return '<p class="siles-nota siles-legal__nota">' . sprintf( esc_html( siles_t( 'Esta traducción se ofrece para tu comodidad. Si hay diferencias entre esta versión y la %s, prevalece la versión en español.' ) ), $enlace ) . '</p>';
 }
 add_shortcode( 'siles_nota_legal', 'siles_nota_legal' );
+
+/**
+ * Algunos plugins (por ejemplo Complianz, para el título de la política de cookies en el banner) piden a WPML la
+ * traducción con el código corto del idioma ("en"), pero en WPML el inglés es "en-us". Si con "en" no hay
+ * traducción, se busca con "en-us".
+ *
+ * @param mixed       $resultado Id que devolvió WPML.
+ * @param string      $tipo      Tipo de contenido.
+ * @param bool        $original  Si WPML debe devolver el original cuando no hay traducción.
+ * @param string|null $idioma    Código pedido.
+ * @return mixed
+ */
+function siles_wpml_codigo_ingles( $resultado, $tipo = '', $original = false, $idioma = null ) {
+	if ( 'en' !== $idioma || ! $resultado ) {
+		return $resultado;
+	}
+	$traduccion = apply_filters( 'wpml_object_id', $resultado, $tipo, false, 'en-us' );
+	return $traduccion ? $traduccion : $resultado;
+}
+add_filter( 'wpml_object_id', 'siles_wpml_codigo_ingles', 20, 4 );

@@ -109,7 +109,7 @@ def pie():
              columna("1_4", texto(
                  antetitulo("Sitio") + "".join(f'<p><a href="{u}">{t}</a></p>' for t, u in sitio), clase="siles-lista"))),
         fila("4_4", columna("4_4", texto(
-            '<p>© 2026 Siles Comunicación</p><p><a href="/politica-de-privacidad/">Privacidad</a><a href="/terminos-y-condiciones/">Términos y condiciones</a></p>',
+            '<p>© 2026 Siles Comunicación</p><p><a href="/politica-de-privacidad/">Privacidad</a><a href="/terminos-y-condiciones/">Términos y condiciones</a></p>[siles_idiomas estilo="pie"]',
             clase="siles-pie-legal"))),
         clase="siles-oscuro", custom_padding="64px||32px||false|false", admin_label="Pie Siles",
     )
