@@ -64,3 +64,16 @@ Cuando termines, avisá. Claude sube el tema con el selector de idioma y la API 
 - [ ] **Revisión legal:** que un abogado revise Términos, Privacidad y Opt-out en cada idioma.
 - [ ] **Recorrido:** revisar cada idioma en el celular y en la computadora.
 - [ ] **Paso a producción:** el despliegue completo reemplaza la base de datos de producción. Hay que decidir si se despliega completo (y se repite en producción lo que cambió solo ahí) o si se instala WPML en producción y se importan las traducciones.
+
+---
+
+## Estado en el staging (18 de noviembre de 2026)
+
+- [x] **Tema 0.11.5:** diccionario del tema, selector de idioma, `hreflang`, nota legal y API de traducciones y cadenas.
+- [x] **Páginas, proyectos y plantillas:** traducidos a en, pt-BR y fr con `divi/traducir.py` (textos en `divi/traducciones/textos/`). La API marca cada traducción como manual para que WPML no la reconstruya con el texto en español.
+- [x] **Menús y categorías de proyecto:** traducidos (`divi/traducciones/menus.json` y `terminos.json`).
+- [x] **Yoast y Complianz:** cadenas traducidas por la API (`divi/traducciones/cadenas.json` y `cadenas-complianz.json`). Los textos de Complianz estaban registrados como inglés; se pasaron a español con `siles/v1/cadenas-origen`.
+- [ ] **Revisión legal** de Términos, Privacidad y Opt-out en cada idioma.
+- [ ] **Paso a producción** (ver "Antes de publicar en producción").
+
+**Si se edita una página en español,** su traducción no se actualiza sola: hay que volver a descargar el original, extraer, traducir lo nuevo y subir (`python3 divi/traducir.py extraer|llenar|subir`).
