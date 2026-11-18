@@ -156,3 +156,53 @@ function siles_selector_idiomas( $atts = array() ) {
 	);
 }
 add_shortcode( 'siles_idiomas', 'siles_selector_idiomas' );
+
+/**
+ * Etiquetas hreflang en el <head>: le dicen a Google qué versión mostrar en cada idioma.
+ * WPML las imprime solo si su opción de SEO está activa; si no lo está, las imprime el tema.
+ * Solo se listan los idiomas en los que la página existe, más x-default (español).
+ */
+function siles_hreflang() {
+	if ( ! has_filter( 'wpml_active_languages' ) || is_404() || is_search() ) {
+		return;
+	}
+	$seo = apply_filters( 'wpml_setting', array(), 'seo' );
+	if ( is_array( $seo ) && ! empty( $seo['head_langs'] ) ) {
+		return; // WPML ya las imprime.
+	}
+	$idiomas = apply_filters( 'wpml_active_languages', null, array( 'skip_missing' => 1 ) );
+	if ( empty( $idiomas ) || count( $idiomas ) < 2 ) {
+		return;
+	}
+	$defecto = '';
+	foreach ( $idiomas as $codigo => $idioma ) {
+		$etiqueta = ! empty( $idioma['tag'] ) ? $idioma['tag'] : $codigo;
+		printf( '<link rel="alternate" hreflang="%s" href="%s" />' . "\n", esc_attr( strtolower( $etiqueta ) ), esc_url( $idioma['url'] ) );
+		if ( 'es' === siles_idioma_normal( $codigo ) ) {
+			$defecto = $idioma['url'];
+		}
+	}
+	if ( $defecto ) {
+		printf( '<link rel="alternate" hreflang="x-default" href="%s" />' . "\n", esc_url( $defecto ) );
+	}
+}
+add_action( 'wp_head', 'siles_hreflang', 2 );
+
+/**
+ * [siles_nota_legal]: nota al inicio de las páginas legales traducidas, con enlace a la versión en español,
+ * que es la que prevalece. En español no muestra nada. Se arma al mostrar la página porque WPML cambiaría
+ * el enlace guardado en el contenido por el de la página traducida.
+ *
+ * @return string
+ */
+function siles_nota_legal() {
+	if ( 'es' === siles_idioma() ) {
+		return '';
+	}
+	$id    = get_the_ID();
+	$es_id = $id ? (int) apply_filters( 'wpml_object_id', $id, get_post_type( $id ), false, 'es' ) : 0;
+	$url   = $es_id ? apply_filters( 'wpml_permalink', get_permalink( $es_id ), 'es' ) : home_url( '/' );
+	$enlace = sprintf( '<a href="%s" hreflang="es" lang="es">%s</a>', esc_url( $url ), esc_html( siles_t( 'versión en español' ) ) );
+	return '<p class="siles-nota siles-legal__nota">' . sprintf( esc_html( siles_t( 'Esta traducción se ofrece para tu comodidad. Si hay diferencias entre esta versión y la %s, prevalece la versión en español.' ) ), $enlace ) . '</p>';
+}
+add_shortcode( 'siles_nota_legal', 'siles_nota_legal' );

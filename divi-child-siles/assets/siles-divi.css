@@ -749,3 +749,10 @@ body.siles #page-container .et-l--header .siles-idiomas a:hover { color: var(--t
 body.siles #page-container .et-l--header .siles-idiomas a[aria-current] { color: var(--texto); font-weight: 700; box-shadow: inset 0 -2px 0 var(--realce); }
 body.siles .et_pb_row.siles-cabecera > .et_pb_column:nth-child(3) { display: flex; align-items: center; justify-content: flex-end; gap: var(--space-4); }
 body.siles .et_pb_row.siles-cabecera > .et_pb_column:nth-child(3) > .et_pb_module { margin-bottom: 0; }
+
+/* Nota de las páginas legales traducidas: la versión en español prevalece. */
+body.siles .siles-legal .siles-legal__nota {
+  margin: 0 0 var(--space-6); padding: var(--space-4) var(--space-5);
+  background: var(--fondo-alterno); border-left: 3px solid var(--realce);
+  font-size: 15px; line-height: 1.5; color: var(--texto-suave);
+}

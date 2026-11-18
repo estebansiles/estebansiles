@@ -49,6 +49,12 @@ RUTAS = {
                                                               "pt-br": "/portafolio/landing-page-agronegocio/",
                                                               "fr": "/portafolio/landing-page-agro-industrie/"},
 }
+# Nota al inicio de las páginas legales traducidas: la arma el shortcode del tema [siles_nota_legal], con el enlace
+# a la versión en español, que prevalece (WPML cambiaría un enlace guardado en el contenido).
+NOTAS_LEGALES = {
+    "terminos-y-condiciones": {i: "[siles_nota_legal]" for i in ("en", "pt-br", "fr")},
+    "politica-de-privacidad": {i: "[siles_nota_legal]" for i in ("en", "pt-br", "fr")},
+}
 # El blog queda en español: sus enlaces no llevan carpeta de idioma.
 SIN_TRADUCIR = ("/blog/", "/category/", "/wp-content/")
 
@@ -222,6 +228,9 @@ def construir(f, idioma):
         raise SystemExit(f"Las etiquetas no coinciden en {len(errores)} textos al {idioma} de {os.path.basename(f)}: {errores[:3]}")
     contenido = recorrer(orig["contenido"], lambda t: tabla[t])
     contenido = enlaces(contenido, idioma)
+    nota = NOTAS_LEGALES.get(orig["slug"])
+    if nota and '<p class="siles-legal__intro">' in contenido:
+        contenido = contenido.replace('<p class="siles-legal__intro">', nota[idioma] + '<p class="siles-legal__intro">', 1)
     if "calendar.google.com" in contenido:
         hl = {"en": "en", "pt-br": "pt-BR", "fr": "fr"}[idioma]
         contenido = re.sub(r"(calendar\.google\.com/calendar/appointments/schedules/[^\"\s?]+\?gv=true)(?:&amp;hl=[\w-]+|&hl=[\w-]+)?",

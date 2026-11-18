@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'SILES_DIVI_VERSION', '0.11.2' );
+define( 'SILES_DIVI_VERSION', '0.11.3' );
 define( 'SILES_DIVI_CORREO', 'contact@siles.cr' ); // Recibe las cotizaciones.
 
 /**

@@ -52,9 +52,9 @@
   },
   {
    "es": "Cada pago lleva su comprobante, con el IVA del 13 % en fila aparte.",
-   "en": "Every payment comes with its receipt, with the 13% VAT on a separate line.",
-   "pt-br": "Cada pagamento tem seu comprovante, com o IVA de 13% em uma linha separada.",
-   "fr": "Chaque paiement est accompagné de son justificatif, avec la TVA de 13 % sur une ligne à part."
+   "en": "Every payment comes with its receipt, with applicable taxes on a separate line.",
+   "pt-br": "Cada pagamento tem seu comprovante, com os impostos aplicáveis em uma linha separada.",
+   "fr": "Chaque paiement est accompagné de son justificatif, avec les taxes applicables sur une ligne à part."
   },
   {
    "es": "Pago por fases",
@@ -64,21 +64,21 @@
   },
   {
    "es": "La mitad al iniciar y la otra mitad contra entrega, por transferencia o SINPE Móvil.",
-   "en": "Half up front and the other half on delivery, by bank transfer or SINPE Móvil.",
-   "pt-br": "Metade no início e a outra metade na entrega, por transferência bancária ou SINPE Móvil.",
-   "fr": "La moitié au démarrage et l’autre moitié à la livraison, par virement bancaire ou SINPE Móvil."
+   "en": "Half up front and the other half on delivery, by international bank transfer.",
+   "pt-br": "Metade no início e a outra metade na entrega, por transferência bancária internacional.",
+   "fr": "La moitié au démarrage et l’autre moitié à la livraison, par virement bancaire international."
   },
   {
    "es": "Firma digital",
-   "en": "Digital signature",
-   "pt-br": "Assinatura digital",
+   "en": "Electronic signature",
+   "pt-br": "Assinatura eletrônica",
    "fr": "Signature électronique"
   },
   {
    "es": "Aprobás la propuesta con firma digital certificada, sin imprimir nada.",
-   "en": "You approve the proposal with a certified digital signature, no printing needed.",
-   "pt-br": "Você aprova a proposta com assinatura digital certificada, sem imprimir nada.",
-   "fr": "Vous approuvez la proposition par signature électronique certifiée, sans rien imprimer."
+   "en": "You approve the proposal with an electronic signature, no printing needed.",
+   "pt-br": "Você aprova a proposta com assinatura eletrônica, sem imprimir nada.",
+   "fr": "Vous approuvez la proposition par signature électronique, sans rien imprimer."
   }
  ]
 }
