@@ -251,3 +251,23 @@ function siles_nota_legal() {
 	return '<p class="siles-nota siles-legal__nota">' . sprintf( esc_html( siles_t( 'Esta traducción se ofrece para tu comodidad. Si hay diferencias entre esta versión y la %s, prevalece la versión en español.' ) ), $enlace ) . '</p>';
 }
 add_shortcode( 'siles_nota_legal', 'siles_nota_legal' );
+
+/**
+ * Algunos plugins (por ejemplo Complianz, para el título de la política de cookies en el banner) piden a WPML la
+ * traducción con el código corto del idioma ("en"), pero en WPML el inglés es "en-us". Si con "en" no hay
+ * traducción, se busca con "en-us".
+ *
+ * @param mixed       $resultado Id que devolvió WPML.
+ * @param string      $tipo      Tipo de contenido.
+ * @param bool        $original  Si WPML debe devolver el original cuando no hay traducción.
+ * @param string|null $idioma    Código pedido.
+ * @return mixed
+ */
+function siles_wpml_codigo_ingles( $resultado, $tipo = '', $original = false, $idioma = null ) {
+	if ( 'en' !== $idioma || ! $resultado ) {
+		return $resultado;
+	}
+	$traduccion = apply_filters( 'wpml_object_id', $resultado, $tipo, false, 'en-us' );
+	return $traduccion ? $traduccion : $resultado;
+}
+add_filter( 'wpml_object_id', 'siles_wpml_codigo_ingles', 20, 4 );
