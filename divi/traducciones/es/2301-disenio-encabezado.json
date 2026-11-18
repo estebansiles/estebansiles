@@ -1,0 +1,19 @@
+{
+ "id": 2301,
+ "tipo": "et_header_layout",
+ "estado": "publish",
+ "titulo": "Todas Categoría páginas",
+ "slug": "theme-builder-layout",
+ "extracto": "",
+ "contenido": "[et_pb_section fb_built=\"1\" admin_label=\"Encabezado Siles\" _builder_version=\"4.27.9\" custom_padding=\"0px||0px||false|false\" sticky_position=\"top\" global_colors_info=\"{}\" theme_builder_area=\"post_content\"][et_pb_row column_structure=\"1_4,1_2,1_4\" module_class=\"siles-cabecera\" _builder_version=\"4.27.9\" global_colors_info=\"{}\" theme_builder_area=\"post_content\"][et_pb_column type=\"1_4\" _builder_version=\"4.27.9\" global_colors_info=\"{}\" theme_builder_area=\"post_content\"][et_pb_image src=\"/wp-content/themes/divi-child-siles/assets/marca/logo-color.svg\" alt=\"Siles Comunicación, inicio\" title_text=\"Siles Comunicación, inicio\" url=\"/\" module_class=\"siles-logo\" _builder_version=\"4.27.9\" global_colors_info=\"{}\" theme_builder_area=\"post_content\"][/et_pb_image][/et_pb_column][et_pb_column type=\"1_2\" _builder_version=\"4.27.9\" global_colors_info=\"{}\" theme_builder_area=\"post_content\"][et_pb_menu menu_id=\"579983389\" submenu_direction=\"downwards\" active_link_color=\"#1E2020\" _builder_version=\"4.27.9\" background_color=\"rgba(0,0,0,0)\" global_colors_info=\"{}\" theme_builder_area=\"post_content\"][/et_pb_menu][/et_pb_column][et_pb_column type=\"1_4\" _builder_version=\"4.27.9\" global_colors_info=\"{}\" theme_builder_area=\"post_content\"][et_pb_code module_class=\"siles-idiomas-modulo\" _builder_version=\"4.27.9\" global_colors_info=\"{}\" theme_builder_area=\"post_content\"][siles_idiomas][/et_pb_code][et_pb_button button_url=\"/conversemos/\" button_text=\"Agendá una llamada\" module_class=\"siles-boton--contorno siles-boton--sm\" _builder_version=\"4.27.9\" global_colors_info=\"{}\" theme_builder_area=\"post_content\"][/et_pb_button][/et_pb_column][/et_pb_row][/et_pb_section]",
+ "enlace": "https://staging2.siles.cr/et_header_layout/theme-builder-layout/",
+ "terminos": [],
+ "yoast": {
+  "titulo": "",
+  "descripcion": ""
+ },
+ "idioma": "es",
+ "traducciones": {
+  "es": 2301
+ }
+}

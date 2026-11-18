@@ -1,0 +1,252 @@
+{
+ "pagina": {
+  "titulo": {
+   "es": "Inicio",
+   "en": "Home",
+   "pt-br": "Início",
+   "fr": "Accueil"
+  },
+  "slug": {
+   "es": "inicio-nuevo",
+   "en": "home",
+   "pt-br": "inicio",
+   "fr": "accueil"
+  },
+  "yoast_titulo": {
+   "es": "Siles Comunicación | Transformación digital y automatización",
+   "en": "Siles Comunicación | Digital transformation and automation",
+   "pt-br": "Siles Comunicación | Transformação digital e automação",
+   "fr": "Siles Comunicación | Transformation numérique et automatisation"
+  },
+  "yoast_descripcion": {
+   "es": "Ordeno tus procesos, automatizo tareas y conecto tus sistemas: agentes de IA y marketing digital para pymes de Costa Rica.",
+   "en": "I organize your processes, automate tasks, and connect your systems: AI agents and digital marketing for small and midsize businesses.",
+   "pt-br": "Organizo seus processos, automatizo tarefas e conecto seus sistemas: agentes de IA e marketing digital para pequenas e médias empresas.",
+   "fr": "J’organise vos processus, j’automatise vos tâches et je connecte vos systèmes : agents IA et marketing numérique pour les PME."
+  }
+ },
+ "textos": [
+  {
+   "es": "Comunicación estratégica",
+   "en": "Strategic communication",
+   "pt-br": "Comunicação estratégica",
+   "fr": "Communication stratégique"
+  },
+  {
+   "es": "Tu negocio se puede transformar digitalmente.",
+   "en": "Your business can be transformed digitally.",
+   "pt-br": "Seu negócio pode se transformar digitalmente.",
+   "fr": "Votre entreprise peut se transformer grâce au numérique."
+  },
+  {
+   "es": "La correcta transformación digital empieza con una adecuada comunicación estratégica. La tecnología sigue a los procesos y las personas.",
+   "en": "The right digital transformation starts with sound strategic communication. Technology follows processes and people.",
+   "pt-br": "A transformação digital certa começa com uma boa comunicação estratégica. A tecnologia acompanha os processos e as pessoas.",
+   "fr": "Une transformation numérique réussie commence par une communication stratégique solide. La technologie suit les processus et les personnes."
+  },
+  {
+   "es": "Agendá una llamada",
+   "en": "Book a call",
+   "pt-br": "Agende uma conversa",
+   "fr": "Réservez un appel"
+  },
+  {
+   "es": "Escribime por WhatsApp",
+   "en": "Message me on WhatsApp",
+   "pt-br": "Fale comigo no WhatsApp",
+   "fr": "Écrivez-moi sur WhatsApp"
+  },
+  {
+   "es": "<span>Transformación digital</span><span>Automatización</span><span>Agentes de IA</span><span>Factura electrónica</span><span>Experiencia de usuario</span><span>Transformación digital</span><span>Automatización</span><span>Agentes de IA</span><span>Factura electrónica</span><span>Experiencia de usuario</span><span>Transformación digital</span><span>Automatización</span><span>Agentes de IA</span><span>Factura electrónica</span><span>Experiencia de usuario</span><span>Transformación digital</span><span>Automatización</span><span>Agentes de IA</span><span>Factura electrónica</span><span>Experiencia de usuario</span>",
+   "en": "<span>Digital transformation</span><span>Automation</span><span>AI agents</span><span>E-invoicing</span><span>User experience</span><span>Digital transformation</span><span>Automation</span><span>AI agents</span><span>E-invoicing</span><span>User experience</span><span>Digital transformation</span><span>Automation</span><span>AI agents</span><span>E-invoicing</span><span>User experience</span><span>Digital transformation</span><span>Automation</span><span>AI agents</span><span>E-invoicing</span><span>User experience</span>",
+   "pt-br": "<span>Transformação digital</span><span>Automação</span><span>Agentes de IA</span><span>Faturamento eletrônico</span><span>Experiência do usuário</span><span>Transformação digital</span><span>Automação</span><span>Agentes de IA</span><span>Faturamento eletrônico</span><span>Experiência do usuário</span><span>Transformação digital</span><span>Automação</span><span>Agentes de IA</span><span>Faturamento eletrônico</span><span>Experiência do usuário</span><span>Transformação digital</span><span>Automação</span><span>Agentes de IA</span><span>Faturamento eletrônico</span><span>Experiência do usuário</span>",
+   "fr": "<span>Transformation numérique</span><span>Automatisation</span><span>Agents IA</span><span>Facturation électronique</span><span>Expérience utilisateur</span><span>Transformation numérique</span><span>Automatisation</span><span>Agents IA</span><span>Facturation électronique</span><span>Expérience utilisateur</span><span>Transformation numérique</span><span>Automatisation</span><span>Agents IA</span><span>Facturation électronique</span><span>Expérience utilisateur</span><span>Transformation numérique</span><span>Automatisation</span><span>Agents IA</span><span>Facturation électronique</span><span>Expérience utilisateur</span>"
+  },
+  {
+   "es": "Servicios",
+   "en": "Services",
+   "pt-br": "Serviços",
+   "fr": "Services"
+  },
+  {
+   "es": "Lo que hago",
+   "en": "What I do",
+   "pt-br": "O que eu faço",
+   "fr": "Ce que je fais"
+  },
+  {
+   "es": "Te acompaño desde la estrategia hasta la implementación.",
+   "en": "I’m with you from strategy all the way to implementation.",
+   "pt-br": "Acompanho você da estratégia à implementação.",
+   "fr": "Je vous accompagne de la stratégie jusqu’à la mise en œuvre."
+  },
+  {
+   "es": "Transformación digital",
+   "en": "Digital transformation",
+   "pt-br": "Transformação digital",
+   "fr": "Transformation numérique"
+  },
+  {
+   "es": "Ordeno tus procesos y elijo con vos las herramientas que sí vas a usar.",
+   "en": "I organize your processes and help you choose the tools you’ll actually use.",
+   "pt-br": "Organizo seus processos e escolho com você as ferramentas que você vai realmente usar.",
+   "fr": "J’organise vos processus et je choisis avec vous les outils que vous utiliserez vraiment."
+  },
+  {
+   "es": "Automatización",
+   "en": "Automation",
+   "pt-br": "Automação",
+   "fr": "Automatisation"
+  },
+  {
+   "es": "Casi todo se puede automatizar. Empiezo por lo que más tiempo te quita.",
+   "en": "Almost anything can be automated. I start with what takes up most of your time.",
+   "pt-br": "Quase tudo pode ser automatizado. Começo pelo que mais toma o seu tempo.",
+   "fr": "Presque tout peut être automatisé. Je commence par ce qui vous prend le plus de temps."
+  },
+  {
+   "es": "Marketing digital",
+   "en": "Digital marketing",
+   "pt-br": "Marketing digital",
+   "fr": "Marketing numérique"
+  },
+  {
+   "es": "Estrategia, contenido y medición para que cada colón invertido rinda.",
+   "en": "Strategy, content, and measurement so every dollar you invest pays off.",
+   "pt-br": "Estratégia, conteúdo e mensuração para que cada dólar investido renda.",
+   "fr": "Stratégie, contenu et mesure pour que chaque dollar investi rapporte."
+  },
+  {
+   "es": "Experiencia de usuario",
+   "en": "User experience",
+   "pt-br": "Experiência do usuário",
+   "fr": "Expérience utilisateur"
+  },
+  {
+   "es": "Diseño sitios y aplicaciones pensando en quien los usa.",
+   "en": "I design websites and apps with the people who use them in mind.",
+   "pt-br": "Crio sites e aplicativos pensando em quem vai usá-los.",
+   "fr": "Je conçois des sites et des applications en pensant à ceux qui les utilisent."
+  },
+  {
+   "es": "Factura electrónica",
+   "en": "E-invoicing",
+   "pt-br": "Faturamento eletrônico",
+   "fr": "Facturation électronique"
+  },
+  {
+   "es": "Integro la facturación con tu contabilidad y tu sistema de ventas.",
+   "en": "I integrate invoicing with your accounting and sales systems.",
+   "pt-br": "Integro o faturamento à sua contabilidade e ao seu sistema de vendas.",
+   "fr": "J’intègre la facturation à votre comptabilité et à votre système de vente."
+  },
+  {
+   "es": "Agentes de IA",
+   "en": "AI agents",
+   "pt-br": "Agentes de IA",
+   "fr": "Agents IA"
+  },
+  {
+   "es": "Asistentes que responden, agendan y dan seguimiento por vos.",
+   "en": "Assistants that answer, schedule, and follow up for you.",
+   "pt-br": "Assistentes que respondem, agendam e fazem o acompanhamento por você.",
+   "fr": "Des assistants qui répondent, prennent rendez-vous et assurent le suivi pour vous."
+  },
+  {
+   "es": "Proceso",
+   "en": "Process",
+   "pt-br": "Processo",
+   "fr": "Méthode"
+  },
+  {
+   "es": "Cómo trabajo",
+   "en": "How I work",
+   "pt-br": "Como eu trabalho",
+   "fr": "Comment je travaille"
+  },
+  {
+   "es": "<span class=\"siles-antetitulo\">Paso 1</span>",
+   "en": "<span class=\"siles-antetitulo\">Step 1</span>",
+   "pt-br": "<span class=\"siles-antetitulo\">Passo 1</span>",
+   "fr": "<span class=\"siles-antetitulo\">Étape 1</span>"
+  },
+  {
+   "es": "Investigo",
+   "en": "Research",
+   "pt-br": "Investigo",
+   "fr": "J’analyse"
+  },
+  {
+   "es": "Entiendo tu negocio y a tus clientes.",
+   "en": "I get to know your business and your customers.",
+   "pt-br": "Entendo seu negócio e seus clientes.",
+   "fr": "Je comprends votre entreprise et vos clients."
+  },
+  {
+   "es": "<span class=\"siles-antetitulo\">Paso 2</span>",
+   "en": "<span class=\"siles-antetitulo\">Step 2</span>",
+   "pt-br": "<span class=\"siles-antetitulo\">Passo 2</span>",
+   "fr": "<span class=\"siles-antetitulo\">Étape 2</span>"
+  },
+  {
+   "es": "Planeo",
+   "en": "Plan",
+   "pt-br": "Planejo",
+   "fr": "Je planifie"
+  },
+  {
+   "es": "Defino prioridades, costos y plazos.",
+   "en": "I set priorities, costs, and timelines.",
+   "pt-br": "Defino prioridades, custos e prazos.",
+   "fr": "Je définis les priorités, les coûts et les délais."
+  },
+  {
+   "es": "<span class=\"siles-antetitulo\">Paso 3</span>",
+   "en": "<span class=\"siles-antetitulo\">Step 3</span>",
+   "pt-br": "<span class=\"siles-antetitulo\">Passo 3</span>",
+   "fr": "<span class=\"siles-antetitulo\">Étape 3</span>"
+  },
+  {
+   "es": "Implemento",
+   "en": "Build",
+   "pt-br": "Implemento",
+   "fr": "Je mets en œuvre"
+  },
+  {
+   "es": "Construyo y conecto las herramientas.",
+   "en": "I build and connect the tools.",
+   "pt-br": "Construo e conecto as ferramentas.",
+   "fr": "Je construis et je connecte les outils."
+  },
+  {
+   "es": "<span class=\"siles-antetitulo\">Paso 4</span>",
+   "en": "<span class=\"siles-antetitulo\">Step 4</span>",
+   "pt-br": "<span class=\"siles-antetitulo\">Passo 4</span>",
+   "fr": "<span class=\"siles-antetitulo\">Étape 4</span>"
+  },
+  {
+   "es": "Mejoro",
+   "en": "Improve",
+   "pt-br": "Melhoro",
+   "fr": "J’améliore"
+  },
+  {
+   "es": "Mido resultados y ajusto.",
+   "en": "I measure results and fine-tune.",
+   "pt-br": "Meço os resultados e faço ajustes.",
+   "fr": "Je mesure les résultats et j’ajuste."
+  },
+  {
+   "es": "Casi todo se puede automatizar",
+   "en": "Almost anything can be automated",
+   "pt-br": "Quase tudo pode ser automatizado",
+   "fr": "Presque tout peut être automatisé"
+  },
+  {
+   "es": "Una llamada de 30 minutos basta para encontrar el primer proceso que podés automatizar.",
+   "en": "A 30-minute call is all it takes to find the first process you can automate.",
+   "pt-br": "Uma conversa de 30 minutos basta para encontrar o primeiro processo que você pode automatizar.",
+   "fr": "Un appel de 30 minutes suffit pour trouver le premier processus que vous pouvez automatiser."
+  }
+ ]
+}

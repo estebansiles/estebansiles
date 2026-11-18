@@ -1,0 +1,60 @@
+{
+ "pagina": {
+  "titulo": {
+   "es": "Theme Builder Layout",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  "slug": {
+   "es": "theme-builder-layout-6",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  "yoast_titulo": {
+   "es": "",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  "yoast_descripcion": {
+   "es": "",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  }
+ },
+ "textos": [
+  {
+   "es": "Otros proyectos",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<a class=\"siles-enlace\" href=\"/portafolio/\">Mirá todos los proyectos</a>",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Tu proyecto puede ser el siguiente",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Contame qué querés transformar y armamos el plan por fases.",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Pedí una cotización",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  }
+ ]
+}

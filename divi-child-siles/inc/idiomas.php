@@ -22,8 +22,23 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @return string
  */
 function siles_idioma() {
-	$idioma = apply_filters( 'wpml_current_language', null );
-	return $idioma ? (string) $idioma : 'es';
+	return siles_idioma_normal( (string) apply_filters( 'wpml_current_language', null ) );
+}
+
+/**
+ * Código de WPML a código del tema: en-us pasa a en, pt-pt o pt-br a pt-br, fr-ca a fr.
+ *
+ * @param string $codigo Código de WPML.
+ * @return string
+ */
+function siles_idioma_normal( $codigo ) {
+	$codigo = strtolower( $codigo );
+	foreach ( array( 'en', 'pt', 'fr', 'es' ) as $base ) {
+		if ( $codigo === $base || 0 === strpos( $codigo, $base . '-' ) ) {
+			return 'pt' === $base ? 'pt-br' : $base;
+		}
+	}
+	return '' === $codigo ? 'es' : $codigo;
 }
 
 /**
@@ -88,15 +103,22 @@ function siles_idiomas_activos() {
 		'fr'    => array( 'Français', 'FR' ),
 	);
 	$lista = array();
-	foreach ( $activos as $codigo => $idioma ) {
+	foreach ( $activos as $codigo_wpml => $idioma ) {
+		$codigo  = siles_idioma_normal( $codigo_wpml );
 		$lista[] = array(
-			'codigo' => $codigo,
-			'nombre' => isset( $nombres[ $codigo ] ) ? $nombres[ $codigo ][0] : $idioma['native_name'],
-			'corto'  => isset( $nombres[ $codigo ] ) ? $nombres[ $codigo ][1] : strtoupper( $codigo ),
-			'url'    => $idioma['url'],
-			'actual' => ! empty( $idioma['active'] ),
+			'codigo'   => $codigo,
+			'hreflang' => ! empty( $idioma['tag'] ) ? $idioma['tag'] : $codigo_wpml,
+			'nombre'   => isset( $nombres[ $codigo ] ) ? $nombres[ $codigo ][0] : $idioma['native_name'],
+			'corto'    => isset( $nombres[ $codigo ] ) ? $nombres[ $codigo ][1] : strtoupper( $codigo ),
+			'url'      => $idioma['url'],
+			'actual'   => ! empty( $idioma['active'] ),
 		);
 	}
+	// Siempre en el mismo orden: español, inglés, portugués, francés.
+	$orden = array_flip( array_keys( $nombres ) );
+	usort( $lista, function ( $a, $b ) use ( $orden ) {
+		return ( isset( $orden[ $a['codigo'] ] ) ? $orden[ $a['codigo'] ] : 9 ) - ( isset( $orden[ $b['codigo'] ] ) ? $orden[ $b['codigo'] ] : 9 );
+	} );
 	return $lista;
 }
 
@@ -120,7 +142,7 @@ function siles_selector_idiomas( $atts = array() ) {
 		$partes[] = sprintf(
 			'<li><a href="%1$s" hreflang="%2$s" lang="%2$s"%3$s%4$s>%5$s</a></li>',
 			esc_url( $idioma['url'] ),
-			esc_attr( 'pt-br' === $idioma['codigo'] ? 'pt-BR' : $idioma['codigo'] ),
+			esc_attr( $idioma['hreflang'] ),
 			$idioma['actual'] ? ' aria-current="true"' : '',
 			$movil ? '' : sprintf( ' title="%s"', esc_attr( $idioma['nombre'] ) ),
 			$movil ? esc_html( $texto ) : sprintf( '<span aria-hidden="true">%s</span><span class="screen-reader-text">%s</span>', esc_html( $texto ), esc_html( $idioma['nombre'] ) )

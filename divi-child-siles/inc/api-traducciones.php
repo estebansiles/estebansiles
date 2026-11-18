@@ -24,7 +24,26 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Tipos de contenido que se pueden traducir por esta API.
  */
 const SILES_API_TIPOS   = array( 'page', 'project', 'et_header_layout', 'et_body_layout', 'et_footer_layout' );
-const SILES_API_IDIOMAS = array( 'en', 'pt-br', 'fr' );
+const SILES_API_IDIOMAS = array( 'en', 'en-us', 'pt-br', 'fr' );
+
+/**
+ * Código de WPML para un idioma del tema: 'en' es 'en-us' si así está configurado en WPML.
+ *
+ * @param string $idioma Código pedido.
+ * @return string
+ */
+function siles_api_codigo( $idioma ) {
+	$activos = (array) apply_filters( 'wpml_active_languages', null, array( 'skip_missing' => 0 ) );
+	if ( isset( $activos[ $idioma ] ) ) {
+		return $idioma;
+	}
+	foreach ( array_keys( $activos ) as $codigo ) {
+		if ( function_exists( 'siles_idioma_normal' ) && siles_idioma_normal( $codigo ) === $idioma ) {
+			return $codigo;
+		}
+	}
+	return $idioma;
+}
 
 /**
  * ¿Es un diseño del Theme Builder?
@@ -188,7 +207,7 @@ function siles_api_traduccion( WP_REST_Request $req ) {
 		return new WP_Error( 'siles_sin_wpml', 'WPML no está activo.', array( 'status' => 409 ) );
 	}
 	$original = get_post( (int) $req['original'] );
-	$idioma   = (string) $req['idioma'];
+	$idioma   = siles_api_codigo( (string) $req['idioma'] );
 	$tipo     = $original->post_type;
 	$trid     = siles_api_trid( $original );
 	if ( ! $trid ) {
@@ -276,7 +295,7 @@ function siles_api_termino( WP_REST_Request $req ) {
 	if ( ! $original || is_wp_error( $original ) ) {
 		return new WP_Error( 'siles_sin_termino', 'No existe el término original.', array( 'status' => 404 ) );
 	}
-	$idioma = (string) $req['idioma'];
+	$idioma = siles_api_codigo( (string) $req['idioma'] );
 	$tipo   = 'tax_' . $tax;
 	$trid   = apply_filters( 'wpml_element_trid', null, $original->term_taxonomy_id, $tipo );
 	if ( ! $trid ) {
@@ -317,7 +336,7 @@ function siles_api_menu( WP_REST_Request $req ) {
 	if ( ! $original ) {
 		return new WP_Error( 'siles_sin_menu', 'No existe el menú original.', array( 'status' => 404 ) );
 	}
-	$idioma = (string) $req['idioma'];
+	$idioma = siles_api_codigo( (string) $req['idioma'] );
 	$tipo   = 'tax_nav_menu';
 	$trid   = apply_filters( 'wpml_element_trid', null, $original->term_taxonomy_id, $tipo );
 	if ( ! $trid ) {
@@ -411,6 +430,22 @@ function siles_api_rutas() {
 					$post = get_post( $res );
 					siles_api_vaciar_cache( $post );
 					return siles_api_ficha( $post );
+				},
+			),
+			array(
+				// Borra una traducción. Nunca borra un original en español.
+				'methods'             => 'DELETE',
+				'permission_callback' => function ( $req ) {
+					return siles_api_puede( (int) $req['id'] ) && current_user_can( 'delete_post', (int) $req['id'] );
+				},
+				'callback'            => function ( $req ) {
+					$post   = get_post( (int) $req['id'] );
+					$idioma = siles_api_idiomas_de( $post )['idioma'];
+					if ( ! $idioma || 'es' === $idioma ) {
+						return new WP_Error( 'siles_original', 'Solo se pueden borrar traducciones, no originales en español.', array( 'status' => 403 ) );
+					}
+					wp_delete_post( $post->ID, true );
+					return array( 'borrado' => $post->ID, 'idioma' => $idioma );
 				},
 			),
 		)

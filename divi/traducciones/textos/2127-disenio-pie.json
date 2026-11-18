@@ -1,0 +1,120 @@
+{
+ "pagina": {
+  "titulo": {
+   "es": "Todas Categoría páginas",
+   "en": "Siles footer (EN)",
+   "pt-br": "Rodapé Siles (PT)",
+   "fr": "Pied de page Siles (FR)"
+  },
+  "slug": {
+   "es": "theme-builder-layout",
+   "en": "theme-builder-layout",
+   "pt-br": "theme-builder-layout",
+   "fr": "theme-builder-layout"
+  },
+  "yoast_titulo": {
+   "es": "",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  "yoast_descripcion": {
+   "es": "",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  }
+ },
+ "textos": [
+  {
+   "es": "Siles Comunicación",
+   "en": "Siles Comunicación",
+   "pt-br": "Siles Comunicación",
+   "fr": "Siles Comunicación"
+  },
+  {
+   "es": "Todo se puede transformar digitalmente, no hay excusas.",
+   "en": "Anything can be transformed digitally. No excuses.",
+   "pt-br": "Tudo pode ser transformado digitalmente. Sem desculpas.",
+   "fr": "Tout peut se transformer grâce au numérique. Aucune excuse."
+  },
+  {
+   "es": "Contacto",
+   "en": "Contact",
+   "pt-br": "Contato",
+   "fr": "Contact"
+  },
+  {
+   "es": "<a href=\"mailto:contact@siles.cr\">contact@siles.cr</a>",
+   "en": "<a href=\"mailto:contact@siles.cr\">contact@siles.cr</a>",
+   "pt-br": "<a href=\"mailto:contact@siles.cr\">contact@siles.cr</a>",
+   "fr": "<a href=\"mailto:contact@siles.cr\">contact@siles.cr</a>"
+  },
+  {
+   "es": "<a href=\"https://wa.me/50688659046\" target=\"_blank\" rel=\"noopener\">WhatsApp 8865 9046</a>",
+   "en": "<a href=\"https://wa.me/50688659046\" target=\"_blank\" rel=\"noopener\">WhatsApp +506 8865 9046</a>",
+   "pt-br": "<a href=\"https://wa.me/50688659046\" target=\"_blank\" rel=\"noopener\">WhatsApp +506 8865 9046</a>",
+   "fr": "<a href=\"https://wa.me/50688659046\" target=\"_blank\" rel=\"noopener\">WhatsApp +506 8865 9046</a>"
+  },
+  {
+   "es": "San José, Costa Rica",
+   "en": "San José, Costa Rica",
+   "pt-br": "San José, Costa Rica",
+   "fr": "San José, Costa Rica"
+  },
+  {
+   "es": "Sitio",
+   "en": "Site",
+   "pt-br": "Site",
+   "fr": "Site"
+  },
+  {
+   "es": "<a href=\"/esteban/\">Sobre mí</a>",
+   "en": "<a href=\"/esteban/\">About me</a>",
+   "pt-br": "<a href=\"/esteban/\">Sobre mim</a>",
+   "fr": "<a href=\"/esteban/\">À propos</a>"
+  },
+  {
+   "es": "<a href=\"/servicios/\">Servicios</a>",
+   "en": "<a href=\"/servicios/\">Services</a>",
+   "pt-br": "<a href=\"/servicios/\">Serviços</a>",
+   "fr": "<a href=\"/servicios/\">Services</a>"
+  },
+  {
+   "es": "<a href=\"/portafolio/\">Proyectos</a>",
+   "en": "<a href=\"/portafolio/\">Projects</a>",
+   "pt-br": "<a href=\"/portafolio/\">Projetos</a>",
+   "fr": "<a href=\"/portafolio/\">Projets</a>"
+  },
+  {
+   "es": "<a href=\"/blog/\">Blog</a>",
+   "en": "<a href=\"/blog/\">Blog (in Spanish)</a>",
+   "pt-br": "<a href=\"/blog/\">Blog (em espanhol)</a>",
+   "fr": "<a href=\"/blog/\">Blog (en espagnol)</a>"
+  },
+  {
+   "es": "<a href=\"/cotizacion/\">Cotización</a>",
+   "en": "<a href=\"/cotizacion/\">Get a quote</a>",
+   "pt-br": "<a href=\"/cotizacion/\">Orçamento</a>",
+   "fr": "<a href=\"/cotizacion/\">Devis</a>"
+  },
+  {
+   "es": "<a href=\"/contacto/\">Contacto</a>",
+   "en": "<a href=\"/contacto/\">Contact</a>",
+   "pt-br": "<a href=\"/contacto/\">Contato</a>",
+   "fr": "<a href=\"/contacto/\">Contact</a>"
+  },
+  {
+   "es": "© 2026 Siles Comunicación",
+   "en": "© 2026 Siles Comunicación",
+   "pt-br": "© 2026 Siles Comunicación",
+   "fr": "© 2026 Siles Comunicación"
+  },
+  {
+   "es": "<a href=\"/politica-de-privacidad/\">Privacidad</a><a href=\"/terminos-y-condiciones/\">Términos y condiciones</a>",
+   "en": "<a href=\"/politica-de-privacidad/\">Privacy</a><a href=\"/terminos-y-condiciones/\">Terms and conditions</a>",
+   "pt-br": "<a href=\"/politica-de-privacidad/\">Privacidade</a><a href=\"/terminos-y-condiciones/\">Termos e condições</a>",
+   "fr": "<a href=\"/politica-de-privacidad/\">Confidentialité</a><a href=\"/terminos-y-condiciones/\">Conditions générales</a>"
+  }
+ ]
+}

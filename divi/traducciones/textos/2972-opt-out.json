@@ -1,0 +1,174 @@
+{
+ "pagina": {
+  "titulo": {
+   "es": "Tus datos, tus derechos",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  "slug": {
+   "es": "opt-out",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  "yoast_titulo": {
+   "es": "",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  "yoast_descripcion": {
+   "es": "Con el Opt-Out Pedí acceso, corrección, borrado o exclusión de tus datos personales, según la Política de privacidad de siles.cr.",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  }
+ },
+ "textos": [
+  {
+   "es": "Privacidad",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Tus datos, tus derechos",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Usá este formulario para pedir acceso, corrección, borrado o exclusión de tus datos personales, según nuestra <a href=\"/politica-de-privacidad/\">Política de privacidad</a>.",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Lo que podés pedir",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<strong>Acceso y portabilidad:</strong> Una copia de los datos personales que tenemos sobre vos.",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<strong>Rectificación:</strong> Corregir información inexacta o incompleta.",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<strong>Borrado:</strong> Eliminar tus datos de nuestras bases de datos.",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<strong>Oposición o exclusión:</strong> Oponerte a ciertos usos de tus datos o al rastreo de píxeles de terceros.",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Cookies y píxeles",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Para dejar de ser rastreado por Google Analytics y los píxeles de redes sociales en este navegador, cambiá tus preferencias de cookies. Si además querés que borremos datos asociados a vos, enviá también el formulario.",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<a class=\"siles-boton siles-boton--secundario-html siles-gestionar-cookies\" href=\"/politica-de-privacidad/\" onclick=\"if (typeof cmplz_set_banner_status === 'function') { cmplz_set_banner_status('show'); return false; }\">Gestionar cookies</a>",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "También podés escribirnos a <a href=\"mailto:contact@siles.cr\">contact@siles.cr</a>. Para proteger tus datos, podemos pedirte que confirmes tu identidad antes de responder.",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Enviar solicitud",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Recibimos tu solicitud. Te responderemos en los plazos que establece la legislación aplicable a tu país de residencia.",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Nombre",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Correo con el que nos contactaste",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Tipo de solicitud",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Acceso y portabilidad: quiero una copia de mis datos",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Rectificación: quiero corregir mis datos",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Borrado: quiero que eliminen mis datos",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Oposición o exclusión (opt-out): no quiero que se usen mis datos ni que se me rastree",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Detalle de tu solicitud (opcional)",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Confirmación",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Confirmo que la solicitud es sobre mis propios datos o que tengo autorización para hacerla.",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  }
+ ]
+}

@@ -1,0 +1,84 @@
+{
+ "pagina": {
+  "titulo": {
+   "es": "Cotización",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  "slug": {
+   "es": "cotizacion",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  "yoast_titulo": {
+   "es": "Cotización de proyectos de transformación digital %%sep%% %%sitename%%",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  "yoast_descripcion": {
+   "es": "Elegí los servicios que necesitás y recibí tu cotización en colones, con el IVA desglosado, después de una llamada de 30 minutos.",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  }
+ },
+ "textos": [
+  {
+   "es": "Cotización",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Condiciones",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Claro desde el inicio",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Factura electrónica",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Cada pago lleva su comprobante, con el IVA del 13 % en fila aparte.",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Pago por fases",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "La mitad al iniciar y la otra mitad contra entrega, por transferencia o SINPE Móvil.",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Firma digital",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Aprobás la propuesta con firma digital certificada, sin imprimir nada.",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  }
+ ]
+}

@@ -1,0 +1,726 @@
+{
+ "pagina": {
+  "titulo": {
+   "es": "Sobre mí",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  "slug": {
+   "es": "esteban",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  "yoast_titulo": {
+   "es": "Esteban Siles %%sep%% Comunicación Estratégica y Transformación Digital",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  "yoast_descripcion": {
+   "es": "Más de 16 años ayudando a organizaciones con comunicación estratégica, transformación digital e IA. Conocé mi trayectoria, método y trabajo.",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  }
+ },
+ "textos": [
+  {
+   "es": "Sobre mí",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<span class=\"siles-linea\"><span>Hola,</span></span><span class=\"siles-linea\"><span>soy <em>Esteban</em>.</span></span>",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Me dedico a <span class=\"siles-rotador\"><span>la comunicación estratégica</span><span>la transformación digital</span><span>la automatización</span><span>la IA generativa</span></span>",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Consultor en comunicación estratégica. Apoyo a equipos a gestionar procesos de transformación digital centrada en el usuario.",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Agendá una llamada",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Mirá mi trabajo",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Seguí bajando",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Esteban Siles frente a un tablero de notas en una sesión de trabajo",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<span class=\"siles-sm-chip siles-sm-chip--1 siles-anima\"><strong data-contar=\"16\" data-prefijo=\"+\">+16</strong>años de experiencia</span><span class=\"siles-sm-chip siles-sm-chip--2 siles-anima\"><strong data-contar=\"44\">44</strong>proyectos</span>",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Quién soy",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Me dedico a la comunicación estratégica",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Por más de quince años me he dedicado a la comunicación estratégica. He trabajado marketing y relaciones públicas apoyado en medios digitales para organizaciones como <a href=\"http://www.prosic.ucr.ac.cr/\" target=\"_blank\" rel=\"noopener\">PROSIC</a>, <a href=\"https://ciep.ucr.ac.cr/\" target=\"_blank\" rel=\"noopener\">CIEP</a>, <a href=\"https://www.techo.org/costarica/techo/\" target=\"_blank\" rel=\"noopener\">TECHO</a>, <a href=\"https://www.facebook.com/viacostarricense/\" target=\"_blank\" rel=\"noopener\">Entebbe</a>, <a href=\"https://www.unikomarcas.com/\" target=\"_blank\" rel=\"noopener\">Uniko Branding</a>, partidos políticos y decenas de empresas y organizaciones públicas y privadas.",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Soy miembro de <a href=\"http://www.alice-comunicacionpolitica.com/\" target=\"_blank\" rel=\"noopener\">ALICE</a>, <a href=\"https://siemprelistos.com/\" target=\"_blank\" rel=\"noopener\">Guías y Scouts</a> y socio de la <a href=\"https://www.torosdelnorte.com/\" target=\"_blank\" rel=\"noopener\">AD San Carlos</a>, el equipo de mis amores, del cual fui Gerente Administrativo entre 2022 y 2023.",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Actualmente lidero un talentoso equipo de marketing digital, desarrollo web y aplicación de IA generativa, y tengo mis servicios a tu disposición.",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<strong data-contar=\"16\" data-prefijo=\"+\">+16</strong><span>Años de experiencia</span>",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<strong data-contar=\"16\" data-prefijo=\"\">16</strong><span>Proyectos independientes</span>",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<strong data-contar=\"28\" data-prefijo=\"\">28</strong><span>Proyectos con agencias</span>",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Lo que más hago",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<span>Transformación digital</span><span><b data-contar=\"90\">90</b> %</span>",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Transformación digital: 90 %",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<span>Design thinking</span><span><b data-contar=\"100\">100</b> %</span>",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Design thinking: 100 %",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<span>Diseño UX</span><span><b data-contar=\"85\">85</b> %</span>",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Diseño UX: 85 %",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<span>SEO y SEM</span><span><b data-contar=\"75\">75</b> %</span>",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "SEO y SEM: 75 %",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<span>Marketing político</span><span><b data-contar=\"100\">100</b> %</span>",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Marketing político: 100 %",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<span>Redes sociales</span><span><b data-contar=\"95\">95</b> %</span>",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Redes sociales: 95 %",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Lo que creo",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<span class=\"p\" style=\"--i: 0\">Todo</span> <span class=\"p\" style=\"--i: 1\">se</span> <span class=\"p\" style=\"--i: 2\">puede</span> <span class=\"p\" style=\"--i: 3\">transformar</span> <span class=\"p\" style=\"--i: 4\">digitalmente,</span> <span class=\"p p--acento\" style=\"--i: 5\">no</span> <span class=\"p p--acento\" style=\"--i: 6\">hay</span> <span class=\"p p--acento\" style=\"--i: 7\">excusas.</span>",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<span class=\"p\" style=\"--i: 0\">Casi</span> <span class=\"p\" style=\"--i: 1\">todo</span> <span class=\"p\" style=\"--i: 2\">se</span> <span class=\"p\" style=\"--i: 3\">puede</span> <span class=\"p\" style=\"--i: 4\">automatizar,</span> <span class=\"p p--acento\" style=\"--i: 5\">no</span> <span class=\"p p--acento\" style=\"--i: 6\">hay</span> <span class=\"p p--acento\" style=\"--i: 7\">motivo</span> <span class=\"p p--acento\" style=\"--i: 8\">para</span> <span class=\"p p--acento\" style=\"--i: 9\">no</span> <span class=\"p p--acento\" style=\"--i: 10\">intentarlo.</span>",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Visión y método",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Mi visión",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Las personas y las organizaciones debemos aprovechar las oportunidades que nos ofrecen las tecnologías disruptivas para hacer que nuestro paso por este planeta sea más eficiente, sostenible y significativo.",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Mi desarrollo profesional ha coincidido con el auge de las herramientas de comunicación digital, lo cual me ha permitido abrir camino en disciplinas que han ayudado a decenas de organizaciones a digitalizar y automatizar procesos de forma simple, efectiva y enfocada en la gente. Actualmente estoy brindando servicios de integración de herramientas de inteligencia artificial para empresas.",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Investigar y definir",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Hay que encontrar los <em>insights</em>. Desde el producto hasta el público meta, pasando por la competencia y el mercado.",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Planear y diseñar",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Poner todo en papel para luego echar a volar la imaginación. Todo ocurre dos veces: cuando lo pensamos y cuando lo hacemos.",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Probar, probar, probar",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "La clave de una buena ejecución está en probar antes de lanzar, da igual si estamos hablando de un sitio web o una campaña de marketing.",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Desarrollar y mejorar",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Una vez que terminamos todo, hay que volverlo a hacer. El buen producto se mantiene en el tiempo porque se adapta a los cambios.",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Trayectoria",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "De dónde vengo",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<span class=\"anio\">2023 – actualidad</span><span class=\"cargo\">Líder de Unidad de Análisis de Datos de Marketing</span><span class=\"lugar\">Coopelesca.</span>",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<span class=\"anio\">2022 – 2023</span><span class=\"cargo\">Gerente Administrativo</span><span class=\"lugar\">Asociación Deportiva San Carlos.</span>",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<span class=\"anio\">2017 – 2022</span><span class=\"cargo\">Director de Proyectos</span><span class=\"lugar\">Uniko Branding Agency.</span>",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<span class=\"anio\">2012 – 2017</span><span class=\"cargo\">Asesor en Comunicación Política</span><span class=\"lugar\">Fundación Costa Rica para el Desarrollo Sostenible.</span>",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<span class=\"anio\">2011 – 2012</span><span class=\"cargo\">Asistente de Investigación</span><span class=\"lugar\">Programa de la Sociedad de la Información y el Conocimiento, Universidad de Costa Rica.</span>",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<span class=\"anio\">2010 – 2011</span><span class=\"cargo\">Asistente de Investigación</span><span class=\"lugar\">Centro de Investigación en Estudios Políticos, Universidad de Costa Rica.</span>",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<span class=\"anio\">2009 – 2010</span><span class=\"cargo\">Community Manager y editor de contenidos</span><span class=\"lugar\">Un Techo para mi país.</span>",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Educación",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<span>2012</span><span>B.A. Ciencias Políticas, Universidad de Costa Rica.</span>",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<span>DNF</span><span>Comercio Exterior, Universidad de Costa Rica.</span>",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Certificaciones",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<span>2025</span><span>Transformación Digital con IA Generativa, Instituto Tecnológico de Costa Rica.</span>",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<span>2022</span><span>Gestión Ágil de Proyectos con el marco de trabajo SCRUM, TEC.</span>",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<span>2022</span><span>BluePrint Media Buyer, Meta.</span>",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<span>2022</span><span>English Certificate 71/100 (C2 Proficient), <a href=\"https://www.efset.org/cert/tuYc1z\" target=\"_blank\" rel=\"noopener\">EF SET</a>.</span>",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<span>2021</span><span>SEO Fundamentals, LinkedIn Learning.</span>",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<span>2020</span><span>Design Thinking: Innovación Centrada en el Usuario, INCAE.</span>",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<span>2012</span><span>Certificado IHMC, Cmap Tools.</span>",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Otras cosas",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<span>2026 – actualidad</span><span>Secretario del Tribunal Electoral, COOCIQUE R.L.</span>",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<span>2024 – actualidad</span><span>Delegado de la Asamblea General, COOCIQUE R.L.</span>",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<span>2024</span><span>Postulante a Dirigente Scout.</span>",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<span>2012</span><span>II Congreso Internacional de Comunicación Política y Estrategias de Campaña.</span>",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<span>2007 – 2010</span><span>Voluntario, Un Techo.</span>",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<span>2007</span><span>Premio Mejor Negociador, MOEA.</span>",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<span>2002</span><span>Insignia Guaria Morada, Guías y Scouts de Costa Rica.</span>",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<span>2001</span><span>Seminario Trabajo en Equipo y Liderazgo, CENECOOP R.L.</span>",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Portafolio",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Un poco de mi trabajo",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<a class=\"siles-enlace\" href=\"/portafolio/\">Mirá todos los proyectos</a>",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Proyecto para Global Chemical Group",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<span>Global Chemical Group</span></a><a class=\"siles-sm-galeria__item\" href=\"/portafolio/tienda-en-linea-para-los-toros-del-norte/\">",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Proyecto para Toros del Norte",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<span>Toros del Norte</span></a><a class=\"siles-sm-galeria__item\" href=\"/portafolio/sitio-web-para-doctor/\">",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Proyecto para Dr. Gabriel Vargas Kelsh",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<span>Dr. Gabriel Vargas Kelsh</span></a>",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Proyecto para Grupo Avanpro",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<span>Grupo Avanpro</span>",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Proyecto para EarthCrop",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<span>EarthCrop</span></a>",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Proyecto para Grupo HM",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<span>Grupo HM</span>",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Proyecto para NST Freight",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<span>NST Freight</span>",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Proyecto para Probio Fruits",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<span>Probio Fruits</span>",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<span>Global Chemical Group</span></a><a class=\"siles-sm-galeria__item\" href=\"/portafolio/tienda-en-linea-para-los-toros-del-norte/\" tabindex=\"-1\">",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<span>Toros del Norte</span></a><a class=\"siles-sm-galeria__item\" href=\"/portafolio/sitio-web-para-doctor/\" tabindex=\"-1\">",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Testimonios",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Lo que dicen de mi trabajo",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "1 de 3",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "José María Figueres Olsen",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Esteban hizo un aporte muy valioso para la ejecución de las estrategias de comunicación digital en proyectos como Vía Costarricense, el Congreso Nacional de Liberacionista 2015, y formó parte del Equipo de Coordinación Nacional de las Elecciones Municipales 2016 y la Convención Liberacionista 2017.",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<strong>José María Figueres Olsen</strong>Expresidente de Costa Rica (1994 – 1998), PLN y Vía Costarricense",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "2 de 3",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Sergio Chávez Acevedo",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Esteban y el equipo de Uniko jugaron un papel fundamental en la modernización y transformación digital de la Asociación Deportiva San Carlos. Desde el Estadio hasta las formas de comunicación interna y externa se han convertido en un ejemplo para el ámbito costarricense.",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<strong>Sergio Chávez Acevedo</strong>Presidente (2015 – 2023), Asociación Deportiva San Carlos",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "3 de 3",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Dr. Gabriel Vargas Kelsh",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Esteban diseñó una web enfocada en la rama médica de la oftalmología. Desde el primer contacto materializó todas mis ideas, y las fue mejorando hasta entregar el producto que yo buscaba. Es un profesional conocedor, entregado y apasionado por su trabajo. Uno le entrega una bola de plastilina, y él la convierte en una escultura.",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<strong>Dr. Gabriel Vargas Kelsh</strong>Oftalmólogo costarricense",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Testimonio anterior",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Testimonio 1",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Testimonio 2",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Testimonio 3",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Testimonio siguiente",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Conversemos",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Contame qué querés transformar y te propongo un primer paso en una llamada de 30 minutos.",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  }
+ ]
+}

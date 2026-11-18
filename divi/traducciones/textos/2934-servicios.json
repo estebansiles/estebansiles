@@ -1,0 +1,258 @@
+{
+ "pagina": {
+  "titulo": {
+   "es": "Servicios",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  "slug": {
+   "es": "servicios",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  "yoast_titulo": {
+   "es": "Servicios de transformación digital y automatización %%sep%% %%sitename%%",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  "yoast_descripcion": {
+   "es": "Automatización, marketing digital, experiencia de usuario y agentes de IA. Trabajo por fases, con entregables que ya podés usar.",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  }
+ },
+ "textos": [
+  {
+   "es": "Servicios",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Elegí por dónde empezar. Todo se puede combinar.",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Automatización",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Reviso tus tareas repetitivas y las convierto en flujos que corren solos: aprobaciones, recordatorios, reportes y conciliaciones.",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Mapa de procesos y priorización",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Integración entre sistemas existentes",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Capacitación para tu equipo",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Plazo",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<span class=\"siles-servicio__plazo\">4 a 8 semanas</span>",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Disponibilidad",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<span><span class=\"siles-estado siles-estado--exito\">Abierta</span></span><a class=\"siles-boton siles-boton--flecha siles-boton--bloque\" href=\"/cotizacion/\">Pedí una cotización</a></aside>",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Marketing digital",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Defino con vos a quién le hablás, qué le decís y cómo medir si funciona. Sin campañas que nadie revisa.",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Estrategia y calendario de contenido",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Pauta en redes y buscadores",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Tablero de resultados mensual",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<span class=\"siles-servicio__plazo\">Mensual</span>",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Experiencia de usuario",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Investigo cómo usan tus clientes el sitio o la aplicación y rediseño lo que les estorba.",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Entrevistas y pruebas con usuarios",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Prototipos navegables",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Guía de diseño para desarrollo",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<span class=\"siles-servicio__plazo\">6 a 10 semanas</span>",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Método",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Por fases, sin saltos al vacío",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Cada fase entrega algo que ya podés usar, y decidís si seguimos con la siguiente.",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<span class=\"siles-paso__marca\">1</span><span class=\"siles-antetitulo\">Fase 1</span>",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Diagnóstico",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Reviso procesos y datos, y priorizo con vos.",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<span class=\"siles-paso__marca\">2</span><span class=\"siles-antetitulo\">Fase 2</span>",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Diseño",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Defino la solución, los costos y los plazos.",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<span class=\"siles-paso__marca\">3</span><span class=\"siles-antetitulo\">Fase 3</span>",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Implementación",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Construyo, conecto y capacito a tu equipo.",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "¿No sabés por dónde empezar?",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "Contame qué hacés hoy y te digo cuál es el primer paso.",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  },
+  {
+   "es": "<a class=\"siles-enlace\" href=\"/conversemos/\">Hablemos</a>",
+   "en": "",
+   "pt-br": "",
+   "fr": ""
+  }
+ ]
+}

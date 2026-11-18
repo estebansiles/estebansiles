@@ -85,7 +85,8 @@ def encabezado():
              columna("1_2", sc("et_pb_menu", "", menu_id=MENU_PRINCIPAL, menu_style="left_aligned",
                                  submenu_direction="downwards", fullwidth_menu="off",
                                  background_color="rgba(0,0,0,0)", active_link_color="#1E2020")),
-             columna("1_4", boton("Agendá una llamada", "/conversemos/", clase="siles-boton--contorno siles-boton--sm")),
+             columna("1_4", sc("et_pb_code", "[siles_idiomas]", module_class="siles-idiomas-modulo"),
+                     boton("Agendá una llamada", "/conversemos/", clase="siles-boton--contorno siles-boton--sm")),
              clase="siles-cabecera"),
         custom_padding="0px||0px||false|false", sticky_position="top", admin_label="Encabezado Siles",
     )
