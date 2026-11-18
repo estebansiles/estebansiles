@@ -1,30 +1,98 @@
 {
  "_nota": "Textos del banner de Complianz (contexto 'complianz'). Antes de cargarlos, el idioma de origen de ese contexto debe pasar a 'es' (siles/v1/cadenas-origen).",
- "357": ["Your privacy matters.", "Sua privacidade importa.", "Votre vie privée compte."],
- "358": ["Your privacy matters.", "Sua privacidade importa.", "Votre vie privée compte."],
- "359": ["Deny", "Recusar", "Refuser"],
- "360": ["Save preferences", "Salvar preferências", "Enregistrer les préférences"],
- "361": ["View preferences", "Ver preferências", "Voir les préférences"],
- "362": ["Functional", "Funcionais", "Fonctionnels"],
- "363": ["Marketing", "Marketing", "Marketing"],
- "364": ["Statistics", "Estatísticas", "Statistiques"],
- "365": ["Preferences", "Preferências", "Préférences"],
- "366": ["Accept", "Aceitar", "Accepter"],
- "367": ["To provide the best experiences, we use technologies like cookies to store and/or access device information. Consenting to these technologies will allow us to process data such as browsing behavior or unique IDs on this site. Not consenting or withdrawing consent may adversely affect certain features and functions.",
-         "Para oferecer as melhores experiências, usamos tecnologias como cookies para armazenar e/ou acessar informações do dispositivo. O consentimento para essas tecnologias nos permitirá processar dados como comportamento de navegação ou identificadores únicos neste site. Não consentir ou retirar o consentimento pode afetar negativamente certos recursos e funções.",
-         "Pour offrir les meilleures expériences, nous utilisons des technologies telles que les cookies pour stocker et/ou accéder aux informations des appareils. Le fait de consentir à ces technologies nous permettra de traiter des données telles que le comportement de navigation ou les identifiants uniques sur ce site. Le fait de ne pas consentir ou de retirer son consentement peut avoir un effet négatif sur certaines caractéristiques et fonctions."],
- "368": ["Got it.", "Entendi.", "D’accord."],
- "369": ["<p>To provide the best experiences, we use technologies like cookies to better understand your interests and the purpose of your visit. Consenting to these technologies will allow us to process data such as browsing behavior. These tools are important for offering you personalized services.</p>",
-         "<p>Para oferecer as melhores experiências, usamos tecnologias como cookies para entender melhor seus interesses e o propósito da sua visita. O consentimento para essas tecnologias nos permitirá processar dados como o comportamento de navegação. Essas ferramentas são importantes para oferecer serviços personalizados.</p>",
-         "<p>Pour offrir les meilleures expériences, nous utilisons des technologies telles que les cookies afin de mieux comprendre vos centres d’intérêt et le but de votre visite. Le fait de consentir à ces technologies nous permettra de traiter des données telles que le comportement de navigation. Ces outils sont importants pour vous proposer des services personnalisés.</p>"],
- "370": ["The technical storage or access is strictly necessary for the legitimate purpose of enabling the use of a specific service explicitly requested by the subscriber or user, or for the sole purpose of carrying out the transmission of a communication over an electronic communications network.",
-         "O armazenamento ou acesso técnico é estritamente necessário para a finalidade legítima de permitir o uso de um serviço específico explicitamente solicitado pelo assinante ou usuário, ou com a única finalidade de realizar a transmissão de uma comunicação por uma rede de comunicações eletrônicas.",
-         "Le stockage ou l’accès technique est strictement nécessaire dans la finalité d’intérêt légitime de permettre l’utilisation d’un service spécifique explicitement demandé par l’abonné ou l’utilisateur, ou dans le seul but d’effectuer la transmission d’une communication sur un réseau de communications électroniques."],
- "371": ["The technical storage or access that is used exclusively for statistical purposes.", "O armazenamento ou acesso técnico que é usado exclusivamente para fins estatísticos.", "Le stockage ou l’accès technique qui est utilisé exclusivement à des fins statistiques."],
- "372": ["The technical storage or access that is used exclusively for anonymous statistical purposes. Without a subpoena, voluntary compliance on the part of your Internet Service Provider, or additional records from a third party, information stored or retrieved for this purpose alone cannot usually be used to identify you.",
-         "O armazenamento ou acesso técnico que é usado exclusivamente para fins estatísticos anônimos. Sem uma intimação, o cumprimento voluntário por parte do seu provedor de internet ou registros adicionais de terceiros, as informações armazenadas ou recuperadas apenas para essa finalidade geralmente não podem ser usadas para identificar você.",
-         "Le stockage ou l’accès technique qui est utilisé exclusivement dans des finalités statistiques anonymes. En l’absence d’une assignation à comparaître, d’une conformité volontaire de la part de votre fournisseur d’accès à internet ou d’enregistrements supplémentaires provenant d’une tierce partie, les informations stockées ou extraites à cette seule fin ne peuvent généralement pas être utilisées pour vous identifier."],
- "373": ["The technical storage or access is necessary for the legitimate purpose of storing preferences that are not requested by the subscriber or user.", "O armazenamento ou acesso técnico é necessário para a finalidade legítima de armazenar preferências não solicitadas pelo assinante ou usuário.", "Le stockage ou l’accès technique est nécessaire dans la finalité d’intérêt légitime de stocker des préférences qui ne sont pas demandées par l’abonné ou la personne utilisant le service."],
- "374": ["The technical storage or access is required to create user profiles to send advertising, or to track the user on a website or across several websites for similar marketing purposes.", "O armazenamento ou acesso técnico é necessário para criar perfis de usuário para enviar publicidade ou para rastrear o usuário em um site ou em vários sites com finalidades de marketing semelhantes.", "Le stockage ou l’accès technique est nécessaire pour créer des profils d’utilisateurs afin d’envoyer des publicités, ou pour suivre l’utilisateur sur un site web ou sur plusieurs sites web ayant des finalités marketing similaires."],
- "375": ["Click to accept marketing cookies and enable this content", "Clique para aceitar cookies de marketing e ativar este conteúdo", "Cliquez pour accepter les cookies marketing et activer ce contenu"]
+ "357": [
+  "Your privacy matters.",
+  "Sua privacidade importa.",
+  "Votre vie privée compte."
+ ],
+ "358": [
+  "Your privacy matters.",
+  "Sua privacidade importa.",
+  "Votre vie privée compte."
+ ],
+ "359": [
+  "Reject",
+  "Rejeitar",
+  "Refuser"
+ ],
+ "360": [
+  "Save preferences",
+  "Salvar preferências",
+  "Enregistrer les préférences"
+ ],
+ "361": [
+  "View preferences",
+  "Ver preferências",
+  "Voir les préférences"
+ ],
+ "362": [
+  "Functional",
+  "Funcionais",
+  "Fonctionnels"
+ ],
+ "363": [
+  "Marketing",
+  "Marketing",
+  "Marketing"
+ ],
+ "364": [
+  "Statistics",
+  "Estatísticas",
+  "Statistiques"
+ ],
+ "365": [
+  "Preferences",
+  "Preferências",
+  "Préférences"
+ ],
+ "366": [
+  "Accept",
+  "Aceitar",
+  "Accepter"
+ ],
+ "367": [
+  "<p>We use cookies and similar technologies to store or access information on your device and give you the best experience. If you accept, we can process data such as your browsing or unique identifiers on this site. If you don’t accept or you withdraw your consent, some features may not be available.</p>",
+  "<p>Usamos cookies e tecnologias semelhantes para armazenar ou consultar informações no seu dispositivo e oferecer a melhor experiência. Se você aceitar, podemos processar dados como sua navegação ou identificadores únicos neste site. Se não aceitar ou retirar seu consentimento, alguns recursos podem não ficar disponíveis.</p>",
+  "<p>Nous utilisons des cookies et des technologies similaires pour stocker des informations sur votre appareil ou y accéder, afin de vous offrir la meilleure expérience. Si vous acceptez, nous pouvons traiter des données comme votre navigation ou des identifiants uniques sur ce site. Si vous refusez ou retirez votre consentement, certaines fonctionnalités pourraient ne pas être disponibles.</p>"
+ ],
+ "368": [
+  "Got it.",
+  "Entendi.",
+  "D’accord."
+ ],
+ "369": [
+  "<p>To provide the best experiences, we use technologies like cookies to better understand your interests and the purpose of your visit. Consenting to these technologies will allow us to process data such as browsing behavior. These tools are important for offering you personalized services.</p>",
+  "<p>Para oferecer as melhores experiências, usamos tecnologias como cookies para entender melhor seus interesses e o propósito da sua visita. O consentimento para essas tecnologias nos permitirá processar dados como o comportamento de navegação. Essas ferramentas são importantes para oferecer serviços personalizados.</p>",
+  "<p>Pour offrir les meilleures expériences, nous utilisons des technologies telles que les cookies afin de mieux comprendre vos centres d’intérêt et le but de votre visite. Le fait de consentir à ces technologies nous permettra de traiter des données telles que le comportement de navigation. Ces outils sont importants pour vous proposer des services personnalisés.</p>"
+ ],
+ "370": [
+  "The technical storage or access is strictly necessary for the legitimate purpose of enabling a service you explicitly requested, or for the sole purpose of transmitting a communication over an electronic communications network.",
+  "O armazenamento ou acesso técnico é estritamente necessário para a finalidade legítima de permitir o uso de um serviço que você solicitou expressamente, ou com a única finalidade de transmitir uma comunicação por uma rede de comunicações eletrônicas.",
+  "Le stockage ou l’accès technique est strictement nécessaire dans la finalité légitime de permettre l’utilisation d’un service que vous avez expressément demandé, ou dans le seul but de transmettre une communication sur un réseau de communications électroniques."
+ ],
+ "371": [
+  "The technical storage or access used only for statistical purposes.",
+  "O armazenamento ou acesso técnico usado apenas para fins estatísticos.",
+  "Le stockage ou l’accès technique utilisé uniquement à des fins statistiques."
+ ],
+ "372": [
+  "The technical storage or access that is used exclusively for anonymous statistical purposes. Without a subpoena, voluntary compliance on the part of your Internet Service Provider, or additional records from a third party, information stored or retrieved for this purpose alone cannot usually be used to identify you.",
+  "O armazenamento ou acesso técnico que é usado exclusivamente para fins estatísticos anônimos. Sem uma intimação, o cumprimento voluntário por parte do seu provedor de internet ou registros adicionais de terceiros, as informações armazenadas ou recuperadas apenas para essa finalidade geralmente não podem ser usadas para identificar você.",
+  "Le stockage ou l’accès technique qui est utilisé exclusivement dans des finalités statistiques anonymes. En l’absence d’une assignation à comparaître, d’une conformité volontaire de la part de votre fournisseur d’accès à internet ou d’enregistrements supplémentaires provenant d’une tierce partie, les informations stockées ou extraites à cette seule fin ne peuvent généralement pas être utilisées pour vous identifier."
+ ],
+ "373": [
+  "The technical storage or access is necessary for the legitimate purpose of storing preferences you did not explicitly request.",
+  "O armazenamento ou acesso técnico é necessário para a finalidade legítima de armazenar preferências que você não solicitou expressamente.",
+  "Le stockage ou l’accès technique est nécessaire dans la finalité légitime de stocker des préférences que vous n’avez pas expressément demandées."
+ ],
+ "374": [
+  "The technical storage or access is necessary to create user profiles and show you advertising, or to track your browsing on one or more websites for similar marketing purposes.",
+  "O armazenamento ou acesso técnico é necessário para criar perfis de usuário e mostrar publicidade a você, ou para acompanhar sua navegação em um ou vários sites com finalidades de marketing semelhantes.",
+  "Le stockage ou l’accès technique est nécessaire pour créer des profils d’utilisateur et vous montrer de la publicité, ou pour suivre votre navigation sur un ou plusieurs sites à des fins marketing similaires."
+ ],
+ "375": [
+  "Click to accept marketing cookies and enable this content",
+  "Clique para aceitar cookies de marketing e ativar este conteúdo",
+  "Cliquez pour accepter les cookies marketing et activer ce contenu"
+ ]
 }

@@ -15,7 +15,7 @@
     display: block;
     position: sticky;
     top: 0;
-    z-index: 100000;
+    z-index: 9999; /* debajo del banner de cookies (Complianz usa 99999), encima del contenido */
     font-family: var(--font-texto);
   }
   .admin-bar .siles-movil { top: 46px; }
