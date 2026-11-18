@@ -17,7 +17,7 @@ De `staging2.siles.cr` a `www.siles.cr` en SiteGround, con WPML: español (raíz
 ## 1. Antes del paso
 
 - [ ] **Licencia de WPML:** en tu cuenta de wpml.org › Sitios, agregá `www.siles.cr` y copiá su clave de sitio. La vas a pegar en el paso 4.
-- [ ] **Tema:** el staging tiene el tema hijo **0.11.8** activo.
+- [ ] **Tema:** el staging tiene el tema hijo **0.11.9** activo.
 - [ ] **Horario:** de poco tráfico, con acceso a Site Tools, al administrador de WordPress, a Search Console y a contact@siles.cr.
 
 ## 2. Respaldo
@@ -61,7 +61,8 @@ De `staging2.siles.cr` a `www.siles.cr` en SiteGround, con WPML: español (raíz
 **Recorrido en los cuatro idiomas** (celular y computadora)
 
 - [ ] **Portadas:** `/`, `/en/`, `/pt-br/`, `/fr/`: red animada, cinta y botones en su idioma.
-- [ ] **Selector de idioma:** en el encabezado, el globo con el código del idioma despliega los cuatro idiomas; en el menú móvil, la lista al pie. Cada idioma lleva a la misma página traducida.
+- [ ] **Selector de idioma:** en el encabezado, el globo con el código del idioma despliega los cuatro idiomas; en el menú móvil, la lista al pie; en el pie, después de Términos y condiciones, abre hacia arriba. Cada idioma lleva a la misma página traducida.
+- [ ] **Botón del encabezado:** "Agendá una llamada" es sólido y pasa a contorno al pasar el cursor.
 - [ ] **Menú y pie:** en el idioma de la página; el Blog figura como "Blog (Spanish)", "Blog (espanhol)" o "Blog (espagnol)".
 - [ ] **Sobre mí:** `/esteban/` en cada idioma; en el celular, la red animada, el método con sus números y la cronología alineada.
 - [ ] **Proyectos:** `/portafolio/` en cada idioma, con el filtro por sector traducido, y un proyecto completo.

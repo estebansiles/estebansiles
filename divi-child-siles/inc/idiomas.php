@@ -177,8 +177,10 @@ function siles_selector_idiomas( $atts = array() ) {
 	}
 
 	wp_enqueue_script( 'siles-idiomas' );
+	// estilo="pie": el mismo desplegable con los colores del pie oscuro y la lista que abre hacia arriba.
+	$variante = 'pie' === $atts['estilo'] ? ' siles-idiomas--pie' : '';
 	return sprintf(
-		'<nav class="siles-idiomas siles-idiomas--desplegable" aria-label="%1$s"><details data-siles-idiomas>'
+		'<nav class="siles-idiomas siles-idiomas--desplegable%6$s" aria-label="%1$s"><details data-siles-idiomas>'
 		. '<summary><span class="screen-reader-text">%1$s: %2$s</span>%3$s<span class="siles-idiomas__codigo" aria-hidden="true">%4$s</span>'
 		. '<svg class="siles-idiomas__flecha" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></summary>'
 		. '<ul class="siles-idiomas__lista">%5$s</ul></details></nav>',
@@ -186,7 +188,8 @@ function siles_selector_idiomas( $atts = array() ) {
 		esc_html( $actual['nombre'] ),
 		siles_icono_idioma( 20 ),
 		esc_html( $actual['corto'] ),
-		$enlaces
+		$enlaces,
+		$variante
 	);
 }
 
