@@ -699,10 +699,290 @@
       <//>`;
   }
 
+  /* ---------- Test de madurez digital (siles.cr/madurezdigital) ----------
+     Preguntas, pasos y niveles vienen de madurez-datos.js, generado desde madurez-digital/madurez.json. */
+
+  var MD = window.SILES_MADUREZ;
+
+  /* Cálculo del resultado. respuestas: arreglo de 10 puntajes (1 a 3). */
+  function calcularMadurez(respuestas) {
+    var puntaje = respuestas.reduce(function (a, b) { return a + (b || 0); }, 0);
+    var nivel = MD.niveles.filter(function (n) { return puntaje >= n.minimo && puntaje <= n.maximo; })[0] || MD.niveles[0];
+    var orden = MD.preguntas.map(function (p, k) { return { k: k, s: respuestas[k] || 3 }; })
+      .sort(function (a, b) { return (a.s - b.s) || (nivel.prioridad.indexOf(a.k + 1) - nivel.prioridad.indexOf(b.k + 1)); })
+      .slice(0, 3);
+    var pasos = orden.map(function (o) {
+      var p = MD.preguntas[o.k], paso = p.pasos[o.s - 1];
+      return { area: p.area, icono: p.icono, titulo: paso.titulo, texto: paso.texto };
+    });
+    return { puntaje: puntaje, nivel: nivel, pasos: pasos };
+  }
+
+  var ETIQUETAS_AREA = ['Inicial', 'En proceso', 'Avanzado'];
+  var COLORES_AREA = ['var(--texto-suave)', 'var(--realce)', 'var(--accion)'];
+  var CORREO_VALIDO = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+
+  function Madurez() {
+    var total = MD.preguntas.length;
+    var vacias = MD.preguntas.map(function () { return null; });
+    var e1 = useState('intro'), paso = e1[0], setPaso = e1[1];
+    var e2 = useState(0), i = e2[0], setI = e2[1];
+    var e3 = useState(vacias), r = e3[0], setR = e3[1];
+    var e4 = useState({}), sel = e4[0], setSel = e4[1];
+    var e5 = useState({}), errores = e5[0], setErrores = e5[1];
+    var e6 = useState(null), datos = e6[0], setDatos = e6[1];
+    var temporizador = useRef(null);
+    useEffect(function () { return function () { clearTimeout(temporizador.current); }; }, []);
+
+    function arriba() { window.scrollTo(0, 0); }
+    function empezar() { clearTimeout(temporizador.current); setR(vacias); setSel({}); setI(0); setErrores({}); setPaso('pregunta'); arriba(); }
+    function avanzar() { if (i < total - 1) setI(i + 1); else { setPaso('datos'); arriba(); } }
+
+    var q = MD.preguntas[i];
+    var marcadas = sel[i] || (r[i] ? [r[i]] : []);
+
+    function elegir(n) {
+      var r2 = r.slice();
+      if (q.multiple) {
+        var m = marcadas.indexOf(n) >= 0 ? marcadas.filter(function (v) { return v !== n; }) : marcadas.concat([n]);
+        r2[i] = m.length ? Math.min.apply(null, m) : null; /* cuenta la opción más baja */
+        var s2 = Object.assign({}, sel); s2[i] = m;
+        setSel(s2); setR(r2);
+        return;
+      }
+      r2[i] = n; setR(r2);
+      clearTimeout(temporizador.current);
+      temporizador.current = setTimeout(function () {
+        if (i < total - 1) setI(i + 1); else { setPaso('datos'); arriba(); }
+      }, 320);
+    }
+    function anterior() { clearTimeout(temporizador.current); if (i > 0) setI(i - 1); else { setPaso('intro'); arriba(); } }
+    function enviar(ev) {
+      ev.preventDefault();
+      var f = ev.target.elements;
+      var nom = (f.nombre.value || '').trim(), cor = (f.correo.value || '').trim();
+      var err = { nombre: nom ? '' : 'Escribí tu nombre', correo: CORREO_VALIDO.test(cor) ? '' : 'Escribí un correo válido', consentimiento: !f.consentimiento.checked };
+      setErrores(err);
+      if (!err.nombre && !err.correo && !err.consentimiento) {
+        setDatos({ nombre: nom, correo: cor, empresa: (f.empresa.value || '').trim(), sector: f.sector.value });
+        setPaso('resultado'); arriba();
+      }
+    }
+
+    var cabecera = html`
+      <header style="position: sticky; top: 0; z-index: 10; background: var(--fondo); border-bottom: 1px solid var(--linea)">
+        <div class="sl-contenedor" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: var(--space-2) var(--space-8); min-height: 72px; padding-top: var(--space-2); padding-bottom: var(--space-2)">
+          <a href=${ir('inicio')} aria-label="Siles Comunicación, inicio" style="display: flex; align-items: center; min-height: 44px"><${Logo} alto=${32} /></a>
+          <${Enlace} href=${ir('inicio')}>Ir a siles.cr<//>
+        </div>
+      </header>`;
+
+    var cuerpo;
+    if (paso === 'intro') {
+      cuerpo = html`
+        <${Patron} alto=${600} semilla=${17} densidad=${13}>
+          <div style="display: flex; flex-direction: column; gap: var(--space-6)">
+            <span class="sl-etiqueta entra" style=${SUAVE}>Test gratuito · 3 minutos</span>
+            <${Firma} nivel="h1" clase="sl-display" extra="entra" estilo="animation-delay: .1s">¿Qué tan digital es tu negocio?<//>
+            <p class="sl-subtitulo entra" style="margin: 0; color: var(--texto-suave); animation-delay: .22s">Respondé 10 preguntas sobre cómo trabaja tu empresa hoy y recibí tu nivel de madurez digital con 3 pasos concretos para mejorar.</p>
+            <div class="entra" style="display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-4) var(--space-6); animation-delay: .34s">
+              <${Boton} iconoFinal="flecha" onClick=${empezar}>Empezá el test<//>
+              <span class="sl-cuerpo-ui" style="display: flex; align-items: center; gap: var(--space-2); color: var(--texto-suave)"><${Icono} nombre="candado" tamano=${20} />Sin costo. Tu reporte llega a tu correo.</span>
+            </div>
+          </div>
+        <//>
+        <${Seccion}>
+          <${Encabezado2} antetitulo="Qué evalúa" titulo="Diez áreas de tu operación">
+            <p class="sl-cuerpo-lg" style="flex: 5 1 280px; margin: 0; color: var(--texto-suave)">Cada pregunta mira un área distinta. Elegí siempre la opción que más se parezca a tu realidad, no a la que te gustaría tener.</p>
+          <//>
+          <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr)); gap: var(--space-6)">
+            ${MD.preguntas.map(function (p) {
+              return html`<div key=${p.id} class="traza revela" style="display: flex; flex-direction: column; gap: var(--space-3)"><${Icono} nombre=${p.icono} tamano=${32} /><span class="sl-cuerpo-ui">${p.area}</span></div>`;
+            })}
+          </div>
+        <//>
+        <${Seccion} alterna=${true}>
+          <div class="revela" style="display: flex; flex-direction: column; gap: var(--space-4); margin-bottom: var(--space-12)">
+            <span class="sl-etiqueta" style=${SUAVE}>Los resultados</span>
+            <${Firma}>Tres niveles de madurez<//>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: var(--space-6)">
+            ${MD.niveles.map(function (n) {
+              return html`<div key=${n.id} class="revela eleva" style="display: grid"><${Tarjeta} antetitulo=${n.etiqueta + ' · ' + n.minimo + ' a ' + n.maximo + ' puntos'} titulo=${n.nombre}>${n.resumen}<//></div>`;
+            })}
+          </div>
+          <div class="revela" style="margin-top: var(--space-12)"><${Boton} iconoFinal="flecha" onClick=${empezar}>Empezá el test<//></div>
+        <//>`;
+    } else if (paso === 'pregunta') {
+      cuerpo = html`
+        <${Seccion}>
+          <div style="max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: var(--space-8)">
+            <div style="display: flex; flex-direction: column; gap: var(--space-3)">
+              <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--space-2)">
+                <span class="sl-etiqueta" role="status" style=${SUAVE}>Pregunta ${i + 1} de ${total}</span>
+                <span class="sl-cuerpo-ui" style=${SUAVE}>${r.filter(Boolean).length} de ${total} respondidas</span>
+              </div>
+              <div aria-hidden="true" style="height: 4px; background: var(--fondo-alterno)"><div class="barra__relleno" style=${'height: 4px; background: var(--realce); width: ' + Math.round((i + 1) / total * 100) + '%'}></div></div>
+            </div>
+            <div key=${i} class="cambia" style="display: flex; flex-direction: column; gap: var(--space-6); animation-name: sube-a">
+              <div style="display: flex; align-items: center; gap: var(--space-3)"><${Icono} nombre=${q.icono} tamano=${32} /><span class="sl-etiqueta" style=${SUAVE}>${q.area}</span></div>
+              <h1 style="margin: 0; font-family: var(--font-titulos); font-weight: 600; font-size: clamp(24px, 2.6vw, 30px); line-height: 1.25">${q.texto}</h1>
+              ${q.multiple ? html`<p class="sl-cuerpo-ui" style="margin: 0; display: flex; align-items: center; gap: var(--space-2); color: var(--texto-suave)"><${Icono} nombre="check" tamano=${20} />Podés marcar varias opciones.</p>` : null}
+              <div role="group" aria-label="Opciones de respuesta" style="display: flex; flex-direction: column; gap: var(--space-3)">
+                ${q.opciones.map(function (op) {
+                  var presionado = q.multiple ? marcadas.indexOf(op.puntos) >= 0 : r[i] === op.puntos;
+                  return html`<button key=${op.letra} type="button" class="opcion" aria-pressed=${presionado ? 'true' : 'false'} onClick=${function () { elegir(op.puntos); }}><span class="opcion__letra">${op.letra}</span><span class="sl-cuerpo" style="padding-top: 2px">${op.texto}</span></button>`;
+                })}
+              </div>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-4)">
+              <${Boton} variante="fantasma" tamano="sm" onClick=${anterior}>Anterior<//>
+              <div style="display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-4)">
+                <span class="sl-nota" style=${SUAVE}>${q.multiple ? 'Cuenta la opción más básica que marqués.' : 'Al elegir una opción pasás a la siguiente pregunta.'}</span>
+                ${q.multiple ? html`<${Boton} iconoFinal="flecha" disabled=${marcadas.length === 0} onClick=${function () { if (marcadas.length) avanzar(); }}>Siguiente<//>` : null}
+              </div>
+            </div>
+          </div>
+        <//>`;
+    } else if (paso === 'datos') {
+      cuerpo = html`
+        <${Seccion}>
+          <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: var(--space-12) var(--space-16)">
+            <div style="flex: 5 1 320px; min-width: 0; display: flex; flex-direction: column; gap: var(--space-6)">
+              <span class="sl-etiqueta entra" style=${SUAVE}>Listo, respondiste las 10 preguntas</span>
+              <${Firma} nivel="h1" clase="sl-titulo-1" extra="entra" estilo="animation-delay: .1s">Tu reporte está listo<//>
+              <p class="sl-subtitulo entra" style="margin: 0; color: var(--texto-suave); animation-delay: .22s">Decime a dónde enviarlo. Lo vas a ver aquí mismo y también te llega una copia a tu correo.</p>
+              <div class="entra papel" style="padding: var(--space-8); background: var(--superficie); display: flex; flex-direction: column; gap: var(--space-4); animation-delay: .34s">
+                <div style="display: flex; align-items: center; gap: var(--space-3)"><${Icono} nombre="candado" tamano=${32} /><span class="sl-etiqueta" style=${SUAVE}>Tu reporte incluye</span></div>
+                <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column">
+                  ${['Tu nivel de madurez digital y tu puntaje', '3 pasos inmediatos según tus respuestas', 'Cómo te fue en cada una de las 10 áreas'].map(function (t) {
+                    return html`<li key=${t} class="sl-cuerpo-ui" style="display: flex; gap: 12px; align-items: center; padding: var(--space-3) 0; border-bottom: 1px solid var(--linea)"><${Icono} nombre="check" tamano=${20} />${t}</li>`;
+                  })}
+                </ul>
+              </div>
+            </div>
+            <div class="entra" style="flex: 6 1 360px; min-width: 0; animation-delay: .46s">
+              <form onSubmit=${enviar} noValidate=${true} style="display: flex; flex-direction: column; gap: var(--space-5)">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: var(--space-5)">
+                  <${Campo} etiqueta="Nombre" name="nombre" placeholder="Tu nombre" autoComplete="given-name" error=${errores.nombre || undefined} />
+                  <${Campo} etiqueta="Correo" name="correo" type="email" placeholder="nombre@empresa.cr" autoComplete="email" error=${errores.correo || undefined} />
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: var(--space-5)">
+                  <${Campo} etiqueta="Empresa (opcional)" name="empresa" placeholder="Nombre de tu empresa" autoComplete="organization" />
+                  <${Selector} etiqueta="Sector" name="sector" opciones=${['Turismo', 'Agroindustria', 'Comercio', 'Servicios profesionales', 'Salud', 'Otro']} />
+                </div>
+                <${Casilla} name="consentimiento" etiqueta="Acepto recibir mi reporte y algunos correos relacionados de Siles Comunicación, según la Ley 8968. Me puedo dar de baja cuando quiera." />
+                ${errores.consentimiento ? html`<div class="tostada"><${Aviso} tipo="error">Marcá la casilla de consentimiento para poder enviarte el reporte.<//></div>` : null}
+                <div style="display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-4) var(--space-6)">
+                  <${Boton} type="submit" iconoFinal="flecha">Recibí mi reporte<//>
+                  <${Boton} variante="fantasma" tamano="sm" onClick=${function () { setI(total - 1); setPaso('pregunta'); arriba(); }}>Revisá tus respuestas<//>
+                </div>
+                <p class="sl-nota" style="margin: 0; color: var(--texto-suave)">Uso tus datos solo para enviarte el reporte y 3 correos con ideas para tu nivel. No los comparto con nadie.</p>
+              </form>
+            </div>
+          </div>
+        <//>`;
+    } else {
+      var res = calcularMadurez(r);
+      var nivel = res.nivel;
+      var idx = MD.niveles.indexOf(nivel);
+      var frac = Math.min(Math.max((res.puntaje - nivel.minimo) / Math.max(nivel.maximo - nivel.minimo, 1), 0), 1);
+      var marcador = (((idx + 0.1 + frac * 0.8) / 3) * 100).toFixed(1) + '%';
+      var nombre = String((datos && datos.nombre) || '').trim().split(/\s+/)[0] || 'Hola';
+      cuerpo = html`
+        <${Seccion}>
+          <div style="display: flex; flex-direction: column; gap: var(--space-4)">
+            <span class="sl-etiqueta entra" style=${SUAVE}>${nombre}, este es tu nivel de madurez digital</span>
+            <${Firma} nivel="h1" clase="sl-titulo-1" extra="entra" estilo="animation-delay: .1s">${nivel.nombre}<//>
+            <div class="entra" style="display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3); animation-delay: .18s">
+              <${Estado} tipo="neutro">${nivel.etiqueta}<//>
+              <span class="sl-cuerpo-ui" style=${SUAVE}>${res.puntaje} de 30 puntos</span>
+            </div>
+          </div>
+          <div class="entra" style="margin-top: var(--space-8); animation-delay: .26s">
+            <div style="position: relative; height: 16px; margin-bottom: var(--space-2)"><span aria-hidden="true" style=${'position: absolute; top: 0; left: ' + marcador + '; transform: translateX(-50%); width: 0; height: 0; border-left: 8px solid transparent; border-right: 8px solid transparent; border-top: 10px solid var(--texto)'}></span></div>
+            <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px">
+              ${MD.niveles.map(function (n, k) {
+                var activo = k === idx;
+                return html`<div key=${n.id} style=${'display: flex; flex-direction: column; gap: 4px; padding: var(--space-3) var(--space-4); background: ' + (activo ? 'var(--accion)' : 'var(--superficie-hundida)') + '; color: ' + (activo ? 'var(--accion-texto)' : 'var(--texto-suave)')}><span style="font-family: var(--font-titulos); font-weight: 500; font-size: 15px; line-height: 1.3">${n.nombre}</span><span class="sl-cuerpo-ui" style="font-size: 13px">${n.minimo} a ${n.maximo} puntos</span></div>`;
+              })}
+            </div>
+          </div>
+          <div class="entra" style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: var(--space-8) var(--space-16); margin-top: var(--space-12); animation-delay: .34s">
+            <div style="flex: 7 1 360px; min-width: 0; display: flex; flex-direction: column; gap: var(--space-4)">
+              <span class="sl-etiqueta" style=${SUAVE}>El diagnóstico</span>
+              <p class="sl-cuerpo-lg sl-medida" style="margin: 0">${nivel.diagnostico}</p>
+            </div>
+            <div style="flex: 4 1 280px; min-width: 0; padding: var(--space-8); background: var(--fondo-alterno); display: flex; flex-direction: column; gap: var(--space-3)">
+              <span class="sl-etiqueta" style=${SUAVE}>Tu siguiente paso</span>
+              <p class="sl-cuerpo" style="margin: 0">${nivel.siguiente}</p>
+            </div>
+          </div>
+          <div class="tostada" style="margin-top: var(--space-8)"><${Aviso} tipo="exito">También te envié una copia de este reporte a ${(datos && datos.correo) || 'tu correo'}.<//></div>
+        <//>
+        <${Seccion} alterna=${true}>
+          <div class="revela" style="display: flex; flex-direction: column; gap: var(--space-4); margin-bottom: var(--space-12)">
+            <span class="sl-etiqueta" style=${SUAVE}>Según tus respuestas</span>
+            <${Firma}>Tus 3 pasos inmediatos<//>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: var(--space-8)">
+            ${res.pasos.map(function (p, n) {
+              return html`
+                <div key=${n} class="traza revela" style="display: flex; flex-direction: column; gap: var(--space-3)">
+                  <div style="display: flex; justify-content: space-between; align-items: center"><span class="sl-etiqueta" style=${SUAVE}>Paso ${n + 1} · ${p.area}</span><${Icono} nombre=${p.icono} tamano=${32} /></div>
+                  <h3 class="sl-titulo-3" style="margin: 0">${p.titulo}</h3>
+                  <p class="sl-cuerpo" style="margin: 0; color: var(--texto-suave)">${p.texto}</p>
+                </div>`;
+            })}
+          </div>
+        <//>
+        <${Seccion}>
+          <${Encabezado2} antetitulo="El detalle" titulo="Cómo te fue por área" margen="var(--space-8)">
+            <p class="sl-cuerpo-ui" style="flex: 0 1 auto; margin: 0; color: var(--texto-suave)">Inicial · En proceso · Avanzado</p>
+          <//>
+          <div style="display: flex; flex-direction: column">
+            ${MD.preguntas.map(function (p, k) {
+              var v = r[k] || 1;
+              return html`
+                <div key=${p.id} class="revela" style="display: grid; grid-template-columns: minmax(0, 240px) minmax(0, 1fr) 96px; align-items: center; gap: var(--space-4); padding: var(--space-3) 0; border-bottom: 1px solid var(--linea)">
+                  <span class="sl-cuerpo-ui" style="display: flex; align-items: center; gap: var(--space-3)"><${Icono} nombre=${p.icono} tamano=${20} />${p.area}</span>
+                  <div aria-hidden="true" style="height: 8px; background: var(--fondo-alterno)"><div class="barra__relleno" style=${'height: 8px; width: ' + Math.round(v / 3 * 100) + '%; background: ' + COLORES_AREA[v - 1]}></div></div>
+                  <span class="sl-cuerpo-ui" style="text-align: right; color: var(--texto-suave)">${ETIQUETAS_AREA[v - 1]}</span>
+                </div>`;
+            })}
+          </div>
+        <//>
+        <${Franja} fondo="marca" alto=${440}>
+          <div class="revela" style="display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-6)">
+            <h2 class="sl-titulo-1" style="margin: 0">${nivel.cta.titulo}</h2>
+            <p class="sl-subtitulo sl-medida" style="margin: 0; color: var(--texto-suave)">${nivel.cta.texto}</p>
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-4) var(--space-6)">
+              <${Boton} iconoFinal="flecha" href=${ir('contacto')}>${nivel.cta.boton}<//>
+              <${Boton} variante="fantasma" tamano="sm" onClick=${function () { setPaso('intro'); setR(vacias); setSel({}); setI(0); arriba(); }}>Volvé a hacer el test<//>
+            </div>
+          </div>
+        <//>`;
+    }
+
+    return html`
+      <div class="pagina" style="min-height: 100vh; display: flex; flex-direction: column; background: var(--fondo); color: var(--texto); font-family: var(--font-texto)">
+        ${cabecera}
+        <main style="flex-grow: 1; display: flex; flex-direction: column">${cuerpo}</main>
+        <footer data-theme="dark" style="background: var(--fondo); color: var(--texto); padding: var(--space-8) 0">
+          <div class="sl-contenedor sl-etiqueta" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: var(--space-2) var(--space-6); color: var(--texto-suave)">
+            <span>© 2026 Siles Comunicación</span>
+            <span style="display: flex; flex-wrap: wrap; gap: 0 var(--space-6)"><a class="nav-a" href="#privacidad">Privacidad</a><a class="nav-a" href="#terminos">Términos de servicio</a></span>
+          </div>
+        </footer>
+      </div>`;
+  }
+
   /* ---------- Aplicación ---------- */
 
-  var VISTAS = { inicio: Inicio, servicios: Servicios, proyectos: Proyectos, proyecto: Proyecto, blog: Blog, cotizacion: Cotizacion, contacto: Contacto };
-  var TITULOS = { inicio: 'Siles Comunicación', servicios: 'Servicios', proyectos: 'Proyectos', proyecto: 'Sitio web para doctor', blog: 'Blog', cotizacion: 'Cotización', contacto: 'Contacto' };
+  var VISTAS = { inicio: Inicio, servicios: Servicios, proyectos: Proyectos, proyecto: Proyecto, blog: Blog, cotizacion: Cotizacion, contacto: Contacto, madurezdigital: Madurez };
+  var TITULOS = { inicio: 'Siles Comunicación', servicios: 'Servicios', proyectos: 'Proyectos', proyecto: 'Sitio web para doctor', blog: 'Blog', cotizacion: 'Cotización', contacto: 'Contacto', madurezdigital: 'Test de madurez digital' };
+  /* Páginas con su propio encabezado y pie (página de aterrizaje del lead magnet) */
+  var SIN_MARCO = { madurezdigital: true };
 
   function rutaActual() {
     var h = window.location.hash;
@@ -725,6 +1005,7 @@
       document.title = vista === 'inicio' ? TITULOS.inicio : TITULOS[vista] + ' · Siles Comunicación';
     }, [vista]);
     var Vista = VISTAS[vista];
+    if (SIN_MARCO[vista]) return html`<${Vista} key=${vista} />`;
     /* key=vista: cada página se monta de nuevo y repite su transición de entrada */
     return html`
       <div key=${vista} class="pagina" style="min-height: 100vh; display: flex; flex-direction: column; background: var(--fondo); color: var(--texto); font-family: var(--font-texto)">
